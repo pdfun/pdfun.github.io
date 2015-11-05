@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用JS将safari"真正"的全屏 - pdx</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="http://pdx.name/theme/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://pdx.name/theme/font-icons/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://pdx.name/theme/css/niu2.min.css" type="text/css" />
+
+    <link rel="canonical" href="http://pdx.name/bnote/将safari真正的全屏.html"/>
+    
+    <script type="text/javascript">window.onload=function(){};</script>
+    <!--[if lt IE 9]>
+        <script src="http://pdx.name/theme/js/html5shiv.js"></script>
+        <script src="http://pdx.name/theme/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://pdx.name">
+            <i class="icon-home"></i>pdx
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="/about.html" title="about me">
+                <i class="icon-anchor"></i>关于</a>
+            </li>
+            <li><a href="/archives.html" title="blog archives">
+                <i class="icon-archive"></i>存档</a>
+            </li>
+            <li><a href="/tag/" title="blog tags">
+                <i class="icon-tag"></i>标签</a>
+            </li>
+        <!-- category dropdown list -->
+        <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+           </a>
+           <ul class="dropdown-menu">
+               <li><a href="http://pdx.name/acode/index.html">
+                      <i class="icon-code"></i>饭碗
+                      (3)</a></li>
+               <li><a href="http://pdx.name/bnote/index.html">
+                      <i class="icon-pencil"></i>笔记
+                      (6)</a></li>
+               <li><a href="http://pdx.name/dlife/index.html">
+                      <i class="icon-coffee"></i>生活
+                      (2)</a></li>
+               <li><a href="http://pdx.name/edesign/index.html">
+                      <i class="icon-flask"></i>设计
+                      (1)</a></li>
+           </ul>
+        </li>
+        <!--  self defined dropdown list -->
+        </ul>
+        
+        <!-- right nav bar -->
+        <ul class="nav navbar-nav navbar-right">
+        <!-- google custom search -->
+        <li>
+        <div id="niu2-cse-wrapper">
+            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                <form action="http://google.com/cse">
+                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <div class="form-group">
+                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                            type="text" name="q" 
+                            placeholder="按回车开始搜索 ..."/>
+                    </div>
+                </form>
+           </div>
+           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+           </div>
+       </div>
+       </li>
+       </ul>
+    </nav>
+</div>
+</div>    </div>
+    
+    <div id="body-content">
+<div class="col-md-8 col-md-offset-2">
+    <h1 id="content-heading">利用JS将safari"真正"的全屏</h1>
+</div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
+    <div id="niu2-main-content">
+        <h4 id="265aa33d028a9960e0e3a5d6f0064e4b">整理自V2</h4>
+<p>将safari"真正"的全屏 
+<a href="https://www.v2ex.com/t/151466">全屏</a></p>
+<h4 id="afe367e404261db2377de6e0e70c75a0">safrai最大化</h4>
+<p>tab和标题栏照样是显示，对屏幕小的MBP来说还是占不小位置的 </p>
+<p><img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/safari_full_screen.png" /></p>
+<h4 id="7bb08620c50719bc7355faa4a772b880">加了JS之后全屏的Google</h4>
+<p><img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/google_full_screen.png" /></p>
+<h4 id="96641bf3534344897ca84bc9a951a953">bSetp</h4>
+<h5 id="58abb73e0878d5ffb16628a31361f0a7">将以下JS代码将入书签收藏</h5>
+<p><code>javascript:document.documentElement.webkitRequestFullScreen()</code></p>
+<p><img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/js_code.png" /></p>
+<h5 id="fb30106bebc04358dc5529a83d03f0f5">快捷全屏(⌘+1)</h5>
+<p>蹭蹭蹭!!!!全屏了,真的全屏了,B格瞬间提升!Esc可退出全屏。确实，这货在展示的时候特别好用。</p>
+<h4 id="251d27be2768a6479ff9111296fc4223">V2真是个神奇的地方</h4>
+<p>创业老板和公司元老的撕B大战,从来没有这么热闹过,眼睛真累,mgpyh<br />
+0_o 关键字会不会到这里来勒,五一快乐<br />
+Mou还不打算更新么,ctrl+s一下就转几圈菊花。。</p>
+    </div>
+    <div id="content-comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/bnote/将safari真正的全屏.html" data-title="利用JS将safari"真正"的全屏" data-url="http://pdx.name/bnote/将safari真正的全屏.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = { short_name: 'pdx' };
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --></div>
+
+</div>
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-meta" class="niu2-sidebar">
+        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+        <div class="niu2-sidebar-value">2015-05-01 08:05</div>
+        <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
+        <div class="niu2-sidebar-value">2015-05-01 09:35</div>
+        <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
+        <div class="niu2-sidebar-value"><a href="http://pdx.name/bnote/index.html">笔记</a></div>
+        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+ 
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdx.name/tag/safariquan-ping.html">safari全屏</a><sup>1</sup></div>
+    </div>
+</div>
+
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+        <div class="niu2-sidebar-label">
+            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+        </div>
+        <ul id="niu2-sidebar-toc-list">
+            <li><a href="#content-heading" target="_blank">利用JS将safari"真正"的全屏</a></li>
+            <li><a href='#265aa33d028a9960e0e3a5d6f0064e4b'>整理自V2</a></li><li><a href='#afe367e404261db2377de6e0e70c75a0'>safrai最大化</a></li><li><a href='#7bb08620c50719bc7355faa4a772b880'>加了JS之后全屏的Google</a></li><li><a href='#96641bf3534344897ca84bc9a951a953'>bSetp</a><ul><li><a href='#58abb73e0878d5ffb16628a31361f0a7'>将以下JS代码将入书签收藏</a></li><li><a href='#fb30106bebc04358dc5529a83d03f0f5'>快捷全屏(⌘+1)</a></li></ul></li><li><a href='#251d27be2768a6479ff9111296fc4223'>V2真是个神奇的地方</a></li>
+            <li><a href="#content-comments">评论</a></li>
+        </ul>
+    </div>
+</div>
+    </div>
+
+    <div id="body-footer" class="col-md-6 col-md-offset-2">
+<div class="niu2-footer">
+    <hr/>
+	<p>
+		Powered by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>, 
+        <a href="https://github.com/mawenbao/niu-x2-sidebar" target="_blank">theme</a> built with <a href="http://getbootstrap.com" target="_blank">Bootstrap3</a>
+		by <a href="http://blog.atime.me" target="_blank">Ma Wenbao</a>, icons by 
+		<a href="http://fortawesome.github.io/Font-Awesome" target="_blank">Font Awesome</a>.
+	</p>
+	<p>
+		©
+				2015
+		<a class="niu2-footer-link" href="http://pdx.name">pdx</a>
+        / 			<a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
+    </p>
+    <p class="niu2-icons">
+	        <a class="niu2-footer-icon" href="http://git.io/v8fku" title="my github page" target="_blank">
+	            <i class="icon-github-alt icon-lg"></i>
+	        </a>
+	        <a class="niu2-footer-icon" href="mail to:pdx@pdx.name" title="my email address" target="_blank">
+	            <i class="icon-envelope-o icon-lg"></i>
+	        </a>
+	</p>
+</div>    </div>
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-58307278-1"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>    
+    <div id="niu2-pygments" data-theme="github"></div>
+
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://pdx.name/theme/js/niu2.min.js"></script>
+    <script type="text/javascript" src="http://pdx.name/theme/js/bootstrap.min.js"></script>
+    <script type="text/javascript">onContentLoaded();</script>
+  </body>
+</html>

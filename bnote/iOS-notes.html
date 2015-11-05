@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS做项目积累的一些小技巧 - pdx</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="http://pdx.name/theme/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://pdx.name/theme/font-icons/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://pdx.name/theme/css/niu2.min.css" type="text/css" />
+
+    <link rel="canonical" href="http://pdx.name/bnote/iOS-notes.html"/>
+    
+    <script type="text/javascript">window.onload=function(){};</script>
+    <!--[if lt IE 9]>
+        <script src="http://pdx.name/theme/js/html5shiv.js"></script>
+        <script src="http://pdx.name/theme/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://pdx.name">
+            <i class="icon-home"></i>pdx
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="/about.html" title="about me">
+                <i class="icon-anchor"></i>关于</a>
+            </li>
+            <li><a href="/archives.html" title="blog archives">
+                <i class="icon-archive"></i>存档</a>
+            </li>
+            <li><a href="/tag/" title="blog tags">
+                <i class="icon-tag"></i>标签</a>
+            </li>
+        <!-- category dropdown list -->
+        <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+           </a>
+           <ul class="dropdown-menu">
+               <li><a href="http://pdx.name/acode/index.html">
+                      <i class="icon-code"></i>饭碗
+                      (3)</a></li>
+               <li><a href="http://pdx.name/bnote/index.html">
+                      <i class="icon-pencil"></i>笔记
+                      (6)</a></li>
+               <li><a href="http://pdx.name/dlife/index.html">
+                      <i class="icon-coffee"></i>生活
+                      (2)</a></li>
+               <li><a href="http://pdx.name/edesign/index.html">
+                      <i class="icon-flask"></i>设计
+                      (1)</a></li>
+           </ul>
+        </li>
+        <!--  self defined dropdown list -->
+        </ul>
+        
+        <!-- right nav bar -->
+        <ul class="nav navbar-nav navbar-right">
+        <!-- google custom search -->
+        <li>
+        <div id="niu2-cse-wrapper">
+            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                <form action="http://google.com/cse">
+                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <div class="form-group">
+                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                            type="text" name="q" 
+                            placeholder="按回车开始搜索 ..."/>
+                    </div>
+                </form>
+           </div>
+           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+           </div>
+       </div>
+       </li>
+       </ul>
+    </nav>
+</div>
+</div>    </div>
+    
+    <div id="body-content">
+<div class="col-md-8 col-md-offset-2">
+    <h1 id="content-heading">iOS做项目积累的一些小技巧</h1>
+</div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
+    <div id="niu2-main-content">
+        <blockquote>
+<p>大部分来自<a href="http://stackoverflow.com">stackoverflow</a></p>
+</blockquote>
+<ul>
+<li>
+<p>使用storyBoard的时候 <code>adding subview to UIImageView</code>
+拖一个<code>UIView</code>把它的类型改为<code>UIImageView</code>这时候就能在这个<code>View</code>在添加子视图了。</p>
+</li>
+<li>
+<p>像<code>tree</code> 命令一样显示<code>view</code>的层次结构。</p>
+</li>
+</ul>
+<div class="codehilite"><pre>[self.view recursiveDescription]
+</pre></div>
+
+
+<ul>
+<li><code>tableView</code>滚动的时候始终以<code>row</code>的高度为单位。
+首先想到的是<code>tableView</code>继承自<code>scrollView</code>也有<code>pagingEnabled</code>属性。
+设置这个属性之后会发现,滚动的时候是以<code>tableView</code>的<code>height</code>为单位滚的。
+实现以下这个代理方法就可以解决了,滚动结束的时候始终停留在某个<code>row</code>上面并且还能够获得<code>indexPath</code>.</li>
+</ul>
+<div class="codehilite"><pre>-(void)scrollViewWillEndDragging:(UIScrollView*)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint*)targetContentOffset {
+
+    // Get index path for target row
+    NSIndexPath* indexPath = [self.tableView indexPathForRowAtPoint:(*targetContentOffset)];
+
+    // Set new target
+    (*targetContentOffset) = [self.tableView rectForRowAtIndexPath:indexPath].origin;
+}
+</pre></div>
+    </div>
+    <div id="content-comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/bnote/iOS-notes.html" data-title="iOS做项目积累的一些小技巧" data-url="http://pdx.name/bnote/iOS-notes.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = { short_name: 'pdx' };
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --></div>
+
+</div>
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-meta" class="niu2-sidebar">
+        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+        <div class="niu2-sidebar-value">2015-08-29 14:58</div>
+        <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
+        <div class="niu2-sidebar-value">2015-08-30 10:49</div>
+        <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
+        <div class="niu2-sidebar-value"><a href="http://pdx.name/bnote/index.html">笔记</a></div>
+        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+ 
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdx.name/tag/ios-develop.html">iOS Develop</a><sup>1</sup></div>
+    </div>
+</div>
+
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+        <div class="niu2-sidebar-label">
+            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+        </div>
+        <ul id="niu2-sidebar-toc-list">
+            <li><a href="#content-heading" target="_blank">iOS做项目积累的一些小技巧</a></li>
+            
+            <li><a href="#content-comments">评论</a></li>
+        </ul>
+    </div>
+</div>
+    </div>
+
+    <div id="body-footer" class="col-md-6 col-md-offset-2">
+<div class="niu2-footer">
+    <hr/>
+	<p>
+		Powered by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>, 
+        <a href="https://github.com/mawenbao/niu-x2-sidebar" target="_blank">theme</a> built with <a href="http://getbootstrap.com" target="_blank">Bootstrap3</a>
+		by <a href="http://blog.atime.me" target="_blank">Ma Wenbao</a>, icons by 
+		<a href="http://fortawesome.github.io/Font-Awesome" target="_blank">Font Awesome</a>.
+	</p>
+	<p>
+		©
+				2015
+		<a class="niu2-footer-link" href="http://pdx.name">pdx</a>
+        / 			<a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
+    </p>
+    <p class="niu2-icons">
+	        <a class="niu2-footer-icon" href="http://git.io/v8fku" title="my github page" target="_blank">
+	            <i class="icon-github-alt icon-lg"></i>
+	        </a>
+	        <a class="niu2-footer-icon" href="mail to:pdx@pdx.name" title="my email address" target="_blank">
+	            <i class="icon-envelope-o icon-lg"></i>
+	        </a>
+	</p>
+</div>    </div>
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-58307278-1"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>    
+    <div id="niu2-pygments" data-theme="github"></div>
+
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://pdx.name/theme/js/niu2.min.js"></script>
+    <script type="text/javascript" src="http://pdx.name/theme/js/bootstrap.min.js"></script>
+    <script type="text/javascript">onContentLoaded();</script>
+  </body>
+</html>
