@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://pdx.name/" rel="alternate"></link><link href="http://pdx.name/feeds/pdx.atom.xml" rel="self"></link><id>http://pdx.name/</id><updated>2015-11-19T11:00:26+08:00</updated><entry><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link href="http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html" rel="alternate"></link><updated>2015-11-19T11:00:26+08:00</updated><author><name>pdx</name></author><id>tag:pdx.name,2015-11-19:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://pdx.name/" rel="alternate"></link><link href="http://pdx.name/feeds/pdx.atom.xml" rel="self"></link><id>http://pdx.name/</id><updated>2015-11-19T11:02:58+08:00</updated><entry><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link href="http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html" rel="alternate"></link><updated>2015-11-19T11:02:58+08:00</updated><author><name>pdx</name></author><id>tag:pdx.name,2015-11-19:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;
@@ -54,7 +54,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;h1 id="126127548010f1ccf3c314bc7463041a"&gt;Cocos2dx-js&lt;/h1&gt;
 &lt;p&gt;待续。。。&lt;/p&gt;
 &lt;h1 id="d1211e4ea9689c600a71c4a36f828216"&gt;Cocos2dx-lua&lt;/h1&gt;
-&lt;p&gt;有这两篇博客就足够了。&lt;/p&gt;
+&lt;p&gt;有这两篇文章足够了。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;不忘初"辛&lt;/li&gt;
 &lt;/ul&gt;

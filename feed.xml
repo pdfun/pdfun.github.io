@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdx.name/</link><description></description><atom:link href="http://pdx.name/feed.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 Nov 2015 11:00:26 +0800</lastBuildDate><item><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link>http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdx.name/</link><description></description><atom:link href="http://pdx.name/feed.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 Nov 2015 11:02:58 +0800</lastBuildDate><item><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link>http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;
@@ -54,7 +54,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;h1 id="126127548010f1ccf3c314bc7463041a"&gt;Cocos2dx-js&lt;/h1&gt;
 &lt;p&gt;待续。。。&lt;/p&gt;
 &lt;h1 id="d1211e4ea9689c600a71c4a36f828216"&gt;Cocos2dx-lua&lt;/h1&gt;
-&lt;p&gt;有这两篇博客就足够了。&lt;/p&gt;
+&lt;p&gt;有这两篇文章足够了。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;不忘初"辛&lt;/li&gt;
 &lt;/ul&gt;
@@ -66,7 +66,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;p&gt;&lt;a href="http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/"&gt;http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CCLuaObjcBridge&lt;/code&gt;堪称&lt;code&gt;cocos2d-x Lua&lt;/code&gt;游戏开发的神器 ^_^(作者原话)）。&lt;code&gt;CCLuaObjcBridge&lt;/code&gt; 已经集成到&lt;a href="https://github.com/chukong/quick-cocos2d-x"&gt;quick-cocos2d-x&lt;/a&gt;中，从&lt;code&gt;Objective-C&lt;/code&gt; 调用 &lt;code&gt;Lua&lt;/code&gt; 也非常简单灵活。&lt;/p&gt;
 &lt;h1 id="bf2c44e6fc09515648b91b1bb4ec3f5f"&gt;Flash&lt;/h1&gt;
-&lt;p&gt;待续。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Thu, 19 Nov 2015 11:00:26 +0800</pubDate><guid>tag:pdx.name,2015-11-19:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</guid><category>iOS SDK Integration</category></item><item><title>Mac下自用的一些命令</title><link>http://pdx.name/bnote/mac-cmd-notes.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;待续。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Thu, 19 Nov 2015 11:02:58 +0800</pubDate><guid>tag:pdx.name,2015-11-19:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</guid><category>iOS SDK Integration</category></item><item><title>Mac下自用的一些命令</title><link>http://pdx.name/bnote/mac-cmd-notes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;整理下经常用到的一些命令。省得每次出问题以后都要重新搜索。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="d5135420e2dbee4c3f1a597639c5b2fa"&gt;link sublime to  Terminal&lt;/h2&gt;
