@@ -138,7 +138,7 @@
 //导航条颜色
 [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
 //title的颜色和字体
-[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],                                   NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
+[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
 //透明or不透明。这个会影响storyBoard纵坐标的位置。注意这个方法与`SetbackgroundImageForBarMetrics`一起使用时导航的变化。
 [[UINavigationBar appearance] setTranslucent:NO];
 //serarchBar的颜色,比如说取消按钮。再也不会遍历子视图了。
