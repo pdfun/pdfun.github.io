@@ -113,7 +113,40 @@
     // Set new target
     (*targetContentOffset) = [self.tableView rectForRowAtIndexPath:indexPath].origin;
 }
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="iOS Develop"></category></entry><entry><title>我的常用Mac App</title><link href="http://pdx.name/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pdx</name></author><id>tag:pdx.name,2015-08-25:bnote/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;去掉tableView多余的行
+  之前一直根据行数来设置tableView的高度😂其实不用这么麻烦&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;self.tableView.tableFooterView = [UIView alloc] init];&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击self.view 键盘收起&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;- (void) touchesBegan:(NSSet&amp;lt;UITouch *&amp;gt; *)touches withEvent:(UIEvent *)event{
+    [_searchBar endEditing:YES];
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其实还有一个神器&lt;a href="https://github.com/hackiftekhar/IQKeyboardManager"&gt;IQKeyboardManager&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更改UI控件系统默认样式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;//黑色改白色 不要忘记设置plist
+[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//导航条颜色
+[[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+//title的颜色和字体
+[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],                                   NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
+//透明or不透明。这个会影响storyBoard纵坐标的位置。注意这个方法与`SetbackgroundImageForBarMetrics`一起使用时导航的变化。
+[[UINavigationBar appearance] setTranslucent:NO];
+//serarchBar的颜色,比如说取消按钮。再也不会遍历子视图了。
+[[UISearchBar appearance] setTintColor:[UIColor whiteColor]];
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;每个控件的&lt;code&gt;appearance&lt;/code&gt;都可以去看下。有时候能省很多事。不用一个个的单独设置。&lt;/p&gt;</summary><category term="iOS Develop"></category></entry><entry><title>我的常用Mac App</title><link href="http://pdx.name/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pdx</name></author><id>tag:pdx.name,2015-08-25:bnote/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;8月貌似一篇博客没写。记录下我常用的Mac app。有机会了再来写介绍吧。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Alfred 2&lt;/p&gt;

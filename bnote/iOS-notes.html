@@ -128,6 +128,39 @@
     (*targetContentOffset) = [self.tableView rectForRowAtIndexPath:indexPath].origin;
 }
 </pre></div>
+
+
+<ul>
+<li>去掉tableView多余的行
+  之前一直根据行数来设置tableView的高度😂其实不用这么麻烦</li>
+</ul>
+<p><code>self.tableView.tableFooterView = [UIView alloc] init];</code></p>
+<ul>
+<li>点击self.view 键盘收起</li>
+</ul>
+<div class="codehilite"><pre>- (void) touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event{
+    [_searchBar endEditing:YES];
+</pre></div>
+
+
+<p>其实还有一个神器<a href="https://github.com/hackiftekhar/IQKeyboardManager">IQKeyboardManager</a></p>
+<ul>
+<li>更改UI控件系统默认样式</li>
+</ul>
+<div class="codehilite"><pre>//黑色改白色 不要忘记设置plist
+[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//导航条颜色
+[[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+//title的颜色和字体
+[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],                                   NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
+//透明or不透明。这个会影响storyBoard纵坐标的位置。注意这个方法与`SetbackgroundImageForBarMetrics`一起使用时导航的变化。
+[[UINavigationBar appearance] setTranslucent:NO];
+//serarchBar的颜色,比如说取消按钮。再也不会遍历子视图了。
+[[UISearchBar appearance] setTintColor:[UIColor whiteColor]];
+</pre></div>
+
+
+<p>每个控件的<code>appearance</code>都可以去看下。有时候能省很多事。不用一个个的单独设置。</p>
     </div>
     <div id="content-comments">
 <!-- 多说评论框 start -->
@@ -153,7 +186,7 @@
         <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
         <div class="niu2-sidebar-value">2015-08-29 14:58</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-        <div class="niu2-sidebar-value">2015-08-30 10:49</div>
+        <div class="niu2-sidebar-value">2015-11-19 09:20</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
         <div class="niu2-sidebar-value"><a href="http://pdx.name/bnote/index.html">笔记</a></div>
         <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
