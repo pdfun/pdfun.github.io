@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://pdx.name/index.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/archives.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/categories.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -28,6 +28,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://pdx.name/about.html</loc>
 <lastmod>2015-11-05T10:55:00:%s</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</loc>
+<lastmod>2015-11-19T10:04:00:%s</lastmod>
+<changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -117,112 +124,119 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://pdx.name/acode/index.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/bnote/index.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/dlife/index.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/edesign/index.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/category.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/poker2.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/bootstrap-moment.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/ios-develop.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://pdx.name/tag/ios-sdk-integration.html</loc>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/cmd.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/safariquan-ping.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/mac.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/hhkb.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/karabiner.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/metal-armv7.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/xcode7.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdx.name/tag/archive.html</loc>
-<lastmod>2015-11-19T09:26:41-00:00</lastmod>
+<lastmod>2015-11-19T11:00:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

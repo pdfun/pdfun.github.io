@@ -3,13 +3,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask笔记_01 - pdx</title>
+    <title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK - pdx</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="http://pdx.name/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="http://pdx.name/theme/font-icons/style.min.css" type="text/css" />
     <link rel="stylesheet" href="http://pdx.name/theme/css/niu2.min.css" type="text/css" />
 
-    <link rel="canonical" href="http://pdx.name/bnote/Flask_notes_01.html"/>
+    <link rel="canonical" href="http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html"/>
     
     <script type="text/javascript">window.onload=function(){};</script>
     <!--[if lt IE 9]>
@@ -93,40 +93,82 @@
     
     <div id="body-content">
 <div class="col-md-8 col-md-offset-2">
-    <h1 id="content-heading">Flask笔记_01</h1>
+    <h1 id="content-heading">Unity3d.Cocos2dx.Flask游戏接入iOS SDK</h1>
 </div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
     <div id="niu2-main-content">
-        <p>Flask学习笔记之Flask-Bootstrap Flask-Moment</p>
-<h1 id="44b2ec7b98f5190b3617c573c39e7488">Flask-Bootstrap</h1>
-<p><code>pip install Flask-Bootstrap</code> 默认安装的是最新版本。也可以在安装的时候自定义版本。</p>
-<h2 id="44731d72f069d71202a56c99d85ffaa8">scripts styles</h2>
-<p>默认的CDN js和css 加载太慢。替换 js和css路径</p>
-<div class="codehilite"><pre>{% block scripts %}
-&lt;script href=&quot;{{ url_for(&#39;static&#39;, filename=&#39;js/jquery.min.js&#39;) }}&quot;&gt;&lt;/script&gt;
-&lt;script href=&quot;{{ url_for(&#39;static&#39;, filename=&#39;js/bootstrap.min.js&#39;) }}&quot;&gt;&lt;/script&gt;
-{% endblock %}
+        <blockquote>
+<p>各种不同引擎的游戏接入<code>iOS SDK</code>大致的解决方案.</p>
+</blockquote>
+<h1 id="1def5b505372521fd984197e91241665">Unity3d</h1>
+<ul>
+<li>Unity能直接调用C的方法。首先把SDK相关的方法转换成C方法。</li>
+</ul>
+<div class="codehilite"><pre>#if defined (__cplusplus)
+extern &quot;C&quot;
+{
+#endif
 
-{% block styles %}
-&lt;link href=&quot;{{ url_for(&#39;static&#39;, filename=&#39;css/bootstrap.min.css&#39;) }}&quot; rel=&quot;stylesheet&quot;&gt;
-{% endblock %}
+    void sdkInit()
+    {
+        //这里直接调用SDK的相关方法进行初始化
+    }
+
+#if defined (__cplusplus)
+}
+#endif
 </pre></div>
 
 
-<h1 id="44979180eb6e24be5afe95fb0e7d7ce7">Flask-Moment</h1>
-<p><code>pip install Flask-Moment</code>。用来本地化日期和时间</p>
-<h2 id="4f01d410f43f695de63ccf8cd1600935">替换CDN js路径 设置默认地区</h2>
-<p>moment是依赖于<code>jquery</code>的</p>
-<div class="codehilite"><pre>{% block scripts %}
-{{ moment.include_moment(local_js=&#39;static/js/moment.js&#39;) }}
-&lt;!--设置默认地区--&gt;
-{{ moment.lang(&quot;zh-CN&quot;)}}
-{% endblock %}
+<p>转换后的文件(.h/.mm)可以通过Unity插件的方式导入，也可以在Unity导出的Xcode后再加到工程文件。</p>
+<ul>
+<li>SDK回调处理。如果熟悉OC语法的话直接处理，在对应的回调里进行相关操作就行了。不熟悉可以在接收到回调的时候用<code>UnitySendMessage</code>向Unity发送通知消息,Unity接收到消息后再进行相应的操作。</li>
+</ul>
+<h1 id="7feef1be1715e7fdb72dd707d83b686b">Cocos2dx</h1>
+<ul>
+<li>
+<p>加入SDK相关文件后。可以在SDK相关的回调里直接调用C++的方法。
+导入 cocos2dx头文件，使用<code>CCNotificationCenter</code>与<code>Scene</code>交互</p>
+</li>
+<li>
+<p>SDK发送通知</p>
+</li>
+</ul>
+<div class="codehilite"><pre>#include &quot;cocos2d.h&quot;
+
+const char * ccParamToken = [paramToken UTF8String];
+    cocos2d::CCString *str = cocos2d::CCString::create(ccParamToken);
+    cocos2d::CCNotificationCenter::sharedNotificationCenter()-&gt;postNotification(&quot;TOKEN&quot;, dynamic_cast&lt;cocos2d::CCObject *&gt;(str));
 </pre></div>
+
+
+<ul>
+<li>Cocos2dx接收通知</li>
+</ul>
+<div class="codehilite"><pre>    CCNotificationCenter::sharedNotificationCenter()-&gt;addObserver(this, callfuncO_selector(HelloWorld::sdkNotification),&quot;TOKEN&quot;, NULL);
+</pre></div>
+
+
+<h1 id="126127548010f1ccf3c314bc7463041a">Cocos2dx-js</h1>
+<p>待续。。。</p>
+<h1 id="d1211e4ea9689c600a71c4a36f828216">Cocos2dx-lua</h1>
+<p>有这两篇博客就足够了。</p>
+<ul>
+<li>不忘初"辛</li>
+</ul>
+<p><a href="http://www.cnblogs.com/flyFreeZn/p/4152881.html">http://www.cnblogs.com/flyFreeZn/p/4152881.html</a></p>
+<p>这篇文件介绍了下OC与lua如何实现交互，涉及<code>Lua,C++,Objective-C</code>三种语言。Lua调用Lua Binding的C++接口，C++接口调用混编的Objective-C接口，而Objective-C通过block形式的回调，将结果通知给C++，C++通过Lua的C API将最终结果返回给Lua。。。。。</p>
+<ul>
+<li>我是妖怪</li>
+</ul>
+<p><a href="http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/">http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/</a></p>
+<p><code>CCLuaObjcBridge</code>堪称<code>cocos2d-x Lua</code>游戏开发的神器 ^_^(作者原话)）。<code>CCLuaObjcBridge</code> 已经集成到<a href="https://github.com/chukong/quick-cocos2d-x">quick-cocos2d-x</a>中，从<code>Objective-C</code> 调用 <code>Lua</code> 也非常简单灵活。</p>
+<h1 id="bf2c44e6fc09515648b91b1bb4ec3f5f">Flash</h1>
+<p>待续。。。</p>
     </div>
     <div id="content-comments">
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/bnote/Flask_notes_01.html" data-title="Flask笔记_01" data-url="http://pdx.name/bnote/Flask_notes_01.html"></div>
+<div class="ds-thread" data-thread-key="/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html" data-title="Unity3d.Cocos2dx.Flask游戏接入iOS SDK" data-url="http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -146,14 +188,14 @@
 <div class="niu2-right-container col-md-2">
     <div id="niu2-sidebar-meta" class="niu2-sidebar">
         <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-        <div class="niu2-sidebar-value">2015-10-25 11:30</div>
+        <div class="niu2-sidebar-value">2015-11-19 11:00</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-        <div class="niu2-sidebar-value">2015-10-25 23:17</div>
+        <div class="niu2-sidebar-value">2015-11-19 10:04</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
         <div class="niu2-sidebar-value"><a href="http://pdx.name/bnote/index.html">笔记</a></div>
         <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
  
-            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdx.name/tag/bootstrap-moment.html">Bootstrap Moment</a><sup>1</sup></div>
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdx.name/tag/ios-sdk-integration.html">iOS SDK Integration</a><sup>1</sup></div>
     </div>
 </div>
 
@@ -163,8 +205,8 @@
             <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
         </div>
         <ul id="niu2-sidebar-toc-list">
-            <li><a href="#content-heading" target="_blank">Flask笔记_01</a></li>
-            <li><a href='#44b2ec7b98f5190b3617c573c39e7488'>Flask-Bootstrap</a><ul><li><a href='#44731d72f069d71202a56c99d85ffaa8'>scripts styles</a></li></ul></li><li><a href='#44979180eb6e24be5afe95fb0e7d7ce7'>Flask-Moment</a><ul><li><a href='#4f01d410f43f695de63ccf8cd1600935'>替换CDN js路径 设置默认地区</a></li></ul></li>
+            <li><a href="#content-heading" target="_blank">Unity3d.Cocos2dx.Flask游戏接入iOS SDK</a></li>
+            <li><a href='#1def5b505372521fd984197e91241665'>Unity3d</a></li><li><a href='#7feef1be1715e7fdb72dd707d83b686b'>Cocos2dx</a></li><li><a href='#126127548010f1ccf3c314bc7463041a'>Cocos2dx-js</a></li><li><a href='#d1211e4ea9689c600a71c4a36f828216'>Cocos2dx-lua</a></li><li><a href='#bf2c44e6fc09515648b91b1bb4ec3f5f'>Flash</a></li>
             <li><a href="#content-comments">评论</a></li>
         </ul>
     </div>
