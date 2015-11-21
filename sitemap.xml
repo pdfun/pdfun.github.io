@@ -4,239 +4,239 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://pdx.name/index.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/index.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/archives.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/archives.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/categories.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/categories.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/about.html</loc>
+<loc>pedx.github.io/about.html</loc>
 <lastmod>2015-11-05T10:55:00:%s</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</loc>
+<loc>pedx.github.io/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</loc>
 <lastmod>2015-11-19T10:04:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/bnote/mac-cmd-notes.html</loc>
+<loc>pedx.github.io/bnote/mac-cmd-notes.html</loc>
 <lastmod>2015-10-28T11:12:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/bnote/Flask_notes_01.html</loc>
+<loc>pedx.github.io/bnote/Flask_notes_01.html</loc>
 <lastmod>2015-10-25T23:17:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/dlife/HHKB-Function-Key-With-Karabiner.html</loc>
+<loc>pedx.github.io/dlife/HHKB-Function-Key-With-Karabiner.html</loc>
 <lastmod>2015-09-14T11:30:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/bnote/iOS-notes.html</loc>
+<loc>pedx.github.io/bnote/iOS-notes.html</loc>
 <lastmod>2015-11-19T09:20:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/bnote/我的mac常用app.html</loc>
+<loc>pedx.github.io/bnote/我的mac常用app.html</loc>
 <lastmod>2015-08-25T20:22:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</loc>
+<loc>pedx.github.io/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</loc>
 <lastmod>2015-09-14T10:30:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/dlife/poker2_mstand.html</loc>
+<loc>pedx.github.io/dlife/poker2_mstand.html</loc>
 <lastmod>2015-08-30T10:44:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/acode/Xcode7免证书真机调试.html</loc>
+<loc>pedx.github.io/acode/Xcode7免证书真机调试.html</loc>
 <lastmod>2015-06-09T19:24:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html</loc>
+<loc>pedx.github.io/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html</loc>
 <lastmod>2015-06-08T10:50:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/bnote/将safari真正的全屏.html</loc>
+<loc>pedx.github.io/bnote/将safari真正的全屏.html</loc>
 <lastmod>2015-05-01T09:35:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/edesign/sketch_01.html</loc>
+<loc>pedx.github.io/edesign/sketch_01.html</loc>
 <lastmod>2015-01-15T23:42:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/acode/iOS简单实用category.html</loc>
+<loc>pedx.github.io/acode/iOS简单实用category.html</loc>
 <lastmod>2015-01-15T14:30:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/acode/index.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/acode/index.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/bnote/index.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/bnote/index.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/dlife/index.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/dlife/index.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/edesign/index.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/edesign/index.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/category.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/category.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/poker2.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/poker2.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/bootstrap-moment.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/bootstrap-moment.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/ios-develop.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/ios-develop.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/ios-sdk-integration.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/ios-sdk-integration.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/cmd.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/cmd.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/safariquan-ping.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/safariquan-ping.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/mac.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/mac.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/hhkb.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/hhkb.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/karabiner.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/karabiner.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/metal-armv7.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/metal-armv7.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/xcode7.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/xcode7.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://pdx.name/tag/archive.html</loc>
-<lastmod>2015-11-19T11:05:57-00:00</lastmod>
+<loc>pedx.github.io/tag/archive.html</loc>
+<lastmod>2015-11-21T10:52:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

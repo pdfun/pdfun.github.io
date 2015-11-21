@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdx.name/</link><description></description><atom:link href="http://pdx.name/feeds/pdx.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 Nov 2015 11:02:58 +0800</lastBuildDate><item><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link>http://pdx.name/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>pedx.github.io/</link><description></description><atom:link href="pedx.github.io/feeds/pdx.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 Nov 2015 11:02:58 +0800</lastBuildDate><item><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link>pedx.github.io/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;
@@ -66,7 +66,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;p&gt;&lt;a href="http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/"&gt;http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CCLuaObjcBridge&lt;/code&gt;堪称&lt;code&gt;cocos2d-x Lua&lt;/code&gt;游戏开发的神器 ^_^(作者原话)）。&lt;code&gt;CCLuaObjcBridge&lt;/code&gt; 已经集成到&lt;a href="https://github.com/chukong/quick-cocos2d-x"&gt;quick-cocos2d-x&lt;/a&gt;中，从&lt;code&gt;Objective-C&lt;/code&gt; 调用 &lt;code&gt;Lua&lt;/code&gt; 也非常简单灵活。&lt;/p&gt;
 &lt;h1 id="bf2c44e6fc09515648b91b1bb4ec3f5f"&gt;Flash&lt;/h1&gt;
-&lt;p&gt;待续。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Thu, 19 Nov 2015 11:02:58 +0800</pubDate><guid>tag:pdx.name,2015-11-19:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</guid><category>iOS SDK Integration</category></item><item><title>Mac下自用的一些命令</title><link>http://pdx.name/bnote/mac-cmd-notes.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;待续。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Thu, 19 Nov 2015 11:02:58 +0800</pubDate><guid>tag:,2015-11-19:pedx.github.io/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</guid><category>iOS SDK Integration</category></item><item><title>Mac下自用的一些命令</title><link>pedx.github.io/bnote/mac-cmd-notes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;整理下经常用到的一些命令。省得每次出问题以后都要重新搜索。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="d5135420e2dbee4c3f1a597639c5b2fa"&gt;link sublime to  Terminal&lt;/h2&gt;
@@ -86,7 +86,7 @@ const char * ccParamToken = [paramToken UTF8String];
 
 &lt;h2 id="d3419d7429dbe1d67b1698fe0ab79457"&gt;class-dump&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;class-dump -H ~/Desktop/AppInstall -o ~/Desktop/app.h
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Wed, 28 Oct 2015 11:12:00 +0800</pubDate><guid>tag:pdx.name,2015-10-28:bnote/mac-cmd-notes.html</guid><category>CMD</category></item><item><title>Flask笔记_01</title><link>http://pdx.name/bnote/Flask_notes_01.html</link><description>&lt;p&gt;Flask学习笔记之Flask-Bootstrap Flask-Moment&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Wed, 28 Oct 2015 11:12:00 +0800</pubDate><guid>tag:,2015-10-28:pedx.github.io/bnote/mac-cmd-notes.html</guid><category>CMD</category></item><item><title>Flask笔记_01</title><link>pedx.github.io/bnote/Flask_notes_01.html</link><description>&lt;p&gt;Flask学习笔记之Flask-Bootstrap Flask-Moment&lt;/p&gt;
 &lt;h1 id="44b2ec7b98f5190b3617c573c39e7488"&gt;Flask-Bootstrap&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;pip install Flask-Bootstrap&lt;/code&gt; 默认安装的是最新版本。也可以在安装的时候自定义版本。&lt;/p&gt;
 &lt;h2 id="44731d72f069d71202a56c99d85ffaa8"&gt;scripts styles&lt;/h2&gt;
@@ -111,7 +111,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &amp;lt;!--设置默认地区--&amp;gt;
 {{ moment.lang(&amp;quot;zh-CN&amp;quot;)}}
 {% endblock %}
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sun, 25 Oct 2015 11:30:00 +0800</pubDate><guid>tag:pdx.name,2015-10-25:bnote/Flask_notes_01.html</guid><category>Bootstrap Moment</category></item><item><title>HHKB Function Key With Karabiner</title><link>http://pdx.name/dlife/HHKB-Function-Key-With-Karabiner.html</link><description>&lt;p&gt;Karabiner 给HHKB添加功能键F0~F12&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sun, 25 Oct 2015 11:30:00 +0800</pubDate><guid>tag:,2015-10-25:pedx.github.io/bnote/Flask_notes_01.html</guid><category>Bootstrap Moment</category></item><item><title>HHKB Function Key With Karabiner</title><link>pedx.github.io/dlife/HHKB-Function-Key-With-Karabiner.html</link><description>&lt;p&gt;Karabiner 给HHKB添加功能键F0~F12&lt;/p&gt;
 &lt;h2 id="34c847b65e809d462fadf06a2488c1ab"&gt;Karabiner&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://pqrs.org/osx/karabiner/"&gt;Karabiner&lt;/a&gt;这个键盘映射工具很强大。看了下&lt;code&gt;Change Key&lt;/code&gt;选项里,只有&lt;code&gt;Shift+Num&lt;/code&gt;和&lt;code&gt;Command+Num&lt;/code&gt;映射&lt;code&gt;Fn&lt;/code&gt;,&lt;code&gt;Shift&lt;/code&gt;和&lt;code&gt;Command&lt;/code&gt;组合数字快捷键平时经常用到,只能另辟蹊径了,这时候很容易想到&lt;code&gt;Option+Num&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id="49b21ad0d38942f635877e7bbc5d7a1e"&gt;Solution&lt;/h2&gt;
@@ -150,7 +150,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;li&gt;&lt;code&gt;R&lt;/code&gt; 表示右边,&lt;code&gt;L&lt;/code&gt;表示左边,比如OPTION_R =&amp;gt; 左边的Option&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;MINUS&lt;/code&gt;=&amp;gt;&lt;code&gt;-&lt;/code&gt;  &lt;code&gt;EQUAL&lt;/code&gt; =&amp;gt;&lt;code&gt;=&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;更全的就看&lt;a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data"&gt;KeyCode.data&lt;/a&gt;了&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Mon, 14 Sep 2015 10:37:00 +0800</pubDate><guid>tag:pdx.name,2015-09-14:dlife/HHKB-Function-Key-With-Karabiner.html</guid><category>HHKB</category><category>Karabiner</category></item><item><title>iOS做项目积累的一些小技巧</title><link>http://pdx.name/bnote/iOS-notes.html</link><description>&lt;blockquote&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Mon, 14 Sep 2015 10:37:00 +0800</pubDate><guid>tag:,2015-09-14:pedx.github.io/dlife/HHKB-Function-Key-With-Karabiner.html</guid><category>HHKB</category><category>Karabiner</category></item><item><title>iOS做项目积累的一些小技巧</title><link>pedx.github.io/bnote/iOS-notes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;大部分来自&lt;a href="http://stackoverflow.com"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
@@ -213,7 +213,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;每个控件的&lt;code&gt;appearance&lt;/code&gt;都可以去看下。有时候能省很多事。不用一个个的单独设置。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 29 Aug 2015 14:58:00 +0800</pubDate><guid>tag:pdx.name,2015-08-29:bnote/iOS-notes.html</guid><category>iOS Develop</category></item><item><title>我的常用Mac App</title><link>http://pdx.name/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;每个控件的&lt;code&gt;appearance&lt;/code&gt;都可以去看下。有时候能省很多事。不用一个个的单独设置。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 29 Aug 2015 14:58:00 +0800</pubDate><guid>tag:,2015-08-29:pedx.github.io/bnote/iOS-notes.html</guid><category>iOS Develop</category></item><item><title>我的常用Mac App</title><link>pedx.github.io/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;8月貌似一篇博客没写。记录下我常用的Mac app。有机会了再来写介绍吧。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Alfred 2&lt;/p&gt;
@@ -230,7 +230,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;p&gt;Prepo&lt;/p&gt;
 &lt;p&gt;Pasteasy&lt;/p&gt;
 &lt;p&gt;Sketch&lt;/p&gt;
-&lt;p&gt;OmniGraffle&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 25 Aug 2015 20:22:00 +0800</pubDate><guid>tag:pdx.name,2015-08-25:bnote/我的mac常用app.html</guid><category>Mac</category></item><item><title>Cannot generate iOS App archive in xcode</title><link>http://pdx.name/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;OmniGraffle&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 25 Aug 2015 20:22:00 +0800</pubDate><guid>tag:,2015-08-25:pedx.github.io/bnote/我的mac常用app.html</guid><category>Mac</category></item><item><title>Cannot generate iOS App archive in xcode</title><link>pedx.github.io/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;Cannot generate iOS App archive in xcode&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id="e678f2cc8303d18a894f8be0f9588fe7"&gt;Xcode archive&lt;/h4&gt;
@@ -239,13 +239,13 @@ const char * ccParamToken = [paramToken UTF8String];
 折腾了几个小时,&lt;code&gt;stackoverflow&lt;/code&gt;也有人提问&lt;a href="http://stackoverflow.com/questions/10715211/cannot-generate-ios-app-archive-in-xcode"&gt;Cannot generate iOS App archive in xcode&lt;/a&gt;.&lt;code&gt;Build Settings&lt;/code&gt;配置也是一样的,就是无法生成&lt;code&gt;ipa&lt;/code&gt;,最后就差重新安装&lt;code&gt;Xcode&lt;/code&gt;了&lt;/p&gt;
 &lt;h4 id="957a228f87aaf86e436762129485625a"&gt;解决方法&lt;/h4&gt;
 &lt;p&gt;项目是用&lt;code&gt;pod&lt;/code&gt;管理的,操作&lt;code&gt;pod&lt;/code&gt;的过程中发现有更新提示.
-&lt;code&gt;sudo gem install cocoapods&lt;/code&gt;更新了下&lt;code&gt;pod&lt;/code&gt;,重新打包竟然OK了。在这里记录一下。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Wed, 29 Jul 2015 10:06:00 +0800</pubDate><guid>tag:pdx.name,2015-07-29:bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</guid><category>archive</category></item><item><title>生产力工具</title><link>http://pdx.name/dlife/poker2_mstand.html</link><description>&lt;p&gt;晒晒我的装备&lt;/p&gt;
+&lt;code&gt;sudo gem install cocoapods&lt;/code&gt;更新了下&lt;code&gt;pod&lt;/code&gt;,重新打包竟然OK了。在这里记录一下。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Wed, 29 Jul 2015 10:06:00 +0800</pubDate><guid>tag:,2015-07-29:pedx.github.io/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</guid><category>archive</category></item><item><title>生产力工具</title><link>pedx.github.io/dlife/poker2_mstand.html</link><description>&lt;p&gt;晒晒我的装备&lt;/p&gt;
 &lt;p&gt;&lt;img alt="poker2" src="http://7xixt5.com1.z0.glb.clouddn.com/poker2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="mStand" src="http://7xixt5.com1.z0.glb.clouddn.com/mStand.png" /&gt;&lt;/p&gt;
 &lt;p&gt;还是用回HHKB吧,两个键盘之间切换实在适应不了。⌨拍照技术太差了😂
 &lt;img alt="HHKB" src="http://7xixt5.com1.z0.glb.clouddn.com/hhkb.png" /&gt;&lt;/p&gt;
 &lt;p&gt;期待了好久的彩色键帽
-&lt;img alt="color_hhkb" src="http://7xixt5.com1.z0.glb.clouddn.com/color_hhkb.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sun, 05 Jul 2015 14:30:00 +0800</pubDate><guid>tag:pdx.name,2015-07-05:dlife/poker2_mstand.html</guid><category>poker2</category><category>HHKB</category></item><item><title>Xcode7免证书真机调试</title><link>http://pdx.name/acode/Xcode7%E5%85%8D%E8%AF%81%E4%B9%A6%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95.html</link><description>&lt;blockquote&gt;
+&lt;img alt="color_hhkb" src="http://7xixt5.com1.z0.glb.clouddn.com/color_hhkb.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sun, 05 Jul 2015 14:30:00 +0800</pubDate><guid>tag:,2015-07-05:pedx.github.io/dlife/poker2_mstand.html</guid><category>poker2</category><category>HHKB</category></item><item><title>Xcode7免证书真机调试</title><link>pedx.github.io/acode/Xcode7%E5%85%8D%E8%AF%81%E4%B9%A6%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;The application does not contain a valid application-identifier entitlement.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id="8e20c0c5e9332a426196dc0e8bce212a"&gt;WWDC2015&lt;/h4&gt;
@@ -262,7 +262,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;h4 id="580a439681eee1ad580356d77a8ed5e6"&gt;真机调试报错&lt;/h4&gt;
 &lt;p&gt;真机调试报错一般情况下点击弹出的&lt;code&gt;Fix&lt;/code&gt;,Xcode基本都可以解决.
 当提示安装失败
-&lt;code&gt;The application does not contain a valid application-identifier entitlement.&lt;/code&gt;,是因为一样的&lt;code&gt;BundleID&lt;/code&gt;之前用99的证书调试过,证书信息不一致无法安装,卸载程序重新运行就可以调试了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 09 Jun 2015 19:24:00 +0800</pubDate><guid>tag:pdx.name,2015-06-09:acode/Xcode7免证书真机调试.html</guid><category>Xcode7</category></item><item><title>framework not found Metal armv7/s</title><link>http://pdx.name/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html</link><description>&lt;p&gt;framework not found Metal for architecture armv7&lt;/p&gt;
+&lt;code&gt;The application does not contain a valid application-identifier entitlement.&lt;/code&gt;,是因为一样的&lt;code&gt;BundleID&lt;/code&gt;之前用99的证书调试过,证书信息不一致无法安装,卸载程序重新运行就可以调试了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 09 Jun 2015 19:24:00 +0800</pubDate><guid>tag:,2015-06-09:pedx.github.io/acode/Xcode7免证书真机调试.html</guid><category>Xcode7</category></item><item><title>framework not found Metal armv7/s</title><link>pedx.github.io/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html</link><description>&lt;p&gt;framework not found Metal for architecture armv7&lt;/p&gt;
 &lt;h4 id="b5d1f808293deb9322b5b96519730ac2"&gt;The scene&lt;/h4&gt;
 &lt;p&gt;以下条件Xcode才会报这个错误: &lt;/p&gt;
 &lt;ul&gt;
@@ -309,7 +309,7 @@ Load command 16
 &lt;p&gt;1&amp;gt;. 直接用Xcode5来生成&lt;code&gt;lib&lt;/code&gt;和&lt;code&gt;framework&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;2&amp;gt;. Xcode6 &lt;code&gt;Build Setting&lt;/code&gt;--&amp;gt;&lt;code&gt;Link Frameworks Automatically&lt;/code&gt;设置为NO,设置这个之后,Xcode 可能会报更多的错误,因为现在不会自动&lt;code&gt;link&lt;/code&gt;框架了,根据报错添加对应的&lt;code&gt;framework&lt;/code&gt;即可.&lt;/p&gt;
 &lt;h3 id="5da618e8e4b89c66fe86e32cdafde142"&gt;From&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7"&gt;framework not found Metal for architecture armv7&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Mon, 08 Jun 2015 09:50:00 +0800</pubDate><guid>tag:pdx.name,2015-06-08:acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html</guid><category>Metal armv7</category></item><item><title>利用JS将safari"真正"的全屏</title><link>http://pdx.name/bnote/%E5%B0%86safari%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%85%A8%E5%B1%8F.html</link><description>&lt;h4 id="265aa33d028a9960e0e3a5d6f0064e4b"&gt;整理自V2&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7"&gt;framework not found Metal for architecture armv7&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Mon, 08 Jun 2015 09:50:00 +0800</pubDate><guid>tag:,2015-06-08:pedx.github.io/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html</guid><category>Metal armv7</category></item><item><title>利用JS将safari"真正"的全屏</title><link>pedx.github.io/bnote/%E5%B0%86safari%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%85%A8%E5%B1%8F.html</link><description>&lt;h4 id="265aa33d028a9960e0e3a5d6f0064e4b"&gt;整理自V2&lt;/h4&gt;
 &lt;p&gt;将safari"真正"的全屏 
 &lt;a href="https://www.v2ex.com/t/151466"&gt;全屏&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id="afe367e404261db2377de6e0e70c75a0"&gt;safrai最大化&lt;/h4&gt;
@@ -326,7 +326,7 @@ Load command 16
 &lt;h4 id="251d27be2768a6479ff9111296fc4223"&gt;V2真是个神奇的地方&lt;/h4&gt;
 &lt;p&gt;创业老板和公司元老的撕B大战,从来没有这么热闹过,眼睛真累,mgpyh&lt;br /&gt;
 0_o 关键字会不会到这里来勒,五一快乐&lt;br /&gt;
-Mou还不打算更新么,ctrl+s一下就转几圈菊花。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Fri, 01 May 2015 08:05:00 +0800</pubDate><guid>tag:pdx.name,2015-05-01:bnote/将safari真正的全屏.html</guid><category>safari全屏</category></item><item><title>思客sketch_day01</title><link>http://pdx.name/edesign/sketch_01.html</link><description>&lt;p&gt;思客抱团学习sketch&lt;/p&gt;
+Mou还不打算更新么,ctrl+s一下就转几圈菊花。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Fri, 01 May 2015 08:05:00 +0800</pubDate><guid>tag:,2015-05-01:pedx.github.io/bnote/将safari真正的全屏.html</guid><category>safari全屏</category></item><item><title>思客sketch_day01</title><link>pedx.github.io/edesign/sketch_01.html</link><description>&lt;p&gt;思客抱团学习sketch&lt;/p&gt;
 &lt;h3 id="eb8fb008f8af47db48b10936b671611f"&gt;&lt;a href="http://medialoot.com/blog/how-to-create-a-website-header-design-using-bohemian-coding-sketch/"&gt;主页头条设计&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/starer_sketch01.png" /&gt;&lt;/p&gt;
 &lt;h3 id="b3c3ad9d7d738a6b0eb767186a4cc4ef"&gt;&lt;a href="http://webdesign.tutsplus.com/tutorials/sketch-for-beginners-design-a-login-form-interface--cms-21534"&gt;登陆页面设计&lt;/a&gt;&lt;/h3&gt;
@@ -334,7 +334,7 @@ Mou还不打算更新么,ctrl+s一下就转几圈菊花。。&lt;/p&gt;</descrip
 &lt;h3 id="952d012fcbf9d533dab2eae0ca3ca41f"&gt;技巧&lt;/h3&gt;
 &lt;p&gt;按住 &lt;code&gt;command&lt;/code&gt;键同时选中多个图形，可以统一设置它们的属性，这个和&lt;code&gt;storyBoard&lt;/code&gt;的
 &lt;code&gt;Autolayout&lt;/code&gt;很像，要是像 &lt;code&gt;storyBoard&lt;/code&gt; 一样能设置间距就好了。&lt;/p&gt;
-&lt;p&gt;按住 &lt;code&gt;option (⌥)&lt;/code&gt;键可以看到选中的&lt;code&gt;shape&lt;/code&gt;与其他上下左右&lt;code&gt;shape&lt;/code&gt;的距离&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 10 Jan 2015 23:10:00 +0800</pubDate><guid>tag:pdx.name,2015-01-10:edesign/sketch_01.html</guid></item><item><title>iOS简单实用category</title><link>http://pdx.name/acode/iOS%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8category.html</link><description>&lt;p&gt;常用第三方category,持续更新中...&lt;/p&gt;
+&lt;p&gt;按住 &lt;code&gt;option (⌥)&lt;/code&gt;键可以看到选中的&lt;code&gt;shape&lt;/code&gt;与其他上下左右&lt;code&gt;shape&lt;/code&gt;的距离&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 10 Jan 2015 23:10:00 +0800</pubDate><guid>tag:,2015-01-10:pedx.github.io/edesign/sketch_01.html</guid></item><item><title>iOS简单实用category</title><link>pedx.github.io/acode/iOS%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8category.html</link><description>&lt;p&gt;常用第三方category,持续更新中...&lt;/p&gt;
 &lt;h4 id="8307527e88ce2fc30a8e9a9e3f85040d"&gt;&lt;a href="https://github.com/nicklockwood/AutoCoding"&gt;AutoCoding&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;AutoCoding is a category on NSObject that provides automatic support for NSCoding to any object. &lt;/p&gt;
 &lt;h4 id="8a5a4d77fb514b4048ae7fdf46cdd6bc"&gt;&lt;a href="https://github.com/zwaldowski/BlocksKit"&gt;BlocksKit&lt;/a&gt;&lt;/h4&gt;
@@ -347,4 +347,4 @@ Mou还不打算更新么,ctrl+s一下就转几圈菊花。。&lt;/p&gt;</descrip
 &lt;h4 id="01de08fcc4a577d10caaae8a505ac7f9"&gt;&lt;a href="https://github.com/yfme/UIImageView-PlayGIF"&gt;UIImageView-PlayGIF&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;UIImageView category/subclass for playing GIF. Simple, high performance, low memory footprint.&lt;/p&gt;
 &lt;h4 id="650b524af37b673e05d15602689581ca"&gt;&lt;a href="https://github.com/andreamazz/UITextField-Shake"&gt;UITextField-Shake&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;UITextField category that adds a shake animation like the password field of the OsX login screen.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 10 Jan 2015 09:53:00 +0800</pubDate><guid>tag:pdx.name,2015-01-10:acode/iOS简单实用category.html</guid><category>category</category></item></channel></rss>
+&lt;p&gt;UITextField category that adds a shake animation like the password field of the OsX login screen.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 10 Jan 2015 09:53:00 +0800</pubDate><guid>tag:,2015-01-10:pedx.github.io/acode/iOS简单实用category.html</guid><category>category</category></item></channel></rss>
