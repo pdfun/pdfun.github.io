@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://www.uinib.com/" rel="alternate"></link><link href="http://www.uinib.com/feeds/pdx.atom.xml" rel="self"></link><id>http://www.uinib.com/</id><updated>2015-11-19T11:02:58+08:00</updated><entry><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link href="http://www.uinib.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html" rel="alternate"></link><updated>2015-11-19T11:02:58+08:00</updated><author><name>pdx</name></author><id>tag:www.uinib.com,2015-11-19:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://www.uinib.com/" rel="alternate"></link><link href="http://www.uinib.com/feeds/pdx.atom.xml" rel="self"></link><id>http://www.uinib.com/</id><updated>2015-11-23T20:34:00+08:00</updated><entry><title>那些年掉过的坑</title><link href="http://www.uinib.com/dlife/those-days-fall-into-holes.html" rel="alternate"></link><updated>2015-11-23T20:34:00+08:00</updated><author><name>pdx</name></author><id>tag:www.uinib.com,2015-11-23:dlife/those-days-fall-into-holes.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;时刻紧记着&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;一步一步来，分割成一点点来。不要觉得你狠牛B，能一下子就能把所有逻辑考虑到，都是一步步加上来的。否则，只会越来越来乱，越来越急燥，代码最后像坨屎一样，到自己到理不清，只能推倒重来。浪费的还是你的时间。&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="holes"></category></entry><entry><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link href="http://www.uinib.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html" rel="alternate"></link><updated>2015-11-19T11:02:58+08:00</updated><author><name>pdx</name></author><id>tag:www.uinib.com,2015-11-19:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;

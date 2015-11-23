@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://www.uinib.com/</link><description></description><atom:link href="http://www.uinib.com/feeds/pdx.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 Nov 2015 11:02:58 +0800</lastBuildDate><item><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link>http://www.uinib.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://www.uinib.com/</link><description></description><atom:link href="http://www.uinib.com/feeds/pdx.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 23 Nov 2015 20:34:00 +0800</lastBuildDate><item><title>那些年掉过的坑</title><link>http://www.uinib.com/dlife/those-days-fall-into-holes.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;时刻紧记着&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;一步一步来，分割成一点点来。不要觉得你狠牛B，能一下子就能把所有逻辑考虑到，都是一步步加上来的。否则，只会越来越来乱，越来越急燥，代码最后像坨屎一样，到自己到理不清，只能推倒重来。浪费的还是你的时间。&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Mon, 23 Nov 2015 20:34:00 +0800</pubDate><guid>tag:www.uinib.com,2015-11-23:dlife/those-days-fall-into-holes.html</guid><category>holes</category></item><item><title>Unity3d.Cocos2dx.Flask游戏接入iOS SDK</title><link>http://www.uinib.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;
