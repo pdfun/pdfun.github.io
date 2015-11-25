@@ -218,7 +218,14 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;每个控件的&lt;code&gt;appearance&lt;/code&gt;都可以去看下。有时候能省很多事。不用一个个的单独设置。&lt;/p&gt;</summary><category term="iOS Develop"></category></entry><entry><title>我的常用Mac App</title><link href="http://www.uinib.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pdx</name></author><id>tag:www.uinib.com,2015-08-25:bnote/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;每个控件的&lt;code&gt;appearance&lt;/code&gt;都可以去看下。有时候能省很多事。不用一个个的单独设置。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tableView上下拉刷新崩溃
+上下刷新频繁操作时数组很容易越界。之前为了解决这个问一直很头大。判断上拉没结束不让下拉，越界的时候刷新tableView之类的。偶尔一次把&lt;code&gt;tableView reload&lt;/code&gt;写在了结束刷上下拉刷新方法之前,竟然不崩溃。&lt;blockquote&gt;
+&lt;p&gt;tableView数据源变化之后尽可能早的刷新tableView,这样数组越界的可能性就会降低很多。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="iOS Develop"></category></entry><entry><title>我的常用Mac App</title><link href="http://www.uinib.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pdx</name></author><id>tag:www.uinib.com,2015-08-25:bnote/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;8月貌似一篇博客没写。记录下我常用的Mac app。有机会了再来写介绍吧。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Alfred 2&lt;/p&gt;

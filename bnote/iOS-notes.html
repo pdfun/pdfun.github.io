@@ -161,6 +161,13 @@
 
 
 <p>每个控件的<code>appearance</code>都可以去看下。有时候能省很多事。不用一个个的单独设置。</p>
+<ul>
+<li>tableView上下拉刷新崩溃
+上下刷新频繁操作时数组很容易越界。之前为了解决这个问一直很头大。判断上拉没结束不让下拉，越界的时候刷新tableView之类的。偶尔一次把<code>tableView reload</code>写在了结束刷上下拉刷新方法之前,竟然不崩溃。<blockquote>
+<p>tableView数据源变化之后尽可能早的刷新tableView,这样数组越界的可能性就会降低很多。</p>
+</blockquote>
+</li>
+</ul>
     </div>
     <div id="content-comments">
 <!-- 多说评论框 start -->
@@ -186,7 +193,7 @@
         <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
         <div class="niu2-sidebar-value">2015-08-29 14:58</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-        <div class="niu2-sidebar-value">2015-11-19 09:20</div>
+        <div class="niu2-sidebar-value">2015-11-25 09:20</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
         <div class="niu2-sidebar-value"><a href="http://www.uinib.com/bnote/index.html">笔记</a></div>
         <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
