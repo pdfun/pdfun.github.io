@@ -3,13 +3,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>利用JS将safari"真正"的全屏 - pdx</title>
+    <title>swift - pdx</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
     <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
 
-    <link rel="canonical" href="http://pdhero.com/bnote/将safari真正的全屏.html"/>
+    <link rel="canonical" href="http://pdhero.com/bnote/swift.html"/>
     
     <script type="text/javascript">window.onload=function(){};</script>
     <!--[if lt IE 9]>
@@ -93,32 +93,137 @@
     
     <div id="body-content">
 <div class="col-md-8 col-md-offset-2">
-    <h1 id="content-heading">利用JS将safari"真正"的全屏</h1>
+    <h1 id="content-heading">swift</h1>
 </div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
     <div id="niu2-main-content">
-        <h4 id="265aa33d028a9960e0e3a5d6f0064e4b">整理自V2</h4>
-<p>将safari"真正"的全屏 
-<a href="https://www.v2ex.com/t/151466">全屏</a></p>
-<h4 id="afe367e404261db2377de6e0e70c75a0">safrai最大化</h4>
-<p>tab和标题栏照样是显示，对屏幕小的MBP来说还是占不小位置的 </p>
-<p><img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/safari_full_screen.png" /></p>
-<h4 id="7bb08620c50719bc7355faa4a772b880">加了JS之后全屏的Google</h4>
-<p><img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/google_full_screen.png" /></p>
-<h4 id="96641bf3534344897ca84bc9a951a953">bSetp</h4>
-<h5 id="58abb73e0878d5ffb16628a31361f0a7">将以下JS代码将入书签收藏</h5>
-<p><code>javascript:document.documentElement.webkitRequestFullScreen()</code></p>
-<p><img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/js_code.png" /></p>
-<h5 id="fb30106bebc04358dc5529a83d03f0f5">快捷全屏(⌘+1)</h5>
-<p>蹭蹭蹭!!!!全屏了,真的全屏了,B格瞬间提升!Esc可退出全屏。确实，这货在展示的时候特别好用。</p>
-<h4 id="251d27be2768a6479ff9111296fc4223">V2真是个神奇的地方</h4>
-<p>创业老板和公司元老的撕B大战,从来没有这么热闹过,眼睛真累,mgpyh<br />
-0_o 关键字会不会到这里来勒,五一快乐<br />
-Mou还不打算更新么,ctrl+s一下就转几圈菊花。。</p>
+        <blockquote>
+<p>swift才出来的时候看过一遍,忘记了。记下笔记加深印象。</p>
+</blockquote>
+<h1 id="ddc7d28b7b108cdca9ee7832f7314422">变量</h1>
+<p>let 定义一个常量 var 定义一个变量  可以不声明变量类型 变量名可用Unicode字符</p>
+<div class="codehilite"><pre>let f = 70
+
+let f1: Float = 70
+
+let 🐶 = &quot;加班狗&quot;
+
+var s: String = &quot;string&quot;
+
+var red, green, bule: Double
+
+let `int` = &quot;abc&quot;
+print(&quot;swift \(🐶)&quot;)
+print(f, f1, separator: &quot;====&quot;, terminator: &quot;\n&quot;)
+</pre></div>
+
+
+<blockquote>
+<p>Notes</p>
+</blockquote>
+<ul>
+<li>常量与变更名不能包含数学符号,箭头,保留的(或非法的)Unicode字符,-与制表符。</li>
+</ul>
+<p>也不能以数字开头,但可以在常量与变量的其他地方包含数字</p>
+<ul>
+<li>一量将常量或变量声明为确定的类型,就不能使用相同的名字再次声明,或者改变其存储值的类型。</li>
+</ul>
+<p>同时也不能将常量与变量进行互转</p>
+<ul>
+<li>避免使用关键字来定义变量,一定要使用的时候用 ` 将关键字包围</li>
+</ul>
+<h1 id="3787f6af617176a3f498bc4105c7289e">基本数据类型</h1>
+<h2 id="87cd879720b68e51d8b03b7e29630ecf">整型</h2>
+<p>与C相似,swift的提供了8,16,32,64位的有符号和无符号整型。（UInt8...）</p>
+<p>一般来说无需特别指定.用Int就好,32位平台Int和Int32长度相同;64位平台Int和Int64长度相同.</p>
+<p><code>Int.min Int.max</code>分别取最大值和最小值.</p>
+<h2 id="db491dc61a030ff6b50ac39c4d8bc06e">浮点型</h2>
+<p>与OC一样,swfit提供了两种<code>Float</code> <code>Double</code></p>
+<h2 id="51c4a47321d555f07442c0e6ea9b934e">类型别名</h2>
+<p><code>typealias</code>关键字    相当于OC的<code>typedef</code></p>
+<h2 id="97b0b6499334ed889b372513290a2a52">布尔</h2>
+<p><code>true</code> or <code>false</code>终于不是 <code>YES or NO</code>了</p>
+<h2 id="cda9f200088a3396902af2d4b5efb290">元组</h2>
+<p>元组把多个值组合在一起,每一个值可以是不同的数据类型.</p>
+<div class="codehilite"><pre>let http404Error = (404,&quot;Not Found&quot;)
+
+类型为(Int,String)的元组
+</pre></div>
+
+
+<div class="codehilite"><pre>let (statuCode, error) = http404Error
+
+print(statuCode,error)
+
+将元组内容分解成单独的的常量和变量
+
+
+
+let (statuCode,_) = http404Error
+
+print(statuCode,error)
+
+分解的时候忽略的部分用_标记
+
+
+
+print(http404Error.0, http404Error.1)
+可以通过下标来访问
+
+let http200 = (code:200, des:true)
+print(http200.code, http200.des)
+定义元组的时候给元素命名,可以通过名字来取值
+</pre></div>
+
+
+<h2 id="4fa4f39154d3fc1624099c34182adbfb">可选类型</h2>
+<p><code>optionals</code>来处理可能缺失的情况,可选类型来表示:</p>
+<ul>
+<li>有值,等于x</li>
+</ul>
+<p>或者</p>
+<ul>
+<li>没有值</li>
+</ul>
+<p><code>Int?</code> or <code>optional Int</code></p>
+<h3 id="852438d026c018c4307b916406f98c62">nil</h3>
+<p>可以给可选变量赋值为nil来表示它没有值。nil不能用于非可选的常量和变量,如果要处理缺失情况,应该声明成对应的可选类型.</p>
+<div class="codehilite"><pre>OC中nil指向不存在的对象的指针。swift中nil不是指针它是一个确定的值,用来表示缺失,任何类型的可选状态都可以设置为nil。
+</pre></div>
+
+
+<h3 id="52281bbb55b775e6238b4faea2763f78">可选值的强制解析</h3>
+<p>当确定可选类型确实包含值之后,可以在可选的名字后面加一个感叹号来取值</p>
+<div class="codehilite"><pre>if convertNumber != nil{
+
+    print(&quot;(converNumber!)&quot;)
+
+ }
+</pre></div>
+
+
+<p>使用<code>!</code>获取一个不存在可选值会导致运行时的错误。使用<code>!</code>来强制解析之前,一定要确定可选包含一个非<code>nil</code>的值。</p>
+<h3 id="362a5bcaae88747d270aedbe592dd7aa">可选绑定</h3>
+<p>使用可选绑定来判断可选类型是否包含值,如果包含值就把值赋给一个临时常量或变量。</p>
+<div class="codehilite"><pre>if let actualNumber = Int(possbileNumber){
+    print(actualNumber)
+}else{
+    print(&quot;not integer&quot;)
+}
+</pre></div>
+
+
+<h3 id="871961bb53c7d430a1be996622d506e5">隐式解析可选类型</h3>
+<p>隐式解析可选其实就是一个普通的可选类型(可自动解析的可选类型)，但是可以被当做非可远类型来用，不需要每次都使用解析来获取值。</p>
+<p>把想要用作可选的类型后面的问号改成感叹号来来声明一个隐式解析可选类型。</p>
+<blockquote>
+<p>如果在隐式解析可选类型中没有值的时候尝试取值,一样会触发运行时错误。
+如果一个变量之后可能变成nil请不要使用隐式解析可选。</p>
+</blockquote>
     </div>
     <div id="content-comments">
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/bnote/将safari真正的全屏.html" data-title="利用JS将safari"真正"的全屏" data-url="http://pdhero.com/bnote/将safari真正的全屏.html"></div>
+<div class="ds-thread" data-thread-key="/bnote/swift.html" data-title="swift" data-url="http://pdhero.com/bnote/swift.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -138,14 +243,14 @@ Mou还不打算更新么,ctrl+s一下就转几圈菊花。。</p>
 <div class="niu2-right-container col-md-2">
     <div id="niu2-sidebar-meta" class="niu2-sidebar">
         <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-        <div class="niu2-sidebar-value">2015-05-01 08:05</div>
+        <div class="niu2-sidebar-value">2015-12-29 10:20</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-        <div class="niu2-sidebar-value">2015-05-01 09:35</div>
+        <div class="niu2-sidebar-value">2015-12-25 15:29</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
         <div class="niu2-sidebar-value"><a href="http://pdhero.com/bnote/index.html">笔记</a></div>
         <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
  
-            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/safariquan-ping.html">safari全屏</a><sup>1</sup></div>
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/swift.html">swift</a><sup>1</sup></div>
     </div>
 </div>
 
@@ -155,8 +260,8 @@ Mou还不打算更新么,ctrl+s一下就转几圈菊花。。</p>
             <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
         </div>
         <ul id="niu2-sidebar-toc-list">
-            <li><a href="#content-heading" target="_blank">利用JS将safari"真正"的全屏</a></li>
-            <li><a href='#265aa33d028a9960e0e3a5d6f0064e4b'>整理自V2</a></li><li><a href='#afe367e404261db2377de6e0e70c75a0'>safrai最大化</a></li><li><a href='#7bb08620c50719bc7355faa4a772b880'>加了JS之后全屏的Google</a></li><li><a href='#96641bf3534344897ca84bc9a951a953'>bSetp</a><ul><li><a href='#58abb73e0878d5ffb16628a31361f0a7'>将以下JS代码将入书签收藏</a></li><li><a href='#fb30106bebc04358dc5529a83d03f0f5'>快捷全屏(⌘+1)</a></li></ul></li><li><a href='#251d27be2768a6479ff9111296fc4223'>V2真是个神奇的地方</a></li>
+            <li><a href="#content-heading" target="_blank">swift</a></li>
+            <li><a href='#ddc7d28b7b108cdca9ee7832f7314422'>变量</a></li><li><a href='#3787f6af617176a3f498bc4105c7289e'>基本数据类型</a><ul><li><a href='#87cd879720b68e51d8b03b7e29630ecf'>整型</a></li><li><a href='#db491dc61a030ff6b50ac39c4d8bc06e'>浮点型</a></li><li><a href='#51c4a47321d555f07442c0e6ea9b934e'>类型别名</a></li><li><a href='#97b0b6499334ed889b372513290a2a52'>布尔</a></li><li><a href='#cda9f200088a3396902af2d4b5efb290'>元组</a></li><li><a href='#4fa4f39154d3fc1624099c34182adbfb'>可选类型</a><ul><li><a href='#852438d026c018c4307b916406f98c62'>nil</a></li><li><a href='#52281bbb55b775e6238b4faea2763f78'>可选值的强制解析</a></li><li><a href='#362a5bcaae88747d270aedbe592dd7aa'>可选绑定</a></li><li><a href='#871961bb53c7d430a1be996622d506e5'>隐式解析可选类型</a></li></ul></li></ul></li>
             <li><a href="#content-comments">评论</a></li>
         </ul>
     </div>

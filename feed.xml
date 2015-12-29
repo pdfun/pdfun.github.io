@@ -1,5 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdhero.com/</link><description></description><atom:link href="http://pdhero.com/feed.xml" rel="self"></atom:link><lastBuildDate>Mon, 23 Nov 2015 20:34:00 +0800</lastBuildDate><item><title>那些年掉过的坑</title><link>http://pdhero.com/dlife/those-days-fall-into-holes.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdhero.com/</link><description></description><atom:link href="http://pdhero.com/feed.xml" rel="self"></atom:link><lastBuildDate>Tue, 29 Dec 2015 10:20:00 +0800</lastBuildDate><item><title>swift</title><link>http://pdhero.com/bnote/swift.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;swift才出来的时候看过一遍,忘记了。记下笔记加深印象。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="ddc7d28b7b108cdca9ee7832f7314422"&gt;变量&lt;/h1&gt;
+&lt;p&gt;let 定义一个常量 var 定义一个变量  可以不声明变量类型 变量名可用Unicode字符&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;let f = 70
+
+let f1: Float = 70
+
+let 🐶 = &amp;quot;加班狗&amp;quot;
+
+var s: String = &amp;quot;string&amp;quot;
+
+var red, green, bule: Double
+
+let `int` = &amp;quot;abc&amp;quot;
+print(&amp;quot;swift \(🐶)&amp;quot;)
+print(f, f1, separator: &amp;quot;====&amp;quot;, terminator: &amp;quot;\n&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Notes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;常量与变更名不能包含数学符号,箭头,保留的(或非法的)Unicode字符,-与制表符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也不能以数字开头,但可以在常量与变量的其他地方包含数字&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一量将常量或变量声明为确定的类型,就不能使用相同的名字再次声明,或者改变其存储值的类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时也不能将常量与变量进行互转&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;避免使用关键字来定义变量,一定要使用的时候用 ` 将关键字包围&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="3787f6af617176a3f498bc4105c7289e"&gt;基本数据类型&lt;/h1&gt;
+&lt;h2 id="87cd879720b68e51d8b03b7e29630ecf"&gt;整型&lt;/h2&gt;
+&lt;p&gt;与C相似,swift的提供了8,16,32,64位的有符号和无符号整型。（UInt8...）&lt;/p&gt;
+&lt;p&gt;一般来说无需特别指定.用Int就好,32位平台Int和Int32长度相同;64位平台Int和Int64长度相同.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Int.min Int.max&lt;/code&gt;分别取最大值和最小值.&lt;/p&gt;
+&lt;h2 id="db491dc61a030ff6b50ac39c4d8bc06e"&gt;浮点型&lt;/h2&gt;
+&lt;p&gt;与OC一样,swfit提供了两种&lt;code&gt;Float&lt;/code&gt; &lt;code&gt;Double&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="51c4a47321d555f07442c0e6ea9b934e"&gt;类型别名&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;typealias&lt;/code&gt;关键字    相当于OC的&lt;code&gt;typedef&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="97b0b6499334ed889b372513290a2a52"&gt;布尔&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;终于不是 &lt;code&gt;YES or NO&lt;/code&gt;了&lt;/p&gt;
+&lt;h2 id="cda9f200088a3396902af2d4b5efb290"&gt;元组&lt;/h2&gt;
+&lt;p&gt;元组把多个值组合在一起,每一个值可以是不同的数据类型.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;let http404Error = (404,&amp;quot;Not Found&amp;quot;)
+
+类型为(Int,String)的元组
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;let (statuCode, error) = http404Error
+
+print(statuCode,error)
+
+将元组内容分解成单独的的常量和变量
+
+
+
+let (statuCode,_) = http404Error
+
+print(statuCode,error)
+
+分解的时候忽略的部分用_标记
+
+
+
+print(http404Error.0, http404Error.1)
+可以通过下标来访问
+
+let http200 = (code:200, des:true)
+print(http200.code, http200.des)
+定义元组的时候给元素命名,可以通过名字来取值
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="4fa4f39154d3fc1624099c34182adbfb"&gt;可选类型&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;optionals&lt;/code&gt;来处理可能缺失的情况,可选类型来表示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有值,等于x&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Int?&lt;/code&gt; or &lt;code&gt;optional Int&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="852438d026c018c4307b916406f98c62"&gt;nil&lt;/h3&gt;
+&lt;p&gt;可以给可选变量赋值为nil来表示它没有值。nil不能用于非可选的常量和变量,如果要处理缺失情况,应该声明成对应的可选类型.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;OC中nil指向不存在的对象的指针。swift中nil不是指针它是一个确定的值,用来表示缺失,任何类型的可选状态都可以设置为nil。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="52281bbb55b775e6238b4faea2763f78"&gt;可选值的强制解析&lt;/h3&gt;
+&lt;p&gt;当确定可选类型确实包含值之后,可以在可选的名字后面加一个感叹号来取值&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;if convertNumber != nil{
+
+    print(&amp;quot;(converNumber!)&amp;quot;)
+
+ }
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;获取一个不存在可选值会导致运行时的错误。使用&lt;code&gt;!&lt;/code&gt;来强制解析之前,一定要确定可选包含一个非&lt;code&gt;nil&lt;/code&gt;的值。&lt;/p&gt;
+&lt;h3 id="362a5bcaae88747d270aedbe592dd7aa"&gt;可选绑定&lt;/h3&gt;
+&lt;p&gt;使用可选绑定来判断可选类型是否包含值,如果包含值就把值赋给一个临时常量或变量。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;if let actualNumber = Int(possbileNumber){
+    print(actualNumber)
+}else{
+    print(&amp;quot;not integer&amp;quot;)
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="871961bb53c7d430a1be996622d506e5"&gt;隐式解析可选类型&lt;/h3&gt;
+&lt;p&gt;隐式解析可选其实就是一个普通的可选类型(可自动解析的可选类型)，但是可以被当做非可远类型来用，不需要每次都使用解析来获取值。&lt;/p&gt;
+&lt;p&gt;把想要用作可选的类型后面的问号改成感叹号来来声明一个隐式解析可选类型。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果在隐式解析可选类型中没有值的时候尝试取值,一样会触发运行时错误。
+如果一个变量之后可能变成nil请不要使用隐式解析可选。&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 29 Dec 2015 10:20:00 +0800</pubDate><guid>tag:pdhero.com,2015-12-29:bnote/swift.html</guid><category>swift</category></item><item><title>那些年掉过的坑</title><link>http://pdhero.com/dlife/those-days-fall-into-holes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;时刻紧记着&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
