@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdhero.com/</link><description></description><atom:link href="http://pdhero.com/feeds/pdx.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 29 Dec 2015 10:20:00 +0800</lastBuildDate><item><title>Swift</title><link>http://pdhero.com/bnote/Swift.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdhero.com/</link><description></description><atom:link href="http://pdhero.com/feeds/pdx.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 29 Dec 2015 10:20:00 +0800</lastBuildDate><item><title>Swift</title><link>http://pdhero.com/bnote/Swift-notes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;Swift才出来的时候看过一遍,忘记了。记下笔记加深印象。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="ddc7d28b7b108cdca9ee7832f7314422"&gt;变量&lt;/h1&gt;
@@ -137,7 +137,7 @@ print(http200.code, http200.des)
 
 &lt;h3 id="3df0c47cdc0607e68b466869840f15c4"&gt;半开区间运算符&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;a..&amp;lt;b&lt;/code&gt; 定义一个从a到b但不包括b的区间,称为半区间是因为包含第一个值不包含最后一个值.
-数组的时候用。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 29 Dec 2015 10:20:00 +0800</pubDate><guid>tag:pdhero.com,2015-12-29:bnote/Swift.html</guid><category>Swift</category></item><item><title>那些年掉过的坑</title><link>http://pdhero.com/dlife/those-days-fall-into-holes.html</link><description>&lt;blockquote&gt;
+数组的时候用。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 29 Dec 2015 10:20:00 +0800</pubDate><guid>tag:pdhero.com,2015-12-29:bnote/Swift-notes.html</guid><category>Swift</category></item><item><title>那些年掉过的坑</title><link>http://pdhero.com/dlife/those-days-fall-into-holes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;时刻紧记着&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;

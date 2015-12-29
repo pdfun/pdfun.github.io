@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pdx.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2015-12-29T10:20:00+08:00</updated><entry><title>Swift</title><link href="http://pdhero.com/bnote/Swift.html" rel="alternate"></link><updated>2015-12-29T10:20:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-12-29:bnote/Swift.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pdx.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2015-12-29T10:20:00+08:00</updated><entry><title>Swift</title><link href="http://pdhero.com/bnote/Swift-notes.html" rel="alternate"></link><updated>2015-12-29T10:20:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-12-29:bnote/Swift-notes.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Swift才出来的时候看过一遍,忘记了。记下笔记加深印象。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="ddc7d28b7b108cdca9ee7832f7314422"&gt;变量&lt;/h1&gt;
