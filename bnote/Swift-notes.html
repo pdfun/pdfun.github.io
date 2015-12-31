@@ -53,7 +53,7 @@
                       (3)</a></li>
                <li><a href="http://pdhero.com/bnote/index.html">
                       <i class="icon-pencil"></i>笔记
-                      (8)</a></li>
+                      (9)</a></li>
                <li><a href="http://pdhero.com/dlife/index.html">
                       <i class="icon-coffee"></i>生活
                       (3)</a></li>
@@ -236,6 +236,76 @@ print(http200.code, http200.des)
 <h3 id="3df0c47cdc0607e68b466869840f15c4">半开区间运算符</h3>
 <p><code>a..&lt;b</code> 定义一个从a到b但不包括b的区间,称为半区间是因为包含第一个值不包含最后一个值.
 数组的时候用。</p>
+<h1 id="cc4dd1da7e1a754534215f02fb9ba85d">字符串</h1>
+<h2 id="a6b363bb757dc13cece66cf23648b8cf">拼接</h2>
+<p>直接使用加号</p>
+<div class="codehilite"><pre>print(&quot;今天星期四&quot;+&quot;明天元旦放假啊&quot;)
+</pre></div>
+
+
+<h2 id="706a31e5f14203120576352d0cf8bf97">字符串插值</h2>
+<p>换句话说就是格式化字符串。个人理解是使用<code>\()</code>来占位替换.</p>
+<div class="codehilite"><pre>let tucao = &quot;车牌又要到3W了&quot;
+print(&quot;\(tucao)。要不要离开这个鬼地方&quot;)
+</pre></div>
+
+
+<blockquote>
+<p>插值字符串写在括号中的表达式不能包含非转义反斜线<code>\</code>,并且不能包含回车或换行。</p>
+</blockquote>
+<h2 id="c6009d4f6a2226b5376028d5f296bae5">字符数量</h2>
+<div class="codehilite"><pre>&quot;数量&quot;.characters.count
+</pre></div>
+
+
+<p>在Swift 中，使用可拓展的字符群集作为Character值来连接或改变字符串时，并不一定会更改字符串的字符数量。</p>
+<p>NSString的length和characters.count返回的长度可能不一样。这个得小心了。感觉很复杂。#-_-</p>
+<div class="codehilite"><pre>var word = &quot;cafe&quot;
+print(&quot;the number of characters in \(word) is \(word.characters.count)&quot;)
+word += &quot;\u{301}&quot;
+print(&quot;the number of characters in \(word) is \(word.characters.count)&quot;)
+</pre></div>
+
+
+<h2 id="83f6fff6219e3d2e7f7e857b7d611c24">访问和修改字符串</h2>
+<h3 id="b271e427962758c71e342a2c06df493a">索引</h3>
+<p>Swift的字符串不能用整数做索引。"字符串"[0]会报错<br />
+<code>startIndex</code>属性区取字符串第一个字符的索引。<br />
+<code>endIndex</code>属性获取最后一个字符的后面一个位置的索引.<br />
+(<code>endIndex</code>不能做为一个字符串有的有效下标会越界)。 <br />
+<code>index.predecessor()</code>得到index的前一个索引。<br />
+<code>index.successor()</code>得到index后一个索引。<br />
+<code>startIndex.advancedBy(3)</code>startIndex后面的第三个索引。  </p>
+<div class="codehilite"><pre>print(word[word.startIndex],
+    word[word.endIndex.predecessor()],
+    word[word.startIndex.successor()],
+    word[word.startIndex.advancedBy(3)])
+</pre></div>
+
+
+<p>字符串characters属性的indices属性创建一个包含全部索引Range,用来在一个字符串中访问单个字符</p>
+<div class="codehilite"><pre>for index in word.characters.indices{
+    print(word[index])
+}
+</pre></div>
+
+
+<h3 id="4f72854e51ae690d3d28f8138e0b6fc7">插入和删除</h3>
+<div class="codehilite"><pre>var s = &quot;插入&quot;
+s.insert(&quot;啊&quot;, atIndex: s.endIndex)//插入单个字符
+s.insertContentsOf(&quot;字符串&quot;.characters, at: s.endIndex)//插入字符串
+s.removeAtIndex(s.startIndex)//移除单个
+let range = s.endIndex.advancedBy(-2)..&lt;s.endIndex//移除子串
+s.removeRange(range)//清空字符串
+print(s)
+</pre></div>
+
+
+<h3 id="469e0eee17a884bf97e500fdb0f02182">比较字符串</h3>
+<p>== 前缀/后缀相等</p>
+<div class="codehilite"><pre>var a_ = &quot;字符串1&quot;,b = &quot;字符串2&quot;
+print(a_ == b, a_.hasPrefix(&quot;字符串&quot;),b.hasSuffix(&quot;2&quot;))
+</pre></div>
     </div>
     <div id="content-comments">
 <!-- 多说评论框 start -->
@@ -259,9 +329,9 @@ print(http200.code, http200.des)
 <div class="niu2-right-container col-md-2">
     <div id="niu2-sidebar-meta" class="niu2-sidebar">
         <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-        <div class="niu2-sidebar-value">2015-12-29 10:20</div>
+        <div class="niu2-sidebar-value">2015-12-25 10:20</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-        <div class="niu2-sidebar-value">2015-12-25 17:17</div>
+        <div class="niu2-sidebar-value">2015-12-31 15:17</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
         <div class="niu2-sidebar-value"><a href="http://pdhero.com/bnote/index.html">笔记</a></div>
         <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -277,7 +347,7 @@ print(http200.code, http200.des)
         </div>
         <ul id="niu2-sidebar-toc-list">
             <li><a href="#content-heading" target="_blank">Swift</a></li>
-            <li><a href='#ddc7d28b7b108cdca9ee7832f7314422'>变量</a></li><li><a href='#3787f6af617176a3f498bc4105c7289e'>基本数据类型</a><ul><li><a href='#87cd879720b68e51d8b03b7e29630ecf'>整型</a></li><li><a href='#db491dc61a030ff6b50ac39c4d8bc06e'>浮点型</a></li><li><a href='#51c4a47321d555f07442c0e6ea9b934e'>类型别名</a></li><li><a href='#97b0b6499334ed889b372513290a2a52'>布尔</a></li><li><a href='#cda9f200088a3396902af2d4b5efb290'>元组</a></li><li><a href='#4fa4f39154d3fc1624099c34182adbfb'>可选类型</a><ul><li><a href='#852438d026c018c4307b916406f98c62'>nil</a></li><li><a href='#52281bbb55b775e6238b4faea2763f78'>可选值的强制解析</a></li><li><a href='#362a5bcaae88747d270aedbe592dd7aa'>可选绑定</a></li><li><a href='#871961bb53c7d430a1be996622d506e5'>隐式解析可选类型</a></li></ul></li></ul></li><li><a href='#9cdd4a789b02863f4444c0f68b42d3e3'>运算符</a><ul><li><a href='#dac6cd239b9a9c4cd71fb3d5e2d3fb49'>赋值运算符</a></li><li><a href='#20805b4c0d2cc79d9e7ff7d09649a390'>算术运算符</a></li><li><a href='#f2e73f2c3fc03cacc6bdddeeb584eddc'>求余运算符</a></li><li><a href='#7e1c49378c9ef74fe43f6361b0e1a21e'>空合运算符</a></li><li><a href='#0b9e4c50c1cc94af08df81e22c2f0fd9'>区间运算符</a><ul><li><a href='#737996fad0e733e457a8fe8f0c72004d'>闭区间运算符</a></li><li><a href='#3df0c47cdc0607e68b466869840f15c4'>半开区间运算符</a></li></ul></li></ul></li>
+            <li><a href='#ddc7d28b7b108cdca9ee7832f7314422'>变量</a></li><li><a href='#3787f6af617176a3f498bc4105c7289e'>基本数据类型</a><ul><li><a href='#87cd879720b68e51d8b03b7e29630ecf'>整型</a></li><li><a href='#db491dc61a030ff6b50ac39c4d8bc06e'>浮点型</a></li><li><a href='#51c4a47321d555f07442c0e6ea9b934e'>类型别名</a></li><li><a href='#97b0b6499334ed889b372513290a2a52'>布尔</a></li><li><a href='#cda9f200088a3396902af2d4b5efb290'>元组</a></li><li><a href='#4fa4f39154d3fc1624099c34182adbfb'>可选类型</a><ul><li><a href='#852438d026c018c4307b916406f98c62'>nil</a></li><li><a href='#52281bbb55b775e6238b4faea2763f78'>可选值的强制解析</a></li><li><a href='#362a5bcaae88747d270aedbe592dd7aa'>可选绑定</a></li><li><a href='#871961bb53c7d430a1be996622d506e5'>隐式解析可选类型</a></li></ul></li></ul></li><li><a href='#9cdd4a789b02863f4444c0f68b42d3e3'>运算符</a><ul><li><a href='#dac6cd239b9a9c4cd71fb3d5e2d3fb49'>赋值运算符</a></li><li><a href='#20805b4c0d2cc79d9e7ff7d09649a390'>算术运算符</a></li><li><a href='#f2e73f2c3fc03cacc6bdddeeb584eddc'>求余运算符</a></li><li><a href='#7e1c49378c9ef74fe43f6361b0e1a21e'>空合运算符</a></li><li><a href='#0b9e4c50c1cc94af08df81e22c2f0fd9'>区间运算符</a><ul><li><a href='#737996fad0e733e457a8fe8f0c72004d'>闭区间运算符</a></li><li><a href='#3df0c47cdc0607e68b466869840f15c4'>半开区间运算符</a></li></ul></li></ul></li><li><a href='#cc4dd1da7e1a754534215f02fb9ba85d'>字符串</a><ul><li><a href='#a6b363bb757dc13cece66cf23648b8cf'>拼接</a></li><li><a href='#706a31e5f14203120576352d0cf8bf97'>字符串插值</a></li><li><a href='#c6009d4f6a2226b5376028d5f296bae5'>字符数量</a></li><li><a href='#83f6fff6219e3d2e7f7e857b7d611c24'>访问和修改字符串</a><ul><li><a href='#b271e427962758c71e342a2c06df493a'>索引</a></li><li><a href='#4f72854e51ae690d3d28f8138e0b6fc7'>插入和删除</a></li><li><a href='#469e0eee17a884bf97e500fdb0f02182'>比较字符串</a></li></ul></li></ul></li>
             <li><a href="#content-comments">评论</a></li>
         </ul>
     </div>

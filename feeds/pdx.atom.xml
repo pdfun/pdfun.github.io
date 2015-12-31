@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pdx.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2015-12-29T10:20:00+08:00</updated><entry><title>Swift</title><link href="http://pdhero.com/bnote/Swift-notes.html" rel="alternate"></link><updated>2015-12-29T10:20:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-12-29:bnote/Swift-notes.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pdx.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2015-12-30T16:26:00+08:00</updated><entry><title>用到的一些vim快捷键</title><link href="http://pdhero.com/bnote/vim.html" rel="alternate"></link><updated>2015-12-30T16:26:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-12-30:bnote/vim.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;自用的一些VIM快捷键,主要在 sublime 和Xcode中用&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="vim"></category></entry><entry><title>Swift</title><link href="http://pdhero.com/bnote/Swift-notes.html" rel="alternate"></link><updated>2015-12-25T10:20:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-12-25:bnote/Swift-notes.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Swift才出来的时候看过一遍,忘记了。记下笔记加深印象。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="ddc7d28b7b108cdca9ee7832f7314422"&gt;变量&lt;/h1&gt;
@@ -137,7 +139,77 @@ print(http200.code, http200.des)
 
 &lt;h3 id="3df0c47cdc0607e68b466869840f15c4"&gt;半开区间运算符&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;a..&amp;lt;b&lt;/code&gt; 定义一个从a到b但不包括b的区间,称为半区间是因为包含第一个值不包含最后一个值.
-数组的时候用。&lt;/p&gt;</summary><category term="Swift"></category></entry><entry><title>那些年掉过的坑</title><link href="http://pdhero.com/dlife/those-days-fall-into-holes.html" rel="alternate"></link><updated>2015-11-23T20:34:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-11-23:dlife/those-days-fall-into-holes.html</id><summary type="html">&lt;blockquote&gt;
+数组的时候用。&lt;/p&gt;
+&lt;h1 id="cc4dd1da7e1a754534215f02fb9ba85d"&gt;字符串&lt;/h1&gt;
+&lt;h2 id="a6b363bb757dc13cece66cf23648b8cf"&gt;拼接&lt;/h2&gt;
+&lt;p&gt;直接使用加号&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;print(&amp;quot;今天星期四&amp;quot;+&amp;quot;明天元旦放假啊&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="706a31e5f14203120576352d0cf8bf97"&gt;字符串插值&lt;/h2&gt;
+&lt;p&gt;换句话说就是格式化字符串。个人理解是使用&lt;code&gt;\()&lt;/code&gt;来占位替换.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;let tucao = &amp;quot;车牌又要到3W了&amp;quot;
+print(&amp;quot;\(tucao)。要不要离开这个鬼地方&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;插值字符串写在括号中的表达式不能包含非转义反斜线&lt;code&gt;\&lt;/code&gt;,并且不能包含回车或换行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="c6009d4f6a2226b5376028d5f296bae5"&gt;字符数量&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;quot;数量&amp;quot;.characters.count
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在Swift 中，使用可拓展的字符群集作为Character值来连接或改变字符串时，并不一定会更改字符串的字符数量。&lt;/p&gt;
+&lt;p&gt;NSString的length和characters.count返回的长度可能不一样。这个得小心了。感觉很复杂。#-_-&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;var word = &amp;quot;cafe&amp;quot;
+print(&amp;quot;the number of characters in \(word) is \(word.characters.count)&amp;quot;)
+word += &amp;quot;\u{301}&amp;quot;
+print(&amp;quot;the number of characters in \(word) is \(word.characters.count)&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="83f6fff6219e3d2e7f7e857b7d611c24"&gt;访问和修改字符串&lt;/h2&gt;
+&lt;h3 id="b271e427962758c71e342a2c06df493a"&gt;索引&lt;/h3&gt;
+&lt;p&gt;Swift的字符串不能用整数做索引。"字符串"[0]会报错&lt;br /&gt;
+&lt;code&gt;startIndex&lt;/code&gt;属性区取字符串第一个字符的索引。&lt;br /&gt;
+&lt;code&gt;endIndex&lt;/code&gt;属性获取最后一个字符的后面一个位置的索引.&lt;br /&gt;
+(&lt;code&gt;endIndex&lt;/code&gt;不能做为一个字符串有的有效下标会越界)。 &lt;br /&gt;
+&lt;code&gt;index.predecessor()&lt;/code&gt;得到index的前一个索引。&lt;br /&gt;
+&lt;code&gt;index.successor()&lt;/code&gt;得到index后一个索引。&lt;br /&gt;
+&lt;code&gt;startIndex.advancedBy(3)&lt;/code&gt;startIndex后面的第三个索引。  &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;print(word[word.startIndex],
+    word[word.endIndex.predecessor()],
+    word[word.startIndex.successor()],
+    word[word.startIndex.advancedBy(3)])
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;字符串characters属性的indices属性创建一个包含全部索引Range,用来在一个字符串中访问单个字符&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;for index in word.characters.indices{
+    print(word[index])
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="4f72854e51ae690d3d28f8138e0b6fc7"&gt;插入和删除&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;var s = &amp;quot;插入&amp;quot;
+s.insert(&amp;quot;啊&amp;quot;, atIndex: s.endIndex)//插入单个字符
+s.insertContentsOf(&amp;quot;字符串&amp;quot;.characters, at: s.endIndex)//插入字符串
+s.removeAtIndex(s.startIndex)//移除单个
+let range = s.endIndex.advancedBy(-2)..&amp;lt;s.endIndex//移除子串
+s.removeRange(range)//清空字符串
+print(s)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="469e0eee17a884bf97e500fdb0f02182"&gt;比较字符串&lt;/h3&gt;
+&lt;p&gt;== 前缀/后缀相等&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;var a_ = &amp;quot;字符串1&amp;quot;,b = &amp;quot;字符串2&amp;quot;
+print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot;2&amp;quot;))
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Swift"></category></entry><entry><title>那些年掉过的坑</title><link href="http://pdhero.com/dlife/those-days-fall-into-holes.html" rel="alternate"></link><updated>2015-11-23T20:34:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-11-23:dlife/those-days-fall-into-holes.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;时刻紧记着&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
