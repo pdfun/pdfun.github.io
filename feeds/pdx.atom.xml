@@ -330,12 +330,7 @@ print(s)
 &lt;p&gt;== 前缀/后缀相等&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;var a_ = &amp;quot;字符串1&amp;quot;,b = &amp;quot;字符串2&amp;quot;
 print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot;2&amp;quot;))
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Swift"></category></entry><entry><title>那些年掉过的坑</title><link href="http://pdhero.com/dlife/those-days-fall-into-holes.html" rel="alternate"></link><updated>2015-11-23T20:34:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-11-23:dlife/those-days-fall-into-holes.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;时刻紧记着&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;一步一步来，分割成一点点来。不要觉得你狠牛B，能一下子就能把所有逻辑考虑到，都是一步步加上来的。否则，只会越来越来乱，越来越急燥，代码最后像坨屎一样，到自己到理不清，只能推倒重来。浪费的还是你的时间。&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="holes"></category></entry><entry><title>Mac下自用的一些命令</title><link href="http://pdhero.com/bnote/mac-cmd-notes.html" rel="alternate"></link><updated>2015-10-28T11:12:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-10-28:bnote/mac-cmd-notes.html</id><summary type="html">&lt;blockquote&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Swift"></category></entry><entry><title>Mac下自用的一些命令</title><link href="http://pdhero.com/bnote/mac-cmd-notes.html" rel="alternate"></link><updated>2015-10-28T11:12:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-10-28:bnote/mac-cmd-notes.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;整理下经常用到的一些命令。省得每次出问题以后都要重新搜索。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="d5135420e2dbee4c3f1a597639c5b2fa"&gt;link sublime to  Terminal&lt;/h2&gt;
