@@ -66,9 +66,63 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;p&gt;&lt;a href="http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/"&gt;http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CCLuaObjcBridge&lt;/code&gt;堪称&lt;code&gt;cocos2d-x Lua&lt;/code&gt;游戏开发的神器 ^_^(作者原话)）。&lt;code&gt;CCLuaObjcBridge&lt;/code&gt; 已经集成到&lt;a href="https://github.com/chukong/quick-cocos2d-x"&gt;quick-cocos2d-x&lt;/a&gt;中，从&lt;code&gt;Objective-C&lt;/code&gt; 调用 &lt;code&gt;Lua&lt;/code&gt; 也非常简单灵活。&lt;/p&gt;
 &lt;h1 id="bf2c44e6fc09515648b91b1bb4ec3f5f"&gt;Flash&lt;/h1&gt;
-&lt;p&gt;待续。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 05 Jan 2016 17:31:08 +0800</pubDate><guid>tag:pdhero.com,2016-01-05:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</guid><category>iOS SDK Integration</category></item><item><title>用到的一些vim快捷键</title><link>http://pdhero.com/bnote/vim.html</link><description>&lt;blockquote&gt;
-&lt;p&gt;自用的一些VIM快捷键,主要在 sublime 和Xcode中用&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Wed, 30 Dec 2015 16:26:00 +0800</pubDate><guid>tag:pdhero.com,2015-12-30:bnote/vim.html</guid><category>vim</category></item><item><title>Swift</title><link>http://pdhero.com/bnote/Swift-notes.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;待续。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 05 Jan 2016 17:31:08 +0800</pubDate><guid>tag:pdhero.com,2016-01-05:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</guid><category>iOS SDK Integration</category></item><item><title>用到的一些vim快捷键</title><link>http://pdhero.com/bnote/vim-notes.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;记下常用的一些VIM快捷键&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;平时用Xcode和Sublime比较多。Xcode使用插件&lt;a href="https://github.com/XVimProject/XVim"&gt;xvim&lt;/a&gt;,sublime直接改下配置文件就有&lt;code&gt;vim&lt;/code&gt;模式了.&lt;/p&gt;
+&lt;h1 id="7653297de32f34fdec0dd0653aebf358"&gt;跳转&lt;/h1&gt;
+&lt;p&gt;跳转到指定行: 行号+gg,比如:100gg跳转到第100行.
+跳转到最后一行:shift+g.
+跳转到第一行:g.
+跳转到行尾:$(shift+4).
+跳转到行首:^(shift+6).
+跳转某个字母:ta跳转到下一个a前面,fa跳转到下一个a(小写的向前,大写的向后).
+跳转到单词:w向前跳转到下一个单词,b向后跳转到下一个单词,e跳转到单词的结束.
+函数体跳转:{}&lt;/p&gt;
+&lt;h1 id="79d3abe929f67f0644a78bf32adb3a89"&gt;复制&lt;/h1&gt;
+&lt;p&gt;复制整行:yy
+复制一个单词:yw
+复制到文档尾:yG&lt;/p&gt;
+&lt;h1 id="2f4aaddde33c9b93c36fd2503f3d122b"&gt;删除&lt;/h1&gt;
+&lt;p&gt;删除也可以叫剪切,删除时会复制选定内容到缓冲区.
+删除整行:dd
+删除某个单词:dw&lt;/p&gt;
+&lt;h1 id="eafbece1016a6af76cce466e55ad9f00"&gt;粘贴&lt;/h1&gt;
+&lt;p&gt;p&lt;/p&gt;
+&lt;h1 id="fad7c8a21fe3d7b3eb1db3d8a3212503"&gt;选中&lt;/h1&gt;
+&lt;p&gt;先v再移动到相应位置进行选中
+选中某个单词:viw或者vaw
+选中当前行:V&lt;/p&gt;
+&lt;h1 id="1d95b75b8b084e242293bf54ff992010"&gt;大小写&lt;/h1&gt;
+&lt;p&gt;大小写转换前先选中
+u:当前选中的小写
+U:当前选的大写
+某个单词大写:先选中 viw 再gU&lt;/p&gt;
+&lt;h1 id="632ca845b6775b8a63991380886b25cb"&gt;组合应用&lt;/h1&gt;
+&lt;h2 id="d85d743375b003f034e69da688867837"&gt;多行注释&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ctrl+v&lt;/li&gt;
+&lt;li&gt;方向键j or k选中多行&lt;/li&gt;
+&lt;li&gt;大写I&lt;/li&gt;
+&lt;li&gt;插入注释符,比如//&lt;/li&gt;
+&lt;li&gt;esc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="f487d1ec492bbf209340222c0608ee56"&gt;取消多行注释&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ctrl+v&lt;/li&gt;
+&lt;li&gt;l向选中,比如://要选中2列&lt;/li&gt;
+&lt;li&gt;j or k&lt;/li&gt;
+&lt;li&gt;d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="dc5d07a1867b1c0b57153afe054d0332"&gt;查找&lt;/h1&gt;
+&lt;p&gt;/ 向前查找
+? 向后查找
+比如:/xx回车 从当前位置向后查找xx
+n继续查找 N反向查找&lt;/p&gt;
+&lt;h1 id="25f9c7fa3b50aebe5125112ac1187777"&gt;总结&lt;/h1&gt;
+&lt;p&gt;其实记住 &lt;code&gt;gydpuvwb&lt;/code&gt; 这些基本的就行了。用久了组合什么的稍微想下就知道了。
+当然了我也只是说说而已😂
+想把这些经常用　组合成个单词,搜索了大脑词量太小了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Wed, 30 Dec 2015 16:26:00 +0800</pubDate><guid>tag:pdhero.com,2015-12-30:bnote/vim-notes.html</guid><category>vim</category></item><item><title>Swift</title><link>http://pdhero.com/bnote/Swift-notes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;Swift才出来的时候看过一遍,忘记了。记下笔记加深印象。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="ddc7d28b7b108cdca9ee7832f7314422"&gt;变量&lt;/h1&gt;

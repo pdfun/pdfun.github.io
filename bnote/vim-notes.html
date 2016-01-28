@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
     <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
 
-    <link rel="canonical" href="http://pdhero.com/bnote/vim.html"/>
+    <link rel="canonical" href="http://pdhero.com/bnote/vim-notes.html"/>
     
     <script type="text/javascript">window.onload=function(){};</script>
     <!--[if lt IE 9]>
@@ -98,12 +98,66 @@
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
     <div id="niu2-main-content">
         <blockquote>
-<p>自用的一些VIM快捷键,主要在 sublime 和Xcode中用</p>
+<p>记下常用的一些VIM快捷键</p>
 </blockquote>
+<p>平时用Xcode和Sublime比较多。Xcode使用插件<a href="https://github.com/XVimProject/XVim">xvim</a>,sublime直接改下配置文件就有<code>vim</code>模式了.</p>
+<h1 id="7653297de32f34fdec0dd0653aebf358">跳转</h1>
+<p>跳转到指定行: 行号+gg,比如:100gg跳转到第100行.
+跳转到最后一行:shift+g.
+跳转到第一行:g.
+跳转到行尾:$(shift+4).
+跳转到行首:^(shift+6).
+跳转某个字母:ta跳转到下一个a前面,fa跳转到下一个a(小写的向前,大写的向后).
+跳转到单词:w向前跳转到下一个单词,b向后跳转到下一个单词,e跳转到单词的结束.
+函数体跳转:{}</p>
+<h1 id="79d3abe929f67f0644a78bf32adb3a89">复制</h1>
+<p>复制整行:yy
+复制一个单词:yw
+复制到文档尾:yG</p>
+<h1 id="2f4aaddde33c9b93c36fd2503f3d122b">删除</h1>
+<p>删除也可以叫剪切,删除时会复制选定内容到缓冲区.
+删除整行:dd
+删除某个单词:dw</p>
+<h1 id="eafbece1016a6af76cce466e55ad9f00">粘贴</h1>
+<p>p</p>
+<h1 id="fad7c8a21fe3d7b3eb1db3d8a3212503">选中</h1>
+<p>先v再移动到相应位置进行选中
+选中某个单词:viw或者vaw
+选中当前行:V</p>
+<h1 id="1d95b75b8b084e242293bf54ff992010">大小写</h1>
+<p>大小写转换前先选中
+u:当前选中的小写
+U:当前选的大写
+某个单词大写:先选中 viw 再gU</p>
+<h1 id="632ca845b6775b8a63991380886b25cb">组合应用</h1>
+<h2 id="d85d743375b003f034e69da688867837">多行注释</h2>
+<ul>
+<li>ctrl+v</li>
+<li>方向键j or k选中多行</li>
+<li>大写I</li>
+<li>插入注释符,比如//</li>
+<li>esc</li>
+</ul>
+<h2 id="f487d1ec492bbf209340222c0608ee56">取消多行注释</h2>
+<ul>
+<li>ctrl+v</li>
+<li>l向选中,比如://要选中2列</li>
+<li>j or k</li>
+<li>d</li>
+</ul>
+<h1 id="dc5d07a1867b1c0b57153afe054d0332">查找</h1>
+<p>/ 向前查找
+? 向后查找
+比如:/xx回车 从当前位置向后查找xx
+n继续查找 N反向查找</p>
+<h1 id="25f9c7fa3b50aebe5125112ac1187777">总结</h1>
+<p>其实记住 <code>gydpuvwb</code> 这些基本的就行了。用久了组合什么的稍微想下就知道了。
+当然了我也只是说说而已😂
+想把这些经常用　组合成个单词,搜索了大脑词量太小了。</p>
     </div>
     <div id="content-comments">
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/bnote/vim.html" data-title="用到的一些vim快捷键" data-url="http://pdhero.com/bnote/vim.html"></div>
+<div class="ds-thread" data-thread-key="/bnote/vim-notes.html" data-title="用到的一些vim快捷键" data-url="http://pdhero.com/bnote/vim-notes.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -125,7 +179,7 @@
         <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
         <div class="niu2-sidebar-value">2015-12-30 16:26</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-        <div class="niu2-sidebar-value">2015-12-30 17:30</div>
+        <div class="niu2-sidebar-value">2016-01-28 09:46</div>
         <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
         <div class="niu2-sidebar-value"><a href="http://pdhero.com/bnote/index.html">笔记</a></div>
         <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -141,7 +195,7 @@
         </div>
         <ul id="niu2-sidebar-toc-list">
             <li><a href="#content-heading" target="_blank">用到的一些vim快捷键</a></li>
-            
+            <li><a href='#7653297de32f34fdec0dd0653aebf358'>跳转</a></li><li><a href='#79d3abe929f67f0644a78bf32adb3a89'>复制</a></li><li><a href='#2f4aaddde33c9b93c36fd2503f3d122b'>删除</a></li><li><a href='#eafbece1016a6af76cce466e55ad9f00'>粘贴</a></li><li><a href='#fad7c8a21fe3d7b3eb1db3d8a3212503'>选中</a></li><li><a href='#1d95b75b8b084e242293bf54ff992010'>大小写</a></li><li><a href='#632ca845b6775b8a63991380886b25cb'>组合应用</a><ul><li><a href='#d85d743375b003f034e69da688867837'>多行注释</a></li><li><a href='#f487d1ec492bbf209340222c0608ee56'>取消多行注释</a></li></ul></li><li><a href='#dc5d07a1867b1c0b57153afe054d0332'>查找</a></li><li><a href='#25f9c7fa3b50aebe5125112ac1187777'>总结</a></li>
             <li><a href="#content-comments">评论</a></li>
         </ul>
     </div>
