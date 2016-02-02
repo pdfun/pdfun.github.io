@@ -162,12 +162,19 @@
 
 <p>每个控件的<code>appearance</code>都可以去看下。有时候能省很多事。不用一个个的单独设置。</p>
 <ul>
-<li>tableView上下拉刷新崩溃
-上下刷新频繁操作时数组很容易越界。之前为了解决这个问一直很头大。判断上拉没结束不让下拉，越界的时候刷新tableView之类的。偶尔一次把<code>tableView reload</code>写在了结束刷上下拉刷新方法之前,竟然不崩溃。<blockquote>
+<li>
+<p>tableView上下拉刷新崩溃
+上下刷新频繁操作时数组很容易越界。之前为了解决这个问一直很头大。判断上拉没结束不让下拉，越界的时候刷新tableView之类的。偶尔一次把<code>tableView reload</code>写在了结束刷上下拉刷新方法之前,竟然不崩溃。</p>
+<blockquote>
 <p>tableView数据源变化之后尽可能早的刷新tableView,这样数组越界的可能性就会降低很多。</p>
 </blockquote>
 </li>
+<li>
+<p><code>Xcode</code>archive之后上传报错</p>
+</li>
 </ul>
+<p><code>ERROR ITMS-90207: "Invalid Bundle. The bundle at 'example.app' does not contain a bundle executable</code></p>
+<p>用<code>vi</code>打开<code>Info.plist</code>检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。</p>
     </div>
     <div id="content-comments">
 <!-- 多说评论框 start -->
