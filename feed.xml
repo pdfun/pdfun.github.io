@@ -414,7 +414,7 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;li&gt;&lt;code&gt;R&lt;/code&gt; 表示右边,&lt;code&gt;L&lt;/code&gt;表示左边,比如OPTION_R =&amp;gt; 左边的Option&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;MINUS&lt;/code&gt;=&amp;gt;&lt;code&gt;-&lt;/code&gt;  &lt;code&gt;EQUAL&lt;/code&gt; =&amp;gt;&lt;code&gt;=&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;更全的就看&lt;a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data"&gt;KeyCode.data&lt;/a&gt;了&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Mon, 14 Sep 2015 10:37:00 +0800</pubDate><guid>tag:pdhero.com,2015-09-14:dlife/HHKB-Function-Key-With-Karabiner.html</guid><category>HHKB</category><category>Karabiner</category></item><item><title>iOS做项目积累的一些小技巧</title><link>http://pdhero.com/bnote/iOS-notes.html</link><description>&lt;blockquote&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Mon, 14 Sep 2015 10:37:00 +0800</pubDate><guid>tag:pdhero.com,2015-09-14:dlife/HHKB-Function-Key-With-Karabiner.html</guid><category>HHKB</category><category>Karabiner</category></item><item><title>iOS notes</title><link>http://pdhero.com/bnote/iOS-notes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;大部分来自&lt;a href="http://stackoverflow.com"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
@@ -491,7 +491,7 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;ERROR ITMS-90207: "Invalid Bundle. The bundle at 'example.app' does not contain a bundle executable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;用&lt;code&gt;vi&lt;/code&gt;打开&lt;code&gt;Info.plist&lt;/code&gt;检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 29 Aug 2015 14:58:00 +0800</pubDate><guid>tag:pdhero.com,2015-08-29:bnote/iOS-notes.html</guid><category>iOS Develop</category></item><item><title>我的常用Mac App</title><link>http://pdhero.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;用&lt;code&gt;vi&lt;/code&gt;打开&lt;code&gt;Info.plist&lt;/code&gt;检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 29 Aug 2015 14:58:00 +0800</pubDate><guid>tag:pdhero.com,2015-08-29:bnote/iOS-notes.html</guid><category>iOS</category></item><item><title>我的常用Mac App</title><link>http://pdhero.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;8月貌似一篇博客没写。记录下我用一的一些Mac app。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Alfred 2&lt;/p&gt;
