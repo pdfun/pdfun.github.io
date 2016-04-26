@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdhero.com/</link><description></description><atom:link href="http://pdhero.com/feed.xml" rel="self"></atom:link><lastBuildDate>Tue, 05 Jan 2016 17:31:08 +0800</lastBuildDate><item><title>Unity3d.Cocos2dx.Flash游戏接入iOS SDK</title><link>http://pdhero.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdhero.com/</link><description></description><atom:link href="http://pdhero.com/feed.xml" rel="self"></atom:link><lastBuildDate>Tue, 23 Feb 2016 20:17:03 +0800</lastBuildDate><item><title>Unity3d.Cocos2dx.Flash游戏接入iOS SDK</title><link>http://pdhero.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;
@@ -66,7 +66,7 @@ const char * ccParamToken = [paramToken UTF8String];
 &lt;p&gt;&lt;a href="http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/"&gt;http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CCLuaObjcBridge&lt;/code&gt;堪称&lt;code&gt;cocos2d-x Lua&lt;/code&gt;游戏开发的神器 ^_^(作者原话)）。&lt;code&gt;CCLuaObjcBridge&lt;/code&gt; 已经集成到&lt;a href="https://github.com/chukong/quick-cocos2d-x"&gt;quick-cocos2d-x&lt;/a&gt;中，从&lt;code&gt;Objective-C&lt;/code&gt; 调用 &lt;code&gt;Lua&lt;/code&gt; 也非常简单灵活。&lt;/p&gt;
 &lt;h1 id="bf2c44e6fc09515648b91b1bb4ec3f5f"&gt;Flash&lt;/h1&gt;
-&lt;p&gt;待续。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 05 Jan 2016 17:31:08 +0800</pubDate><guid>tag:pdhero.com,2016-01-05:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</guid><category>iOS SDK Integration</category></item><item><title>vim notes</title><link>http://pdhero.com/bnote/vim-notes.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;待续。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 23 Feb 2016 20:17:03 +0800</pubDate><guid>tag:pdhero.com,2016-02-23:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</guid><category>iOS SDK Integration</category></item><item><title>vim notes</title><link>http://pdhero.com/bnote/vim-notes.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;记下常用的一些VIM快捷键&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;平时用Xcode和Sublime比较多。Xcode使用插件&lt;a href="https://github.com/XVimProject/XVim"&gt;xvim&lt;/a&gt;,sublime直接改下配置文件就有&lt;code&gt;vim&lt;/code&gt;模式了.&lt;/p&gt;
@@ -491,7 +491,11 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;ERROR ITMS-90207: "Invalid Bundle. The bundle at 'example.app' does not contain a bundle executable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;用&lt;code&gt;vi&lt;/code&gt;打开&lt;code&gt;Info.plist&lt;/code&gt;检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 29 Aug 2015 14:58:00 +0800</pubDate><guid>tag:pdhero.com,2015-08-29:bnote/iOS-notes.html</guid><category>iOS</category></item><item><title>我的常用Mac App</title><link>http://pdhero.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;用&lt;code&gt;vi&lt;/code&gt;打开&lt;code&gt;Info.plist&lt;/code&gt;检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在UILabel的text后面增加一些空格,并右对齐.
+右对齐后空格无法显示。&lt;code&gt;iOS7&lt;/code&gt;+的UILabel会自动将text行尾的空白符全部去除。半角空格&lt;code&gt;\0x20&lt;/code&gt;和制表符&lt;code&gt;\t&lt;/code&gt;除外。在text后面追加这两个符号即可。&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 29 Aug 2015 14:58:00 +0800</pubDate><guid>tag:pdhero.com,2015-08-29:bnote/iOS-notes.html</guid><category>iOS</category></item><item><title>我的常用Mac App</title><link>http://pdhero.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;8月貌似一篇博客没写。记录下我用一的一些Mac app。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Alfred 2&lt;/p&gt;

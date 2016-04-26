@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pdx.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2016-01-05T17:31:08+08:00</updated><entry><title>Unity3d.Cocos2dx.Flash游戏接入iOS SDK</title><link href="http://pdhero.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html" rel="alternate"></link><updated>2016-01-05T17:31:08+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2016-01-05:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pdx</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pdx.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2016-02-23T20:17:03+08:00</updated><entry><title>Unity3d.Cocos2dx.Flash游戏接入iOS SDK</title><link href="http://pdhero.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html" rel="alternate"></link><updated>2016-02-23T20:17:03+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2016-02-23:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;
@@ -491,7 +491,11 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;ERROR ITMS-90207: "Invalid Bundle. The bundle at 'example.app' does not contain a bundle executable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;用&lt;code&gt;vi&lt;/code&gt;打开&lt;code&gt;Info.plist&lt;/code&gt;检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。&lt;/p&gt;</summary><category term="iOS"></category></entry><entry><title>我的常用Mac App</title><link href="http://pdhero.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-08-25:bnote/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;用&lt;code&gt;vi&lt;/code&gt;打开&lt;code&gt;Info.plist&lt;/code&gt;检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在UILabel的text后面增加一些空格,并右对齐.
+右对齐后空格无法显示。&lt;code&gt;iOS7&lt;/code&gt;+的UILabel会自动将text行尾的空白符全部去除。半角空格&lt;code&gt;\0x20&lt;/code&gt;和制表符&lt;code&gt;\t&lt;/code&gt;除外。在text后面追加这两个符号即可。&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="iOS"></category></entry><entry><title>我的常用Mac App</title><link href="http://pdhero.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-08-25:bnote/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;8月貌似一篇博客没写。记录下我用一的一些Mac app。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Alfred 2&lt;/p&gt;

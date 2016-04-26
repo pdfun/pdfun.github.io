@@ -175,6 +175,10 @@
 </ul>
 <p><code>ERROR ITMS-90207: "Invalid Bundle. The bundle at 'example.app' does not contain a bundle executable</code></p>
 <p>用<code>vi</code>打开<code>Info.plist</code>检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。</p>
+<ul>
+<li>在UILabel的text后面增加一些空格,并右对齐.
+右对齐后空格无法显示。<code>iOS7</code>+的UILabel会自动将text行尾的空白符全部去除。半角空格<code>\0x20</code>和制表符<code>\t</code>除外。在text后面追加这两个符号即可。</li>
+</ul>
     </div>
     <div id="content-comments">
 <!-- 多说评论框 start -->
