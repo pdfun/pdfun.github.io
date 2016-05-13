@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdhero.com/</link><description></description><atom:link href="http://pdhero.com/feeds/pdx.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 23 Feb 2016 20:17:03 +0800</lastBuildDate><item><title>Unity3d.Cocos2dx.Flash游戏接入iOS SDK</title><link>http://pdhero.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pdx</title><link>http://pdhero.com/</link><description></description><atom:link href="http://pdhero.com/feeds/pdx.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 13 May 2016 15:00:00 +0800</lastBuildDate><item><title>iOS微信多图分享到朋友圈</title><link>http://pdhero.com/acode/iOS%E5%BE%AE%E4%BF%A1%E5%A4%9A%E5%9B%BE%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%AB%E5%88%B0%E6%9C%8B%E5%8F%8B%E5%9C%88.html</link><description>&lt;p&gt;iOS系统分享多张图片到微信朋友圈&lt;/p&gt;
+&lt;h2 id="b3a139f3f6e01f97d2a9848454a93f19"&gt;微信分享多张图片到微信朋圈&lt;/h2&gt;
+&lt;p&gt;最近有个需求，要分享多张图片到微信朋友圈。导入微信SDK,看了下微信的接口,各种限制，根本没办法搞。BOSS一定要实现，没办法只能折腾了。
+最后通过系统级别的分享&lt;code&gt;UIActivityViewController&lt;/code&gt;来实现了这个功能。&lt;/p&gt;
+&lt;h2 id="f07ab974460fc58edc38aa8b7a41b9e9"&gt;UIActivityViewController&lt;/h2&gt;
+&lt;p&gt;这个类很简单头文件总共也就几个初始化方法和回调。支持6.0以上的系统。初始化然后弹出视图就OK了。直接上代码了。&lt;/p&gt;
+&lt;h2 id="ca0dbad92a874b2f69b549293387925e"&gt;Code&lt;/h2&gt;
+&lt;h3 id="19453cab0dfbbc578b0f79f85e4ee499"&gt;微信SDK的一些设置就不多说了。&lt;/h3&gt;
+&lt;h3 id="b8b5d264f8938bc020ee54dc1fe3d27f"&gt;分享到微信的部分代码&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showHUD&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="bp"&gt;UIPasteboard&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;generalPasteboard&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;微信多图分享到朋友圈&amp;quot;&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;imageCache&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;SDImageCache&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SDImageCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sharedImageCache&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;imageArr&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="nb"&gt;AnyObject&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;imageUrl&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataArr&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;imagepath&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;String&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;imageCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;defaultCachePathForKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;imageUrl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stringValue&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="bp"&gt;NSFileManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;defaultManager&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;fileExistsAtPath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;imagepath&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;imageArr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;NSURL&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kd"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fileURLWithPath&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;imagepath&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+ &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;activityView&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;UIActivityViewController&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;UIActivityViewController&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kd"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;activityItems&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;imageArr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;applicationActivities&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+ &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hideHUDWithCompletionMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;分享的内容已经复制到粘贴板&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;finishedHandler&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+     &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;navigationController&lt;/span&gt;&lt;span class="p"&gt;?.&lt;/span&gt;&lt;span class="n"&gt;presentViewController&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;activityView&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;animated&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;completion&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+ &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="c5eca45d461382d648c77f6df4e9fd15"&gt;代码说明&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;dataArr是一个储存图片的数组&lt;/li&gt;
+&lt;li&gt;使用了&lt;code&gt;SDWebImage&lt;/code&gt;来显示图片就没另外写图片下载功能。分享的时候直接取&lt;code&gt;SDWebImageView&lt;/code&gt;图片缓存&lt;/li&gt;
+&lt;li&gt;试了好多次&lt;code&gt;activityItems&lt;/code&gt;里面的元素为&lt;code&gt;UIImage&lt;/code&gt;或者&lt;code&gt;NSURL&lt;/code&gt;的时候经常失败。只能分享一次，重新打开App后才能继续分享.从本地沙盒读到图片这样成功率最高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="ee0d63e36aeca19c348ec418af737159"&gt;存在的问题&lt;/h3&gt;
+&lt;p&gt;没办法添加文字。暂时能通过复制粘贴的方式实现。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在&lt;code&gt;Swift&lt;/code&gt;出3.0前又重新体验了下。比&lt;code&gt;Objective C&lt;/code&gt;写起来要爽。&lt;code&gt;Swift&lt;/code&gt;从精通到重新入门.😬😰&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Fri, 13 May 2016 15:00:00 +0800</pubDate><guid>tag:pdhero.com,2016-05-13:acode/iOS微信多图分享到享到朋友圈.html</guid></item><item><title>Unity3d.Cocos2dx.Flash游戏接入iOS SDK</title><link>http://pdhero.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;
@@ -495,7 +531,7 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;ul&gt;
 &lt;li&gt;在UILabel的text后面增加一些空格,并右对齐.
 右对齐后空格无法显示。&lt;code&gt;iOS7&lt;/code&gt;+的UILabel会自动将text行尾的空白符全部去除。半角空格&lt;code&gt;\0x20&lt;/code&gt;和制表符&lt;code&gt;\t&lt;/code&gt;除外。在text后面追加这两个符号即可。&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 29 Aug 2015 14:58:00 +0800</pubDate><guid>tag:pdhero.com,2015-08-29:bnote/iOS-notes.html</guid><category>iOS</category></item><item><title>我的常用Mac App</title><link>http://pdhero.com/bnote/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html</link><description>&lt;blockquote&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Sat, 29 Aug 2015 14:58:00 +0800</pubDate><guid>tag:pdhero.com,2015-08-29:bnote/iOS-notes.html</guid><category>iOS</category></item><item><title>我的常用Mac App</title><link>http://pdhero.com/dlife/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;8月貌似一篇博客没写。记录下我用一的一些Mac app。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Alfred 2&lt;/p&gt;
@@ -503,17 +539,19 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;p&gt;Dash&lt;/p&gt;
 &lt;p&gt;Evernote&lt;/p&gt;
 &lt;p&gt;WizNote&lt;/p&gt;
-&lt;p&gt;Mou&lt;/p&gt;
+&lt;p&gt;Quiver&lt;/p&gt;
+&lt;p&gt;MWeb&lt;/p&gt;
 &lt;p&gt;PDF Export&lt;/p&gt;
 &lt;p&gt;Monosnap&lt;/p&gt;
 &lt;p&gt;SourceTree&lt;/p&gt;
 &lt;p&gt;Sublime&lt;/p&gt;
 &lt;p&gt;Paw&lt;/p&gt;
 &lt;p&gt;Fantastical&lt;/p&gt;
-&lt;p&gt;Pasteasy&lt;/p&gt;
 &lt;p&gt;Sketch&lt;/p&gt;
 &lt;p&gt;Wireshark&lt;/p&gt;
-&lt;p&gt;sqlitebrowser&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 25 Aug 2015 20:22:00 +0800</pubDate><guid>tag:pdhero.com,2015-08-25:bnote/我的mac常用app.html</guid><category>Mac</category></item><item><title>Cannot generate iOS App archive in xcode</title><link>http://pdhero.com/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</link><description>&lt;blockquote&gt;
+&lt;p&gt;Burpsuite_free&lt;/p&gt;
+&lt;p&gt;DropBox&lt;/p&gt;
+&lt;p&gt;坚果云&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">pdx</dc:creator><pubDate>Tue, 25 Aug 2015 20:22:00 +0800</pubDate><guid>tag:pdhero.com,2015-08-25:dlife/我的mac常用app.html</guid><category>Mac</category></item><item><title>Cannot generate iOS App archive in xcode</title><link>http://pdhero.com/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;Cannot generate iOS App archive in xcode&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id="e678f2cc8303d18a894f8be0f9588fe7"&gt;Xcode archive&lt;/h4&gt;
