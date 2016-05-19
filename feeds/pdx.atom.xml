@@ -35,74 +35,7 @@
 &lt;p&gt;没办法添加文字。暂时能通过复制粘贴的方式实现。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在&lt;code&gt;Swift&lt;/code&gt;出3.0前又重新体验了下。比&lt;code&gt;Objective C&lt;/code&gt;写起来要爽。&lt;code&gt;Swift&lt;/code&gt;从精通到重新入门.😬😰&lt;/p&gt;
-&lt;/blockquote&gt;</summary></entry><entry><title>Unity3d.Cocos2dx.Flash游戏接入iOS SDK</title><link href="http://pdhero.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html" rel="alternate"></link><updated>2016-02-23T20:17:03+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2016-02-23:bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;各种不同引擎的游戏接入&lt;code&gt;iOS SDK&lt;/code&gt;大致的解决方案.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id="1def5b505372521fd984197e91241665"&gt;Unity3d&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Unity能直接调用C的方法。首先把SDK相关的方法转换成C方法。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;#if defined (__cplusplus)
-extern &amp;quot;C&amp;quot;
-{
-#endif
-
-    void sdkInit()
-    {
-        //这里直接调用SDK的相关方法进行初始化
-    }
-
-#if defined (__cplusplus)
-}
-#endif
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;转换后的文件(.h/.mm)可以通过Unity插件的方式导入，也可以在Unity导出的Xcode后再加到工程文件。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SDK回调处理。如果熟悉OC语法的话直接处理，在对应的回调里进行相关操作就行了。不熟悉可以在接收到回调的时候用&lt;code&gt;UnitySendMessage&lt;/code&gt;向Unity发送通知消息,Unity接收到消息后再进行相应的操作。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="7feef1be1715e7fdb72dd707d83b686b"&gt;Cocos2dx&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;加入SDK相关文件后。可以在SDK相关的回调里直接调用C++的方法。
-导入 cocos2dx头文件，使用&lt;code&gt;CCNotificationCenter&lt;/code&gt;与&lt;code&gt;Scene&lt;/code&gt;交互&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;SDK发送通知&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;#include &amp;quot;cocos2d.h&amp;quot;
-
-const char * ccParamToken = [paramToken UTF8String];
-    cocos2d::CCString *str = cocos2d::CCString::create(ccParamToken);
-    cocos2d::CCNotificationCenter::sharedNotificationCenter()-&amp;gt;postNotification(&amp;quot;TOKEN&amp;quot;, dynamic_cast&amp;lt;cocos2d::CCObject *&amp;gt;(str));
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;Cocos2dx接收通知&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    CCNotificationCenter::sharedNotificationCenter()-&amp;gt;addObserver(this, callfuncO_selector(HelloWorld::sdkNotification),&amp;quot;TOKEN&amp;quot;, NULL);
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h1 id="126127548010f1ccf3c314bc7463041a"&gt;Cocos2dx-js&lt;/h1&gt;
-&lt;p&gt;待续。。。&lt;/p&gt;
-&lt;h1 id="d1211e4ea9689c600a71c4a36f828216"&gt;Cocos2dx-lua&lt;/h1&gt;
-&lt;p&gt;有这两篇文章足够了。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;不忘初"辛&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://www.cnblogs.com/flyFreeZn/p/4152881.html"&gt;http://www.cnblogs.com/flyFreeZn/p/4152881.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;这篇文件介绍了下OC与lua如何实现交互，涉及&lt;code&gt;Lua,C++,Objective-C&lt;/code&gt;三种语言。Lua调用Lua Binding的C++接口，C++接口调用混编的Objective-C接口，而Objective-C通过block形式的回调，将结果通知给C++，C++通过Lua的C API将最终结果返回给Lua。。。。。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;我是妖怪&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/"&gt;http://dualface.github.io/blog/2013/01/27/call-objectivec-from-lua/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;CCLuaObjcBridge&lt;/code&gt;堪称&lt;code&gt;cocos2d-x Lua&lt;/code&gt;游戏开发的神器 ^_^(作者原话)）。&lt;code&gt;CCLuaObjcBridge&lt;/code&gt; 已经集成到&lt;a href="https://github.com/chukong/quick-cocos2d-x"&gt;quick-cocos2d-x&lt;/a&gt;中，从&lt;code&gt;Objective-C&lt;/code&gt; 调用 &lt;code&gt;Lua&lt;/code&gt; 也非常简单灵活。&lt;/p&gt;
-&lt;h1 id="bf2c44e6fc09515648b91b1bb4ec3f5f"&gt;Flash&lt;/h1&gt;
-&lt;p&gt;待续。。。&lt;/p&gt;</summary><category term="iOS SDK Integration"></category></entry><entry><title>vim notes</title><link href="http://pdhero.com/bnote/vim-notes.html" rel="alternate"></link><updated>2015-12-30T16:26:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-12-30:bnote/vim-notes.html</id><summary type="html">&lt;blockquote&gt;
+&lt;/blockquote&gt;</summary></entry><entry><title>vim notes</title><link href="http://pdhero.com/bnote/vim-notes.html" rel="alternate"></link><updated>2015-12-30T16:26:00+08:00</updated><author><name>pdx</name></author><id>tag:pdhero.com,2015-12-30:bnote/vim-notes.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;记下常用的一些VIM快捷键&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;平时用Xcode和Sublime比较多。Xcode使用插件&lt;a href="https://github.com/XVimProject/XVim"&gt;xvim&lt;/a&gt;,sublime直接改下配置文件就有&lt;code&gt;vim&lt;/code&gt;模式了.&lt;/p&gt;

@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://pdhero.com/index.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/archives.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/categories.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,13 +34,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://pdhero.com/acode/iOS微信多图分享到享到朋友圈.html</loc>
 <lastmod>2016-05-13T15:00:00:%s</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://pdhero.com/bnote/Unity3d-Cocos2dx-Flash-Game-Connect-iOS-SDK.html</loc>
-<lastmod>2015-11-19T10:04:00:%s</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -145,133 +138,126 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://pdhero.com/acode/index.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/bnote/index.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/dlife/index.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/edesign/index.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/category.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/poker2.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/bootstrap-moment.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/xcode7.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://pdhero.com/tag/ios-sdk-integration.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/cmd.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/ios.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/vim.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/safariquan-ping.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/mac.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/hhkb.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/karabiner.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/metal-armv7.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/swift.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://pdhero.com/tag/archive.html</loc>
-<lastmod>2016-05-13T15:13:11-00:00</lastmod>
+<lastmod>2016-05-19T09:46:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
