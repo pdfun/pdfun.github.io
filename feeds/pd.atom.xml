@@ -299,27 +299,7 @@ print(s)
 &lt;p&gt;== 前缀/后缀相等&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;var a_ = &amp;quot;字符串1&amp;quot;,b = &amp;quot;字符串2&amp;quot;
 print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot;2&amp;quot;))
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Swift"></category></entry><entry><title>Mac下自用的一些命令</title><link href="http://pdhero.com/bnote/mac-cmd-notes.html" rel="alternate"></link><updated>2015-10-28T11:12:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-10-28:bnote/mac-cmd-notes.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;整理下经常用到的一些命令。省得每次出问题以后都要重新搜索。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id="d5135420e2dbee4c3f1a597639c5b2fa"&gt;link sublime to  Terminal&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;ln /opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2 id="4455189f9683c2cad36750be82483687"&gt;Xcode update Plugin invalid&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2 id="cbce8f03f7f9f2a57353c9b53b04fa46"&gt;find file&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;find . -name &amp;quot;*.dmg&amp;quot;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2 id="d3419d7429dbe1d67b1698fe0ab79457"&gt;class-dump&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;class-dump -H ~/Desktop/AppInstall -o ~/Desktop/app.h
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="CMD"></category></entry><entry><title>Flask笔记_01</title><link href="http://pdhero.com/bnote/Flask_notes_01.html" rel="alternate"></link><updated>2015-10-25T11:30:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-10-25:bnote/Flask_notes_01.html</id><summary type="html">&lt;p&gt;Flask学习笔记之Flask-Bootstrap Flask-Moment&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Swift"></category></entry><entry><title>Flask笔记_01</title><link href="http://pdhero.com/bnote/Flask_notes_01.html" rel="alternate"></link><updated>2015-10-25T11:30:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-10-25:bnote/Flask_notes_01.html</id><summary type="html">&lt;p&gt;Flask学习笔记之Flask-Bootstrap Flask-Moment&lt;/p&gt;
 &lt;h1 id="44b2ec7b98f5190b3617c573c39e7488"&gt;Flask-Bootstrap&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;pip install Flask-Bootstrap&lt;/code&gt; 默认安装的是最新版本。也可以在安装的时候自定义版本。&lt;/p&gt;
 &lt;h2 id="44731d72f069d71202a56c99d85ffaa8"&gt;scripts styles&lt;/h2&gt;
@@ -563,24 +543,7 @@ Load command 16
 &lt;p&gt;1&amp;gt;. 直接用Xcode5来生成&lt;code&gt;lib&lt;/code&gt;和&lt;code&gt;framework&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;2&amp;gt;. Xcode6 &lt;code&gt;Build Setting&lt;/code&gt;--&amp;gt;&lt;code&gt;Link Frameworks Automatically&lt;/code&gt;设置为NO,设置这个之后,Xcode 可能会报更多的错误,因为现在不会自动&lt;code&gt;link&lt;/code&gt;框架了,根据报错添加对应的&lt;code&gt;framework&lt;/code&gt;即可.&lt;/p&gt;
 &lt;h3 id="5da618e8e4b89c66fe86e32cdafde142"&gt;From&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7"&gt;framework not found Metal for architecture armv7&lt;/a&gt;&lt;/p&gt;</summary><category term="Metal armv7"></category></entry><entry><title>利用JS将safari"真正"的全屏</title><link href="http://pdhero.com/bnote/%E5%B0%86safari%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%85%A8%E5%B1%8F.html" rel="alternate"></link><updated>2015-05-01T08:05:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-05-01:bnote/将safari真正的全屏.html</id><summary type="html">&lt;h4 id="265aa33d028a9960e0e3a5d6f0064e4b"&gt;整理自V2&lt;/h4&gt;
-&lt;p&gt;将safari"真正"的全屏 
-&lt;a href="https://www.v2ex.com/t/151466"&gt;全屏&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id="afe367e404261db2377de6e0e70c75a0"&gt;safrai最大化&lt;/h4&gt;
-&lt;p&gt;tab和标题栏照样是显示，对屏幕小的MBP来说还是占不小位置的 &lt;/p&gt;
-&lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/safari_full_screen.png" /&gt;&lt;/p&gt;
-&lt;h4 id="7bb08620c50719bc7355faa4a772b880"&gt;加了JS之后全屏的Google&lt;/h4&gt;
-&lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/google_full_screen.png" /&gt;&lt;/p&gt;
-&lt;h4 id="96641bf3534344897ca84bc9a951a953"&gt;bSetp&lt;/h4&gt;
-&lt;h5 id="58abb73e0878d5ffb16628a31361f0a7"&gt;将以下JS代码将入书签收藏&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;javascript:document.documentElement.webkitRequestFullScreen()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/js_code.png" /&gt;&lt;/p&gt;
-&lt;h5 id="fb30106bebc04358dc5529a83d03f0f5"&gt;快捷全屏(⌘+1)&lt;/h5&gt;
-&lt;p&gt;蹭蹭蹭!!!!全屏了,真的全屏了,B格瞬间提升!Esc可退出全屏。确实，这货在展示的时候特别好用。&lt;/p&gt;
-&lt;h4 id="251d27be2768a6479ff9111296fc4223"&gt;V2真是个神奇的地方&lt;/h4&gt;
-&lt;p&gt;创业老板和公司元老的撕B大战,从来没有这么热闹过,眼睛真累,mgpyh&lt;br /&gt;
-0_o 关键字会不会到这里来勒,五一快乐&lt;br /&gt;
-Mou还不打算更新么,ctrl+s一下就转几圈菊花。。&lt;/p&gt;</summary><category term="safari全屏"></category></entry><entry><title>思客sketch_day01</title><link href="http://pdhero.com/edesign/sketch_01.html" rel="alternate"></link><updated>2015-01-10T23:10:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-01-10:edesign/sketch_01.html</id><summary type="html">&lt;p&gt;思客抱团学习sketch&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7"&gt;framework not found Metal for architecture armv7&lt;/a&gt;&lt;/p&gt;</summary><category term="Metal armv7"></category></entry><entry><title>思客sketch_day01</title><link href="http://pdhero.com/edesign/sketch_01.html" rel="alternate"></link><updated>2015-01-10T23:10:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-01-10:edesign/sketch_01.html</id><summary type="html">&lt;p&gt;思客抱团学习sketch&lt;/p&gt;
 &lt;h3 id="eb8fb008f8af47db48b10936b671611f"&gt;&lt;a href="http://medialoot.com/blog/how-to-create-a-website-header-design-using-bohemian-coding-sketch/"&gt;主页头条设计&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/starer_sketch01.png" /&gt;&lt;/p&gt;
 &lt;h3 id="b3c3ad9d7d738a6b0eb767186a4cc4ef"&gt;&lt;a href="http://webdesign.tutsplus.com/tutorials/sketch-for-beginners-design-a-login-form-interface--cms-21534"&gt;登陆页面设计&lt;/a&gt;&lt;/h3&gt;
@@ -588,17 +551,4 @@ Mou还不打算更新么,ctrl+s一下就转几圈菊花。。&lt;/p&gt;</summary
 &lt;h3 id="952d012fcbf9d533dab2eae0ca3ca41f"&gt;技巧&lt;/h3&gt;
 &lt;p&gt;按住 &lt;code&gt;command&lt;/code&gt;键同时选中多个图形，可以统一设置它们的属性，这个和&lt;code&gt;storyBoard&lt;/code&gt;的
 &lt;code&gt;Autolayout&lt;/code&gt;很像，要是像 &lt;code&gt;storyBoard&lt;/code&gt; 一样能设置间距就好了。&lt;/p&gt;
-&lt;p&gt;按住 &lt;code&gt;option (⌥)&lt;/code&gt;键可以看到选中的&lt;code&gt;shape&lt;/code&gt;与其他上下左右&lt;code&gt;shape&lt;/code&gt;的距离&lt;/p&gt;</summary></entry><entry><title>iOS简单实用category</title><link href="http://pdhero.com/acode/iOS%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8category.html" rel="alternate"></link><updated>2015-01-10T09:53:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-01-10:acode/iOS简单实用category.html</id><summary type="html">&lt;p&gt;常用第三方category,持续更新中...&lt;/p&gt;
-&lt;h4 id="8307527e88ce2fc30a8e9a9e3f85040d"&gt;&lt;a href="https://github.com/nicklockwood/AutoCoding"&gt;AutoCoding&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;AutoCoding is a category on NSObject that provides automatic support for NSCoding to any object. &lt;/p&gt;
-&lt;h4 id="8a5a4d77fb514b4048ae7fdf46cdd6bc"&gt;&lt;a href="https://github.com/zwaldowski/BlocksKit"&gt;BlocksKit&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Blocks in C and Objective-C are downright magical. They make coding easier and potentially quicker, not to mention faster on the front end with multithreading and Grand Central Dispatch. BlocksKit hopes to facilitate this kind of programming by removing some of the annoying - and, in some cases, impeding - limits on coding with blocks.&lt;/p&gt;
-&lt;h3 id="02eaebc8a33e00488c45df2fcf852d90"&gt;UIView&lt;/h3&gt;
-&lt;h4 id="31b206a4a17cd2661a390239e4ae9dd6"&gt;&lt;a href="https://github.com/freak4pc/UIView-Positioning"&gt;UIView-Positioning&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;UIView+Positioning is an Objective-C Category which provides easy shorthand methods to defining the frame properties (width, height, x, y) of any UIView based object in an easy fashion, as well as extra helpful properties and methods&lt;/p&gt;
-&lt;h4 id="ea6ae8445ac08b76cda2ab9980caa0a7"&gt;&lt;a href="https://github.com/jonasschnelli/UIView-i7Rotate360"&gt;UIView-i7Rotate360&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;This UIView Categorie (Extend) will allow you to rotate a view easly 360°&lt;/p&gt;
-&lt;h4 id="01de08fcc4a577d10caaae8a505ac7f9"&gt;&lt;a href="https://github.com/yfme/UIImageView-PlayGIF"&gt;UIImageView-PlayGIF&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;UIImageView category/subclass for playing GIF. Simple, high performance, low memory footprint.&lt;/p&gt;
-&lt;h4 id="650b524af37b673e05d15602689581ca"&gt;&lt;a href="https://github.com/andreamazz/UITextField-Shake"&gt;UITextField-Shake&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;UITextField category that adds a shake animation like the password field of the OsX login screen.&lt;/p&gt;</summary><category term="category"></category></entry></feed>
+&lt;p&gt;按住 &lt;code&gt;option (⌥)&lt;/code&gt;键可以看到选中的&lt;code&gt;shape&lt;/code&gt;与其他上下左右&lt;code&gt;shape&lt;/code&gt;的距离&lt;/p&gt;</summary></entry></feed>
