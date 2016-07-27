@@ -3,11 +3,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>标签 Bootstrap Moment - just do it</title>
+    <title>git备忘 - just do it</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
     <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
+
+    <link rel="canonical" href="http://pdhero.com/bnote/git-notes.html"/>
     
     <script type="text/javascript">window.onload=function(){};</script>
     <!--[if lt IE 9]>
@@ -91,42 +93,91 @@
     
     <div id="body-content">
 <div class="col-md-8 col-md-offset-2">
-
-<h1 class="niu2-index-title">
-<i class="icon-tag icon-lg"></i>Bootstrap Moment
-</h1>
+    <h1 id="content-heading">git备忘</h1>
+</div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
+    <div id="niu2-main-content">
+        <blockquote>
+<p>之前学习git的时候记录的笔记</p>
+</blockquote>
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a></p>
+<ul>
+<li>reflog 查看命令历史</li>
+<li>git log 查看提交历史</li>
+<li>工作区--&gt;暂存区--&gt;本地仓库--&gt;远程仓库</li>
+<li>git checkout -- file 丢弃工作区的修改(回到最近一次commit或add)</li>
+<li>git reset HEAD file 把暂存区的修改撤销掉,重新放回工作区</li>
+<li>git rm</li>
+<li>git branch 查看分支</li>
+<li>git branch <name> 创建分支</li>
+<li>git checkout <name> 切换分支</li>
+<li>git checkout -b <name> 创建+切换分支</li>
+<li>git merge <name> 合并某分支到当前分支</li>
+<li>git branch -d <name> 删除分支</li>
+<li>git log —graph 查看分支合并图 (—pretty=oneline)</li>
+<li>git merge —no-ff -m ‘xx’ file (—no-ff普通模式合并,合并后的历史有分支,可以看出做过合并,fast forward合并看不出来曾经做过合并)</li>
+<li>git stash list/apply/apply stash@{0}/drop/pop 保存工作区, 修复bug后再git stash pop回到工作现场</li>
+<li>git remote(-v)</li>
+<li>git push origin master(dev分支)</li>
+<li>git tag <tagname> 创建标签默认为head,也可以以指定一个commitid</li>
+<li>git tag -a <tagname> -m ‘balabala’ 指定标签信息</li>
+<li>git tag查看所有标签</li>
+<li>git push origin <tagname>可以推送一个本地标签</li>
+<li>git push origin --tags 可以推送全部未推送过的本地标签</li>
+<li>git tag -d <tagname>可以删除一个本地标签</li>
+<li>git push origin :refs/tags/<tagname>可以删除一个远程标签</li>
+<li>git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</li>
+</ul>
+<p><img alt="" src="http://i.imgur.com/niIaT29.png" /></p>
+    </div>
+    <div id="content-comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/bnote/git-notes.html" data-title="git备忘" data-url="http://pdhero.com/bnote/git-notes.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = { short_name: 'pdx' };
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --></div>
 
 </div>
-
-<div class="col-md-8 col-md-offset-2">
-    <div class="niu2-index-article">
-        <div class="niu2-index-article-title">
-            <span>
-                <a href="http://pdhero.com/bnote/Flask_notes_01.html">Flask笔记_01</a>
-            </span>
-        </div>
-<div class="niu2-meta-index">
-    <span class="niu2-meta-date-index">
-        <i class="icon-calendar"></i>2015-10-25
-    </span>
-    <span class="niu2-meta-category-index">
-        <i class="icon-pencil"></i><a href="http://pdhero.com/bnote/index.html">笔记</a>
-    </span>
-    <span class="niu2-meta-tag-index">
-        <i class="icon-tag"></i>
-        <a href="http://pdhero.com/tag/bootstrap-moment.html ">Bootstrap Moment</a>
-    </span>
-</div>        <div class="niu2-article-summary">
-            Flask学习笔记之Flask-Bootstrap Flask-Moment
-        </div>
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-meta" class="niu2-sidebar">
+        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+        <div class="niu2-sidebar-value">2016-07-27 09:11</div>
+        <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
+        <div class="niu2-sidebar-value">2016-07-27 09:45</div>
+        <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
+        <div class="niu2-sidebar-value"><a href="http://pdhero.com/bnote/index.html">笔记</a></div>
+        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+ 
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/git.html">git</a><sup>1</sup></div>
     </div>
+</div>
 
-
-
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+        <div class="niu2-sidebar-label">
+            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+        </div>
+        <ul id="niu2-sidebar-toc-list">
+            <li><a href="#content-heading" target="_blank">git备忘</a></li>
+            
+            <li><a href="#content-comments">评论</a></li>
+        </ul>
+    </div>
 </div>
     </div>
 
-<div id="body-footer" class="col-md-8 col-md-offset-2">
+    <div id="body-footer" class="col-md-6 col-md-offset-2">
 <div class="niu2-footer">
     <hr/>
 	<p>
@@ -149,13 +200,13 @@
 	            <i class="icon-envelope-o icon-lg"></i>
 	        </a>
 	</p>
-</div></div>
+</div>    </div>
 <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-58307278-1"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>    
     <div id="niu2-pygments" data-theme="github"></div>
 
     <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
     <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">onContentLoaded();</script>
   </body>
 </html>
