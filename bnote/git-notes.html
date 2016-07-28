@@ -1,103 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>git备忘 - just do it</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
-
-    <link rel="canonical" href="http://pdhero.com/bnote/git-notes.html"/>
-    
-    <script type="text/javascript">window.onload=function(){};</script>
-    <!--[if lt IE 9]>
-        <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
-        <script src="http://pdhero.com/theme/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body> 
-    <div id="body-header">
-<div class="navbar navbar-inverse navbar-fixed-top">
-<div class="col-md-12">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://pdhero.com">
-            <i class="icon-home"></i>just do it
-        </a>
-    </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-            <li><a href="/about.html" title="about me">
-                <i class="icon-anchor"></i>关于</a>
-            </li>
-            <li><a href="/archives.html" title="blog archives">
-                <i class="icon-archive"></i>存档</a>
-            </li>
-            <li><a href="/tag/" title="blog tags">
-                <i class="icon-tag"></i>标签</a>
-            </li>
-        <!-- category dropdown list -->
-        <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-folder-open"></i>分类<b class="caret"></b>
-           </a>
-           <ul class="dropdown-menu">
-               <li><a href="http://pdhero.com/acode/index.html">
-                      <i class="icon-code"></i>饭碗
-                      (3)</a></li>
-               <li><a href="http://pdhero.com/bnote/index.html">
-                      <i class="icon-pencil"></i>笔记
-                      (6)</a></li>
-               <li><a href="http://pdhero.com/dlife/index.html">
-                      <i class="icon-coffee"></i>生活
-                      (3)</a></li>
-               <li><a href="http://pdhero.com/edesign/index.html">
-                      <i class="icon-flask"></i>设计
-                      (1)</a></li>
-           </ul>
-        </li>
-        <!--  self defined dropdown list -->
-        </ul>
-        
-        <!-- right nav bar -->
-        <ul class="nav navbar-nav navbar-right">
-        <!-- google custom search -->
-        <li>
-        <div id="niu2-cse-wrapper">
-            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
-                <form action="http://google.com/cse">
-                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
-                    <input type="hidden" name="ie" value="UTF-8" />
-                    <div class="form-group">
-                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
-                            type="text" name="q" 
-                            placeholder="按回车开始搜索 ..."/>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="git">
+        <meta name="description" content="之前学习git的时候记录的笔记">
+        <title>git备忘 - just do it</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
+        <link rel="canonical" href="http://pdhero.com/bnote/git-notes.html" />
+        <script type="text/javascript">window.onload=function(){};</script>
+        <!--[if lt IE 9]>
+            <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
+            <script src="http://pdhero.com/theme/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body> 
+        <div id="body-header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://pdhero.com">
+                            <i class="icon-home"></i>just do it
+                        </a>
                     </div>
-                </form>
-           </div>
-           <div id="niu2-cse-ctrl-box" class="navbar-nav">
-            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
-           </div>
-       </div>
-       </li>
-       </ul>
-    </nav>
-</div>
-</div>    </div>
-    
-    <div id="body-content">
-<div class="col-md-8 col-md-offset-2">
-    <h1 id="content-heading">git备忘</h1>
-</div>
-<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
-    <div id="niu2-main-content">
-        <blockquote>
+                    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/about.html" title="about me">
+                                <i class="icon-anchor"></i>关于</a>
+                            </li>
+                            <li><a href="/tag/" title="blog tags">
+                                <i class="icon-tag"></i>标签</a>
+                            </li>
+                        <!-- category dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="http://pdhero.com/acode/index.html">
+                                      <i class="icon-code"></i>饭碗
+                                      (3)</a></li>
+                               <li><a href="http://pdhero.com/bnote/index.html">
+                                      <i class="icon-pencil"></i>笔记
+                                      (6)</a></li>
+                               <li><a href="http://pdhero.com/dlife/index.html">
+                                      <i class="icon-coffee"></i>生活
+                                      (3)</a></li>
+                               <li><a href="http://pdhero.com/edesign/index.html">
+                                      <i class="icon-flask"></i>设计
+                                      (1)</a></li>
+                           </ul>
+                        </li>
+                        <!--  self defined dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="fa-archive"></i>存档<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="/archives.html" title="archives order by publish time">
+                                 <i class="fa-calendar"></i>存档 (按发布时间)</a>
+                               </li>
+                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
+                                 <i class="fa-pencil"></i>存档 (按修改时间)</a>
+                               </li>
+                           </ul>
+                        </li>
+                        </ul>
+                        
+                        <!-- right nav bar -->
+                        <ul class="nav navbar-nav navbar-right">
+                        <!-- google custom search -->
+                        <li>
+                        <div id="niu2-cse-wrapper">
+                            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                                <form action="https://cse.google.com/cse">
+                                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
+                                    <input type="hidden" name="ie" value="UTF-8" />
+                                    <div class="form-group">
+                                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                                            type="text" name="q" 
+                                            placeholder="按回车开始搜索 ..."/>
+                                    </div>
+                                </form>
+                           </div>
+                           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+                            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+                           </div>
+                       </div>
+                       </li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="body-content">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 id="content-heading">git备忘</h1>
+            </div>
+            <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+                <div id="niu2-main-content">
+                    <blockquote>
 <p>之前学习git的时候记录的笔记</p>
 </blockquote>
 <p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a></p>
@@ -109,104 +121,129 @@
 <li>git reset HEAD file 把暂存区的修改撤销掉,重新放回工作区</li>
 <li>git rm</li>
 <li>git branch 查看分支</li>
-<li>git branch <name> 创建分支</li>
-<li>git checkout <name> 切换分支</li>
-<li>git checkout -b <name> 创建+切换分支</li>
-<li>git merge <name> 合并某分支到当前分支</li>
-<li>git branch -d <name> 删除分支</li>
+<li>git branch <name> 创建分支</name></li>
+<li>git checkout <name> 切换分支</name></li>
+<li>git checkout -b <name> 创建+切换分支</name></li>
+<li>git merge <name> 合并某分支到当前分支</name></li>
+<li>git branch -d <name> 删除分支</name></li>
 <li>git log —graph 查看分支合并图 (—pretty=oneline)</li>
 <li>git merge —no-ff -m ‘xx’ file (—no-ff普通模式合并,合并后的历史有分支,可以看出做过合并,fast forward合并看不出来曾经做过合并)</li>
 <li>git stash list/apply/apply stash@{0}/drop/pop 保存工作区, 修复bug后再git stash pop回到工作现场</li>
 <li>git remote(-v)</li>
 <li>git push origin master(dev分支)</li>
-<li>git tag <tagname> 创建标签默认为head,也可以以指定一个commitid</li>
-<li>git tag -a <tagname> -m ‘balabala’ 指定标签信息</li>
+<li>git tag <tagname> 创建标签默认为head,也可以以指定一个commitid</tagname></li>
+<li>git tag -a <tagname> -m ‘balabala’ 指定标签信息</tagname></li>
 <li>git tag查看所有标签</li>
-<li>git push origin <tagname>可以推送一个本地标签</li>
+<li>git push origin <tagname>可以推送一个本地标签</tagname></li>
 <li>git push origin --tags 可以推送全部未推送过的本地标签</li>
-<li>git tag -d <tagname>可以删除一个本地标签</li>
-<li>git push origin :refs/tags/<tagname>可以删除一个远程标签</li>
+<li>git tag -d <tagname>可以删除一个本地标签</tagname></li>
+<li>git push origin :refs/tags/<tagname>可以删除一个远程标签</tagname></li>
 <li>git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</li>
 </ul>
-<p><img alt="" src="http://i.imgur.com/niIaT29.png" /></p>
-    </div>
-    <div id="content-comments">
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/bnote/git-notes.html" data-title="git备忘" data-url="http://pdhero.com/bnote/git-notes.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    var duoshuoQuery = { short_name: 'pdx' };
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end --></div>
+<p><img alt="" src="http://i.imgur.com/niIaT29.png"/></p>
+                </div>
+                <div id="content-comments">
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/bnote/git-notes.html" data-title="git备忘" data-url="http://pdhero.com/bnote/git-notes.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pd' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
+                        })();
+                    </script>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
-</div>
-<div class="niu2-right-container col-md-2">
-    <div id="niu2-sidebar-meta" class="niu2-sidebar">
-        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-        <div class="niu2-sidebar-value">2016-07-27 09:11</div>
-        <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-        <div class="niu2-sidebar-value">2016-07-27 09:45</div>
-        <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
-        <div class="niu2-sidebar-value"><a href="http://pdhero.com/bnote/index.html">笔记</a></div>
-        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
- 
-            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/git.html">git</a><sup>1</sup></div>
-    </div>
-</div>
+            </div>
+            <div class="niu2-right-container col-md-2 with-left-border">
+                <div id="niu2-sidebar-meta" class="niu2-sidebar">
+                    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+                    <div class="niu2-sidebar-value">2016-07-27 09:11</div>
+                    <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
+                    <div class="niu2-sidebar-value">2016-07-27 09:45</div>
+                    <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
+                    <div class="niu2-sidebar-value"><a href="http://pdhero.com/bnote/index.html">笔记</a></div>
+                    <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/git.html">git</a><sup>1</sup></div>
+                </div>
 
-<div class="niu2-right-container col-md-2">
-    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
-        <div class="niu2-sidebar-label">
-            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
+                    <div class="niu2-sidebar-label">
+                        <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                    </div>
+                    <ul id="niu2-sidebar-toc-list">
+                        <li><a href="#content-heading">git备忘</a></li>
+                        
+                        <li><a href="#content-comments">评论</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="niu2-toolbar">
+                <ul class="list-unstyled">
+                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
+                </ul>
+                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
+                <div id="niu2-toolbar-github" data-repo=""></div>
+                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
+            </div>
+            <div id="niu2-toc" data-style="fixed"></div>
         </div>
-        <ul id="niu2-sidebar-toc-list">
-            <li><a href="#content-heading" target="_blank">git备忘</a></li>
-            
-            <li><a href="#content-comments">评论</a></li>
-        </ul>
-    </div>
-</div>
-    </div>
 
-    <div id="body-footer" class="col-md-6 col-md-offset-2">
-<div class="niu2-footer">
-    <hr/>
-	<p>
-		Powered by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>, 
-        <a href="https://github.com/mawenbao/niu-x2-sidebar" target="_blank">theme</a> built with <a href="http://getbootstrap.com" target="_blank">Bootstrap3</a>
-		by <a href="http://blog.atime.me" target="_blank">Ma Wenbao</a>, icons by 
-		<a href="http://fortawesome.github.io/Font-Awesome" target="_blank">Font Awesome</a>.
-	</p>
-	<p>
-		©
-				2015-2016
-		<a class="niu2-footer-link" href="http://pdhero.com">pd</a>
-        / 			<a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
-    </p>
-    <p class="niu2-icons">
-	        <a class="niu2-footer-icon" href="http://git.io/v8fku" title="my github page" target="_blank">
-	            <i class="icon-github-alt icon-lg"></i>
-	        </a>
-	        <a class="niu2-footer-icon" href="mailto:pd@pdher.com" title="my email address" target="_blank">
-	            <i class="icon-envelope-o icon-lg"></i>
-	        </a>
-	</p>
-</div>    </div>
-<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-58307278-1"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>    
-    <div id="niu2-pygments" data-theme="github"></div>
+        <div class="niu2-footer">
+            <div id="body-footer" class="col-md-6 col-md-offset-2">
+                <hr/>
+                <p>
+                    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+                    <a href="https://github.com/mawenbao/niu-x2-sidebar">theme</a> built with <a href="https://github.com/twbs/bootstrap">Bootstrap3</a>
+                    by <a href="https://blog.mawenbao.com">Ma Wenbao</a>, icons by 
+                    <a href="https://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
+                </p>
+                <p>
+                    ©
+                            2015-2016
+                    <a class="niu2-footer-link" href="http://pdhero.com">pd</a>
+                    /                         <a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
+                </p>
+                <p class="niu2-icons">
+                    <a class="niu2-footer-icon" href="https://git.io/vKNkO" title="my github page">
+                        <i class="icon-github-alt icon-lg"></i>
+                    </a>
+                    <a class="niu2-footer-icon" href="mailto:pd@pdhero.com" title="my email address">
+                        <i class="icon-envelope-o icon-lg"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
-    <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
-    <script type="text/javascript">onContentLoaded();</script>
-  </body>
+        <script type="text/javascript">
+            var _gaq=_gaq||[];
+            _gaq.push(["_setAccount","UA-58307278-1"]);
+            _gaq.push(["_trackPageview"]);
+            (function(){
+                var b=document.createElement("script");
+                b.type="text/javascript";
+                b.async=true;
+                b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";
+                var a=document.getElementsByTagName("script")[0];
+                a.parentNode.insertBefore(b,a)
+            })();
+        </script>
+        <div id="niu2-pygments" data-theme="github"></div>
+        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
+        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
+        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
+        <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            onContentLoaded();
+        </script>
+    </body>
 </html>

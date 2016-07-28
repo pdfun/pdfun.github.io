@@ -31,6 +31,7 @@ window.gCurrTocId = '';
 window.gSidebarCtrlButtonEnabled = true;
 window.gMousePositionX = 0;
 window.gMousePositionY = 0;
+window.gTocStyle = 'fixed';
 
 $(document).ready(function() {
     initGoogleCSEAnimation();
@@ -49,18 +50,21 @@ function onContentLoaded() {
     //window.setInterval(updateFootnoteStatus, 500);
     updateFootnoteStatus();
 
-    // detach toc list before inserting many
-    // toc index <span>, for performance reason
-    getTocList().detach();
-    initTocListIndex(getTocList());
-    getTocList().appendTo(getSidebarToc());
+    window.gTocStyle = $('#niu2-toc').data('style');
+    if (window.gTocStyle != 'closed') {
+        // detach toc list before inserting many
+        // toc index <span>, for performance reason
+        getTocList().detach();
+        initTocListIndex(getTocList());
+        getTocList().appendTo(getSidebarToc());
 
-    setSidebarTocWidth();
-    setTocOverflowedTitle();
+        setSidebarTocWidth();
+        setTocOverflowedTitle();
 
-    initTocLinkScrollAnimation();
-    initAllTocsCtrl();
-    locateTocInViewport();
+        initTocLinkScrollAnimation();
+        initAllTocsCtrl();
+        locateTocInViewport();
+    }
 
     initToolbar();
 }
@@ -135,8 +139,7 @@ function initToolbar() {
             if (!rightContainers.is(':hidden')) {
                 markVerticalPosition();
                 rightContainers.fadeOut('fast');
-                leftContainer.removeClass('with-right-border');
-                leftContainer.animate({width: '65%'}, leftCSlideDuration, complete=function() {
+                leftContainer.animate({width: '67%'}, leftCSlideDuration, complete=function() {
                     restoreVerticalPosition(function() {
                         enableSidebarCtrlButton();
                         ctrlIcon.attr('class', 'icon-3x icon-show-sidebar');
@@ -146,7 +149,7 @@ function initToolbar() {
                         resetFootnoteCache();
                     });
                 });
-                footer.animate({width: '65%'}, leftCSlideDuration);
+                footer.animate({width: '67%'}, leftCSlideDuration);
             } else {
                 markVerticalPosition();
                 leftContainer.animate({width: '50%'}, leftCSlideDuration, complete=function() {
@@ -156,7 +159,6 @@ function initToolbar() {
                     // We have to detach fixed sidebar before doing the fadein animation,
                     // otherwise Chrome39 will behave weird(showing duplicate sidebar toc).
                     sidebarElems.detach();
-                    leftContainer.addClass('with-right-border');
                     window.gEnableTocStatusUpdate = false;
                     rightContainers.fadeIn('fast', complete=function() {
                         sidebarElems.appendTo(sidebarParent);
@@ -223,7 +225,7 @@ function initLazyLoad() {
                 par.removeClass('image-cover-box');
                 imgOverly.hide();
                 // init colorbox
-                var imageLink = $('<a href="' + img.attr('src') + ' " title="' + img.attr('alt') + '" target="_blank"></a>');
+                var imageLink = $('<a href="' + img.attr('src') + ' " title="' + img.attr('alt') + '"></a>');
                 img.appendTo(imageLink);
                 imageLink.colorbox({
                     href: img.attr('src'),
@@ -267,11 +269,10 @@ function setSidebarTocWidth() {
     getSidebarToc().attr('style', 'max-width:' + tocMaxWidth + 'px');
 }
 
-function resetSidebarToc() {
-    var sidebarToc = $('#niu2-sidebar-toc');
-}
-
 function toggleSidebarTocFixed() {
+    if (window.gTocStyle != 'fixed') {
+        return;
+    }
     var sidebarToc = $('#niu2-sidebar-toc');
     var sidebarMeta = $('#niu2-sidebar-meta');
     if (sidebarToc.length == 0 || sidebarMeta.length == 0) {
@@ -279,16 +280,16 @@ function toggleSidebarTocFixed() {
     }
     var vtop = $(window).scrollTop();
     var vpos = sidebarMeta.offset().top + sidebarMeta.height() - 55;
-    if (!sidebarToc.is(':hidden') && vtop > vpos && 'niu2-sidebar' == sidebarToc.attr('class')) {
+    if (!sidebarToc.is(':hidden') && vtop > vpos && 'niu2-sidebar with-left-border' == sidebarToc.attr('class')) {
         var sidebarParent = sidebarToc.parent();
         // @TODO: check Chrome39+
         // We have to detach sidebar toc before setting its position to fixed,
         // otherwise Chrome39 will behave weird(showing duplicate sidebar toc).
         sidebarToc.detach();
-        sidebarToc.attr('class', 'niu2-sidebar niu2-sidebar-toc-fixed');
+        sidebarToc.attr('class', 'niu2-sidebar with-left-border niu2-sidebar-toc-fixed');
         sidebarToc.appendTo(sidebarParent);
-    } else if (vtop <= vpos && 'niu2-sidebar' != sidebarToc.attr('class')) {
-        sidebarToc.attr('class', 'niu2-sidebar');
+    } else if (vtop <= vpos && 'niu2-sidebar with-left-border' != sidebarToc.attr('class')) {
+        sidebarToc.attr('class', 'niu2-sidebar with-left-border');
     }
 }
 
@@ -448,6 +449,9 @@ function getHtmlHeaders() {
 }
 
 function locateTocInViewport() {
+    if (window.gTocStyle != 'fixed') {
+        return;
+    }
     if (!window.gEnableTocStatusUpdate) {
         return;
     }
@@ -488,6 +492,9 @@ function getSidebarToc() {
 }
 
 function getTocList() {
+    if (window.gTocStyle == 'closed') {
+        return null;
+    }
     if (!window.gTocList) {
         window.gTocList = $('#niu2-sidebar-toc-list');
         window.gTocListType = window.gTocList[0].tagName.toLowerCase();
@@ -967,10 +974,12 @@ function initMouseXYRecord() {
         }
 
         // sidebar toc list scroll
-        if (isPositionInRect(e.clientX, e.clientY, getTocList()[0].getBoundingClientRect())) {
-            window.gMouseInSidebarTocList = true;
-        } else {
-            window.gMouseInSidebarTocList = false;
+        if (window.gTocStyle != 'closed') {
+            if (isPositionInRect(e.clientX, e.clientY, getTocList()[0].getBoundingClientRect())) {
+                window.gMouseInSidebarTocList = true;
+            } else {
+                window.gMouseInSidebarTocList = false;
+            }
         }
 
         // toggle toolbar

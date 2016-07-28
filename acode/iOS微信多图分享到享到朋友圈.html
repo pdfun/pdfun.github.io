@@ -1,103 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iOS微信多图分享到朋友圈 - just do it</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
-
-    <link rel="canonical" href="http://pdhero.com/acode/iOS微信多图分享到享到朋友圈.html"/>
-    
-    <script type="text/javascript">window.onload=function(){};</script>
-    <!--[if lt IE 9]>
-        <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
-        <script src="http://pdhero.com/theme/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body> 
-    <div id="body-header">
-<div class="navbar navbar-inverse navbar-fixed-top">
-<div class="col-md-12">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://pdhero.com">
-            <i class="icon-home"></i>just do it
-        </a>
-    </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-            <li><a href="/about.html" title="about me">
-                <i class="icon-anchor"></i>关于</a>
-            </li>
-            <li><a href="/archives.html" title="blog archives">
-                <i class="icon-archive"></i>存档</a>
-            </li>
-            <li><a href="/tag/" title="blog tags">
-                <i class="icon-tag"></i>标签</a>
-            </li>
-        <!-- category dropdown list -->
-        <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-folder-open"></i>分类<b class="caret"></b>
-           </a>
-           <ul class="dropdown-menu">
-               <li><a href="http://pdhero.com/acode/index.html">
-                      <i class="icon-code"></i>饭碗
-                      (3)</a></li>
-               <li><a href="http://pdhero.com/bnote/index.html">
-                      <i class="icon-pencil"></i>笔记
-                      (6)</a></li>
-               <li><a href="http://pdhero.com/dlife/index.html">
-                      <i class="icon-coffee"></i>生活
-                      (3)</a></li>
-               <li><a href="http://pdhero.com/edesign/index.html">
-                      <i class="icon-flask"></i>设计
-                      (1)</a></li>
-           </ul>
-        </li>
-        <!--  self defined dropdown list -->
-        </ul>
-        
-        <!-- right nav bar -->
-        <ul class="nav navbar-nav navbar-right">
-        <!-- google custom search -->
-        <li>
-        <div id="niu2-cse-wrapper">
-            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
-                <form action="http://google.com/cse">
-                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
-                    <input type="hidden" name="ie" value="UTF-8" />
-                    <div class="form-group">
-                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
-                            type="text" name="q" 
-                            placeholder="按回车开始搜索 ..."/>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="iOS系统分享多张图片到微信朋友圈">
+        <title>iOS微信多图分享到朋友圈 - just do it</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
+        <link rel="canonical" href="http://pdhero.com/acode/iOS微信多图分享到享到朋友圈.html" />
+        <script type="text/javascript">window.onload=function(){};</script>
+        <!--[if lt IE 9]>
+            <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
+            <script src="http://pdhero.com/theme/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body> 
+        <div id="body-header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://pdhero.com">
+                            <i class="icon-home"></i>just do it
+                        </a>
                     </div>
-                </form>
-           </div>
-           <div id="niu2-cse-ctrl-box" class="navbar-nav">
-            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
-           </div>
-       </div>
-       </li>
-       </ul>
-    </nav>
-</div>
-</div>    </div>
-    
-    <div id="body-content">
-<div class="col-md-8 col-md-offset-2">
-    <h1 id="content-heading">iOS微信多图分享到朋友圈</h1>
-</div>
-<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
-    <div id="niu2-main-content">
-        <p>iOS系统分享多张图片到微信朋友圈</p>
+                    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/about.html" title="about me">
+                                <i class="icon-anchor"></i>关于</a>
+                            </li>
+                            <li><a href="/tag/" title="blog tags">
+                                <i class="icon-tag"></i>标签</a>
+                            </li>
+                        <!-- category dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="http://pdhero.com/acode/index.html">
+                                      <i class="icon-code"></i>饭碗
+                                      (3)</a></li>
+                               <li><a href="http://pdhero.com/bnote/index.html">
+                                      <i class="icon-pencil"></i>笔记
+                                      (6)</a></li>
+                               <li><a href="http://pdhero.com/dlife/index.html">
+                                      <i class="icon-coffee"></i>生活
+                                      (3)</a></li>
+                               <li><a href="http://pdhero.com/edesign/index.html">
+                                      <i class="icon-flask"></i>设计
+                                      (1)</a></li>
+                           </ul>
+                        </li>
+                        <!--  self defined dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="fa-archive"></i>存档<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="/archives.html" title="archives order by publish time">
+                                 <i class="fa-calendar"></i>存档 (按发布时间)</a>
+                               </li>
+                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
+                                 <i class="fa-pencil"></i>存档 (按修改时间)</a>
+                               </li>
+                           </ul>
+                        </li>
+                        </ul>
+                        
+                        <!-- right nav bar -->
+                        <ul class="nav navbar-nav navbar-right">
+                        <!-- google custom search -->
+                        <li>
+                        <div id="niu2-cse-wrapper">
+                            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                                <form action="https://cse.google.com/cse">
+                                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
+                                    <input type="hidden" name="ie" value="UTF-8" />
+                                    <div class="form-group">
+                                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                                            type="text" name="q" 
+                                            placeholder="按回车开始搜索 ..."/>
+                                    </div>
+                                </form>
+                           </div>
+                           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+                            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+                           </div>
+                       </div>
+                       </li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="body-content">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 id="content-heading">iOS微信多图分享到朋友圈</h1>
+            </div>
+            <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+                <div id="niu2-main-content">
+                    <p>iOS系统分享多张图片到微信朋友圈</p>
 <h2 id="b3a139f3f6e01f97d2a9848454a93f19">微信分享多张图片到微信朋圈</h2>
 <p>最近有个需求，要分享多张图片到微信朋友圈。导入微信SDK,看了下微信的接口,各种限制，根本没办法搞。BOSS一定要实现，没办法只能折腾了。
 最后通过系统级别的分享<code>UIActivityViewController</code>来实现了这个功能。</p>
@@ -107,7 +118,7 @@
 <h3 id="19453cab0dfbbc578b0f79f85e4ee499">微信SDK的一些设置就不多说了。</h3>
 <h3 id="b8b5d264f8938bc020ee54dc1fe3d27f">分享到微信的部分代码</h3>
 <div class="codehilite"><pre><span class="kc">self</span><span class="p">.</span><span class="n">showHUD</span><span class="p">()</span>
-<span class="bp">UIPasteboard</span><span class="p">.</span><span class="n">generalPasteboard</span><span class="p">().</span><span class="n">string</span> <span class="p">=</span> <span class="s">&quot;微信多图分享到朋友圈&quot;</span>
+<span class="bp">UIPasteboard</span><span class="p">.</span><span class="n">generalPasteboard</span><span class="p">().</span><span class="n">string</span> <span class="p">=</span> <span class="s">"微信多图分享到朋友圈"</span>
 <span class="kd">let</span> <span class="nv">imageCache</span><span class="p">:</span><span class="n">SDImageCache</span> <span class="p">=</span> <span class="n">SDImageCache</span><span class="p">.</span><span class="n">sharedImageCache</span><span class="p">()</span>
 <span class="kd">var</span> <span class="nv">imageArr</span><span class="p">:[</span><span class="nb">AnyObject</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">imageUrl</span> <span class="k">in</span> <span class="kc">self</span><span class="p">.</span><span class="n">dataArr</span> <span class="p">{</span>
@@ -117,12 +128,10 @@
  <span class="p">}</span>
 <span class="p">}</span>
 <span class="kd">let</span> <span class="nv">activityView</span><span class="p">:</span> <span class="bp">UIActivityViewController</span> <span class="p">=</span> <span class="bp">UIActivityViewController</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">activityItems</span><span class="p">:</span> <span class="n">imageArr</span><span class="p">,</span> <span class="n">applicationActivities</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
- <span class="kc">self</span><span class="p">.</span><span class="n">hideHUDWithCompletionMessage</span><span class="p">(</span><span class="s">&quot;分享的内容已经复制到粘贴板&quot;</span><span class="p">,</span> <span class="n">finishedHandler</span><span class="p">:</span> <span class="p">{</span>
+ <span class="kc">self</span><span class="p">.</span><span class="n">hideHUDWithCompletionMessage</span><span class="p">(</span><span class="s">"分享的内容已经复制到粘贴板"</span><span class="p">,</span> <span class="n">finishedHandler</span><span class="p">:</span> <span class="p">{</span>
      <span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">?.</span><span class="n">presentViewController</span><span class="p">(</span><span class="n">activityView</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
  <span class="p">})</span>
 </pre></div>
-
-
 <h3 id="c5eca45d461382d648c77f6df4e9fd15">代码说明</h3>
 <ul>
 <li>dataArr是一个储存图片的数组</li>
@@ -134,80 +143,106 @@
 <blockquote>
 <p>在<code>Swift</code>出3.0前又重新体验了下。比<code>Objective C</code>写起来要爽。<code>Swift</code>从精通到重新入门.😬😰</p>
 </blockquote>
-    </div>
-    <div id="content-comments">
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/acode/iOS微信多图分享到享到朋友圈.html" data-title="iOS微信多图分享到朋友圈" data-url="http://pdhero.com/acode/iOS微信多图分享到享到朋友圈.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    var duoshuoQuery = { short_name: 'pdx' };
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end --></div>
+                </div>
+                <div id="content-comments">
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/acode/iOS微信多图分享到享到朋友圈.html" data-title="iOS微信多图分享到朋友圈" data-url="http://pdhero.com/acode/iOS微信多图分享到享到朋友圈.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pd' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
+                        })();
+                    </script>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
-</div>
-<div class="niu2-right-container col-md-2">
-    <div id="niu2-sidebar-meta" class="niu2-sidebar">
-        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-        <div class="niu2-sidebar-value">2016-05-13 15:00</div>
-        <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
-        <div class="niu2-sidebar-value"><a href="http://pdhero.com/acode/index.html">饭碗</a></div>
-        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
-    </div>
-</div>
+            </div>
+            <div class="niu2-right-container col-md-2 with-left-border">
+                <div id="niu2-sidebar-meta" class="niu2-sidebar">
+                    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+                    <div class="niu2-sidebar-value">2016-05-13 15:00</div>
+                    <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
+                    <div class="niu2-sidebar-value"><a href="http://pdhero.com/acode/index.html">饭碗</a></div>
+                    <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+                </div>
 
-<div class="niu2-right-container col-md-2">
-    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
-        <div class="niu2-sidebar-label">
-            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
+                    <div class="niu2-sidebar-label">
+                        <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                    </div>
+                    <ul id="niu2-sidebar-toc-list">
+                        <li><a href="#content-heading">iOS微信多图分享到朋友圈</a></li>
+                        <li><a href='#b3a139f3f6e01f97d2a9848454a93f19'>微信分享多张图片到微信朋圈</a></li><li><a href='#f07ab974460fc58edc38aa8b7a41b9e9'>UIActivityViewController</a></li><li><a href='#ca0dbad92a874b2f69b549293387925e'>Code</a><ul><li><a href='#19453cab0dfbbc578b0f79f85e4ee499'>微信SDK的一些设置就不多说了。</a></li><li><a href='#b8b5d264f8938bc020ee54dc1fe3d27f'>分享到微信的部分代码</a></li><li><a href='#c5eca45d461382d648c77f6df4e9fd15'>代码说明</a></li><li><a href='#ee0d63e36aeca19c348ec418af737159'>存在的问题</a></li></ul></li>
+                        <li><a href="#content-comments">评论</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="niu2-toolbar">
+                <ul class="list-unstyled">
+                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
+                </ul>
+                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
+                <div id="niu2-toolbar-github" data-repo=""></div>
+                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
+            </div>
+            <div id="niu2-toc" data-style="fixed"></div>
         </div>
-        <ul id="niu2-sidebar-toc-list">
-            <li><a href="#content-heading" target="_blank">iOS微信多图分享到朋友圈</a></li>
-            <li><a href='#b3a139f3f6e01f97d2a9848454a93f19'>微信分享多张图片到微信朋圈</a></li><li><a href='#f07ab974460fc58edc38aa8b7a41b9e9'>UIActivityViewController</a></li><li><a href='#ca0dbad92a874b2f69b549293387925e'>Code</a><ul><li><a href='#19453cab0dfbbc578b0f79f85e4ee499'>微信SDK的一些设置就不多说了。</a></li><li><a href='#b8b5d264f8938bc020ee54dc1fe3d27f'>分享到微信的部分代码</a></li><li><a href='#c5eca45d461382d648c77f6df4e9fd15'>代码说明</a></li><li><a href='#ee0d63e36aeca19c348ec418af737159'>存在的问题</a></li></ul></li>
-            <li><a href="#content-comments">评论</a></li>
-        </ul>
-    </div>
-</div>
-    </div>
 
-    <div id="body-footer" class="col-md-6 col-md-offset-2">
-<div class="niu2-footer">
-    <hr/>
-	<p>
-		Powered by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>, 
-        <a href="https://github.com/mawenbao/niu-x2-sidebar" target="_blank">theme</a> built with <a href="http://getbootstrap.com" target="_blank">Bootstrap3</a>
-		by <a href="http://blog.atime.me" target="_blank">Ma Wenbao</a>, icons by 
-		<a href="http://fortawesome.github.io/Font-Awesome" target="_blank">Font Awesome</a>.
-	</p>
-	<p>
-		©
-				2015-2016
-		<a class="niu2-footer-link" href="http://pdhero.com">pd</a>
-        / 			<a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
-    </p>
-    <p class="niu2-icons">
-	        <a class="niu2-footer-icon" href="http://git.io/v8fku" title="my github page" target="_blank">
-	            <i class="icon-github-alt icon-lg"></i>
-	        </a>
-	        <a class="niu2-footer-icon" href="mailto:pd@pdher.com" title="my email address" target="_blank">
-	            <i class="icon-envelope-o icon-lg"></i>
-	        </a>
-	</p>
-</div>    </div>
-<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-58307278-1"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>    
-    <div id="niu2-pygments" data-theme="github"></div>
+        <div class="niu2-footer">
+            <div id="body-footer" class="col-md-6 col-md-offset-2">
+                <hr/>
+                <p>
+                    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+                    <a href="https://github.com/mawenbao/niu-x2-sidebar">theme</a> built with <a href="https://github.com/twbs/bootstrap">Bootstrap3</a>
+                    by <a href="https://blog.mawenbao.com">Ma Wenbao</a>, icons by 
+                    <a href="https://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
+                </p>
+                <p>
+                    ©
+                            2015-2016
+                    <a class="niu2-footer-link" href="http://pdhero.com">pd</a>
+                    /                         <a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
+                </p>
+                <p class="niu2-icons">
+                    <a class="niu2-footer-icon" href="https://git.io/vKNkO" title="my github page">
+                        <i class="icon-github-alt icon-lg"></i>
+                    </a>
+                    <a class="niu2-footer-icon" href="mailto:pd@pdhero.com" title="my email address">
+                        <i class="icon-envelope-o icon-lg"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
-    <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
-    <script type="text/javascript">onContentLoaded();</script>
-  </body>
+        <script type="text/javascript">
+            var _gaq=_gaq||[];
+            _gaq.push(["_setAccount","UA-58307278-1"]);
+            _gaq.push(["_trackPageview"]);
+            (function(){
+                var b=document.createElement("script");
+                b.type="text/javascript";
+                b.async=true;
+                b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";
+                var a=document.getElementsByTagName("script")[0];
+                a.parentNode.insertBefore(b,a)
+            })();
+        </script>
+        <div id="niu2-pygments" data-theme="github"></div>
+        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
+        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
+        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
+        <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            onContentLoaded();
+        </script>
+    </body>
 </html>

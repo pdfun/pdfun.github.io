@@ -1,133 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vim notes - just do it</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
-
-    <link rel="canonical" href="http://pdhero.com/bnote/vim-notes.html"/>
-    
-    <script type="text/javascript">window.onload=function(){};</script>
-    <!--[if lt IE 9]>
-        <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
-        <script src="http://pdhero.com/theme/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body> 
-    <div id="body-header">
-<div class="navbar navbar-inverse navbar-fixed-top">
-<div class="col-md-12">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://pdhero.com">
-            <i class="icon-home"></i>just do it
-        </a>
-    </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-            <li><a href="/about.html" title="about me">
-                <i class="icon-anchor"></i>关于</a>
-            </li>
-            <li><a href="/archives.html" title="blog archives">
-                <i class="icon-archive"></i>存档</a>
-            </li>
-            <li><a href="/tag/" title="blog tags">
-                <i class="icon-tag"></i>标签</a>
-            </li>
-        <!-- category dropdown list -->
-        <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-folder-open"></i>分类<b class="caret"></b>
-           </a>
-           <ul class="dropdown-menu">
-               <li><a href="http://pdhero.com/acode/index.html">
-                      <i class="icon-code"></i>饭碗
-                      (3)</a></li>
-               <li><a href="http://pdhero.com/bnote/index.html">
-                      <i class="icon-pencil"></i>笔记
-                      (6)</a></li>
-               <li><a href="http://pdhero.com/dlife/index.html">
-                      <i class="icon-coffee"></i>生活
-                      (3)</a></li>
-               <li><a href="http://pdhero.com/edesign/index.html">
-                      <i class="icon-flask"></i>设计
-                      (1)</a></li>
-           </ul>
-        </li>
-        <!--  self defined dropdown list -->
-        </ul>
-        
-        <!-- right nav bar -->
-        <ul class="nav navbar-nav navbar-right">
-        <!-- google custom search -->
-        <li>
-        <div id="niu2-cse-wrapper">
-            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
-                <form action="http://google.com/cse">
-                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
-                    <input type="hidden" name="ie" value="UTF-8" />
-                    <div class="form-group">
-                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
-                            type="text" name="q" 
-                            placeholder="按回车开始搜索 ..."/>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="vim">
+        <meta name="description" content="记下常用的一些VIM快捷键">
+        <title>vim notes - just do it</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
+        <link rel="canonical" href="http://pdhero.com/bnote/vim-notes.html" />
+        <script type="text/javascript">window.onload=function(){};</script>
+        <!--[if lt IE 9]>
+            <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
+            <script src="http://pdhero.com/theme/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body> 
+        <div id="body-header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://pdhero.com">
+                            <i class="icon-home"></i>just do it
+                        </a>
                     </div>
-                </form>
-           </div>
-           <div id="niu2-cse-ctrl-box" class="navbar-nav">
-            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
-           </div>
-       </div>
-       </li>
-       </ul>
-    </nav>
-</div>
-</div>    </div>
-    
-    <div id="body-content">
-<div class="col-md-8 col-md-offset-2">
-    <h1 id="content-heading">vim notes</h1>
-</div>
-<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
-    <div id="niu2-main-content">
-        <blockquote>
+                    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/about.html" title="about me">
+                                <i class="icon-anchor"></i>关于</a>
+                            </li>
+                            <li><a href="/tag/" title="blog tags">
+                                <i class="icon-tag"></i>标签</a>
+                            </li>
+                        <!-- category dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="http://pdhero.com/acode/index.html">
+                                      <i class="icon-code"></i>饭碗
+                                      (3)</a></li>
+                               <li><a href="http://pdhero.com/bnote/index.html">
+                                      <i class="icon-pencil"></i>笔记
+                                      (6)</a></li>
+                               <li><a href="http://pdhero.com/dlife/index.html">
+                                      <i class="icon-coffee"></i>生活
+                                      (3)</a></li>
+                               <li><a href="http://pdhero.com/edesign/index.html">
+                                      <i class="icon-flask"></i>设计
+                                      (1)</a></li>
+                           </ul>
+                        </li>
+                        <!--  self defined dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="fa-archive"></i>存档<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="/archives.html" title="archives order by publish time">
+                                 <i class="fa-calendar"></i>存档 (按发布时间)</a>
+                               </li>
+                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
+                                 <i class="fa-pencil"></i>存档 (按修改时间)</a>
+                               </li>
+                           </ul>
+                        </li>
+                        </ul>
+                        
+                        <!-- right nav bar -->
+                        <ul class="nav navbar-nav navbar-right">
+                        <!-- google custom search -->
+                        <li>
+                        <div id="niu2-cse-wrapper">
+                            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                                <form action="https://cse.google.com/cse">
+                                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
+                                    <input type="hidden" name="ie" value="UTF-8" />
+                                    <div class="form-group">
+                                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                                            type="text" name="q" 
+                                            placeholder="按回车开始搜索 ..."/>
+                                    </div>
+                                </form>
+                           </div>
+                           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+                            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+                           </div>
+                       </div>
+                       </li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="body-content">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 id="content-heading">vim notes</h1>
+            </div>
+            <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+                <div id="niu2-main-content">
+                    <blockquote>
 <p>记下常用的一些VIM快捷键</p>
 </blockquote>
 <p>平时用Xcode和Sublime比较多。Xcode使用插件<a href="https://github.com/XVimProject/XVim">xvim</a>,sublime直接改下配置文件就有<code>vim</code>模式了.</p>
 <h1 id="7653297de32f34fdec0dd0653aebf358">跳转</h1>
-<p>跳转到指定行: 行号+gg,比如:100gg跳转到第100行.<br />
-跳转到最后一行:shift+g.<br />
-跳转到第一行:g.<br />
-跳转到行尾:$(shift+4).<br />
-跳转到行首:^(shift+6).<br />
-跳转某个字母:ta跳转到下一个a前面,fa跳转到下一个a(小写的向前,大写的向后).<br />
-跳转到单词:w向前跳转到下一个单词,b向后跳转到下一个单词,e跳转到单词的结束.<br />
+<p>跳转到指定行: 行号+gg,比如:100gg跳转到第100行.<br/>
+跳转到最后一行:shift+g.<br/>
+跳转到第一行:g.<br/>
+跳转到行尾:$(shift+4).<br/>
+跳转到行首:^(shift+6).<br/>
+跳转某个字母:ta跳转到下一个a前面,fa跳转到下一个a(小写的向前,大写的向后).<br/>
+跳转到单词:w向前跳转到下一个单词,b向后跳转到下一个单词,e跳转到单词的结束.<br/>
 函数体跳转:{}  </p>
 <h1 id="79d3abe929f67f0644a78bf32adb3a89">复制</h1>
-<p>复制整行:yy<br />
-复制一个单词:yw<br />
+<p>复制整行:yy<br/>
+复制一个单词:yw<br/>
 复制到文档尾:yG  </p>
 <h1 id="2f4aaddde33c9b93c36fd2503f3d122b">删除</h1>
-<p>删除也可以叫剪切,删除时会复制选定内容到缓冲区.<br />
-删除整行:dd<br />
+<p>删除也可以叫剪切,删除时会复制选定内容到缓冲区.<br/>
+删除整行:dd<br/>
 删除某个单词:dw  </p>
 <h1 id="eafbece1016a6af76cce466e55ad9f00">粘贴</h1>
 <p>p</p>
 <h1 id="fad7c8a21fe3d7b3eb1db3d8a3212503">选中</h1>
-<p>先v再移动到相应位置进行选中<br />
-选中某个单词:viw或者vaw<br />
+<p>先v再移动到相应位置进行选中<br/>
+选中某个单词:viw或者vaw<br/>
 选中当前行:V  </p>
 <h1 id="1d95b75b8b084e242293bf54ff992010">大小写</h1>
-<p>大小写转换前先选中<br />
-u:当前选中的小写<br />
-U:当前选的大写<br />
+<p>大小写转换前先选中<br/>
+u:当前选中的小写<br/>
+U:当前选的大写<br/>
 某个单词大写:先选中 viw 再gU  </p>
 <h1 id="632ca845b6775b8a63991380886b25cb">组合应用</h1>
 <h2 id="d85d743375b003f034e69da688867837">多行注释</h2>
@@ -146,92 +158,117 @@ U:当前选的大写<br />
 <li>d</li>
 </ul>
 <h1 id="dc5d07a1867b1c0b57153afe054d0332">查找</h1>
-<p>/ 向前查找<br />
-? 向后查找<br />
-比如:/xx回车 从当前位置向后查找xx<br />
+<p>/ 向前查找<br/>
+? 向后查找<br/>
+比如:/xx回车 从当前位置向后查找xx<br/>
 n继续查找 N反向查找  </p>
 <h1 id="25f9c7fa3b50aebe5125112ac1187777">总结</h1>
-<p>其实记住 <code>gydpuvwb</code> 这些基本的就行了.用久了组合什么的稍微想下就知道了.<br />
-当然了我也只是说说而已😂<br />
+<p>其实记住 <code>gydpuvwb</code> 这些基本的就行了.用久了组合什么的稍微想下就知道了.<br/>
+当然了我也只是说说而已😂<br/>
 想把这些经常用　组合成个单词,搜索了大脑词量太小了。  </p>
-    </div>
-    <div id="content-comments">
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/bnote/vim-notes.html" data-title="vim notes" data-url="http://pdhero.com/bnote/vim-notes.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    var duoshuoQuery = { short_name: 'pdx' };
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end --></div>
+                </div>
+                <div id="content-comments">
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/bnote/vim-notes.html" data-title="vim notes" data-url="http://pdhero.com/bnote/vim-notes.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pd' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
+                        })();
+                    </script>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
-</div>
-<div class="niu2-right-container col-md-2">
-    <div id="niu2-sidebar-meta" class="niu2-sidebar">
-        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-        <div class="niu2-sidebar-value">2015-12-30 16:26</div>
-        <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-        <div class="niu2-sidebar-value">2016-01-28 09:46</div>
-        <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
-        <div class="niu2-sidebar-value"><a href="http://pdhero.com/bnote/index.html">笔记</a></div>
-        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
- 
-            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/vim.html">vim</a><sup>1</sup></div>
-    </div>
-</div>
+            </div>
+            <div class="niu2-right-container col-md-2 with-left-border">
+                <div id="niu2-sidebar-meta" class="niu2-sidebar">
+                    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+                    <div class="niu2-sidebar-value">2015-12-30 16:26</div>
+                    <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
+                    <div class="niu2-sidebar-value">2016-01-28 09:46</div>
+                    <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
+                    <div class="niu2-sidebar-value"><a href="http://pdhero.com/bnote/index.html">笔记</a></div>
+                    <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/vim.html">vim</a><sup>1</sup></div>
+                </div>
 
-<div class="niu2-right-container col-md-2">
-    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
-        <div class="niu2-sidebar-label">
-            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
+                    <div class="niu2-sidebar-label">
+                        <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                    </div>
+                    <ul id="niu2-sidebar-toc-list">
+                        <li><a href="#content-heading">vim notes</a></li>
+                        <li><a href='#7653297de32f34fdec0dd0653aebf358'>跳转</a></li><li><a href='#79d3abe929f67f0644a78bf32adb3a89'>复制</a></li><li><a href='#2f4aaddde33c9b93c36fd2503f3d122b'>删除</a></li><li><a href='#eafbece1016a6af76cce466e55ad9f00'>粘贴</a></li><li><a href='#fad7c8a21fe3d7b3eb1db3d8a3212503'>选中</a></li><li><a href='#1d95b75b8b084e242293bf54ff992010'>大小写</a></li><li><a href='#632ca845b6775b8a63991380886b25cb'>组合应用</a><ul><li><a href='#d85d743375b003f034e69da688867837'>多行注释</a></li><li><a href='#f487d1ec492bbf209340222c0608ee56'>取消多行注释</a></li></ul></li><li><a href='#dc5d07a1867b1c0b57153afe054d0332'>查找</a></li><li><a href='#25f9c7fa3b50aebe5125112ac1187777'>总结</a></li>
+                        <li><a href="#content-comments">评论</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="niu2-toolbar">
+                <ul class="list-unstyled">
+                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
+                </ul>
+                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
+                <div id="niu2-toolbar-github" data-repo=""></div>
+                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
+            </div>
+            <div id="niu2-toc" data-style="fixed"></div>
         </div>
-        <ul id="niu2-sidebar-toc-list">
-            <li><a href="#content-heading" target="_blank">vim notes</a></li>
-            <li><a href='#7653297de32f34fdec0dd0653aebf358'>跳转</a></li><li><a href='#79d3abe929f67f0644a78bf32adb3a89'>复制</a></li><li><a href='#2f4aaddde33c9b93c36fd2503f3d122b'>删除</a></li><li><a href='#eafbece1016a6af76cce466e55ad9f00'>粘贴</a></li><li><a href='#fad7c8a21fe3d7b3eb1db3d8a3212503'>选中</a></li><li><a href='#1d95b75b8b084e242293bf54ff992010'>大小写</a></li><li><a href='#632ca845b6775b8a63991380886b25cb'>组合应用</a><ul><li><a href='#d85d743375b003f034e69da688867837'>多行注释</a></li><li><a href='#f487d1ec492bbf209340222c0608ee56'>取消多行注释</a></li></ul></li><li><a href='#dc5d07a1867b1c0b57153afe054d0332'>查找</a></li><li><a href='#25f9c7fa3b50aebe5125112ac1187777'>总结</a></li>
-            <li><a href="#content-comments">评论</a></li>
-        </ul>
-    </div>
-</div>
-    </div>
 
-    <div id="body-footer" class="col-md-6 col-md-offset-2">
-<div class="niu2-footer">
-    <hr/>
-	<p>
-		Powered by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>, 
-        <a href="https://github.com/mawenbao/niu-x2-sidebar" target="_blank">theme</a> built with <a href="http://getbootstrap.com" target="_blank">Bootstrap3</a>
-		by <a href="http://blog.atime.me" target="_blank">Ma Wenbao</a>, icons by 
-		<a href="http://fortawesome.github.io/Font-Awesome" target="_blank">Font Awesome</a>.
-	</p>
-	<p>
-		©
-				2015-2016
-		<a class="niu2-footer-link" href="http://pdhero.com">pd</a>
-        / 			<a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
-    </p>
-    <p class="niu2-icons">
-	        <a class="niu2-footer-icon" href="http://git.io/v8fku" title="my github page" target="_blank">
-	            <i class="icon-github-alt icon-lg"></i>
-	        </a>
-	        <a class="niu2-footer-icon" href="mailto:pd@pdher.com" title="my email address" target="_blank">
-	            <i class="icon-envelope-o icon-lg"></i>
-	        </a>
-	</p>
-</div>    </div>
-<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-58307278-1"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>    
-    <div id="niu2-pygments" data-theme="github"></div>
+        <div class="niu2-footer">
+            <div id="body-footer" class="col-md-6 col-md-offset-2">
+                <hr/>
+                <p>
+                    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+                    <a href="https://github.com/mawenbao/niu-x2-sidebar">theme</a> built with <a href="https://github.com/twbs/bootstrap">Bootstrap3</a>
+                    by <a href="https://blog.mawenbao.com">Ma Wenbao</a>, icons by 
+                    <a href="https://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
+                </p>
+                <p>
+                    ©
+                            2015-2016
+                    <a class="niu2-footer-link" href="http://pdhero.com">pd</a>
+                    /                         <a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
+                </p>
+                <p class="niu2-icons">
+                    <a class="niu2-footer-icon" href="https://git.io/vKNkO" title="my github page">
+                        <i class="icon-github-alt icon-lg"></i>
+                    </a>
+                    <a class="niu2-footer-icon" href="mailto:pd@pdhero.com" title="my email address">
+                        <i class="icon-envelope-o icon-lg"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
-    <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
-    <script type="text/javascript">onContentLoaded();</script>
-  </body>
+        <script type="text/javascript">
+            var _gaq=_gaq||[];
+            _gaq.push(["_setAccount","UA-58307278-1"]);
+            _gaq.push(["_trackPageview"]);
+            (function(){
+                var b=document.createElement("script");
+                b.type="text/javascript";
+                b.async=true;
+                b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";
+                var a=document.getElementsByTagName("script")[0];
+                a.parentNode.insertBefore(b,a)
+            })();
+        </script>
+        <div id="niu2-pygments" data-theme="github"></div>
+        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
+        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
+        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
+        <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            onContentLoaded();
+        </script>
+    </body>
 </html>

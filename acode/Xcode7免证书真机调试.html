@@ -1,196 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xcode7免证书真机调试 - just do it</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
-
-    <link rel="canonical" href="http://pdhero.com/acode/Xcode7免证书真机调试.html"/>
-    
-    <script type="text/javascript">window.onload=function(){};</script>
-    <!--[if lt IE 9]>
-        <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
-        <script src="http://pdhero.com/theme/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body> 
-    <div id="body-header">
-<div class="navbar navbar-inverse navbar-fixed-top">
-<div class="col-md-12">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://pdhero.com">
-            <i class="icon-home"></i>just do it
-        </a>
-    </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-            <li><a href="/about.html" title="about me">
-                <i class="icon-anchor"></i>关于</a>
-            </li>
-            <li><a href="/archives.html" title="blog archives">
-                <i class="icon-archive"></i>存档</a>
-            </li>
-            <li><a href="/tag/" title="blog tags">
-                <i class="icon-tag"></i>标签</a>
-            </li>
-        <!-- category dropdown list -->
-        <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-folder-open"></i>分类<b class="caret"></b>
-           </a>
-           <ul class="dropdown-menu">
-               <li><a href="http://pdhero.com/acode/index.html">
-                      <i class="icon-code"></i>饭碗
-                      (3)</a></li>
-               <li><a href="http://pdhero.com/bnote/index.html">
-                      <i class="icon-pencil"></i>笔记
-                      (6)</a></li>
-               <li><a href="http://pdhero.com/dlife/index.html">
-                      <i class="icon-coffee"></i>生活
-                      (3)</a></li>
-               <li><a href="http://pdhero.com/edesign/index.html">
-                      <i class="icon-flask"></i>设计
-                      (1)</a></li>
-           </ul>
-        </li>
-        <!--  self defined dropdown list -->
-        </ul>
-        
-        <!-- right nav bar -->
-        <ul class="nav navbar-nav navbar-right">
-        <!-- google custom search -->
-        <li>
-        <div id="niu2-cse-wrapper">
-            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
-                <form action="http://google.com/cse">
-                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
-                    <input type="hidden" name="ie" value="UTF-8" />
-                    <div class="form-group">
-                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
-                            type="text" name="q" 
-                            placeholder="按回车开始搜索 ..."/>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Xcode7">
+        <meta name="description" content="The application does not contain a valid application-identifier entitlement.">
+        <title>Xcode7免证书真机调试 - just do it</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
+        <link rel="canonical" href="http://pdhero.com/acode/Xcode7免证书真机调试.html" />
+        <script type="text/javascript">window.onload=function(){};</script>
+        <!--[if lt IE 9]>
+            <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
+            <script src="http://pdhero.com/theme/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body> 
+        <div id="body-header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://pdhero.com">
+                            <i class="icon-home"></i>just do it
+                        </a>
                     </div>
-                </form>
-           </div>
-           <div id="niu2-cse-ctrl-box" class="navbar-nav">
-            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
-           </div>
-       </div>
-       </li>
-       </ul>
-    </nav>
-</div>
-</div>    </div>
-    
-    <div id="body-content">
-<div class="col-md-8 col-md-offset-2">
-    <h1 id="content-heading">Xcode7免证书真机调试</h1>
-</div>
-<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
-    <div id="niu2-main-content">
-        <blockquote>
+                    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/about.html" title="about me">
+                                <i class="icon-anchor"></i>关于</a>
+                            </li>
+                            <li><a href="/tag/" title="blog tags">
+                                <i class="icon-tag"></i>标签</a>
+                            </li>
+                        <!-- category dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="http://pdhero.com/acode/index.html">
+                                      <i class="icon-code"></i>饭碗
+                                      (3)</a></li>
+                               <li><a href="http://pdhero.com/bnote/index.html">
+                                      <i class="icon-pencil"></i>笔记
+                                      (6)</a></li>
+                               <li><a href="http://pdhero.com/dlife/index.html">
+                                      <i class="icon-coffee"></i>生活
+                                      (3)</a></li>
+                               <li><a href="http://pdhero.com/edesign/index.html">
+                                      <i class="icon-flask"></i>设计
+                                      (1)</a></li>
+                           </ul>
+                        </li>
+                        <!--  self defined dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="fa-archive"></i>存档<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="/archives.html" title="archives order by publish time">
+                                 <i class="fa-calendar"></i>存档 (按发布时间)</a>
+                               </li>
+                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
+                                 <i class="fa-pencil"></i>存档 (按修改时间)</a>
+                               </li>
+                           </ul>
+                        </li>
+                        </ul>
+                        
+                        <!-- right nav bar -->
+                        <ul class="nav navbar-nav navbar-right">
+                        <!-- google custom search -->
+                        <li>
+                        <div id="niu2-cse-wrapper">
+                            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                                <form action="https://cse.google.com/cse">
+                                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
+                                    <input type="hidden" name="ie" value="UTF-8" />
+                                    <div class="form-group">
+                                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                                            type="text" name="q" 
+                                            placeholder="按回车开始搜索 ..."/>
+                                    </div>
+                                </form>
+                           </div>
+                           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+                            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+                           </div>
+                       </div>
+                       </li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="body-content">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 id="content-heading">Xcode7免证书真机调试</h1>
+            </div>
+            <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+                <div id="niu2-main-content">
+                    <blockquote>
 <p>The application does not contain a valid application-identifier entitlement.</p>
 </blockquote>
 <h4 id="8e20c0c5e9332a426196dc0e8bce212a">WWDC2015</h4>
 <p>这次的WWDC对开发者意义最大的要数<code>Swift2.0</code>年底开源,重点支持 OS X、iOS和Linux三个平台,期待<code>Swift</code>的表现。另一件事就是证书三合一了,<code>iOS</code> <code>Mac</code> <code>Safari Extensions</code>证书的三合了,给开发者省了不少钱。</p>
 <h4 id="a233f06910fc7ea15b4be4e98af53e80">Xcode7真机调试</h4>
 <p>登陆非开发者的appID,可以看到iOS Mac都是<code>Free</code>
-<img alt="appid" src="http://7xixt5.com1.z0.glb.clouddn.com/appId.png" /></p>
+<img alt="appid" src="http://7xixt5.com1.z0.glb.clouddn.com/appId.png"/></p>
 <p>点进详情查看,和以前一样有与<code>BundleID</code>对应的描述文件还有Develop证书。
-<img alt="appID_detail" src="http://7xixt5.com1.z0.glb.clouddn.com/appID_detail.png" />
+<img alt="appID_detail" src="http://7xixt5.com1.z0.glb.clouddn.com/appID_detail.png"/>
 可以看到没有<code>Distribution</code>描述文件和证书,所以是没办法直接<code>Archive</code>导出<code>ipa</code>的。</p>
 <h4 id="9e318b9dbc478c973c3319552b39aaec">keyChain</h4>
 <p>其实<code>Xcode7</code>也不是免证书调试.苹果自动在钥匙串中生成了证书.进钥匙串可以看到证书的相关信息。
-<img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/Xcode7_keyChain.png" /></p>
+<img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/Xcode7_keyChain.png"/></p>
 <h4 id="580a439681eee1ad580356d77a8ed5e6">真机调试报错</h4>
 <p>真机调试报错一般情况下点击弹出的<code>Fix</code>,Xcode基本都可以解决.
 当提示安装失败
 <code>The application does not contain a valid application-identifier entitlement.</code>,是因为一样的<code>BundleID</code>之前用99的证书调试过,证书信息不一致无法安装,卸载程序重新运行就可以调试了。</p>
-    </div>
-    <div id="content-comments">
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/acode/Xcode7免证书真机调试.html" data-title="Xcode7免证书真机调试" data-url="http://pdhero.com/acode/Xcode7免证书真机调试.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    var duoshuoQuery = { short_name: 'pdx' };
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end --></div>
+                </div>
+                <div id="content-comments">
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/acode/Xcode7免证书真机调试.html" data-title="Xcode7免证书真机调试" data-url="http://pdhero.com/acode/Xcode7免证书真机调试.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pd' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
+                        })();
+                    </script>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
-</div>
-<div class="niu2-right-container col-md-2">
-    <div id="niu2-sidebar-meta" class="niu2-sidebar">
-        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-        <div class="niu2-sidebar-value">2015-06-09 19:24</div>
-        <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
-        <div class="niu2-sidebar-value"><a href="http://pdhero.com/acode/index.html">饭碗</a></div>
-        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
- 
-            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/xcode7.html">Xcode7</a><sup>1</sup></div>
-    </div>
-</div>
+            </div>
+            <div class="niu2-right-container col-md-2 with-left-border">
+                <div id="niu2-sidebar-meta" class="niu2-sidebar">
+                    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+                    <div class="niu2-sidebar-value">2015-06-09 19:24</div>
+                    <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
+                    <div class="niu2-sidebar-value"><a href="http://pdhero.com/acode/index.html">饭碗</a></div>
+                    <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/xcode7.html">Xcode7</a><sup>1</sup></div>
+                </div>
 
-<div class="niu2-right-container col-md-2">
-    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
-        <div class="niu2-sidebar-label">
-            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
+                    <div class="niu2-sidebar-label">
+                        <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                    </div>
+                    <ul id="niu2-sidebar-toc-list">
+                        <li><a href="#content-heading">Xcode7免证书真机调试</a></li>
+                        <li><a href='#8e20c0c5e9332a426196dc0e8bce212a'>WWDC2015</a></li><li><a href='#a233f06910fc7ea15b4be4e98af53e80'>Xcode7真机调试</a></li><li><a href='#9e318b9dbc478c973c3319552b39aaec'>keyChain</a></li><li><a href='#580a439681eee1ad580356d77a8ed5e6'>真机调试报错</a></li>
+                        <li><a href="#content-comments">评论</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="niu2-toolbar">
+                <ul class="list-unstyled">
+                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
+                </ul>
+                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
+                <div id="niu2-toolbar-github" data-repo=""></div>
+                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
+            </div>
+            <div id="niu2-toc" data-style="fixed"></div>
         </div>
-        <ul id="niu2-sidebar-toc-list">
-            <li><a href="#content-heading" target="_blank">Xcode7免证书真机调试</a></li>
-            <li><a href='#8e20c0c5e9332a426196dc0e8bce212a'>WWDC2015</a></li><li><a href='#a233f06910fc7ea15b4be4e98af53e80'>Xcode7真机调试</a></li><li><a href='#9e318b9dbc478c973c3319552b39aaec'>keyChain</a></li><li><a href='#580a439681eee1ad580356d77a8ed5e6'>真机调试报错</a></li>
-            <li><a href="#content-comments">评论</a></li>
-        </ul>
-    </div>
-</div>
-    </div>
 
-    <div id="body-footer" class="col-md-6 col-md-offset-2">
-<div class="niu2-footer">
-    <hr/>
-	<p>
-		Powered by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>, 
-        <a href="https://github.com/mawenbao/niu-x2-sidebar" target="_blank">theme</a> built with <a href="http://getbootstrap.com" target="_blank">Bootstrap3</a>
-		by <a href="http://blog.atime.me" target="_blank">Ma Wenbao</a>, icons by 
-		<a href="http://fortawesome.github.io/Font-Awesome" target="_blank">Font Awesome</a>.
-	</p>
-	<p>
-		©
-				2015-2016
-		<a class="niu2-footer-link" href="http://pdhero.com">pd</a>
-        / 			<a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
-    </p>
-    <p class="niu2-icons">
-	        <a class="niu2-footer-icon" href="http://git.io/v8fku" title="my github page" target="_blank">
-	            <i class="icon-github-alt icon-lg"></i>
-	        </a>
-	        <a class="niu2-footer-icon" href="mailto:pd@pdher.com" title="my email address" target="_blank">
-	            <i class="icon-envelope-o icon-lg"></i>
-	        </a>
-	</p>
-</div>    </div>
-<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-58307278-1"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>    
-    <div id="niu2-pygments" data-theme="github"></div>
+        <div class="niu2-footer">
+            <div id="body-footer" class="col-md-6 col-md-offset-2">
+                <hr/>
+                <p>
+                    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+                    <a href="https://github.com/mawenbao/niu-x2-sidebar">theme</a> built with <a href="https://github.com/twbs/bootstrap">Bootstrap3</a>
+                    by <a href="https://blog.mawenbao.com">Ma Wenbao</a>, icons by 
+                    <a href="https://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
+                </p>
+                <p>
+                    ©
+                            2015-2016
+                    <a class="niu2-footer-link" href="http://pdhero.com">pd</a>
+                    /                         <a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
+                </p>
+                <p class="niu2-icons">
+                    <a class="niu2-footer-icon" href="https://git.io/vKNkO" title="my github page">
+                        <i class="icon-github-alt icon-lg"></i>
+                    </a>
+                    <a class="niu2-footer-icon" href="mailto:pd@pdhero.com" title="my email address">
+                        <i class="icon-envelope-o icon-lg"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
-    <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
-    <script type="text/javascript">onContentLoaded();</script>
-  </body>
+        <script type="text/javascript">
+            var _gaq=_gaq||[];
+            _gaq.push(["_setAccount","UA-58307278-1"]);
+            _gaq.push(["_trackPageview"]);
+            (function(){
+                var b=document.createElement("script");
+                b.type="text/javascript";
+                b.async=true;
+                b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";
+                var a=document.getElementsByTagName("script")[0];
+                a.parentNode.insertBefore(b,a)
+            })();
+        </script>
+        <div id="niu2-pygments" data-theme="github"></div>
+        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
+        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
+        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
+        <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            onContentLoaded();
+        </script>
+    </body>
 </html>

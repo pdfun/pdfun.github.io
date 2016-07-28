@@ -230,8 +230,12 @@ img {
     border-right: 1px solid #ccc;
 }
 
+.with-left-border {
+    border-left: 1px solid #ccc;
+}
+
 .niu2-right-container {
-    margin-left: 5px;
+    padding-left: 16px;
 }
 
 a.niu2-active-toc, a.niu2-active-toc:hover {
@@ -294,6 +298,8 @@ a.niu2-active-toc:before {
 
 #niu2-sidebar-toc {
     margin-top: 10px !important;
+    margin-left: -17px;
+    padding-left: 17px;
     min-width: 210px !important;
 }
 
@@ -414,8 +420,9 @@ img {
 
 #niu2-cse-search-input {
 	width: 150px;
-    height: 20px;
+    height: 21px;
     padding: 1px 3px;
+    margin-top: 1px;
 }
 
 #niu2-cse-ctrl-box {
@@ -469,10 +476,6 @@ img {
 .niu2-meta-date-index {
     font-size: 14px;
     margin-right: 10px;
-}
-
-.niu2-index-title {
-    margin-bottom: 20px;
 }
 
 .niu2-index-date {
@@ -552,6 +555,11 @@ a.niu2-toggle-ctrl:hover {
 #niu2-archives {
     font-size: 15px;
     line-height: 1.7;
+}
+
+#niu2-archives .panel {
+    box-shadow: none;
+    margin-bottom: 10px;
 }
 
 #niu2-archives ul {
@@ -642,6 +650,7 @@ h4:before, h5:before, h6:before {
 
 #niu2-loading-overly {
     position: fixed;
+    top: 0;
     width: 100%;
     height: 100%;
     background: #000;
