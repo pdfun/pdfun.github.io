@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="iOS系统分享多张图片到微信朋友圈">
         <title>iOS微信多图分享到朋友圈 - just do it</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -36,6 +36,9 @@
                             <li><a href="/about.html" title="about me">
                                 <i class="icon-anchor"></i>关于</a>
                             </li>
+                            <li><a href="/archives.html" title="blog archives">
+                                <i class="icon-archive"></i>存档</a>
+                            </li>
                             <li><a href="/tag/" title="blog tags">
                                 <i class="icon-tag"></i>标签</a>
                             </li>
@@ -53,26 +56,13 @@
                                       (6)</a></li>
                                <li><a href="http://pdhero.com/dlife/index.html">
                                       <i class="icon-coffee"></i>生活
-                                      (3)</a></li>
+                                      (4)</a></li>
                                <li><a href="http://pdhero.com/edesign/index.html">
                                       <i class="icon-flask"></i>设计
                                       (1)</a></li>
                            </ul>
                         </li>
                         <!--  self defined dropdown list -->
-                        <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <i class="fa-archive"></i>存档<b class="caret"></b>
-                           </a>
-                           <ul class="dropdown-menu">
-                               <li><a href="/archives.html" title="archives order by publish time">
-                                 <i class="fa-calendar"></i>存档 (按发布时间)</a>
-                               </li>
-                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
-                                 <i class="fa-pencil"></i>存档 (按修改时间)</a>
-                               </li>
-                           </ul>
-                        </li>
                         </ul>
                         
                         <!-- right nav bar -->
@@ -118,7 +108,7 @@
 <h3 id="19453cab0dfbbc578b0f79f85e4ee499">微信SDK的一些设置就不多说了。</h3>
 <h3 id="b8b5d264f8938bc020ee54dc1fe3d27f">分享到微信的部分代码</h3>
 <div class="codehilite"><pre><span class="kc">self</span><span class="p">.</span><span class="n">showHUD</span><span class="p">()</span>
-<span class="bp">UIPasteboard</span><span class="p">.</span><span class="n">generalPasteboard</span><span class="p">().</span><span class="n">string</span> <span class="p">=</span> <span class="s">"微信多图分享到朋友圈"</span>
+<span class="bp">UIPasteboard</span><span class="p">.</span><span class="n">generalPasteboard</span><span class="p">().</span><span class="n">string</span> <span class="p">=</span> <span class="s">&quot;微信多图分享到朋友圈&quot;</span>
 <span class="kd">let</span> <span class="nv">imageCache</span><span class="p">:</span><span class="n">SDImageCache</span> <span class="p">=</span> <span class="n">SDImageCache</span><span class="p">.</span><span class="n">sharedImageCache</span><span class="p">()</span>
 <span class="kd">var</span> <span class="nv">imageArr</span><span class="p">:[</span><span class="nb">AnyObject</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">imageUrl</span> <span class="k">in</span> <span class="kc">self</span><span class="p">.</span><span class="n">dataArr</span> <span class="p">{</span>
@@ -128,10 +118,12 @@
  <span class="p">}</span>
 <span class="p">}</span>
 <span class="kd">let</span> <span class="nv">activityView</span><span class="p">:</span> <span class="bp">UIActivityViewController</span> <span class="p">=</span> <span class="bp">UIActivityViewController</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">activityItems</span><span class="p">:</span> <span class="n">imageArr</span><span class="p">,</span> <span class="n">applicationActivities</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
- <span class="kc">self</span><span class="p">.</span><span class="n">hideHUDWithCompletionMessage</span><span class="p">(</span><span class="s">"分享的内容已经复制到粘贴板"</span><span class="p">,</span> <span class="n">finishedHandler</span><span class="p">:</span> <span class="p">{</span>
+ <span class="kc">self</span><span class="p">.</span><span class="n">hideHUDWithCompletionMessage</span><span class="p">(</span><span class="s">&quot;分享的内容已经复制到粘贴板&quot;</span><span class="p">,</span> <span class="n">finishedHandler</span><span class="p">:</span> <span class="p">{</span>
      <span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">?.</span><span class="n">presentViewController</span><span class="p">(</span><span class="n">activityView</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="n">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
  <span class="p">})</span>
 </pre></div>
+
+
 <h3 id="c5eca45d461382d648c77f6df4e9fd15">代码说明</h3>
 <ul>
 <li>dataArr是一个储存图片的数组</li>
@@ -185,14 +177,6 @@
                     </ul>
                 </div>
             </div>
-            <div id="niu2-toolbar">
-                <ul class="list-unstyled">
-                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
-                </ul>
-                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
-                <div id="niu2-toolbar-github" data-repo=""></div>
-                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
-            </div>
             <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
@@ -236,8 +220,6 @@
             })();
         </script>
         <div id="niu2-pygments" data-theme="github"></div>
-        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
-        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
         <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>

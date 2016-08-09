@@ -6,7 +6,7 @@
         <meta name="keywords" content="iOS">
         <meta name="description" content="大部分来自stackoverflow">
         <title>iOS notes - just do it</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -37,6 +37,9 @@
                             <li><a href="/about.html" title="about me">
                                 <i class="icon-anchor"></i>关于</a>
                             </li>
+                            <li><a href="/archives.html" title="blog archives">
+                                <i class="icon-archive"></i>存档</a>
+                            </li>
                             <li><a href="/tag/" title="blog tags">
                                 <i class="icon-tag"></i>标签</a>
                             </li>
@@ -54,26 +57,13 @@
                                       (6)</a></li>
                                <li><a href="http://pdhero.com/dlife/index.html">
                                       <i class="icon-coffee"></i>生活
-                                      (3)</a></li>
+                                      (4)</a></li>
                                <li><a href="http://pdhero.com/edesign/index.html">
                                       <i class="icon-flask"></i>设计
                                       (1)</a></li>
                            </ul>
                         </li>
                         <!--  self defined dropdown list -->
-                        <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <i class="fa-archive"></i>存档<b class="caret"></b>
-                           </a>
-                           <ul class="dropdown-menu">
-                               <li><a href="/archives.html" title="archives order by publish time">
-                                 <i class="fa-calendar"></i>存档 (按发布时间)</a>
-                               </li>
-                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
-                                 <i class="fa-pencil"></i>存档 (按修改时间)</a>
-                               </li>
-                           </ul>
-                        </li>
                         </ul>
                         
                         <!-- right nav bar -->
@@ -123,6 +113,8 @@
 </ul>
 <div class="codehilite"><pre>[self.view recursiveDescription]
 </pre></div>
+
+
 <ul>
 <li><code>tableView</code>滚动的时候始终以<code>row</code>的高度为单位。
 首先想到的是<code>tableView</code>继承自<code>scrollView</code>也有<code>pagingEnabled</code>属性。
@@ -138,6 +130,8 @@
     (*targetContentOffset) = [self.tableView rectForRowAtIndexPath:indexPath].origin;
 }
 </pre></div>
+
+
 <ul>
 <li>去掉tableView多余的行
   之前一直根据行数来设置tableView的高度😂其实不用这么麻烦</li>
@@ -149,6 +143,8 @@
 <div class="codehilite"><pre>- (void) touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event{
     [_searchBar endEditing:YES];
 </pre></div>
+
+
 <p>其实还有一个神器<a href="https://github.com/hackiftekhar/IQKeyboardManager">IQKeyboardManager</a></p>
 <ul>
 <li>更改UI控件系统默认样式</li>
@@ -164,6 +160,8 @@
 //serarchBar的颜色,比如说取消按钮。再也不会遍历子视图了。
 [[UISearchBar appearance] setTintColor:[UIColor whiteColor]];
 </pre></div>
+
+
 <p>每个控件的<code>appearance</code>都可以去看下。有时候能省很多事。不用一个个的单独设置。</p>
 <ul>
 <li>
@@ -228,14 +226,6 @@
                     </ul>
                 </div>
             </div>
-            <div id="niu2-toolbar">
-                <ul class="list-unstyled">
-                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
-                </ul>
-                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
-                <div id="niu2-toolbar-github" data-repo=""></div>
-                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
-            </div>
             <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
@@ -279,8 +269,6 @@
             })();
         </script>
         <div id="niu2-pygments" data-theme="github"></div>
-        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
-        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
         <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>

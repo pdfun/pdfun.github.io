@@ -6,7 +6,7 @@
         <meta name="keywords" content="HHKB, Karabiner">
         <meta name="description" content="Karabiner 给HHKB添加功能键F0~F12">
         <title>HHKB Function Key With Karabiner - just do it</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -37,6 +37,9 @@
                             <li><a href="/about.html" title="about me">
                                 <i class="icon-anchor"></i>关于</a>
                             </li>
+                            <li><a href="/archives.html" title="blog archives">
+                                <i class="icon-archive"></i>存档</a>
+                            </li>
                             <li><a href="/tag/" title="blog tags">
                                 <i class="icon-tag"></i>标签</a>
                             </li>
@@ -54,26 +57,13 @@
                                       (6)</a></li>
                                <li><a href="http://pdhero.com/dlife/index.html">
                                       <i class="icon-coffee"></i>生活
-                                      (3)</a></li>
+                                      (4)</a></li>
                                <li><a href="http://pdhero.com/edesign/index.html">
                                       <i class="icon-flask"></i>设计
                                       (1)</a></li>
                            </ul>
                         </li>
                         <!--  self defined dropdown list -->
-                        <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <i class="fa-archive"></i>存档<b class="caret"></b>
-                           </a>
-                           <ul class="dropdown-menu">
-                               <li><a href="/archives.html" title="archives order by publish time">
-                                 <i class="fa-calendar"></i>存档 (按发布时间)</a>
-                               </li>
-                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
-                                 <i class="fa-pencil"></i>存档 (按修改时间)</a>
-                               </li>
-                           </ul>
-                        </li>
                         </ul>
                         
                         <!-- right nav bar -->
@@ -116,7 +106,7 @@
 <p>打开<code>Karabiner</code>,选中<code>Change Key</code>菜单,看到右下角有句话<code>Do you want to add your own settings?</code>点击<code>Open the documentation web site</code>跳转到 <a href="https://pqrs.org/osx/karabiner/document.html#privatexml">How to add your own settings</a>,有详情的教程告诉我们进行个性化设置。</p>
 <h2 id="fa535ffb25e1fd20341652f9be21e06e">Config</h2>
 <p>贴下我的XML配置,只是左边的<code>Option+Num</code>映射<code>Fn</code>的,可以根据自己的需要进行修改。</p>
-<div class="codehilite"><pre>&lt;?xml version="1.0"?&gt;
+<div class="codehilite"><pre>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;root&gt;
   &lt;item&gt;
     &lt;name&gt;option+num to Fn&lt;/name&gt;
@@ -137,6 +127,8 @@
 
 &lt;/root&gt;
 </pre></div>
+
+
 <h2 id="e7384c252586cce857cb14709845a8a4">KeyCode.data</h2>
 <p>找对应的<code>KeyCode</code>是件头疼的事,才开始慢慢试看到<code>Karabiner</code>报错一点点修改,后来搜索了下才发现的有现成的可以看😹这智商真是捉急啊。附上KeyCode.data链接<a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data">KeyCode.data</a></p>
 <p>总结下规律:</p>
@@ -144,7 +136,7 @@
 <li>全部是大写</li>
 <li><code>KEY_num</code> 表示数字,比如:KEY_0 =&gt; 0</li>
 <li><code>R</code> 表示右边,<code>L</code>表示左边,比如OPTION_R =&gt; 左边的Option</li>
-<li><code>MINUS</code>=&gt;<code>-</code> <code>EQUAL</code> =&gt;<code>=</code></li>
+<li><code>MINUS</code>=&gt;<code>-</code>  <code>EQUAL</code> =&gt;<code>=</code></li>
 <li>更全的就看<a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data">KeyCode.data</a>了</li>
 </ul>
                 </div>
@@ -193,14 +185,6 @@
                     </ul>
                 </div>
             </div>
-            <div id="niu2-toolbar">
-                <ul class="list-unstyled">
-                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
-                </ul>
-                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
-                <div id="niu2-toolbar-github" data-repo=""></div>
-                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
-            </div>
             <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
@@ -244,8 +228,6 @@
             })();
         </script>
         <div id="niu2-pygments" data-theme="github"></div>
-        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
-        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
         <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>

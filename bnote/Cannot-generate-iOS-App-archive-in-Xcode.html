@@ -6,7 +6,7 @@
         <meta name="keywords" content="archive">
         <meta name="description" content="Cannot generate iOS App archive in xcode">
         <title>Cannot generate iOS App archive in xcode - just do it</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -37,6 +37,9 @@
                             <li><a href="/about.html" title="about me">
                                 <i class="icon-anchor"></i>关于</a>
                             </li>
+                            <li><a href="/archives.html" title="blog archives">
+                                <i class="icon-archive"></i>存档</a>
+                            </li>
                             <li><a href="/tag/" title="blog tags">
                                 <i class="icon-tag"></i>标签</a>
                             </li>
@@ -54,26 +57,13 @@
                                       (6)</a></li>
                                <li><a href="http://pdhero.com/dlife/index.html">
                                       <i class="icon-coffee"></i>生活
-                                      (3)</a></li>
+                                      (4)</a></li>
                                <li><a href="http://pdhero.com/edesign/index.html">
                                       <i class="icon-flask"></i>设计
                                       (1)</a></li>
                            </ul>
                         </li>
                         <!--  self defined dropdown list -->
-                        <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <i class="fa-archive"></i>存档<b class="caret"></b>
-                           </a>
-                           <ul class="dropdown-menu">
-                               <li><a href="/archives.html" title="archives order by publish time">
-                                 <i class="fa-calendar"></i>存档 (按发布时间)</a>
-                               </li>
-                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
-                                 <i class="fa-pencil"></i>存档 (按修改时间)</a>
-                               </li>
-                           </ul>
-                        </li>
                         </ul>
                         
                         <!-- right nav bar -->
@@ -114,7 +104,7 @@
 </blockquote>
 <h4 id="e678f2cc8303d18a894f8be0f9588fe7">Xcode archive</h4>
 <p>Xcode 打包的时候一直生成<code>Other Item</code>不生成<code>iOS App</code>
-<img alt="Cannot generate iOS App archive in xcode" src="http://7xixt5.com1.z0.glb.clouddn.com/Cannot-generate-iOS-App-archive-in-xcode.png"/>
+<img alt="Cannot generate iOS App archive in xcode" src="http://7xixt5.com1.z0.glb.clouddn.com/Cannot-generate-iOS-App-archive-in-xcode.png" />
 折腾了几个小时,<code>stackoverflow</code>也有人提问<a href="http://stackoverflow.com/questions/10715211/cannot-generate-ios-app-archive-in-xcode">Cannot generate iOS App archive in xcode</a>.<code>Build Settings</code>配置也是一样的,就是无法生成<code>ipa</code>,最后就差重新安装<code>Xcode</code>了</p>
 <h4 id="957a228f87aaf86e436762129485625a">解决方法</h4>
 <p>项目是用<code>pod</code>管理的,操作<code>pod</code>的过程中发现有更新提示.
@@ -164,14 +154,6 @@
                     </ul>
                 </div>
             </div>
-            <div id="niu2-toolbar">
-                <ul class="list-unstyled">
-                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
-                </ul>
-                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
-                <div id="niu2-toolbar-github" data-repo=""></div>
-                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
-            </div>
             <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
@@ -215,8 +197,6 @@
             })();
         </script>
         <div id="niu2-pygments" data-theme="github"></div>
-        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
-        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
         <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
