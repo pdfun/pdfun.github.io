@@ -6,7 +6,7 @@
         <meta name="keywords" content="git">
         <meta name="description" content="之前学习git的时候记录的笔记">
         <title>git备忘 - just do it</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -37,9 +37,6 @@
                             <li><a href="/about.html" title="about me">
                                 <i class="icon-anchor"></i>关于</a>
                             </li>
-                            <li><a href="/archives.html" title="blog archives">
-                                <i class="icon-archive"></i>存档</a>
-                            </li>
                             <li><a href="/tag/" title="blog tags">
                                 <i class="icon-tag"></i>标签</a>
                             </li>
@@ -64,6 +61,19 @@
                            </ul>
                         </li>
                         <!--  self defined dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="fa-archive"></i>归档<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="/archives.html" title="archives order by publish time">
+                                 <i class="fa-calendar"></i>归档 (按发布时间)</a>
+                               </li>
+                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
+                                 <i class="fa-pencil"></i>归档 (按修改时间)</a>
+                               </li>
+                           </ul>
+                        </li>
                         </ul>
                         
                         <!-- right nav bar -->
@@ -111,26 +121,26 @@
 <li>git reset HEAD file 把暂存区的修改撤销掉,重新放回工作区</li>
 <li>git rm</li>
 <li>git branch 查看分支</li>
-<li>git branch <name> 创建分支</li>
-<li>git checkout <name> 切换分支</li>
-<li>git checkout -b <name> 创建+切换分支</li>
-<li>git merge <name> 合并某分支到当前分支</li>
-<li>git branch -d <name> 删除分支</li>
+<li>git branch <name> 创建分支</name></li>
+<li>git checkout <name> 切换分支</name></li>
+<li>git checkout -b <name> 创建+切换分支</name></li>
+<li>git merge <name> 合并某分支到当前分支</name></li>
+<li>git branch -d <name> 删除分支</name></li>
 <li>git log —graph 查看分支合并图 (—pretty=oneline)</li>
 <li>git merge —no-ff -m ‘xx’ file (—no-ff普通模式合并,合并后的历史有分支,可以看出做过合并,fast forward合并看不出来曾经做过合并)</li>
 <li>git stash list/apply/apply stash@{0}/drop/pop 保存工作区, 修复bug后再git stash pop回到工作现场</li>
 <li>git remote(-v)</li>
 <li>git push origin master(dev分支)</li>
-<li>git tag <tagname> 创建标签默认为head,也可以以指定一个commitid</li>
-<li>git tag -a <tagname> -m ‘balabala’ 指定标签信息</li>
+<li>git tag <tagname> 创建标签默认为head,也可以以指定一个commitid</tagname></li>
+<li>git tag -a <tagname> -m ‘balabala’ 指定标签信息</tagname></li>
 <li>git tag查看所有标签</li>
-<li>git push origin <tagname>可以推送一个本地标签</li>
+<li>git push origin <tagname>可以推送一个本地标签</tagname></li>
 <li>git push origin --tags 可以推送全部未推送过的本地标签</li>
-<li>git tag -d <tagname>可以删除一个本地标签</li>
-<li>git push origin :refs/tags/<tagname>可以删除一个远程标签</li>
+<li>git tag -d <tagname>可以删除一个本地标签</tagname></li>
+<li>git push origin :refs/tags/<tagname>可以删除一个远程标签</tagname></li>
 <li>git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</li>
 </ul>
-<p><img alt="" src="http://i.imgur.com/niIaT29.png" /></p>
+<p><img alt="" src="http://i.imgur.com/niIaT29.png"/></p>
                 </div>
                 <div id="content-comments">
                     <!-- 多说评论框 start -->
@@ -176,6 +186,14 @@
                     </ul>
                 </div>
             </div>
+            <div id="niu2-toolbar">
+                <ul class="list-unstyled">
+                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
+                </ul>
+                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
+                <div id="niu2-toolbar-github" data-repo=""></div>
+                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
+            </div>
             <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
@@ -219,6 +237,8 @@
             })();
         </script>
         <div id="niu2-pygments" data-theme="github"></div>
+        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
+        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
         <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>

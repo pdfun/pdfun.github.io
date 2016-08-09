@@ -11,7 +11,7 @@
 &lt;p&gt;有时候脾气很大。 &lt;/p&gt;
 &lt;p&gt;依然不自信。 
 ...&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/jsXm2yZ.png" /&gt;&lt;/p&gt;</summary><category term="状态"></category></entry><entry><title>git备忘</title><link href="http://pdhero.com/bnote/git-notes.html" rel="alternate"></link><updated>2016-07-27T09:11:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-07-27:bnote/git-notes.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/jsXm2yZ.png"/&gt;&lt;/p&gt;</summary><category term="状态"></category></entry><entry><title>git备忘</title><link href="http://pdhero.com/bnote/git-notes.html" rel="alternate"></link><updated>2016-07-27T09:11:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-07-27:bnote/git-notes.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;之前学习git的时候记录的笔记&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000"&gt;Git教程&lt;/a&gt;&lt;/p&gt;
@@ -23,26 +23,26 @@
 &lt;li&gt;git reset HEAD file 把暂存区的修改撤销掉,重新放回工作区&lt;/li&gt;
 &lt;li&gt;git rm&lt;/li&gt;
 &lt;li&gt;git branch 查看分支&lt;/li&gt;
-&lt;li&gt;git branch &lt;name&gt; 创建分支&lt;/li&gt;
-&lt;li&gt;git checkout &lt;name&gt; 切换分支&lt;/li&gt;
-&lt;li&gt;git checkout -b &lt;name&gt; 创建+切换分支&lt;/li&gt;
-&lt;li&gt;git merge &lt;name&gt; 合并某分支到当前分支&lt;/li&gt;
-&lt;li&gt;git branch -d &lt;name&gt; 删除分支&lt;/li&gt;
+&lt;li&gt;git branch &lt;name&gt; 创建分支&lt;/name&gt;&lt;/li&gt;
+&lt;li&gt;git checkout &lt;name&gt; 切换分支&lt;/name&gt;&lt;/li&gt;
+&lt;li&gt;git checkout -b &lt;name&gt; 创建+切换分支&lt;/name&gt;&lt;/li&gt;
+&lt;li&gt;git merge &lt;name&gt; 合并某分支到当前分支&lt;/name&gt;&lt;/li&gt;
+&lt;li&gt;git branch -d &lt;name&gt; 删除分支&lt;/name&gt;&lt;/li&gt;
 &lt;li&gt;git log —graph 查看分支合并图 (—pretty=oneline)&lt;/li&gt;
 &lt;li&gt;git merge —no-ff -m ‘xx’ file (—no-ff普通模式合并,合并后的历史有分支,可以看出做过合并,fast forward合并看不出来曾经做过合并)&lt;/li&gt;
 &lt;li&gt;git stash list/apply/apply stash@{0}/drop/pop 保存工作区, 修复bug后再git stash pop回到工作现场&lt;/li&gt;
 &lt;li&gt;git remote(-v)&lt;/li&gt;
 &lt;li&gt;git push origin master(dev分支)&lt;/li&gt;
-&lt;li&gt;git tag &lt;tagname&gt; 创建标签默认为head,也可以以指定一个commitid&lt;/li&gt;
-&lt;li&gt;git tag -a &lt;tagname&gt; -m ‘balabala’ 指定标签信息&lt;/li&gt;
+&lt;li&gt;git tag &lt;tagname&gt; 创建标签默认为head,也可以以指定一个commitid&lt;/tagname&gt;&lt;/li&gt;
+&lt;li&gt;git tag -a &lt;tagname&gt; -m ‘balabala’ 指定标签信息&lt;/tagname&gt;&lt;/li&gt;
 &lt;li&gt;git tag查看所有标签&lt;/li&gt;
-&lt;li&gt;git push origin &lt;tagname&gt;可以推送一个本地标签&lt;/li&gt;
+&lt;li&gt;git push origin &lt;tagname&gt;可以推送一个本地标签&lt;/tagname&gt;&lt;/li&gt;
 &lt;li&gt;git push origin --tags 可以推送全部未推送过的本地标签&lt;/li&gt;
-&lt;li&gt;git tag -d &lt;tagname&gt;可以删除一个本地标签&lt;/li&gt;
-&lt;li&gt;git push origin :refs/tags/&lt;tagname&gt;可以删除一个远程标签&lt;/li&gt;
+&lt;li&gt;git tag -d &lt;tagname&gt;可以删除一个本地标签&lt;/tagname&gt;&lt;/li&gt;
+&lt;li&gt;git push origin :refs/tags/&lt;tagname&gt;可以删除一个远程标签&lt;/tagname&gt;&lt;/li&gt;
 &lt;li&gt;git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset' --abbrev-commit"&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/niIaT29.png" /&gt;&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>iOS微信多图分享到朋友圈</title><link href="http://pdhero.com/acode/iOS%E5%BE%AE%E4%BF%A1%E5%A4%9A%E5%9B%BE%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%AB%E5%88%B0%E6%9C%8B%E5%8F%8B%E5%9C%88.html" rel="alternate"></link><updated>2016-05-13T15:00:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-05-13:acode/iOS微信多图分享到享到朋友圈.html</id><summary type="html">&lt;p&gt;iOS系统分享多张图片到微信朋友圈&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/niIaT29.png"/&gt;&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>iOS微信多图分享到朋友圈</title><link href="http://pdhero.com/acode/iOS%E5%BE%AE%E4%BF%A1%E5%A4%9A%E5%9B%BE%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%AB%E5%88%B0%E6%9C%8B%E5%8F%8B%E5%9C%88.html" rel="alternate"></link><updated>2016-05-13T15:00:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-05-13:acode/iOS微信多图分享到享到朋友圈.html</id><summary type="html">&lt;p&gt;iOS系统分享多张图片到微信朋友圈&lt;/p&gt;
 &lt;h2 id="b3a139f3f6e01f97d2a9848454a93f19"&gt;微信分享多张图片到微信朋圈&lt;/h2&gt;
 &lt;p&gt;最近有个需求，要分享多张图片到微信朋友圈。导入微信SDK,看了下微信的接口,各种限制，根本没办法搞。BOSS一定要实现，没办法只能折腾了。
 最后通过系统级别的分享&lt;code&gt;UIActivityViewController&lt;/code&gt;来实现了这个功能。&lt;/p&gt;
@@ -52,7 +52,7 @@
 &lt;h3 id="19453cab0dfbbc578b0f79f85e4ee499"&gt;微信SDK的一些设置就不多说了。&lt;/h3&gt;
 &lt;h3 id="b8b5d264f8938bc020ee54dc1fe3d27f"&gt;分享到微信的部分代码&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showHUD&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="bp"&gt;UIPasteboard&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;generalPasteboard&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;微信多图分享到朋友圈&amp;quot;&lt;/span&gt;
+&lt;span class="bp"&gt;UIPasteboard&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;generalPasteboard&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"微信多图分享到朋友圈"&lt;/span&gt;
 &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;imageCache&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;SDImageCache&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SDImageCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sharedImageCache&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;imageArr&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="nb"&gt;AnyObject&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;imageUrl&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataArr&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -62,12 +62,10 @@
  &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;activityView&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;UIActivityViewController&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;UIActivityViewController&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kd"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;activityItems&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;imageArr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;applicationActivities&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
- &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hideHUDWithCompletionMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;分享的内容已经复制到粘贴板&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;finishedHandler&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hideHUDWithCompletionMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"分享的内容已经复制到粘贴板"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;finishedHandler&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
      &lt;span class="kc"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;navigationController&lt;/span&gt;&lt;span class="p"&gt;?.&lt;/span&gt;&lt;span class="n"&gt;presentViewController&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;activityView&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;animated&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;completion&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
  &lt;span class="p"&gt;})&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h3 id="c5eca45d461382d648c77f6df4e9fd15"&gt;代码说明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;dataArr是一个储存图片的数组&lt;/li&gt;
@@ -83,32 +81,32 @@
 &lt;/blockquote&gt;
 &lt;p&gt;平时用Xcode和Sublime比较多。Xcode使用插件&lt;a href="https://github.com/XVimProject/XVim"&gt;xvim&lt;/a&gt;,sublime直接改下配置文件就有&lt;code&gt;vim&lt;/code&gt;模式了.&lt;/p&gt;
 &lt;h1 id="7653297de32f34fdec0dd0653aebf358"&gt;跳转&lt;/h1&gt;
-&lt;p&gt;跳转到指定行: 行号+gg,比如:100gg跳转到第100行.&lt;br /&gt;
-跳转到最后一行:shift+g.&lt;br /&gt;
-跳转到第一行:g.&lt;br /&gt;
-跳转到行尾:$(shift+4).&lt;br /&gt;
-跳转到行首:^(shift+6).&lt;br /&gt;
-跳转某个字母:ta跳转到下一个a前面,fa跳转到下一个a(小写的向前,大写的向后).&lt;br /&gt;
-跳转到单词:w向前跳转到下一个单词,b向后跳转到下一个单词,e跳转到单词的结束.&lt;br /&gt;
+&lt;p&gt;跳转到指定行: 行号+gg,比如:100gg跳转到第100行.&lt;br/&gt;
+跳转到最后一行:shift+g.&lt;br/&gt;
+跳转到第一行:g.&lt;br/&gt;
+跳转到行尾:$(shift+4).&lt;br/&gt;
+跳转到行首:^(shift+6).&lt;br/&gt;
+跳转某个字母:ta跳转到下一个a前面,fa跳转到下一个a(小写的向前,大写的向后).&lt;br/&gt;
+跳转到单词:w向前跳转到下一个单词,b向后跳转到下一个单词,e跳转到单词的结束.&lt;br/&gt;
 函数体跳转:{}  &lt;/p&gt;
 &lt;h1 id="79d3abe929f67f0644a78bf32adb3a89"&gt;复制&lt;/h1&gt;
-&lt;p&gt;复制整行:yy&lt;br /&gt;
-复制一个单词:yw&lt;br /&gt;
+&lt;p&gt;复制整行:yy&lt;br/&gt;
+复制一个单词:yw&lt;br/&gt;
 复制到文档尾:yG  &lt;/p&gt;
 &lt;h1 id="2f4aaddde33c9b93c36fd2503f3d122b"&gt;删除&lt;/h1&gt;
-&lt;p&gt;删除也可以叫剪切,删除时会复制选定内容到缓冲区.&lt;br /&gt;
-删除整行:dd&lt;br /&gt;
+&lt;p&gt;删除也可以叫剪切,删除时会复制选定内容到缓冲区.&lt;br/&gt;
+删除整行:dd&lt;br/&gt;
 删除某个单词:dw  &lt;/p&gt;
 &lt;h1 id="eafbece1016a6af76cce466e55ad9f00"&gt;粘贴&lt;/h1&gt;
 &lt;p&gt;p&lt;/p&gt;
 &lt;h1 id="fad7c8a21fe3d7b3eb1db3d8a3212503"&gt;选中&lt;/h1&gt;
-&lt;p&gt;先v再移动到相应位置进行选中&lt;br /&gt;
-选中某个单词:viw或者vaw&lt;br /&gt;
+&lt;p&gt;先v再移动到相应位置进行选中&lt;br/&gt;
+选中某个单词:viw或者vaw&lt;br/&gt;
 选中当前行:V  &lt;/p&gt;
 &lt;h1 id="1d95b75b8b084e242293bf54ff992010"&gt;大小写&lt;/h1&gt;
-&lt;p&gt;大小写转换前先选中&lt;br /&gt;
-u:当前选中的小写&lt;br /&gt;
-U:当前选的大写&lt;br /&gt;
+&lt;p&gt;大小写转换前先选中&lt;br/&gt;
+u:当前选中的小写&lt;br/&gt;
+U:当前选的大写&lt;br/&gt;
 某个单词大写:先选中 viw 再gU  &lt;/p&gt;
 &lt;h1 id="632ca845b6775b8a63991380886b25cb"&gt;组合应用&lt;/h1&gt;
 &lt;h2 id="d85d743375b003f034e69da688867837"&gt;多行注释&lt;/h2&gt;
@@ -127,13 +125,13 @@ U:当前选的大写&lt;br /&gt;
 &lt;li&gt;d&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="dc5d07a1867b1c0b57153afe054d0332"&gt;查找&lt;/h1&gt;
-&lt;p&gt;/ 向前查找&lt;br /&gt;
-? 向后查找&lt;br /&gt;
-比如:/xx回车 从当前位置向后查找xx&lt;br /&gt;
+&lt;p&gt;/ 向前查找&lt;br/&gt;
+? 向后查找&lt;br/&gt;
+比如:/xx回车 从当前位置向后查找xx&lt;br/&gt;
 n继续查找 N反向查找  &lt;/p&gt;
 &lt;h1 id="25f9c7fa3b50aebe5125112ac1187777"&gt;总结&lt;/h1&gt;
-&lt;p&gt;其实记住 &lt;code&gt;gydpuvwb&lt;/code&gt; 这些基本的就行了.用久了组合什么的稍微想下就知道了.&lt;br /&gt;
-当然了我也只是说说而已😂&lt;br /&gt;
+&lt;p&gt;其实记住 &lt;code&gt;gydpuvwb&lt;/code&gt; 这些基本的就行了.用久了组合什么的稍微想下就知道了.&lt;br/&gt;
+当然了我也只是说说而已😂&lt;br/&gt;
 想把这些经常用　组合成个单词,搜索了大脑词量太小了。  &lt;/p&gt;</summary><category term="vim"></category></entry><entry><title>Swift</title><link href="http://pdhero.com/bnote/Swift-notes.html" rel="alternate"></link><updated>2015-12-25T10:20:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-12-25:bnote/Swift-notes.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Swift才出来的时候看过一遍,忘记了。记下笔记加深印象。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -141,15 +139,13 @@ n继续查找 N反向查找  &lt;/p&gt;
 &lt;p&gt;let 定义一个常量 var 定义一个变量  可以不声明变量类型 变量名可用Unicode字符&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;let f = 70
 let f1: Float = 70
-let 🐶 = &amp;quot;加班狗&amp;quot;
-var s: String = &amp;quot;string&amp;quot;
+let 🐶 = "加班狗"
+var s: String = "string"
 var red, green, bule: Double
-let `int` = &amp;quot;abc&amp;quot;
-print(&amp;quot;Swift \(🐶)&amp;quot;)
-print(f, f1, separator: &amp;quot;====&amp;quot;, terminator: &amp;quot;\n&amp;quot;)
+let `int` = "abc"
+print("Swift \(🐶)")
+print(f, f1, separator: "====", terminator: "\n")
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;blockquote&gt;
 &lt;p&gt;Notes&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -173,11 +169,9 @@ print(f, f1, separator: &amp;quot;====&amp;quot;, terminator: &amp;quot;\n&amp;q
 &lt;p&gt;&lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;终于不是 &lt;code&gt;YES or NO&lt;/code&gt;了&lt;/p&gt;
 &lt;h2 id="cda9f200088a3396902af2d4b5efb290"&gt;元组&lt;/h2&gt;
 &lt;p&gt;元组把多个值组合在一起,每一个值可以是不同的数据类型.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;let http404Error = (404,&amp;quot;Not Found&amp;quot;)
+&lt;div class="codehilite"&gt;&lt;pre&gt;let http404Error = (404,"Not Found")
 类型为(Int,String)的元组
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;div class="codehilite"&gt;&lt;pre&gt;let (statuCode, error) = http404Error
 print(statuCode,error)
 将元组内容分解成单独的的常量和变量
@@ -193,8 +187,6 @@ let http200 = (code:200, des:true)
 print(http200.code, http200.des)
 定义元组的时候给元素命名,可以通过名字来取值
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h2 id="4fa4f39154d3fc1624099c34182adbfb"&gt;可选类型&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;optionals&lt;/code&gt;来处理可能缺失的情况,可选类型来表示:&lt;/p&gt;
 &lt;ul&gt;
@@ -207,29 +199,23 @@ print(http200.code, http200.des)
 &lt;p&gt;可以给可选变量赋值为nil来表示它没有值。nil不能用于非可选的常量和变量,如果要处理缺失情况,应该声明成对应的可选类型.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;OC中nil指向不存在的对象的指针。Swift中nil不是指针它是一个确定的值,用来表示缺失,任何类型的可选状态都可以设置为nil。
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h3 id="52281bbb55b775e6238b4faea2763f78"&gt;可选值的强制解析&lt;/h3&gt;
 &lt;p&gt;当确定可选类型确实包含值之后,可以在可选的名字后面加一个感叹号来取值&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;if convertNumber != nil{
 
-    print(&amp;quot;(converNumber!)&amp;quot;)
+    print("(converNumber!)")
 
 }
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;获取一个不存在可选值会导致运行时的错误。使用&lt;code&gt;!&lt;/code&gt;来强制解析之前,一定要确定可选包含一个非&lt;code&gt;nil&lt;/code&gt;的值。&lt;/p&gt;
 &lt;h3 id="362a5bcaae88747d270aedbe592dd7aa"&gt;可选绑定&lt;/h3&gt;
 &lt;p&gt;使用可选绑定来判断可选类型是否包含值,如果包含值就把值赋给一个临时常量或变量。&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;if let actualNumber = Int(possbileNumber){
     print(actualNumber)
 }else{
-    print(&amp;quot;not integer&amp;quot;)
+    print("not integer")
 }
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h3 id="871961bb53c7d430a1be996622d506e5"&gt;隐式解析可选类型&lt;/h3&gt;
 &lt;p&gt;隐式解析可选其实就是一个普通的可选类型(可自动解析的可选类型)，但是可以被当做非可选类型来用，不需要每次都使用解析来获取值。
 把想要用作可选的类型后面的问号改成感叹号来来声明一个隐式解析可选类型。&lt;/p&gt;
@@ -247,8 +233,6 @@ print(http200.code, http200.des)
 
 }
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h2 id="20805b4c0d2cc79d9e7ff7d09649a390"&gt;算术运算符&lt;/h2&gt;
 &lt;p&gt;Swift默认情况下不允许出现溢出情况。但可以使用Swift的溢出运算符来实现溢出运算。如(a &amp;amp;+ b)
 可用+号来拼接字符串这点与python很像。&lt;/p&gt;
@@ -268,104 +252,86 @@ print(http200.code, http200.des)
 
 }
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h3 id="3df0c47cdc0607e68b466869840f15c4"&gt;半开区间运算符&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;a..&amp;lt;b&lt;/code&gt; 定义一个从a到b但不包括b的区间,称为半区间是因为包含第一个值不包含最后一个值.
 数组的时候用。&lt;/p&gt;
 &lt;h1 id="cc4dd1da7e1a754534215f02fb9ba85d"&gt;字符串&lt;/h1&gt;
 &lt;h2 id="a6b363bb757dc13cece66cf23648b8cf"&gt;拼接&lt;/h2&gt;
 &lt;p&gt;直接使用加号&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;print(&amp;quot;今天星期四&amp;quot;+&amp;quot;明天元旦放假啊&amp;quot;)
+&lt;div class="codehilite"&gt;&lt;pre&gt;print("今天星期四"+"明天元旦放假啊")
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h2 id="706a31e5f14203120576352d0cf8bf97"&gt;字符串插值&lt;/h2&gt;
 &lt;p&gt;换句话说就是格式化字符串。个人理解是使用&lt;code&gt;\()&lt;/code&gt;来占位替换.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;let tucao = &amp;quot;车牌又要到3W了&amp;quot;
-print(&amp;quot;\(tucao)。要不要离开这个鬼地方&amp;quot;)
+&lt;div class="codehilite"&gt;&lt;pre&gt;let tucao = "车牌又要到3W了"
+print("\(tucao)。要不要离开这个鬼地方")
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;blockquote&gt;
 &lt;p&gt;插值字符串写在括号中的表达式不能包含非转义反斜线&lt;code&gt;\&lt;/code&gt;,并且不能包含回车或换行。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="c6009d4f6a2226b5376028d5f296bae5"&gt;字符数量&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;quot;数量&amp;quot;.characters.count
+&lt;div class="codehilite"&gt;&lt;pre&gt;"数量".characters.count
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;在Swift 中，使用可拓展的字符群集作为Character值来连接或改变字符串时，并不一定会更改字符串的字符数量。&lt;/p&gt;
 &lt;p&gt;NSString的length和characters.count返回的长度可能不一样。这个得小心了。感觉很复杂。#-_-&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;var word = &amp;quot;cafe&amp;quot;
-print(&amp;quot;the number of characters in \(word) is \(word.characters.count)&amp;quot;)
-word += &amp;quot;\u{301}&amp;quot;
-print(&amp;quot;the number of characters in \(word) is \(word.characters.count)&amp;quot;)
+&lt;div class="codehilite"&gt;&lt;pre&gt;var word = "cafe"
+print("the number of characters in \(word) is \(word.characters.count)")
+word += "\u{301}"
+print("the number of characters in \(word) is \(word.characters.count)")
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h2 id="83f6fff6219e3d2e7f7e857b7d611c24"&gt;访问和修改字符串&lt;/h2&gt;
 &lt;h3 id="b271e427962758c71e342a2c06df493a"&gt;索引&lt;/h3&gt;
-&lt;p&gt;Swift的字符串不能用整数做索引。"字符串"[0]会报错&lt;br /&gt;
-&lt;code&gt;startIndex&lt;/code&gt;属性区取字符串第一个字符的索引。&lt;br /&gt;
-&lt;code&gt;endIndex&lt;/code&gt;属性获取最后一个字符的后面一个位置的索引.&lt;br /&gt;
-(&lt;code&gt;endIndex&lt;/code&gt;不能做为一个字符串有的有效下标会越界)。 &lt;br /&gt;
-&lt;code&gt;index.predecessor()&lt;/code&gt;得到index的前一个索引。&lt;br /&gt;
-&lt;code&gt;index.successor()&lt;/code&gt;得到index后一个索引。&lt;br /&gt;
+&lt;p&gt;Swift的字符串不能用整数做索引。"字符串"[0]会报错&lt;br/&gt;
+&lt;code&gt;startIndex&lt;/code&gt;属性区取字符串第一个字符的索引。&lt;br/&gt;
+&lt;code&gt;endIndex&lt;/code&gt;属性获取最后一个字符的后面一个位置的索引.&lt;br/&gt;
+(&lt;code&gt;endIndex&lt;/code&gt;不能做为一个字符串有的有效下标会越界)。 &lt;br/&gt;
+&lt;code&gt;index.predecessor()&lt;/code&gt;得到index的前一个索引。&lt;br/&gt;
+&lt;code&gt;index.successor()&lt;/code&gt;得到index后一个索引。&lt;br/&gt;
 &lt;code&gt;startIndex.advancedBy(3)&lt;/code&gt;startIndex后面的第三个索引。  &lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;print(word[word.startIndex],
     word[word.endIndex.predecessor()],
     word[word.startIndex.successor()],
     word[word.startIndex.advancedBy(3)])
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;字符串characters属性的indices属性创建一个包含全部索引Range,用来在一个字符串中访问单个字符&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;for index in word.characters.indices{
     print(word[index])
 }
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h3 id="4f72854e51ae690d3d28f8138e0b6fc7"&gt;插入和删除&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;var s = &amp;quot;插入&amp;quot;
-s.insert(&amp;quot;啊&amp;quot;, atIndex: s.endIndex)//插入单个字符
-s.insertContentsOf(&amp;quot;字符串&amp;quot;.characters, at: s.endIndex)//插入字符串
+&lt;div class="codehilite"&gt;&lt;pre&gt;var s = "插入"
+s.insert("啊", atIndex: s.endIndex)//插入单个字符
+s.insertContentsOf("字符串".characters, at: s.endIndex)//插入字符串
 s.removeAtIndex(s.startIndex)//移除单个
 let range = s.endIndex.advancedBy(-2)..&amp;lt;s.endIndex//移除子串
 s.removeRange(range)//清空字符串
 print(s)
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h3 id="469e0eee17a884bf97e500fdb0f02182"&gt;比较字符串&lt;/h3&gt;
 &lt;p&gt;== 前缀/后缀相等&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;var a_ = &amp;quot;字符串1&amp;quot;,b = &amp;quot;字符串2&amp;quot;
-print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot;2&amp;quot;))
+&lt;div class="codehilite"&gt;&lt;pre&gt;var a_ = "字符串1",b = "字符串2"
+print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="Swift"></category></entry><entry><title>Flask笔记_01</title><link href="http://pdhero.com/bnote/Flask_notes_01.html" rel="alternate"></link><updated>2015-10-25T11:30:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-10-25:bnote/Flask_notes_01.html</id><summary type="html">&lt;p&gt;Flask学习笔记之Flask-Bootstrap Flask-Moment&lt;/p&gt;
 &lt;h1 id="44b2ec7b98f5190b3617c573c39e7488"&gt;Flask-Bootstrap&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;pip install Flask-Bootstrap&lt;/code&gt; 默认安装的是最新版本。也可以在安装的时候自定义版本。&lt;/p&gt;
 &lt;h2 id="44731d72f069d71202a56c99d85ffaa8"&gt;scripts styles&lt;/h2&gt;
 &lt;p&gt;默认的CDN js和css 加载太慢。替换 js和css路径&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;{% block scripts %}
-&amp;lt;script href=&amp;quot;{{ url_for(&amp;#39;static&amp;#39;, filename=&amp;#39;js/jquery.min.js&amp;#39;) }}&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script href=&amp;quot;{{ url_for(&amp;#39;static&amp;#39;, filename=&amp;#39;js/bootstrap.min.js&amp;#39;) }}&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script href="{{ url_for('static', filename='js/jquery.min.js') }}"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script href="{{ url_for('static', filename='js/bootstrap.min.js') }}"&amp;gt;&amp;lt;/script&amp;gt;
 {% endblock %}
 
 {% block styles %}
-&amp;lt;link href=&amp;quot;{{ url_for(&amp;#39;static&amp;#39;, filename=&amp;#39;css/bootstrap.min.css&amp;#39;) }}&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&amp;lt;link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"&amp;gt;
 {% endblock %}
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h1 id="44979180eb6e24be5afe95fb0e7d7ce7"&gt;Flask-Moment&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;pip install Flask-Moment&lt;/code&gt;。用来本地化日期和时间&lt;/p&gt;
 &lt;h2 id="4f01d410f43f695de63ccf8cd1600935"&gt;替换CDN js路径 设置默认地区&lt;/h2&gt;
 &lt;p&gt;moment是依赖于&lt;code&gt;jquery&lt;/code&gt;的&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;{% block scripts %}
-{{ moment.include_moment(local_js=&amp;#39;static/js/moment.js&amp;#39;) }}
+{{ moment.include_moment(local_js='static/js/moment.js') }}
 &amp;lt;!--设置默认地区--&amp;gt;
-{{ moment.lang(&amp;quot;zh-CN&amp;quot;)}}
+{{ moment.lang("zh-CN")}}
 {% endblock %}
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="Bootstrap Moment"></category></entry><entry><title>HHKB Function Key With Karabiner</title><link href="http://pdhero.com/dlife/HHKB-Function-Key-With-Karabiner.html" rel="alternate"></link><updated>2015-09-14T10:37:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-09-14:dlife/HHKB-Function-Key-With-Karabiner.html</id><summary type="html">&lt;p&gt;Karabiner 给HHKB添加功能键F0~F12&lt;/p&gt;
 &lt;h2 id="34c847b65e809d462fadf06a2488c1ab"&gt;Karabiner&lt;/h2&gt;
@@ -374,7 +340,7 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;p&gt;打开&lt;code&gt;Karabiner&lt;/code&gt;,选中&lt;code&gt;Change Key&lt;/code&gt;菜单,看到右下角有句话&lt;code&gt;Do you want to add your own settings?&lt;/code&gt;点击&lt;code&gt;Open the documentation web site&lt;/code&gt;跳转到 &lt;a href="https://pqrs.org/osx/karabiner/document.html#privatexml"&gt;How to add your own settings&lt;/a&gt;,有详情的教程告诉我们进行个性化设置。&lt;/p&gt;
 &lt;h2 id="fa535ffb25e1fd20341652f9be21e06e"&gt;Config&lt;/h2&gt;
 &lt;p&gt;贴下我的XML配置,只是左边的&lt;code&gt;Option+Num&lt;/code&gt;映射&lt;code&gt;Fn&lt;/code&gt;的,可以根据自己的需要进行修改。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;?xml version="1.0"?&amp;gt;
 &amp;lt;root&amp;gt;
   &amp;lt;item&amp;gt;
     &amp;lt;name&amp;gt;option+num to Fn&amp;lt;/name&amp;gt;
@@ -395,8 +361,6 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 
 &amp;lt;/root&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h2 id="e7384c252586cce857cb14709845a8a4"&gt;KeyCode.data&lt;/h2&gt;
 &lt;p&gt;找对应的&lt;code&gt;KeyCode&lt;/code&gt;是件头疼的事,才开始慢慢试看到&lt;code&gt;Karabiner&lt;/code&gt;报错一点点修改,后来搜索了下才发现的有现成的可以看😹这智商真是捉急啊。附上KeyCode.data链接&lt;a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data"&gt;KeyCode.data&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;总结下规律:&lt;/p&gt;
@@ -404,7 +368,7 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;li&gt;全部是大写&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;KEY_num&lt;/code&gt; 表示数字,比如:KEY_0 =&amp;gt; 0&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;R&lt;/code&gt; 表示右边,&lt;code&gt;L&lt;/code&gt;表示左边,比如OPTION_R =&amp;gt; 左边的Option&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;MINUS&lt;/code&gt;=&amp;gt;&lt;code&gt;-&lt;/code&gt;  &lt;code&gt;EQUAL&lt;/code&gt; =&amp;gt;&lt;code&gt;=&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;MINUS&lt;/code&gt;=&amp;gt;&lt;code&gt;-&lt;/code&gt; &lt;code&gt;EQUAL&lt;/code&gt; =&amp;gt;&lt;code&gt;=&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;更全的就看&lt;a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data"&gt;KeyCode.data&lt;/a&gt;了&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="HHKB"></category><category term="Karabiner"></category></entry><entry><title>iOS notes</title><link href="http://pdhero.com/bnote/iOS-notes.html" rel="alternate"></link><updated>2015-08-29T14:58:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-08-29:bnote/iOS-notes.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;大部分来自&lt;a href="http://stackoverflow.com"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
@@ -420,8 +384,6 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;[self.view recursiveDescription]
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;tableView&lt;/code&gt;滚动的时候始终以&lt;code&gt;row&lt;/code&gt;的高度为单位。
 首先想到的是&lt;code&gt;tableView&lt;/code&gt;继承自&lt;code&gt;scrollView&lt;/code&gt;也有&lt;code&gt;pagingEnabled&lt;/code&gt;属性。
@@ -437,8 +399,6 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
     (*targetContentOffset) = [self.tableView rectForRowAtIndexPath:indexPath].origin;
 }
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;ul&gt;
 &lt;li&gt;去掉tableView多余的行
   之前一直根据行数来设置tableView的高度😂其实不用这么麻烦&lt;/li&gt;
@@ -450,8 +410,6 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;div class="codehilite"&gt;&lt;pre&gt;- (void) touchesBegan:(NSSet&amp;lt;UITouch *&amp;gt; *)touches withEvent:(UIEvent *)event{
     [_searchBar endEditing:YES];
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;其实还有一个神器&lt;a href="https://github.com/hackiftekhar/IQKeyboardManager"&gt;IQKeyboardManager&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;更改UI控件系统默认样式&lt;/li&gt;
@@ -467,8 +425,6 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 //serarchBar的颜色,比如说取消按钮。再也不会遍历子视图了。
 [[UISearchBar appearance] setTintColor:[UIColor whiteColor]];
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;每个控件的&lt;code&gt;appearance&lt;/code&gt;都可以去看下。有时候能省很多事。不用一个个的单独设置。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -512,30 +468,30 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 &lt;/blockquote&gt;
 &lt;h4 id="e678f2cc8303d18a894f8be0f9588fe7"&gt;Xcode archive&lt;/h4&gt;
 &lt;p&gt;Xcode 打包的时候一直生成&lt;code&gt;Other Item&lt;/code&gt;不生成&lt;code&gt;iOS App&lt;/code&gt;
-&lt;img alt="Cannot generate iOS App archive in xcode" src="http://7xixt5.com1.z0.glb.clouddn.com/Cannot-generate-iOS-App-archive-in-xcode.png" /&gt;
+&lt;img alt="Cannot generate iOS App archive in xcode" src="http://7xixt5.com1.z0.glb.clouddn.com/Cannot-generate-iOS-App-archive-in-xcode.png"/&gt;
 折腾了几个小时,&lt;code&gt;stackoverflow&lt;/code&gt;也有人提问&lt;a href="http://stackoverflow.com/questions/10715211/cannot-generate-ios-app-archive-in-xcode"&gt;Cannot generate iOS App archive in xcode&lt;/a&gt;.&lt;code&gt;Build Settings&lt;/code&gt;配置也是一样的,就是无法生成&lt;code&gt;ipa&lt;/code&gt;,最后就差重新安装&lt;code&gt;Xcode&lt;/code&gt;了&lt;/p&gt;
 &lt;h4 id="957a228f87aaf86e436762129485625a"&gt;解决方法&lt;/h4&gt;
 &lt;p&gt;项目是用&lt;code&gt;pod&lt;/code&gt;管理的,操作&lt;code&gt;pod&lt;/code&gt;的过程中发现有更新提示.
 &lt;code&gt;sudo gem install cocoapods&lt;/code&gt;更新了下&lt;code&gt;pod&lt;/code&gt;,重新打包竟然OK了。在这里记录一下。&lt;/p&gt;</summary><category term="archive"></category></entry><entry><title>生产力工具</title><link href="http://pdhero.com/dlife/poker2_mstand.html" rel="alternate"></link><updated>2015-07-05T14:30:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-07-05:dlife/poker2_mstand.html</id><summary type="html">&lt;p&gt;晒晒我的装备&lt;/p&gt;
-&lt;p&gt;&lt;img alt="poker2" src="http://7xixt5.com1.z0.glb.clouddn.com/poker2.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="mStand" src="http://7xixt5.com1.z0.glb.clouddn.com/mStand.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="poker2" src="http://7xixt5.com1.z0.glb.clouddn.com/poker2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="mStand" src="http://7xixt5.com1.z0.glb.clouddn.com/mStand.png"/&gt;&lt;/p&gt;
 &lt;p&gt;还是用回HHKB吧,两个键盘之间切换实在适应不了。⌨拍照技术太差了😂
-&lt;img alt="HHKB" src="http://7xixt5.com1.z0.glb.clouddn.com/hhkb.png" /&gt;&lt;/p&gt;
+&lt;img alt="HHKB" src="http://7xixt5.com1.z0.glb.clouddn.com/hhkb.png"/&gt;&lt;/p&gt;
 &lt;p&gt;期待了好久的彩色键帽
-&lt;img alt="color_hhkb" src="http://7xixt5.com1.z0.glb.clouddn.com/color_hhkb.png" /&gt;&lt;/p&gt;</summary><category term="poker2"></category><category term="HHKB"></category></entry><entry><title>Xcode7免证书真机调试</title><link href="http://pdhero.com/acode/Xcode7%E5%85%8D%E8%AF%81%E4%B9%A6%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95.html" rel="alternate"></link><updated>2015-06-09T19:24:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-06-09:acode/Xcode7免证书真机调试.html</id><summary type="html">&lt;blockquote&gt;
+&lt;img alt="color_hhkb" src="http://7xixt5.com1.z0.glb.clouddn.com/color_hhkb.png"/&gt;&lt;/p&gt;</summary><category term="poker2"></category><category term="HHKB"></category></entry><entry><title>Xcode7免证书真机调试</title><link href="http://pdhero.com/acode/Xcode7%E5%85%8D%E8%AF%81%E4%B9%A6%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95.html" rel="alternate"></link><updated>2015-06-09T19:24:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-06-09:acode/Xcode7免证书真机调试.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;The application does not contain a valid application-identifier entitlement.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id="8e20c0c5e9332a426196dc0e8bce212a"&gt;WWDC2015&lt;/h4&gt;
 &lt;p&gt;这次的WWDC对开发者意义最大的要数&lt;code&gt;Swift2.0&lt;/code&gt;年底开源,重点支持 OS X、iOS和Linux三个平台,期待&lt;code&gt;Swift&lt;/code&gt;的表现。另一件事就是证书三合一了,&lt;code&gt;iOS&lt;/code&gt; &lt;code&gt;Mac&lt;/code&gt; &lt;code&gt;Safari Extensions&lt;/code&gt;证书的三合了,给开发者省了不少钱。&lt;/p&gt;
 &lt;h4 id="a233f06910fc7ea15b4be4e98af53e80"&gt;Xcode7真机调试&lt;/h4&gt;
 &lt;p&gt;登陆非开发者的appID,可以看到iOS Mac都是&lt;code&gt;Free&lt;/code&gt;
-&lt;img alt="appid" src="http://7xixt5.com1.z0.glb.clouddn.com/appId.png" /&gt;&lt;/p&gt;
+&lt;img alt="appid" src="http://7xixt5.com1.z0.glb.clouddn.com/appId.png"/&gt;&lt;/p&gt;
 &lt;p&gt;点进详情查看,和以前一样有与&lt;code&gt;BundleID&lt;/code&gt;对应的描述文件还有Develop证书。
-&lt;img alt="appID_detail" src="http://7xixt5.com1.z0.glb.clouddn.com/appID_detail.png" /&gt;
+&lt;img alt="appID_detail" src="http://7xixt5.com1.z0.glb.clouddn.com/appID_detail.png"/&gt;
 可以看到没有&lt;code&gt;Distribution&lt;/code&gt;描述文件和证书,所以是没办法直接&lt;code&gt;Archive&lt;/code&gt;导出&lt;code&gt;ipa&lt;/code&gt;的。&lt;/p&gt;
 &lt;h4 id="9e318b9dbc478c973c3319552b39aaec"&gt;keyChain&lt;/h4&gt;
 &lt;p&gt;其实&lt;code&gt;Xcode7&lt;/code&gt;也不是免证书调试.苹果自动在钥匙串中生成了证书.进钥匙串可以看到证书的相关信息。
-&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/Xcode7_keyChain.png" /&gt;&lt;/p&gt;
+&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/Xcode7_keyChain.png"/&gt;&lt;/p&gt;
 &lt;h4 id="580a439681eee1ad580356d77a8ed5e6"&gt;真机调试报错&lt;/h4&gt;
 &lt;p&gt;真机调试报错一般情况下点击弹出的&lt;code&gt;Fix&lt;/code&gt;,Xcode基本都可以解决.
 当提示安装失败
@@ -555,8 +511,6 @@ print(a_ == b, a_.hasPrefix(&amp;quot;字符串&amp;quot;),b.hasSuffix(&amp;quot
 #include &amp;lt;CoreVideo/CVMetalTextureCache.h&amp;gt;
 #endif
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;&lt;code&gt;COREVIDEO_SUPPORTS_METAL&lt;/code&gt;是这样定义的:&lt;code&gt;#if TARGET_OS_IPHONE&lt;/code&gt;,这是不够的,因为&lt;code&gt;armv7/s&lt;/code&gt;设备不支持&lt;code&gt;Metal&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id="10eb951159a4b6a485744e900a86dff5"&gt;Link Frameworks Automatically&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;XCode5&lt;/code&gt;苹果引进了新&lt;code&gt;links&lt;/code&gt;flags,&lt;code&gt;Link Frames Automatically&lt;/code&gt;,&lt;code&gt;Defalut&lt;/code&gt;值是&lt;code&gt;YES&lt;/code&gt;.目的为了减少开发者添加&lt;code&gt;framework&lt;/code&gt;的工作量.在引入这个之前开发者使用&lt;code&gt;framework&lt;/code&gt;必须&lt;code&gt;link&lt;/code&gt;到工程。这个&lt;code&gt;flag&lt;/code&gt;让开发者们更简单的使用&lt;code&gt;framework&lt;/code&gt;.
@@ -578,8 +532,6 @@ string #1 -framework
 string #2 Metal
 Load command 16
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;正如你所看到的,这将导致&lt;code&gt;linker&lt;/code&gt;隐式使用&lt;code&gt;Metal&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id="34e74b1c7f4aad91715567cf698912f6"&gt;The Solution&lt;/h4&gt;
 &lt;p&gt;在苹果没解决这个问题之前。可以通过以下两种方法来避免编译错误:&lt;/p&gt;
@@ -588,9 +540,9 @@ Load command 16
 &lt;h3 id="5da618e8e4b89c66fe86e32cdafde142"&gt;From&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7"&gt;framework not found Metal for architecture armv7&lt;/a&gt;&lt;/p&gt;</summary><category term="Metal armv7"></category></entry><entry><title>思客sketch_day01</title><link href="http://pdhero.com/edesign/sketch_01.html" rel="alternate"></link><updated>2015-01-10T23:10:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2015-01-10:edesign/sketch_01.html</id><summary type="html">&lt;p&gt;思客抱团学习sketch&lt;/p&gt;
 &lt;h3 id="eb8fb008f8af47db48b10936b671611f"&gt;&lt;a href="http://medialoot.com/blog/how-to-create-a-website-header-design-using-bohemian-coding-sketch/"&gt;主页头条设计&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/starer_sketch01.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/starer_sketch01.png"/&gt;&lt;/p&gt;
 &lt;h3 id="b3c3ad9d7d738a6b0eb767186a4cc4ef"&gt;&lt;a href="http://webdesign.tutsplus.com/tutorials/sketch-for-beginners-design-a-login-form-interface--cms-21534"&gt;登陆页面设计&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/starer_sketch01_login.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/starer_sketch01_login.png"/&gt;&lt;/p&gt;
 &lt;h3 id="952d012fcbf9d533dab2eae0ca3ca41f"&gt;技巧&lt;/h3&gt;
 &lt;p&gt;按住 &lt;code&gt;command&lt;/code&gt;键同时选中多个图形，可以统一设置它们的属性，这个和&lt;code&gt;storyBoard&lt;/code&gt;的
 &lt;code&gt;Autolayout&lt;/code&gt;很像，要是像 &lt;code&gt;storyBoard&lt;/code&gt; 一样能设置间距就好了。&lt;/p&gt;

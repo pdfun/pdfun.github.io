@@ -6,7 +6,7 @@
         <meta name="keywords" content="Xcode7">
         <meta name="description" content="The application does not contain a valid application-identifier entitlement.">
         <title>Xcode7免证书真机调试 - just do it</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -37,9 +37,6 @@
                             <li><a href="/about.html" title="about me">
                                 <i class="icon-anchor"></i>关于</a>
                             </li>
-                            <li><a href="/archives.html" title="blog archives">
-                                <i class="icon-archive"></i>存档</a>
-                            </li>
                             <li><a href="/tag/" title="blog tags">
                                 <i class="icon-tag"></i>标签</a>
                             </li>
@@ -64,6 +61,19 @@
                            </ul>
                         </li>
                         <!--  self defined dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="fa-archive"></i>归档<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="/archives.html" title="archives order by publish time">
+                                 <i class="fa-calendar"></i>归档 (按发布时间)</a>
+                               </li>
+                               <li><a href="/archives_updatedate.html" title="archives order by modify time">
+                                 <i class="fa-pencil"></i>归档 (按修改时间)</a>
+                               </li>
+                           </ul>
+                        </li>
                         </ul>
                         
                         <!-- right nav bar -->
@@ -106,13 +116,13 @@
 <p>这次的WWDC对开发者意义最大的要数<code>Swift2.0</code>年底开源,重点支持 OS X、iOS和Linux三个平台,期待<code>Swift</code>的表现。另一件事就是证书三合一了,<code>iOS</code> <code>Mac</code> <code>Safari Extensions</code>证书的三合了,给开发者省了不少钱。</p>
 <h4 id="a233f06910fc7ea15b4be4e98af53e80">Xcode7真机调试</h4>
 <p>登陆非开发者的appID,可以看到iOS Mac都是<code>Free</code>
-<img alt="appid" src="http://7xixt5.com1.z0.glb.clouddn.com/appId.png" /></p>
+<img alt="appid" src="http://7xixt5.com1.z0.glb.clouddn.com/appId.png"/></p>
 <p>点进详情查看,和以前一样有与<code>BundleID</code>对应的描述文件还有Develop证书。
-<img alt="appID_detail" src="http://7xixt5.com1.z0.glb.clouddn.com/appID_detail.png" />
+<img alt="appID_detail" src="http://7xixt5.com1.z0.glb.clouddn.com/appID_detail.png"/>
 可以看到没有<code>Distribution</code>描述文件和证书,所以是没办法直接<code>Archive</code>导出<code>ipa</code>的。</p>
 <h4 id="9e318b9dbc478c973c3319552b39aaec">keyChain</h4>
 <p>其实<code>Xcode7</code>也不是免证书调试.苹果自动在钥匙串中生成了证书.进钥匙串可以看到证书的相关信息。
-<img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/Xcode7_keyChain.png" /></p>
+<img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/Xcode7_keyChain.png"/></p>
 <h4 id="580a439681eee1ad580356d77a8ed5e6">真机调试报错</h4>
 <p>真机调试报错一般情况下点击弹出的<code>Fix</code>,Xcode基本都可以解决.
 当提示安装失败
@@ -160,6 +170,14 @@
                     </ul>
                 </div>
             </div>
+            <div id="niu2-toolbar">
+                <ul class="list-unstyled">
+                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
+                </ul>
+                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
+                <div id="niu2-toolbar-github" data-repo=""></div>
+                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
+            </div>
             <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
@@ -203,6 +221,8 @@
             })();
         </script>
         <div id="niu2-pygments" data-theme="github"></div>
+        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
+        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
         <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
