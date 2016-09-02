@@ -3,15 +3,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="mutiple github account">
-        <meta name="description" content="同一台机器使用两个github帐号从终端推送代码到不同的仓库。">
-        <title>set different github account on same machine - just do it</title>
+        <title>标签 mutiple github account - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
-        <link rel="canonical" href="http://pdhero.com/acode/github一台机器多帐号.html" />
         <script type="text/javascript">window.onload=function(){};</script>
         <!--[if lt IE 9]>
             <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
@@ -105,124 +102,40 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">set different github account on same machine</h1>
+                <h1 class="niu2-index-title"><i class="icon-tag icon-lg"></i>mutiple github account</h1>
             </div>
-            <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
-                <div id="niu2-main-content">
-                    <blockquote>
-<p>同一台机器使用两个github帐号从终端推送代码到不同的仓库。</p>
-</blockquote>
-<h2 id="33cb536a07aaab662456a946c6f0ef34">配置sshkey</h2>
-<ul>
-<li>最好先把原来的sshkey删掉</li>
-</ul>
-<p><code>ssh-add -D</code></p>
-<ul>
-<li>生成新的sshkey,并添加到对应的github帐号</li>
-</ul>
-<h3 id="8796bf1a684bb8170f501d7e49709332">user1的sshkey</h3>
-<p><code>ssh-keygen -t rsa -C "your_email_user1@youremail.com"</code></p>
-<p><code>ssh-add ~/.ssh/id_rsa</code> <br/>
-user1一般是default user</p>
-<h3 id="06ae4201004ff7ced17717e00ffb12a1">user2的sshkey</h3>
-<p><code>ssh-keygen -t rsa -C "your_email_user2@youremail.com"</code></p>
-<p><code>ssh-add ~/.ssh/id_rsa_user2</code></p>
-<ul>
-<li>查看sshkey, use1和user2都在列表中下面的才能继续</li>
-</ul>
-<p><code>ssh-add -l</code></p>
-<h2 id="8c887769dedcb72eaaae799897729f96">配置ssh config</h2>
-<p>在 ~/.ssh文件中添加config文件</p>
-<p><code>cd ~/.ssh/</code><br/>
-<code>vi config</code></p>
-<p>输入以下内容</p>
-<div class="codehilite"><pre>#默认的sshky可以不用配置
-Host github.com #Host相当于别名
-    HostName github.com #HostName填写github.com
-    PreferredAuthentications publickey 
-    IdentityFile ~/.ssh/id_rsa #私钥的路径
 
-# 另外一个sshkey
-Host new.github.com #记住这个Host后面需要用到
-    HostName github.com
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_rsa_user2
-</pre></div>
-<p>config文件根据实际情况修改。wq保存。</p>
-<h2 id="73378aea3aa42433689a071309d606e3">提交代码</h2>
-<p>第一个帐号是可以正常使用的，第二个需要修改主机名。</p>
-<p><code>git clone https://github.com/user2/mutiple_sshkey.git</code></p>
-<p><code>git remote remove origin</code></p>
-<p>将原来的主机名修改成ssh的方式。 <br/>
-<code>git remote origin set-url
-git@new.github.com:user2/mutiple_sshkey.git</code></p>
-<blockquote>
-<p>注意：主机名<code>new.github.com</code>这里要和config文件中配置的<code>Host</code>一致。</p>
-</blockquote>
-<p><code>ssh -T git@new.github.com</code> <br/>
-出现下面的提示基本就成功了。 <br/>
-Hi user2! You've successfully authenticated, but GitHub does not provide shell access.</p>
-<p>接下就可以进行<code>commit</code> <code>push</code>等操作了。</p>
-<h2 id="d1f972b30c618743b603afa37d79464f">参考文档</h2>
-<p><a href="https://gist.github.com/jexchan/2351996">gist</a></p>
-                </div>
-                <div id="content-comments">
-                    <!-- 多说评论框 start -->
-                    <div class="ds-thread" data-thread-key="/acode/github一台机器多帐号.html" data-title="set different github account on same machine" data-url="http://pdhero.com/acode/github一台机器多帐号.html">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="niu2-index-article">
+                    <div class="niu2-index-article-title">
+                        <span>
+                            <a href="http://pdhero.com/acode/github一台机器多帐号.html">set different github account on same machine</a>
+                        </span>
                     </div>
-                    <!-- 多说评论框 end -->
-                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-                    <script type="text/javascript">
-                        var duoshuoQuery = { short_name: 'pdx' };
-                        (function() {
-                            var ds = document.createElement('script');
-                            ds.type = 'text/javascript';ds.async = true;
-                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                            ds.charset = 'UTF-8';
-                            (document.getElementsByTagName('head')[0] 
-                             || document.getElementsByTagName('body')[0]).appendChild(ds);
-                        })();
-                    </script>
-                    <!-- 多说公共JS代码 end -->
-                </div>
-
-            </div>
-            <div class="niu2-right-container col-md-2 with-left-border">
-                <div id="niu2-sidebar-meta" class="niu2-sidebar">
-                    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-                    <div class="niu2-sidebar-value">2016-09-02 18:00</div>
-                    <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2016-09-02 18:10</div>
-                    <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
-                    <div class="niu2-sidebar-value"><a href="http://pdhero.com/acode/index.html">饭碗</a></div>
-                    <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
-                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/mutiple-github-account.html">mutiple github account</a><sup>1</sup></div>
-                </div>
-
-                <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
-                    <div class="niu2-sidebar-label">
-                        <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                    <div class="niu2-meta-index">
+                        <span class="niu2-meta-date-index">
+                            <i class="icon-calendar"></i>2016-09-02
+                        </span>
+                        <span class="niu2-meta-category-index">
+                            <i class="icon-code"></i><a href="http://pdhero.com/acode/index.html">饭碗</a>
+                        </span>
+                        <span class="niu2-meta-tag-index">
+                            <i class="icon-tag"></i>
+                            <a href="http://pdhero.com/tag/mutiple-github-account.html">mutiple github account</a>
+                        </span>
                     </div>
-                    <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">set different github account on same machine</a></li>
-                        <li><a href='#33cb536a07aaab662456a946c6f0ef34'>配置sshkey</a><ul><li><a href='#8796bf1a684bb8170f501d7e49709332'>user1的sshkey</a></li><li><a href='#06ae4201004ff7ced17717e00ffb12a1'>user2的sshkey</a></li></ul></li><li><a href='#8c887769dedcb72eaaae799897729f96'>配置ssh config</a></li><li><a href='#73378aea3aa42433689a071309d606e3'>提交代码</a></li><li><a href='#d1f972b30c618743b603afa37d79464f'>参考文档</a></li>
-                        <li><a href="#content-comments">评论</a></li>
-                    </ul>
+                    <div class="niu2-article-summary">
+                        同一台机器使用两个github帐号从终端推送代码到不同的仓库。
+                    </div>
                 </div>
+
+
+
             </div>
-            <div id="niu2-toolbar">
-                <ul class="list-unstyled">
-                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
-                </ul>
-                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
-                <div id="niu2-toolbar-github" data-repo=""></div>
-                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
-            </div>
-            <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
         <div class="niu2-footer">
-            <div id="body-footer" class="col-md-6 col-md-offset-2">
+            <div id="body-footer" class="col-md-8 col-md-offset-2">
                 <hr/>
                 <p>
                     Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
@@ -267,7 +180,6 @@ Hi user2! You've successfully authenticated, but GitHub does not provide shell a
         <script type="text/javascript" src="http://pdhero.com/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://pdhero.com/theme/js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            onContentLoaded();
         </script>
     </body>
 </html>
