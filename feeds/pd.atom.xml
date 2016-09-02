@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pd.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2016-08-09T11:25:00+08:00</updated><entry><title>写在七夕</title><link href="http://pdhero.com/dlife/post%20on%C2%A0Double%20Seventh%20Festival.html" rel="alternate"></link><updated>2016-08-09T11:25:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-08-09:dlife/post on Double Seventh Festival.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pd.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2016-09-02T18:00:00+08:00</updated><entry><title>同一台机器使用多个github帐号</title><link href="http://pdhero.com/acode/github%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%A4%9A%E5%B8%90%E5%8F%B7.html" rel="alternate"></link><updated>2016-09-02T18:00:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-09-02:acode/github一台机器多帐号.html</id><summary type="html">&lt;h2 id="79217e46af2d120f5af7e05a5c86b18d"&gt;set different github account on same machine&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;同一台机器使用两个github帐号从终端推送代码到不同的仓库。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="33cb536a07aaab662456a946c6f0ef34"&gt;配置sshkey&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;最好先把原来的sshkey删掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ssh-add -D&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生成新的sshkey,并添加到对应的github帐号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="8796bf1a684bb8170f501d7e49709332"&gt;user1的sshkey&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t rsa -C "your_email_user1@youremail.com"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-add ~/.ssh/id_rsa&lt;/code&gt; &lt;br/&gt;
+user1一般是default user&lt;/p&gt;
+&lt;h3 id="06ae4201004ff7ced17717e00ffb12a1"&gt;user2的sshkey&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t rsa -C "your_email_user2@youremail.com"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-add ~/.ssh/id_rsa_user2&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看sshkey, use1和user2都在列表中下面的才能继续&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ssh-add -l&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="8c887769dedcb72eaaae799897729f96"&gt;配置ssh config&lt;/h2&gt;
+&lt;p&gt;在 ~/.ssh文件中添加config文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd ~/.ssh/&lt;/code&gt;&lt;br/&gt;
+&lt;code&gt;vi config&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;输入以下内容&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;#默认的sshky可以不用配置
+Host github.com #Host相当于别名
+    HostName github.com #HostName填写github.com
+    PreferredAuthentications publickey 
+    IdentityFile ~/.ssh/id_rsa #私钥的路径
+
+# 另外一个sshkey
+Host new.github.com #记住这个Host后面需要用到
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_user2
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;config文件根据实际情况修改。wq保存。&lt;/p&gt;
+&lt;h2 id="73378aea3aa42433689a071309d606e3"&gt;提交代码&lt;/h2&gt;
+&lt;p&gt;第一个帐号是可以正常使用的，第二个需要修改主机名。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/user2/mutiple_sshkey.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git remote remove origin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将原来的主机名修改成ssh的方式。 &lt;br/&gt;
+&lt;code&gt;git remote origin set-url
+git@new.github.com:user2/mutiple_sshkey.git&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：主机名&lt;code&gt;new.github.com&lt;/code&gt;这里要和config文件中配置的&lt;code&gt;Host&lt;/code&gt;一致。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;ssh -T git@new.github.com&lt;/code&gt; &lt;br/&gt;
+出现下面的提示基本就成功了。 &lt;br/&gt;
+Hi user2! You've successfully authenticated, but GitHub does not provide shell access.&lt;/p&gt;
+&lt;p&gt;接下就可以进行&lt;code&gt;commit&lt;/code&gt; &lt;code&gt;push&lt;/code&gt;等操作了。&lt;/p&gt;
+&lt;h2 id="d1f972b30c618743b603afa37d79464f"&gt;参考文档&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://gist.github.com/jexchan/2351996"&gt;gist&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>写在七夕</title><link href="http://pdhero.com/dlife/post%20on%C2%A0Double%20Seventh%20Festival.html" rel="alternate"></link><updated>2016-08-09T11:25:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-08-09:dlife/post on Double Seventh Festival.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;内容与title没有关系，只是记录下近期的状态&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;两年前买的书还没有看完，两年前下决心学的东西现在还是一知半解。&lt;/p&gt;
