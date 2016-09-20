@@ -3,15 +3,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="Xcode7">
-        <meta name="description" content="The application does not contain a valid application-identifier entitlement.">
-        <title>Xcode7免证书真机调试 - just do it</title>
+        <meta name="keywords" content="Xcode8 Plugin">
+        <meta name="description" content="解决Xcode8插件无效的一个办法">
+        <title>Xcode8插件无效 - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/niu2.min.css" type="text/css" />
-        <link rel="canonical" href="http://pdhero.com/acode/Xcode7免证书真机调试.html" />
+        <link rel="canonical" href="http://pdhero.com/acode/Xcode8-Pluign-invalid.html" />
         <script type="text/javascript">window.onload=function(){};</script>
         <!--[if lt IE 9]>
             <script src="http://pdhero.com/theme/js/html5shiv.js"></script>
@@ -105,32 +105,46 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">Xcode7免证书真机调试</h1>
+                <h1 id="content-heading">Xcode8插件无效</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
                     <blockquote>
-<p>The application does not contain a valid application-identifier entitlement.</p>
+<p>解决Xcode8插件无效的一个办法</p>
 </blockquote>
-<h4 id="8e20c0c5e9332a426196dc0e8bce212a">WWDC2015</h4>
-<p>这次的WWDC对开发者意义最大的要数<code>Swift2.0</code>年底开源,重点支持 OS X、iOS和Linux三个平台,期待<code>Swift</code>的表现。另一件事就是证书三合一了,<code>iOS</code> <code>Mac</code> <code>Safari Extensions</code>证书的三合了,给开发者省了不少钱。</p>
-<h4 id="a233f06910fc7ea15b4be4e98af53e80">Xcode7真机调试</h4>
-<p>登陆非开发者的appID,可以看到iOS Mac都是<code>Free</code>
-<img alt="appid" src="http://7xixt5.com1.z0.glb.clouddn.com/appId.png"/></p>
-<p>点进详情查看,和以前一样有与<code>BundleID</code>对应的描述文件还有Develop证书。
-<img alt="appID_detail" src="http://7xixt5.com1.z0.glb.clouddn.com/appID_detail.png"/>
-可以看到没有<code>Distribution</code>描述文件和证书,所以是没办法直接<code>Archive</code>导出<code>ipa</code>的。</p>
-<h4 id="9e318b9dbc478c973c3319552b39aaec">keyChain</h4>
-<p>其实<code>Xcode7</code>也不是免证书调试.苹果自动在钥匙串中生成了证书.进钥匙串可以看到证书的相关信息。
-<img alt="img" src="http://7xixt5.com1.z0.glb.clouddn.com/Xcode7_keyChain.png"/></p>
-<h4 id="580a439681eee1ad580356d77a8ed5e6">真机调试报错</h4>
-<p>真机调试报错一般情况下点击弹出的<code>Fix</code>,Xcode基本都可以解决.
-当提示安装失败
-<code>The application does not contain a valid application-identifier entitlement.</code>,是因为一样的<code>BundleID</code>之前用99的证书调试过,证书信息不一致无法安装,卸载程序重新运行就可以调试了。</p>
+<h2 id="968aa9a1b558d0206eab6aeff69d9dd2">起因</h2>
+<p><a href="https://github.com/XcodeGhostSource/XcodeGhost">XcodeGhost</a>事件终于让苹果开始重视iOS上的安全了。限制企业证书的发放，吊销非法使用的企业证书，加强<code>AppStore</code>审核机制等等，这次又开插件开刀了。苹果把Xcode插件以Extension的形式集成到了Xcode8中。其实早应该规范起来了,苹果加了一步验证，之前的插件都无效不能正常使用了。</p>
+<h2 id="957a228f87aaf86e436762129485625a">解决方法</h2>
+<ul>
+<li>git clone https://github.com/XVimProject/XVim/</li>
+<li>cd XVim</li>
+<li>make   </li>
+<li>最后运行下面的命令</li>
+</ul>
+<div class="codehilite"><pre>find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
+</pre></div>
+<ul>
+<li>重启Xcode即可</li>
+</ul>
+<h2 id="270e8c1b2bea06a8639feb53a1515cab">安装的XCode插件</h2>
+<p>XVim
+VVDocument
+KSImagedNamed
+XAlign
+XTodo
+OMColorSense
+Alcatraz</p>
+<h2 id="57a7ba92ce1d85951eadf7e075378077">MakeFile</h2>
+<p>看了下XVim的Makefile文件，<code>code_unsign</code>移除了Xcode8的签名并且说明<code>This may increase security risk since you cannot validate Xcode signature once we remove it.</code> </p>
+<blockquote>
+<p>最好别用移除签名的XCode打包上传到AppStore</p>
+</blockquote>
+<h2 id="d1f972b30c618743b603afa37d79464f">参考文档</h2>
+<p><a href="https://github.com/XVimProject/XVim/issues/988">Xcode8 GM version couldn't launch</a></p>
                 </div>
                 <div id="content-comments">
                     <!-- 多说评论框 start -->
-                    <div class="ds-thread" data-thread-key="/acode/Xcode7免证书真机调试.html" data-title="Xcode7免证书真机调试" data-url="http://pdhero.com/acode/Xcode7免证书真机调试.html">
+                    <div class="ds-thread" data-thread-key="/acode/Xcode8-Pluign-invalid.html" data-title="Xcode8插件无效" data-url="http://pdhero.com/acode/Xcode8-Pluign-invalid.html">
                     </div>
                     <!-- 多说评论框 end -->
                     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -152,11 +166,13 @@
             <div class="niu2-right-container col-md-2 with-left-border">
                 <div id="niu2-sidebar-meta" class="niu2-sidebar">
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-                    <div class="niu2-sidebar-value">2015-06-09 19:24</div>
+                    <div class="niu2-sidebar-value">2016-09-19 20:33</div>
+                    <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
+                    <div class="niu2-sidebar-value">2016-06-09 10:00</div>
                     <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://pdhero.com/acode/index.html">饭碗</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
-                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/xcode7.html">Xcode7</a><sup>1</sup></div>
+                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://pdhero.com/tag/xcode8-plugin.html">Xcode8 Plugin</a><sup>1</sup></div>
                 </div>
 
                 <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
@@ -164,8 +180,8 @@
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">Xcode7免证书真机调试</a></li>
-                        <li><a href='#8e20c0c5e9332a426196dc0e8bce212a'>WWDC2015</a></li><li><a href='#a233f06910fc7ea15b4be4e98af53e80'>Xcode7真机调试</a></li><li><a href='#9e318b9dbc478c973c3319552b39aaec'>keyChain</a></li><li><a href='#580a439681eee1ad580356d77a8ed5e6'>真机调试报错</a></li>
+                        <li><a href="#content-heading">Xcode8插件无效</a></li>
+                        <li><a href='#968aa9a1b558d0206eab6aeff69d9dd2'>起因</a></li><li><a href='#957a228f87aaf86e436762129485625a'>解决方法</a></li><li><a href='#270e8c1b2bea06a8639feb53a1515cab'>安装的XCode插件</a></li><li><a href='#57a7ba92ce1d85951eadf7e075378077'>MakeFile</a></li><li><a href='#d1f972b30c618743b603afa37d79464f'>参考文档</a></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>
                 </div>

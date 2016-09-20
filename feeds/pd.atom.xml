@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pd.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2016-09-02T18:00:00+08:00</updated><entry><title>set different github account on same machine</title><link href="http://pdhero.com/acode/github%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%A4%9A%E5%B8%90%E5%8F%B7.html" rel="alternate"></link><updated>2016-09-02T18:00:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-09-02:acode/github一台机器多帐号.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pd.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2016-09-19T20:33:00+08:00</updated><entry><title>Xcode8插件无效</title><link href="http://pdhero.com/acode/Xcode8-Pluign-invalid.html" rel="alternate"></link><updated>2016-09-19T20:33:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-09-19:acode/Xcode8-Pluign-invalid.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;解决Xcode8插件无效的一个办法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="968aa9a1b558d0206eab6aeff69d9dd2"&gt;起因&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/XcodeGhostSource/XcodeGhost"&gt;XcodeGhost&lt;/a&gt;事件终于让苹果开始重视iOS上的安全了。限制企业证书的发放，吊销非法使用的企业证书，加强&lt;code&gt;AppStore&lt;/code&gt;审核机制等等，这次又开插件开刀了。苹果把Xcode插件以Extension的形式集成到了Xcode8中。其实早应该规范起来了,苹果加了一步验证，之前的插件都无效不能正常使用了。&lt;/p&gt;
+&lt;h2 id="957a228f87aaf86e436762129485625a"&gt;解决方法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;git clone https://github.com/XVimProject/XVim/&lt;/li&gt;
+&lt;li&gt;cd XVim&lt;/li&gt;
+&lt;li&gt;make   &lt;/li&gt;
+&lt;li&gt;最后运行下面的命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;重启Xcode即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="270e8c1b2bea06a8639feb53a1515cab"&gt;安装的XCode插件&lt;/h2&gt;
+&lt;p&gt;XVim
+VVDocument
+KSImagedNamed
+XAlign
+XTodo
+OMColorSense
+Alcatraz&lt;/p&gt;
+&lt;h2 id="57a7ba92ce1d85951eadf7e075378077"&gt;MakeFile&lt;/h2&gt;
+&lt;p&gt;看了下XVim的Makefile文件，&lt;code&gt;code_unsign&lt;/code&gt;移除了Xcode8的签名并且说明&lt;code&gt;This may increase security risk since you cannot validate Xcode signature once we remove it.&lt;/code&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最好别用移除签名的XCode打包上传到AppStore&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="d1f972b30c618743b603afa37d79464f"&gt;参考文档&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/XVimProject/XVim/issues/988"&gt;Xcode8 GM version couldn't launch&lt;/a&gt;&lt;/p&gt;</summary><category term="Xcode8 Plugin"></category></entry><entry><title>set different github account on same machine</title><link href="http://pdhero.com/acode/github%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%A4%9A%E5%B8%90%E5%8F%B7.html" rel="alternate"></link><updated>2016-09-02T18:00:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-09-02:acode/github一台机器多帐号.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;同一台机器使用两个github帐号从终端推送代码到不同的仓库。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="33cb536a07aaab662456a946c6f0ef34"&gt;配置sshkey&lt;/h2&gt;
