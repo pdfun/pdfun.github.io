@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pd.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2016-09-19T20:33:00+08:00</updated><entry><title>Xcode8插件失效</title><link href="http://pdhero.com/acode/Xcode8-Pluign-invalid.html" rel="alternate"></link><updated>2016-09-19T20:33:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-09-19:acode/Xcode8-Pluign-invalid.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it</title><link href="http://pdhero.com/" rel="alternate"></link><link href="http://pdhero.com/feeds/pd.atom.xml" rel="self"></link><id>http://pdhero.com/</id><updated>2016-09-19T20:33:00+08:00</updated><entry><title>Xcode8插件失效</title><link href="http://pdhero.com/acode/Xcode8-Plugin-invalid.html" rel="alternate"></link><updated>2016-09-19T20:33:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-09-19:acode/Xcode8-Plugin-invalid.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;让Xcode8插件继续工作&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="968aa9a1b558d0206eab6aeff69d9dd2"&gt;起因&lt;/h2&gt;
