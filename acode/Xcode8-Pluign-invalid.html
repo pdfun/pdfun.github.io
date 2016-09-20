@@ -4,8 +4,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Xcode8 Plugin">
-        <meta name="description" content="解决Xcode8插件无效的一个办法">
-        <title>Xcode8插件无效 - just do it</title>
+        <meta name="description" content="让Xcode8插件继续工作">
+        <title>Xcode8插件失效 - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://pdhero.com/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://pdhero.com/theme/font-icons/style.min.css" type="text/css" />
@@ -105,15 +105,15 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">Xcode8插件无效</h1>
+                <h1 id="content-heading">Xcode8插件失效</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
                     <blockquote>
-<p>解决Xcode8插件无效的一个办法</p>
+<p>让Xcode8插件继续工作</p>
 </blockquote>
 <h2 id="968aa9a1b558d0206eab6aeff69d9dd2">起因</h2>
-<p><a href="https://github.com/XcodeGhostSource/XcodeGhost">XcodeGhost</a>事件终于让苹果开始重视iOS上的安全了。限制企业证书的发放，吊销非法使用的企业证书，加强<code>AppStore</code>审核机制等等，这次又开插件开刀了。苹果把Xcode插件以Extension的形式集成到了Xcode8中。其实早应该规范起来了,苹果加了一步验证，之前的插件都无效不能正常使用了。</p>
+<p><a href="https://github.com/XcodeGhostSource/XcodeGhost">XcodeGhost</a>事件终于让苹果开始重视iOS上的安全了。限制企业证书的发放，吊销非法使用的企业证书，加强<code>AppStore</code>审核机制等等，这次又开插件开刀了。苹果把Xcode插件以Extension的形式集成到了Xcode8中,其实早应该规范起来了。苹果加了一步验证，之前安装插件都不能正常使用了。</p>
 <h2 id="957a228f87aaf86e436762129485625a">解决方法</h2>
 <ul>
 <li>git clone https://github.com/XVimProject/XVim/</li>
@@ -127,24 +127,26 @@
 <li>重启Xcode即可</li>
 </ul>
 <h2 id="270e8c1b2bea06a8639feb53a1515cab">安装的XCode插件</h2>
-<p>XVim
-VVDocument
-KSImagedNamed
-XAlign
-XTodo
-OMColorSense
-Alcatraz</p>
+<ul>
+<li>XVim</li>
+<li>VVDocument</li>
+<li>KSImagedNamed</li>
+<li>XAlign</li>
+<li>XTodo</li>
+<li>OMColorSense</li>
+<li>Alcatraz</li>
+</ul>
 <h2 id="57a7ba92ce1d85951eadf7e075378077">MakeFile</h2>
 <p>看了下XVim的Makefile文件，<code>code_unsign</code>移除了Xcode8的签名并且说明<code>This may increase security risk since you cannot validate Xcode signature once we remove it.</code> </p>
 <blockquote>
-<p>最好别用移除签名的XCode打包上传到AppStore</p>
+<p>最好别用移除签名的Xcode打包上传到AppStore</p>
 </blockquote>
 <h2 id="d1f972b30c618743b603afa37d79464f">参考文档</h2>
 <p><a href="https://github.com/XVimProject/XVim/issues/988">Xcode8 GM version couldn't launch</a></p>
                 </div>
                 <div id="content-comments">
                     <!-- 多说评论框 start -->
-                    <div class="ds-thread" data-thread-key="/acode/Xcode8-Pluign-invalid.html" data-title="Xcode8插件无效" data-url="http://pdhero.com/acode/Xcode8-Pluign-invalid.html">
+                    <div class="ds-thread" data-thread-key="/acode/Xcode8-Pluign-invalid.html" data-title="Xcode8插件失效" data-url="http://pdhero.com/acode/Xcode8-Pluign-invalid.html">
                     </div>
                     <!-- 多说评论框 end -->
                     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -168,7 +170,7 @@ Alcatraz</p>
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2016-09-19 20:33</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2016-06-09 10:00</div>
+                    <div class="niu2-sidebar-value">2016-06-09 10:05</div>
                     <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://pdhero.com/acode/index.html">饭碗</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -180,7 +182,7 @@ Alcatraz</p>
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">Xcode8插件无效</a></li>
+                        <li><a href="#content-heading">Xcode8插件失效</a></li>
                         <li><a href='#968aa9a1b558d0206eab6aeff69d9dd2'>起因</a></li><li><a href='#957a228f87aaf86e436762129485625a'>解决方法</a></li><li><a href='#270e8c1b2bea06a8639feb53a1515cab'>安装的XCode插件</a></li><li><a href='#57a7ba92ce1d85951eadf7e075378077'>MakeFile</a></li><li><a href='#d1f972b30c618743b603afa37d79464f'>参考文档</a></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>
