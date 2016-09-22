@@ -116,6 +116,20 @@
 <p><a href="https://github.com/XcodeGhostSource/XcodeGhost">XcodeGhost</a>事件终于让苹果开始重视iOS上的安全了。限制企业证书的发放，吊销非法使用的企业证书，加强<code>AppStore</code>审核机制等等，这次又开插件开刀了。苹果把Xcode插件以Extension的形式集成到了Xcode8中,其实早应该规范起来了。苹果加了一步验证，之前安装插件都不能正常使用了。</p>
 <h2 id="957a228f87aaf86e436762129485625a">解决方法</h2>
 <ul>
+<li>创建自签名证书</li>
+</ul>
+<p>打开钥匙串,选中登录, 钥匙串访问-&gt;证书助理-&gt;创建证书
+<img alt="" src="http://i.imgur.com/yQykY5N.png"/></p>
+<p>证书类型选择代码签名
+<img alt="" src="http://i.imgur.com/jwz40Xa.png"/></p>
+<p>创建成功后检查钥匙串里有没有这个证书</p>
+<p><img alt="" src="http://i.imgur.com/7pd73Qi.png"/></p>
+<ul>
+<li>用创建的<code>XcodeSigner</code>证书给<code>Xcode</code>重新签名</li>
+</ul>
+<div class="codehilite"><pre>sudo codesign -f -s XcodeSigner /Applications/Xcode.app 
+</pre></div>
+<ul>
 <li>git clone https://github.com/XVimProject/XVim/</li>
 <li>cd XVim</li>
 <li>make   </li>
@@ -130,19 +144,30 @@
 <ul>
 <li>XVim</li>
 <li>VVDocument</li>
-<li>KSImagedNamed</li>
-<li>XAlign</li>
+<li>
+<p>KSImagedNamed()</p>
+<blockquote>
+<p>Sierra10.12打开Xcode8后如果闪退,卸载这个插件</p>
+</blockquote>
+</li>
+<li>
+<p>XAlign</p>
+</li>
 <li>XTodo</li>
 <li>OMColorSense</li>
-<li>Alcatraz</li>
+<li>Alcatraz<blockquote>
+<p>插件管理在Sierra10.12 Xcode8下无显示</p>
+</blockquote>
+</li>
 </ul>
-<h2 id="57a7ba92ce1d85951eadf7e075378077">MakeFile</h2>
-<p>看了下XVim的Makefile文件，<code>code_unsign</code>移除了Xcode8的签名并且说明<code>This may increase security risk since you cannot validate Xcode signature once we remove it.</code> </p>
+<h2 id="f411d0f1f925d9b48d8c1d451bd809b1">说明</h2>
+<p>在<code>mac OS Sierra 10.12</code> <code>Xcode Version 8.0 (8A218a)</code>进行的测试。</p>
+<p>替换Xcode8签名前最好复制一份</p>
 <blockquote>
-<p>最好别用移除签名的Xcode打包上传到AppStore</p>
+<p>最好别用重签名的Xcode打包上传到AppStore</p>
 </blockquote>
 <h2 id="d1f972b30c618743b603afa37d79464f">参考文档</h2>
-<p><a href="https://github.com/XVimProject/XVim/issues/988">Xcode8 GM version couldn't launch</a></p>
+<p><a href="https://github.com/XVimProject/XVim">XVim</a></p>
                 </div>
                 <div id="content-comments">
                     <!-- 多说评论框 start -->
@@ -170,7 +195,7 @@
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2016-09-19 20:33</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2016-09-19 10:30</div>
+                    <div class="niu2-sidebar-value">2016-09-22 10:58</div>
                     <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://pdhero.com/acode/index.html">饭碗</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -183,7 +208,7 @@
                     </div>
                     <ul id="niu2-sidebar-toc-list">
                         <li><a href="#content-heading">Xcode8插件失效</a></li>
-                        <li><a href='#968aa9a1b558d0206eab6aeff69d9dd2'>起因</a></li><li><a href='#957a228f87aaf86e436762129485625a'>解决方法</a></li><li><a href='#178c85676bdda29c98a8d3ab99233061'>安装的Xcode插件</a></li><li><a href='#57a7ba92ce1d85951eadf7e075378077'>MakeFile</a></li><li><a href='#d1f972b30c618743b603afa37d79464f'>参考文档</a></li>
+                        <li><a href='#968aa9a1b558d0206eab6aeff69d9dd2'>起因</a></li><li><a href='#957a228f87aaf86e436762129485625a'>解决方法</a></li><li><a href='#178c85676bdda29c98a8d3ab99233061'>安装的Xcode插件</a></li><li><a href='#f411d0f1f925d9b48d8c1d451bd809b1'>说明</a></li><li><a href='#d1f972b30c618743b603afa37d79464f'>参考文档</a></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>
                 </div>

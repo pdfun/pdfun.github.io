@@ -6,6 +6,20 @@
 &lt;p&gt;&lt;a href="https://github.com/XcodeGhostSource/XcodeGhost"&gt;XcodeGhost&lt;/a&gt;事件终于让苹果开始重视iOS上的安全了。限制企业证书的发放，吊销非法使用的企业证书，加强&lt;code&gt;AppStore&lt;/code&gt;审核机制等等，这次又开插件开刀了。苹果把Xcode插件以Extension的形式集成到了Xcode8中,其实早应该规范起来了。苹果加了一步验证，之前安装插件都不能正常使用了。&lt;/p&gt;
 &lt;h2 id="957a228f87aaf86e436762129485625a"&gt;解决方法&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;创建自签名证书&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;打开钥匙串,选中登录, 钥匙串访问-&amp;gt;证书助理-&amp;gt;创建证书
+&lt;img alt="" src="http://i.imgur.com/yQykY5N.png"/&gt;&lt;/p&gt;
+&lt;p&gt;证书类型选择代码签名
+&lt;img alt="" src="http://i.imgur.com/jwz40Xa.png"/&gt;&lt;/p&gt;
+&lt;p&gt;创建成功后检查钥匙串里有没有这个证书&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/7pd73Qi.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用创建的&lt;code&gt;XcodeSigner&lt;/code&gt;证书给&lt;code&gt;Xcode&lt;/code&gt;重新签名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;sudo codesign -f -s XcodeSigner /Applications/Xcode.app 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
 &lt;li&gt;git clone https://github.com/XVimProject/XVim/&lt;/li&gt;
 &lt;li&gt;cd XVim&lt;/li&gt;
 &lt;li&gt;make   &lt;/li&gt;
@@ -20,19 +34,30 @@
 &lt;ul&gt;
 &lt;li&gt;XVim&lt;/li&gt;
 &lt;li&gt;VVDocument&lt;/li&gt;
-&lt;li&gt;KSImagedNamed&lt;/li&gt;
-&lt;li&gt;XAlign&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;KSImagedNamed()&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sierra10.12打开Xcode8后如果闪退,卸载这个插件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;XAlign&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;XTodo&lt;/li&gt;
 &lt;li&gt;OMColorSense&lt;/li&gt;
-&lt;li&gt;Alcatraz&lt;/li&gt;
+&lt;li&gt;Alcatraz&lt;blockquote&gt;
+&lt;p&gt;插件管理在Sierra10.12 Xcode8下无显示&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="57a7ba92ce1d85951eadf7e075378077"&gt;MakeFile&lt;/h2&gt;
-&lt;p&gt;看了下XVim的Makefile文件，&lt;code&gt;code_unsign&lt;/code&gt;移除了Xcode8的签名并且说明&lt;code&gt;This may increase security risk since you cannot validate Xcode signature once we remove it.&lt;/code&gt; &lt;/p&gt;
+&lt;h2 id="f411d0f1f925d9b48d8c1d451bd809b1"&gt;说明&lt;/h2&gt;
+&lt;p&gt;在&lt;code&gt;mac OS Sierra 10.12&lt;/code&gt; &lt;code&gt;Xcode Version 8.0 (8A218a)&lt;/code&gt;进行的测试。&lt;/p&gt;
+&lt;p&gt;替换Xcode8签名前最好复制一份&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;最好别用移除签名的Xcode打包上传到AppStore&lt;/p&gt;
+&lt;p&gt;最好别用重签名的Xcode打包上传到AppStore&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="d1f972b30c618743b603afa37d79464f"&gt;参考文档&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/XVimProject/XVim/issues/988"&gt;Xcode8 GM version couldn't launch&lt;/a&gt;&lt;/p&gt;</summary><category term="Xcode8 Plugin"></category></entry><entry><title>set different github account on same machine</title><link href="http://pdhero.com/acode/github%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%A4%9A%E5%B8%90%E5%8F%B7.html" rel="alternate"></link><updated>2016-09-02T18:00:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-09-02:acode/github一台机器多帐号.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/XVimProject/XVim"&gt;XVim&lt;/a&gt;&lt;/p&gt;</summary><category term="Xcode8 Plugin"></category></entry><entry><title>set different github account on same machine</title><link href="http://pdhero.com/acode/github%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%A4%9A%E5%B8%90%E5%8F%B7.html" rel="alternate"></link><updated>2016-09-02T18:00:00+08:00</updated><author><name>pd</name></author><id>tag:pdhero.com,2016-09-02:acode/github一台机器多帐号.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;同一台机器使用两个github帐号从终端推送代码到不同的仓库。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="33cb536a07aaab662456a946c6f0ef34"&gt;配置sshkey&lt;/h2&gt;
