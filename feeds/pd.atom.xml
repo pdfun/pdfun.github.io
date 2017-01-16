@@ -558,9 +558,21 @@ print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
 &lt;p&gt;&lt;code&gt;ERROR ITMS-90207: "Invalid Bundle. The bundle at 'example.app' does not contain a bundle executable&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;用&lt;code&gt;vi&lt;/code&gt;打开&lt;code&gt;Info.plist&lt;/code&gt;检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;在UILabel的text后面增加一些空格,并右对齐.
-右对齐后空格无法显示。&lt;code&gt;iOS7&lt;/code&gt;+的UILabel会自动将text行尾的空白符全部去除。半角空格&lt;code&gt;\0x20&lt;/code&gt;和制表符&lt;code&gt;\t&lt;/code&gt;除外。在text后面追加这两个符号即可。&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="iOS"></category></entry><entry><title>我的常用Mac App</title><link href="http://99d.in/dlife/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-25:dlife/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
+&lt;li&gt;
+&lt;p&gt;在UILabel的text后面增加一些空格,并右对齐.
+右对齐后空格无法显示。&lt;code&gt;iOS7&lt;/code&gt;+的UILabel会自动将text行尾的空白符全部去除。半角空格&lt;code&gt;\0x20&lt;/code&gt;和制表符&lt;code&gt;\t&lt;/code&gt;除外。在text后面追加这两个符号即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Xcode&lt;/code&gt; 调试的状态显示&lt;code&gt;indexing....&lt;/code&gt;,卡很久&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;Open your Project Folder.
+Find ProjectName.xcodeproj file.
+Right-Click Copy and Paste to Safe Place.
+Right-Click Show Package Contents.
+Find project.xcworkspace file and delete that file.
+Reopen Your Project and clean and Rebuild.
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="iOS"></category></entry><entry><title>我的常用Mac App</title><link href="http://99d.in/dlife/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-25:dlife/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;8月貌似一篇博客没写。记录下我用一的一些Mac app。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Alfred 2&lt;/p&gt;
