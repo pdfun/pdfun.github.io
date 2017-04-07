@@ -511,27 +511,44 @@ Right-Click Copy and Paste to Safe Place.
 Right-Click Show Package Contents.
 Find project.xcworkspace file and delete that file.
 Reopen Your Project and clean and Rebuild.
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="iOS"></category></entry><entry><title>我的常用Mac App</title><link href="http://99d.in/dlife/%E6%88%91%E7%9A%84mac%E5%B8%B8%E7%94%A8app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-25:dlife/我的mac常用app.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;8月貌似一篇博客没写。记录下我用一的一些Mac app。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Alfred 2&lt;/p&gt;
-&lt;p&gt;1Password&lt;/p&gt;
-&lt;p&gt;Dash&lt;/p&gt;
-&lt;p&gt;Evernote&lt;/p&gt;
-&lt;p&gt;WizNote&lt;/p&gt;
-&lt;p&gt;Quiver&lt;/p&gt;
-&lt;p&gt;MWeb&lt;/p&gt;
-&lt;p&gt;PDF Export&lt;/p&gt;
-&lt;p&gt;Monosnap&lt;/p&gt;
-&lt;p&gt;SourceTree&lt;/p&gt;
-&lt;p&gt;Sublime&lt;/p&gt;
-&lt;p&gt;Paw&lt;/p&gt;
-&lt;p&gt;Fantastical&lt;/p&gt;
-&lt;p&gt;Sketch&lt;/p&gt;
-&lt;p&gt;Wireshark&lt;/p&gt;
-&lt;p&gt;Burpsuite_free&lt;/p&gt;
-&lt;p&gt;DropBox&lt;/p&gt;
-&lt;p&gt;坚果云&lt;/p&gt;</summary><category term="Mac"></category></entry><entry><title>Cannot generate iOS App archive in xcode</title><link href="http://99d.in/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html" rel="alternate"></link><updated>2015-07-29T10:06:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-29:bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</id><summary type="html">&lt;blockquote&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="iOS"></category></entry><entry><title>macOS app installed</title><link href="http://99d.in/dlife/%E6%88%91%E7%9A%84macOS%20app.html" rel="alternate"></link><updated>2015-08-25T20:22:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-25:dlife/我的macOS app.html</id><summary type="html">&lt;h1 id="3256142c22150278239cd3379225ebe8"&gt;效率&lt;/h1&gt;
+&lt;p&gt;Alfred 3
+1Password
+PDF Export
+Fantastical&lt;/p&gt;
+&lt;h1 id="53733cd6e368336f07f46755e971cab3"&gt;编辑器&lt;/h1&gt;
+&lt;p&gt;Sublime
+MWeb
+MacVim
+UltraEdit
+WizNote
+Xcode&lt;/p&gt;
+&lt;h1 id="20dce2c6fa909a5cd62526615fe2788a"&gt;工具&lt;/h1&gt;
+&lt;p&gt;SourceTree
+Cornerstone3
+Beyond Compare
+easy APNs Provider
+DB Browser for SQLite&lt;/p&gt;
+&lt;h1 id="7a6818e949d352b8337c6044e1f1b9d9"&gt;图片相关&lt;/h1&gt;
+&lt;p&gt;Sketch
+cuImage
+Snaps&lt;/p&gt;
+&lt;h1 id="bfb948674f0abac493f32fb6d39a73b9"&gt;网络相关&lt;/h1&gt;
+&lt;p&gt;Burpsuite_free
+Wireshark
+Paw&lt;/p&gt;
+&lt;h1 id="67bc37adcf6e7dff32b2aae0af3fdbbb"&gt;网盘&lt;/h1&gt;
+&lt;p&gt;DropBox
+坚果云&lt;/p&gt;
+&lt;h1 id="c97c043860d0b110620f60f50b292212"&gt;思维导图&lt;/h1&gt;
+&lt;p&gt;Scapple&lt;/p&gt;
+&lt;h1 id="de71492af019157e5a5ef958b570e760"&gt;系统工具&lt;/h1&gt;
+&lt;p&gt;TeamViewer
+AriServer
+ColorPikcer
+The Unarchiver&lt;/p&gt;
+&lt;h1 id="0eda7c38afb2bff0a16ee496cc03a5e8"&gt;播放器&lt;/h1&gt;
+&lt;p&gt;mpv&lt;/p&gt;</summary><category term="Mac"></category></entry><entry><title>Cannot generate iOS App archive in xcode</title><link href="http://99d.in/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html" rel="alternate"></link><updated>2015-07-29T10:06:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-29:bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Cannot generate iOS App archive in xcode&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id="e678f2cc8303d18a894f8be0f9588fe7"&gt;Xcode archive&lt;/h4&gt;
