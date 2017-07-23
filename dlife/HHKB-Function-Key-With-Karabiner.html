@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="HHKB, Karabiner">
         <meta name="description" content="Karabiner 给HHKB添加功能键F0~F12">
-        <title>HHKB Function Key With Karabiner - just do it</title>
+        <title>HHKB-Function-Key-With-Karabiner - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
@@ -105,7 +105,7 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">HHKB Function Key With Karabiner</h1>
+                <h1 id="content-heading">HHKB-Function-Key-With-Karabiner</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
@@ -116,26 +116,26 @@
 <p>打开<code>Karabiner</code>,选中<code>Change Key</code>菜单,看到右下角有句话<code>Do you want to add your own settings?</code>点击<code>Open the documentation web site</code>跳转到 <a href="https://pqrs.org/osx/karabiner/document.html#privatexml">How to add your own settings</a>,有详情的教程告诉我们进行个性化设置。</p>
 <h2 id="fa535ffb25e1fd20341652f9be21e06e">Config</h2>
 <p>贴下我的XML配置,只是左边的<code>Option+Num</code>映射<code>Fn</code>的,可以根据自己的需要进行修改。</p>
-<div class="codehilite"><pre>&lt;?xml version="1.0"?&gt;
-&lt;root&gt;
-  &lt;item&gt;
-    &lt;name&gt;option+num to Fn&lt;/name&gt;
-    &lt;identifier&gt;private.swap_space_and_tab&lt;/identifier&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_1, ModifierFlag::OPTION_L, KeyCode::F1&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_2, ModifierFlag::OPTION_L, KeyCode::F2&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_3, ModifierFlag::OPTION_L, KeyCode::F3&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_4, ModifierFlag::OPTION_L, KeyCode::F4&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_5, ModifierFlag::OPTION_L, KeyCode::F5&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_6, ModifierFlag::OPTION_L, KeyCode::F6&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_7, ModifierFlag::OPTION_L, KeyCode::F7&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_8, ModifierFlag::OPTION_L, KeyCode::F8&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_9, ModifierFlag::OPTION_L, KeyCode::F9&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::KEY_0, ModifierFlag::OPTION_L, KeyCode::F10&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::MINUS, ModifierFlag::OPTION_L, KeyCode::F11&lt;/autogen&gt;
-    &lt;autogen&gt;__KeyToKey__ KeyCode::EQUAL, ModifierFlag::OPTION_L, KeyCode::F12&lt;/autogen&gt;
-  &lt;/item&gt;
+<div class="highlight"><pre><span></span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;root&gt;</span>
+  <span class="nt">&lt;item&gt;</span>
+    <span class="nt">&lt;name&gt;</span>option+num to Fn<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;identifier&gt;</span>private.swap_space_and_tab<span class="nt">&lt;/identifier&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_1, ModifierFlag::OPTION_L, KeyCode::F1<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_2, ModifierFlag::OPTION_L, KeyCode::F2<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_3, ModifierFlag::OPTION_L, KeyCode::F3<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_4, ModifierFlag::OPTION_L, KeyCode::F4<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_5, ModifierFlag::OPTION_L, KeyCode::F5<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_6, ModifierFlag::OPTION_L, KeyCode::F6<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_7, ModifierFlag::OPTION_L, KeyCode::F7<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_8, ModifierFlag::OPTION_L, KeyCode::F8<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_9, ModifierFlag::OPTION_L, KeyCode::F9<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_0, ModifierFlag::OPTION_L, KeyCode::F10<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::MINUS, ModifierFlag::OPTION_L, KeyCode::F11<span class="nt">&lt;/autogen&gt;</span>
+    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::EQUAL, ModifierFlag::OPTION_L, KeyCode::F12<span class="nt">&lt;/autogen&gt;</span>
+  <span class="nt">&lt;/item&gt;</span>
 
-&lt;/root&gt;
+<span class="nt">&lt;/root&gt;</span>
 </pre></div>
 <h2 id="e7384c252586cce857cb14709845a8a4">KeyCode.data</h2>
 <p>找对应的<code>KeyCode</code>是件头疼的事,才开始慢慢试看到<code>Karabiner</code>报错一点点修改,后来搜索了下才发现的有现成的可以看😹这智商真是捉急啊。附上KeyCode.data链接<a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data">KeyCode.data</a></p>
@@ -149,21 +149,24 @@
 </ul>
                 </div>
                 <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/dlife/HHKB-Function-Key-With-Karabiner.html';
-                            this.page.identifier = 'HHKB-Function-Key-With-Karabiner';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/dlife/HHKB-Function-Key-With-Karabiner.html" data-title="HHKB-Function-Key-With-Karabiner" data-url="http://99d.in/dlife/HHKB-Function-Key-With-Karabiner.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pdx' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
             </div>
             <div class="niu2-right-container col-md-2 with-left-border">
@@ -171,7 +174,7 @@
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2015-09-14 10:37</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2015-09-14 11:30</div>
+                    <div class="niu2-sidebar-value">2017-07-19 19:50</div>
                     <div class="niu2-sidebar-label"><i class="icon-coffee"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://99d.in/dlife/index.html">生活</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -184,7 +187,7 @@
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">HHKB Function Key With Karabiner</a></li>
+                        <li><a href="#content-heading">HHKB-Function-Key-With-Karabiner</a></li>
                         <li><a href='#34c847b65e809d462fadf06a2488c1ab'>Karabiner</a></li><li><a href='#49b21ad0d38942f635877e7bbc5d7a1e'>Solution</a></li><li><a href='#fa535ffb25e1fd20341652f9be21e06e'>Config</a></li><li><a href='#e7384c252586cce857cb14709845a8a4'>KeyCode.data</a></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>

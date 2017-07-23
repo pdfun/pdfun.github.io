@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Swift">
         <meta name="description" content="Swift才出来的时候看过一遍,忘记了。">
-        <title>Swift - just do it</title>
+        <title>Swift-notes - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
@@ -105,7 +105,7 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">Swift</h1>
+                <h1 id="content-heading">Swift-notes</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
@@ -114,7 +114,7 @@
 </blockquote>
 <h1 id="ddc7d28b7b108cdca9ee7832f7314422">变量</h1>
 <p>let 定义一个常量 var 定义一个变量  可以不声明变量类型 变量名可用Unicode字符</p>
-<div class="codehilite"><pre>let f = 70
+<div class="highlight"><pre><span></span>let f = 70
 let f1: Float = 70
 let 🐶 = "加班狗"
 var s: String = "string"
@@ -146,10 +146,10 @@ print(f, f1, separator: "====", terminator: "\n")
 <p><code>true</code> or <code>false</code>终于不是 <code>YES or NO</code>了</p>
 <h2 id="cda9f200088a3396902af2d4b5efb290">元组</h2>
 <p>元组把多个值组合在一起,每一个值可以是不同的数据类型.</p>
-<div class="codehilite"><pre>let http404Error = (404,"Not Found")
+<div class="highlight"><pre><span></span>let http404Error = (404,"Not Found")
 类型为(Int,String)的元组
 </pre></div>
-<div class="codehilite"><pre>let (statuCode, error) = http404Error
+<div class="highlight"><pre><span></span>let (statuCode, error) = http404Error
 print(statuCode,error)
 将元组内容分解成单独的的常量和变量
 
@@ -174,11 +174,11 @@ print(http200.code, http200.des)
 <p><code>Int?</code> or <code>optional Int</code></p>
 <h3 id="852438d026c018c4307b916406f98c62">nil</h3>
 <p>可以给可选变量赋值为nil来表示它没有值。nil不能用于非可选的常量和变量,如果要处理缺失情况,应该声明成对应的可选类型.</p>
-<div class="codehilite"><pre>OC中nil指向不存在的对象的指针。Swift中nil不是指针它是一个确定的值,用来表示缺失,任何类型的可选状态都可以设置为nil。
+<div class="highlight"><pre><span></span>OC中nil指向不存在的对象的指针。Swift中nil不是指针它是一个确定的值,用来表示缺失,任何类型的可选状态都可以设置为nil。
 </pre></div>
 <h3 id="52281bbb55b775e6238b4faea2763f78">可选值的强制解析</h3>
 <p>当确定可选类型确实包含值之后,可以在可选的名字后面加一个感叹号来取值</p>
-<div class="codehilite"><pre>if convertNumber != nil{
+<div class="highlight"><pre><span></span>if convertNumber != nil{
 
     print("(converNumber!)")
 
@@ -187,7 +187,7 @@ print(http200.code, http200.des)
 <p>使用<code>!</code>获取一个不存在可选值会导致运行时的错误。使用<code>!</code>来强制解析之前,一定要确定可选包含一个非<code>nil</code>的值。</p>
 <h3 id="362a5bcaae88747d270aedbe592dd7aa">可选绑定</h3>
 <p>使用可选绑定来判断可选类型是否包含值,如果包含值就把值赋给一个临时常量或变量。</p>
-<div class="codehilite"><pre>if let actualNumber = Int(possbileNumber){
+<div class="highlight"><pre><span></span>if let actualNumber = Int(possbileNumber){
     print(actualNumber)
 }else{
     print("not integer")
@@ -204,7 +204,7 @@ print(http200.code, http200.des)
 <p>很多地方和大部分语言是相同的。只记下不同的地方。</p>
 <h2 id="dac6cd239b9a9c4cd71fb3d5e2d3fb49">赋值运算符</h2>
 <p>Swift的赋值运算符不返回任何值。</p>
-<div class="codehilite"><pre>if(x = 1){
+<div class="highlight"><pre><span></span>if(x = 1){
 
     //此句错误。再也不用担心 ==写成=了。
 
@@ -223,7 +223,7 @@ print(http200.code, http200.des)
 <h2 id="0b9e4c50c1cc94af08df81e22c2f0fd9">区间运算符</h2>
 <h3 id="737996fad0e733e457a8fe8f0c72004d">闭区间运算符</h3>
 <p><code>a...b</code> 定义一个从a到b(包含a和b)的所有值区间,b必须大于等于a.</p>
-<div class="codehilite"><pre>for index in 1...5{
+<div class="highlight"><pre><span></span>for index in 1...5{
 
     print(index)
 
@@ -235,22 +235,22 @@ print(http200.code, http200.des)
 <h1 id="cc4dd1da7e1a754534215f02fb9ba85d">字符串</h1>
 <h2 id="a6b363bb757dc13cece66cf23648b8cf">拼接</h2>
 <p>直接使用加号</p>
-<div class="codehilite"><pre>print("今天星期四"+"明天元旦放假啊")
+<div class="highlight"><pre><span></span>print("今天星期四"+"明天元旦放假啊")
 </pre></div>
 <h2 id="706a31e5f14203120576352d0cf8bf97">字符串插值</h2>
 <p>换句话说就是格式化字符串。个人理解是使用<code>\()</code>来占位替换.</p>
-<div class="codehilite"><pre>let tucao = "车牌又要到3W了"
+<div class="highlight"><pre><span></span>let tucao = "车牌又要到3W了"
 print("\(tucao)。要不要离开这个鬼地方")
 </pre></div>
 <blockquote>
 <p>插值字符串写在括号中的表达式不能包含非转义反斜线<code>\</code>,并且不能包含回车或换行。</p>
 </blockquote>
 <h2 id="c6009d4f6a2226b5376028d5f296bae5">字符数量</h2>
-<div class="codehilite"><pre>"数量".characters.count
+<div class="highlight"><pre><span></span>"数量".characters.count
 </pre></div>
 <p>在Swift 中，使用可拓展的字符群集作为Character值来连接或改变字符串时，并不一定会更改字符串的字符数量。</p>
 <p>NSString的length和characters.count返回的长度可能不一样。这个得小心了。感觉很复杂。#-_-</p>
-<div class="codehilite"><pre>var word = "cafe"
+<div class="highlight"><pre><span></span>var word = "cafe"
 print("the number of characters in \(word) is \(word.characters.count)")
 word += "\u{301}"
 print("the number of characters in \(word) is \(word.characters.count)")
@@ -264,18 +264,18 @@ print("the number of characters in \(word) is \(word.characters.count)")
 <code>index.predecessor()</code>得到index的前一个索引。<br/>
 <code>index.successor()</code>得到index后一个索引。<br/>
 <code>startIndex.advancedBy(3)</code>startIndex后面的第三个索引。  </p>
-<div class="codehilite"><pre>print(word[word.startIndex],
+<div class="highlight"><pre><span></span>print(word[word.startIndex],
     word[word.endIndex.predecessor()],
     word[word.startIndex.successor()],
     word[word.startIndex.advancedBy(3)])
 </pre></div>
 <p>字符串characters属性的indices属性创建一个包含全部索引Range,用来在一个字符串中访问单个字符</p>
-<div class="codehilite"><pre>for index in word.characters.indices{
+<div class="highlight"><pre><span></span>for index in word.characters.indices{
     print(word[index])
 }
 </pre></div>
 <h3 id="4f72854e51ae690d3d28f8138e0b6fc7">插入和删除</h3>
-<div class="codehilite"><pre>var s = "插入"
+<div class="highlight"><pre><span></span>var s = "插入"
 s.insert("啊", atIndex: s.endIndex)//插入单个字符
 s.insertContentsOf("字符串".characters, at: s.endIndex)//插入字符串
 s.removeAtIndex(s.startIndex)//移除单个
@@ -285,26 +285,29 @@ print(s)
 </pre></div>
 <h3 id="469e0eee17a884bf97e500fdb0f02182">比较字符串</h3>
 <p>== 前缀/后缀相等</p>
-<div class="codehilite"><pre>var a_ = "字符串1",b = "字符串2"
+<div class="highlight"><pre><span></span>var a_ = "字符串1",b = "字符串2"
 print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
 </pre></div>
                 </div>
                 <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/bnote/Swift-notes.html';
-                            this.page.identifier = 'Swift-notes';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/bnote/Swift-notes.html" data-title="Swift-notes" data-url="http://99d.in/bnote/Swift-notes.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pdx' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
             </div>
             <div class="niu2-right-container col-md-2 with-left-border">
@@ -312,7 +315,7 @@ print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2015-12-25 10:20</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2015-12-31 15:17</div>
+                    <div class="niu2-sidebar-value">2017-07-13 19:34</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://99d.in/bnote/index.html">笔记</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -324,7 +327,7 @@ print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">Swift</a></li>
+                        <li><a href="#content-heading">Swift-notes</a></li>
                         <li><a href='#ddc7d28b7b108cdca9ee7832f7314422'>变量</a></li><li><a href='#3787f6af617176a3f498bc4105c7289e'>基本数据类型</a><ul><li><a href='#87cd879720b68e51d8b03b7e29630ecf'>整型</a></li><li><a href='#db491dc61a030ff6b50ac39c4d8bc06e'>浮点型</a></li><li><a href='#51c4a47321d555f07442c0e6ea9b934e'>类型别名</a></li><li><a href='#97b0b6499334ed889b372513290a2a52'>布尔</a></li><li><a href='#cda9f200088a3396902af2d4b5efb290'>元组</a></li><li><a href='#4fa4f39154d3fc1624099c34182adbfb'>可选类型</a><ul><li><a href='#852438d026c018c4307b916406f98c62'>nil</a></li><li><a href='#52281bbb55b775e6238b4faea2763f78'>可选值的强制解析</a></li><li><a href='#362a5bcaae88747d270aedbe592dd7aa'>可选绑定</a></li><li><a href='#871961bb53c7d430a1be996622d506e5'>隐式解析可选类型</a></li></ul></li></ul></li><li><a href='#9cdd4a789b02863f4444c0f68b42d3e3'>运算符</a><ul><li><a href='#dac6cd239b9a9c4cd71fb3d5e2d3fb49'>赋值运算符</a></li><li><a href='#20805b4c0d2cc79d9e7ff7d09649a390'>算术运算符</a></li><li><a href='#f2e73f2c3fc03cacc6bdddeeb584eddc'>求余运算符</a></li><li><a href='#7e1c49378c9ef74fe43f6361b0e1a21e'>空合运算符</a></li><li><a href='#0b9e4c50c1cc94af08df81e22c2f0fd9'>区间运算符</a><ul><li><a href='#737996fad0e733e457a8fe8f0c72004d'>闭区间运算符</a></li><li><a href='#3df0c47cdc0607e68b466869840f15c4'>半开区间运算符</a></li></ul></li></ul></li><li><a href='#cc4dd1da7e1a754534215f02fb9ba85d'>字符串</a><ul><li><a href='#a6b363bb757dc13cece66cf23648b8cf'>拼接</a></li><li><a href='#706a31e5f14203120576352d0cf8bf97'>字符串插值</a></li><li><a href='#c6009d4f6a2226b5376028d5f296bae5'>字符数量</a></li><li><a href='#83f6fff6219e3d2e7f7e857b7d611c24'>访问和修改字符串</a><ul><li><a href='#b271e427962758c71e342a2c06df493a'>索引</a></li><li><a href='#4f72854e51ae690d3d28f8138e0b6fc7'>插入和删除</a></li><li><a href='#469e0eee17a884bf97e500fdb0f02182'>比较字符串</a></li></ul></li></ul></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>

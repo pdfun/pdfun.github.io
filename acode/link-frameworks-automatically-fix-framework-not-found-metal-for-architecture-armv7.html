@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Metal armv7">
         <meta name="description" content="framework not found Metal for architecture armv7">
-        <title>framework not found Metal armv7/s - just do it</title>
+        <title>link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7 - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
@@ -105,7 +105,7 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">framework not found Metal armv7/s</h1>
+                <h1 id="content-heading">link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
@@ -120,10 +120,10 @@
 <h4 id="8b87f3464a8057b84f5b012bdf867cbe">The Reason</h4>
 <p>其实这是苹果的一个bug.没有对<code>no-Metal</code>的设备即<code>armv7&amp;armv7s</code>做向后兼容
 <code>CoreVideo.h</code>可以看出来这点:</p>
-<div class="codehilite"><pre>#if COREVIDEO_SUPPORTS_METAL
-#include &lt;CoreVideo/CVMetalTexture.h&gt;
-#include &lt;CoreVideo/CVMetalTextureCache.h&gt;
-#endif
+<div class="highlight"><pre><span></span><span class="cp">#if COREVIDEO_SUPPORTS_METAL</span>
+<span class="cp">#include</span> <span class="cpf">&lt;CoreVideo/CVMetalTexture.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;CoreVideo/CVMetalTextureCache.h&gt;</span><span class="cp"></span>
+<span class="cp">#endif</span>
 </pre></div>
 <p><code>COREVIDEO_SUPPORTS_METAL</code>是这样定义的:<code>#if TARGET_OS_IPHONE</code>,这是不够的,因为<code>armv7/s</code>设备不支持<code>Metal</code></p>
 <h4 id="10eb951159a4b6a485744e900a86dff5">Link Frameworks Automatically</h4>
@@ -131,7 +131,7 @@
 对报错的<code>framework</code>执行以下命令:</p>
 <p><code>otool -arch armv7 –l Xxxxx.framework/Xxxxx</code></p>
 <p>我们可以看到以下内容:</p>
-<div class="codehilite"><pre>Load command 14
+<div class="highlight"><pre><span></span>Load command 14
 cmd LC_LINKER_OPTION
 cmdsize 32
 count 2
@@ -155,21 +155,24 @@ Load command 16
 <p><a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7">framework not found Metal for architecture armv7</a></p>
                 </div>
                 <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html';
-                            this.page.identifier = 'link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html" data-title="link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7" data-url="http://99d.in/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pdx' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
             </div>
             <div class="niu2-right-container col-md-2 with-left-border">
@@ -177,7 +180,7 @@ Load command 16
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2015-06-08 09:50</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2015-06-08 10:50</div>
+                    <div class="niu2-sidebar-value">2017-07-19 19:49</div>
                     <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://99d.in/acode/index.html">饭碗</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -189,7 +192,7 @@ Load command 16
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">framework not found Metal armv7/s</a></li>
+                        <li><a href="#content-heading">link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7</a></li>
                         <li><a href='#b5d1f808293deb9322b5b96519730ac2'>The scene</a></li><li><a href='#8b87f3464a8057b84f5b012bdf867cbe'>The Reason</a></li><li><a href='#10eb951159a4b6a485744e900a86dff5'>Link Frameworks Automatically</a></li><li><a href='#34e74b1c7f4aad91715567cf698912f6'>The Solution</a></li><li><a href='#5da618e8e4b89c66fe86e32cdafde142'>From</a></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>

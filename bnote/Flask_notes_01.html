@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Bootstrap Moment">
         <meta name="description" content="Flask学习笔记之Flask-Bootstrap Flask-Moment">
-        <title>Flask笔记_01 - just do it</title>
+        <title>Flask_notes_01 - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
@@ -105,7 +105,7 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">Flask笔记_01</h1>
+                <h1 id="content-heading">Flask_notes_01</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
@@ -114,42 +114,45 @@
 <p><code>pip install Flask-Bootstrap</code> 默认安装的是最新版本。也可以在安装的时候自定义版本。</p>
 <h2 id="44731d72f069d71202a56c99d85ffaa8">scripts styles</h2>
 <p>默认的CDN js和css 加载太慢。替换 js和css路径</p>
-<div class="codehilite"><pre>{% block scripts %}
-&lt;script href="{{ url_for('static', filename='js/jquery.min.js') }}"&gt;&lt;/script&gt;
-&lt;script href="{{ url_for('static', filename='js/bootstrap.min.js') }}"&gt;&lt;/script&gt;
-{% endblock %}
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">scripts</span> <span class="cp">%}</span>
+<span class="nt">&lt;script</span> <span class="na">href=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">url_for</span><span class="o">(</span><span class="s1">'static'</span><span class="o">,</span> <span class="nv">filename</span><span class="o">=</span><span class="s1">'js/jquery.min.js'</span><span class="o">)</span> <span class="cp">}}</span><span class="s">"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">href=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">url_for</span><span class="o">(</span><span class="s1">'static'</span><span class="o">,</span> <span class="nv">filename</span><span class="o">=</span><span class="s1">'js/bootstrap.min.js'</span><span class="o">)</span> <span class="cp">}}</span><span class="s">"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
 
-{% block styles %}
-&lt;link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"&gt;
-{% endblock %}
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">styles</span> <span class="cp">%}</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">url_for</span><span class="o">(</span><span class="s1">'static'</span><span class="o">,</span> <span class="nv">filename</span><span class="o">=</span><span class="s1">'css/bootstrap.min.css'</span><span class="o">)</span> <span class="cp">}}</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
 </pre></div>
 <h1 id="44979180eb6e24be5afe95fb0e7d7ce7">Flask-Moment</h1>
 <p><code>pip install Flask-Moment</code>。用来本地化日期和时间</p>
 <h2 id="4f01d410f43f695de63ccf8cd1600935">替换CDN js路径 设置默认地区</h2>
 <p>moment是依赖于<code>jquery</code>的</p>
-<div class="codehilite"><pre>{% block scripts %}
-{{ moment.include_moment(local_js='static/js/moment.js') }}
-&lt;!--设置默认地区--&gt;
-{{ moment.lang("zh-CN")}}
-{% endblock %}
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">scripts</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">moment.include_moment</span><span class="o">(</span><span class="nv">local_js</span><span class="o">=</span><span class="s1">'static/js/moment.js'</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">&lt;!--设置默认地区--&gt;</span>
+<span class="cp">{{</span> <span class="nv">moment.lang</span><span class="o">(</span><span class="s2">"zh-CN"</span><span class="o">)</span><span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
                 </div>
                 <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/bnote/Flask_notes_01.html';
-                            this.page.identifier = 'Flask_notes_01';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/bnote/Flask_notes_01.html" data-title="Flask_notes_01" data-url="http://99d.in/bnote/Flask_notes_01.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pdx' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
             </div>
             <div class="niu2-right-container col-md-2 with-left-border">
@@ -157,7 +160,7 @@
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2015-10-25 11:30</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2015-10-25 23:17</div>
+                    <div class="niu2-sidebar-value">2017-07-13 19:33</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://99d.in/bnote/index.html">笔记</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -169,7 +172,7 @@
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">Flask笔记_01</a></li>
+                        <li><a href="#content-heading">Flask_notes_01</a></li>
                         <li><a href='#44b2ec7b98f5190b3617c573c39e7488'>Flask-Bootstrap</a><ul><li><a href='#44731d72f069d71202a56c99d85ffaa8'>scripts styles</a></li></ul></li><li><a href='#44979180eb6e24be5afe95fb0e7d7ce7'>Flask-Moment</a><ul><li><a href='#4f01d410f43f695de63ccf8cd1600935'>替换CDN js路径 设置默认地区</a></li></ul></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>

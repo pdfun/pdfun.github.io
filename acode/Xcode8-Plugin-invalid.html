@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Xcode8 Plugin">
         <meta name="description" content="让Xcode8插件继续工作">
-        <title>Xcode8插件失效 - just do it</title>
+        <title>Xcode8-Plugin-invalid - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
@@ -105,7 +105,7 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">Xcode8插件失效</h1>
+                <h1 id="content-heading">Xcode8-Plugin-invalid</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
@@ -127,7 +127,7 @@
 <ul>
 <li>用创建的<code>XcodeSigner</code>证书给<code>Xcode</code>重新签名</li>
 </ul>
-<div class="codehilite"><pre>sudo codesign -f -s XcodeSigner /Applications/Xcode.app 
+<div class="highlight"><pre><span></span>sudo codesign -f -s XcodeSigner /Applications/Xcode.app 
 </pre></div>
 <ul>
 <li>git clone https://github.com/XVimProject/XVim/</li>
@@ -135,7 +135,7 @@
 <li>make   </li>
 <li>最后运行下面的命令</li>
 </ul>
-<div class="codehilite"><pre>find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
+<div class="highlight"><pre><span></span>find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
 </pre></div>
 <ul>
 <li>重启Xcode即可</li>
@@ -170,21 +170,24 @@
 <p><a href="https://github.com/XVimProject/XVim">XVim</a></p>
                 </div>
                 <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/acode/Xcode8-Plugin-invalid.html';
-                            this.page.identifier = 'Xcode8-Plugin-invalid';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/acode/Xcode8-Plugin-invalid.html" data-title="Xcode8-Plugin-invalid" data-url="http://99d.in/acode/Xcode8-Plugin-invalid.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pdx' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
             </div>
             <div class="niu2-right-container col-md-2 with-left-border">
@@ -192,7 +195,7 @@
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2016-09-19 20:33</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2016-09-22 10:58</div>
+                    <div class="niu2-sidebar-value">2017-07-13 19:33</div>
                     <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://99d.in/acode/index.html">饭碗</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -204,7 +207,7 @@
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">Xcode8插件失效</a></li>
+                        <li><a href="#content-heading">Xcode8-Plugin-invalid</a></li>
                         <li><a href='#968aa9a1b558d0206eab6aeff69d9dd2'>起因</a></li><li><a href='#957a228f87aaf86e436762129485625a'>解决方法</a></li><li><a href='#178c85676bdda29c98a8d3ab99233061'>安装的Xcode插件</a></li><li><a href='#f411d0f1f925d9b48d8c1d451bd809b1'>说明</a></li><li><a href='#d1f972b30c618743b603afa37d79464f'>参考文档</a></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>

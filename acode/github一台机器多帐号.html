@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="mutiple github account">
         <meta name="description" content="同一台机器使用两个github帐号从终端推送代码到不同的仓库。">
-        <title>set different github account on same machine - just do it</title>
+        <title>github一台机器多帐号 - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
@@ -105,7 +105,7 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">set different github account on same machine</h1>
+                <h1 id="content-heading">github一台机器多帐号</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
@@ -136,7 +136,7 @@ user1一般是default user</p>
 <p><code>cd ~/.ssh/</code><br/>
 <code>vi config</code></p>
 <p>输入以下内容</p>
-<div class="codehilite"><pre>#默认的sshky可以不用配置
+<div class="highlight"><pre><span></span>#默认的sshky可以不用配置
 Host github.com #Host相当于别名
     HostName github.com #HostName填写github.com
     PreferredAuthentications publickey 
@@ -167,21 +167,24 @@ Hi user2! You've successfully authenticated, but GitHub does not provide shell a
 <p><a href="https://gist.github.com/jexchan/2351996">gist</a></p>
                 </div>
                 <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/acode/github一台机器多帐号.html';
-                            this.page.identifier = 'github一台机器多帐号';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/acode/github一台机器多帐号.html" data-title="github一台机器多帐号" data-url="http://99d.in/acode/github一台机器多帐号.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pdx' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
             </div>
             <div class="niu2-right-container col-md-2 with-left-border">
@@ -189,7 +192,7 @@ Hi user2! You've successfully authenticated, but GitHub does not provide shell a
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2016-09-02 18:00</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2016-09-02 18:10</div>
+                    <div class="niu2-sidebar-value">2017-07-19 19:48</div>
                     <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://99d.in/acode/index.html">饭碗</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -201,7 +204,7 @@ Hi user2! You've successfully authenticated, but GitHub does not provide shell a
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">set different github account on same machine</a></li>
+                        <li><a href="#content-heading">github一台机器多帐号</a></li>
                         <li><a href='#33cb536a07aaab662456a946c6f0ef34'>配置sshkey</a><ul><li><a href='#8796bf1a684bb8170f501d7e49709332'>user1的sshkey</a></li><li><a href='#06ae4201004ff7ced17717e00ffb12a1'>user2的sshkey</a></li></ul></li><li><a href='#8c887769dedcb72eaaae799897729f96'>配置ssh config</a></li><li><a href='#73378aea3aa42433689a071309d606e3'>提交代码</a></li><li><a href='#d1f972b30c618743b603afa37d79464f'>参考文档</a></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>

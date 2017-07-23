@@ -3,8 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="微信多图分享">
         <meta name="description" content="iOS系统分享多张图片到微信朋友圈">
-        <title>iOS微信多图分享到朋友圈 - just do it</title>
+        <title>iOS微信多图分享到享到朋友圈 - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
@@ -104,7 +105,7 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">iOS微信多图分享到朋友圈</h1>
+                <h1 id="content-heading">iOS微信多图分享到享到朋友圈</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
@@ -117,7 +118,7 @@
 <h2 id="ca0dbad92a874b2f69b549293387925e">Code</h2>
 <h3 id="19453cab0dfbbc578b0f79f85e4ee499">微信SDK的一些设置就不多说了。</h3>
 <h3 id="b8b5d264f8938bc020ee54dc1fe3d27f">分享到微信的部分代码</h3>
-<div class="codehilite"><pre><span class="kc">self</span><span class="p">.</span><span class="n">showHUD</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><span class="kc">self</span><span class="p">.</span><span class="n">showHUD</span><span class="p">()</span>
 <span class="bp">UIPasteboard</span><span class="p">.</span><span class="n">generalPasteboard</span><span class="p">().</span><span class="n">string</span> <span class="p">=</span> <span class="s">"微信多图分享到朋友圈"</span>
 <span class="kd">let</span> <span class="nv">imageCache</span><span class="p">:</span><span class="n">SDImageCache</span> <span class="p">=</span> <span class="n">SDImageCache</span><span class="p">.</span><span class="n">sharedImageCache</span><span class="p">()</span>
 <span class="kd">var</span> <span class="nv">imageArr</span><span class="p">:[</span><span class="nb">AnyObject</span><span class="p">]</span> <span class="p">=</span> <span class="p">[]</span>
@@ -145,30 +146,36 @@
 </blockquote>
                 </div>
                 <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/acode/iOS微信多图分享到享到朋友圈.html';
-                            this.page.identifier = 'iOS微信多图分享到享到朋友圈';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/acode/iOS微信多图分享到享到朋友圈.html" data-title="iOS微信多图分享到享到朋友圈" data-url="http://99d.in/acode/iOS微信多图分享到享到朋友圈.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pdx' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
             </div>
             <div class="niu2-right-container col-md-2 with-left-border">
                 <div id="niu2-sidebar-meta" class="niu2-sidebar">
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2016-05-13 15:00</div>
+                    <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
+                    <div class="niu2-sidebar-value">2017-07-19 19:49</div>
                     <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://99d.in/acode/index.html">饭碗</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://99d.in/tag/wei-xin-duo-tu-fen-xiang.html">微信多图分享</a><sup>1</sup></div>
                 </div>
 
                 <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
@@ -176,7 +183,7 @@
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">iOS微信多图分享到朋友圈</a></li>
+                        <li><a href="#content-heading">iOS微信多图分享到享到朋友圈</a></li>
                         <li><a href='#b3a139f3f6e01f97d2a9848454a93f19'>微信分享多张图片到微信朋圈</a></li><li><a href='#f07ab974460fc58edc38aa8b7a41b9e9'>UIActivityViewController</a></li><li><a href='#ca0dbad92a874b2f69b549293387925e'>Code</a><ul><li><a href='#19453cab0dfbbc578b0f79f85e4ee499'>微信SDK的一些设置就不多说了。</a></li><li><a href='#b8b5d264f8938bc020ee54dc1fe3d27f'>分享到微信的部分代码</a></li><li><a href='#c5eca45d461382d648c77f6df4e9fd15'>代码说明</a></li><li><a href='#ee0d63e36aeca19c348ec418af737159'>存在的问题</a></li></ul></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>

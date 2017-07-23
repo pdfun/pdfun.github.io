@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="iOS">
         <meta name="description" content="大部分来自stackoverflow">
-        <title>iOS notes - just do it</title>
+        <title>iOS-notes - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
@@ -105,7 +105,7 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">iOS notes</h1>
+                <h1 id="content-heading">iOS-notes</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
@@ -121,7 +121,7 @@
 <p>像<code>tree</code> 命令一样显示<code>view</code>的层次结构。</p>
 </li>
 </ul>
-<div class="codehilite"><pre>[self.view recursiveDescription]
+<div class="highlight"><pre><span></span>[self.view recursiveDescription]
 </pre></div>
 <ul>
 <li><code>tableView</code>滚动的时候始终以<code>row</code>的高度为单位。
@@ -129,14 +129,14 @@
 设置这个属性之后会发现,滚动的时候是以<code>tableView</code>的<code>height</code>为单位滚的。
 实现以下这个代理方法就可以解决了,滚动结束的时候始终停留在某个<code>row</code>上面并且还能够获得<code>indexPath</code>.</li>
 </ul>
-<div class="codehilite"><pre>-(void)scrollViewWillEndDragging:(UIScrollView*)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint*)targetContentOffset {
+<div class="highlight"><pre><span></span><span class="nt">-</span><span class="o">(</span><span class="nt">void</span><span class="o">)</span><span class="nt">scrollViewWillEndDragging</span><span class="o">:(</span><span class="nt">UIScrollView</span><span class="o">*)</span><span class="nt">scrollView</span> <span class="nt">withVelocity</span><span class="o">:(</span><span class="nt">CGPoint</span><span class="o">)</span><span class="nt">velocity</span> <span class="nt">targetContentOffset</span><span class="o">:(</span><span class="nt">inout</span> <span class="nt">CGPoint</span><span class="o">*)</span><span class="nt">targetContentOffset</span> <span class="p">{</span>
 
-    // Get index path for target row
-    NSIndexPath* indexPath = [self.tableView indexPathForRowAtPoint:(*targetContentOffset)];
+    <span class="err">//</span> <span class="err">Get</span> <span class="err">index</span> <span class="err">path</span> <span class="err">for</span> <span class="err">target</span> <span class="err">row</span>
+    <span class="err">NSIndexPath*</span> <span class="err">indexPath</span> <span class="err">=</span> <span class="cp">[</span><span class="bp">self.</span><span class="nx nx-Member">tableView</span> <span class="nx">indexPathForRowAtPoint</span><span class="p">:(</span><span class="o">*</span><span class="nx">targetContentOffset</span><span class="p">)</span><span class="cp">]</span><span class="p">;</span>
 
-    // Set new target
-    (*targetContentOffset) = [self.tableView rectForRowAtIndexPath:indexPath].origin;
-}
+    <span class="err">//</span> <span class="err">Set</span> <span class="err">new</span> <span class="err">target</span>
+    <span class="err">(*targetContentOffset)</span> <span class="err">=</span> <span class="cp">[</span><span class="bp">self.</span><span class="nx nx-Member">tableView</span> <span class="nx">rectForRowAtIndexPath</span><span class="p">:</span><span class="nx">indexPath</span><span class="cp">]</span><span class="err">.origin</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 <ul>
 <li>去掉tableView多余的行
@@ -146,23 +146,23 @@
 <ul>
 <li>点击self.view 键盘收起</li>
 </ul>
-<div class="codehilite"><pre>- (void) touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event{
-    [_searchBar endEditing:YES];
+<div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">touchesBegan:</span><span class="p">(</span><span class="bp">NSSet</span><span class="o">&lt;</span><span class="bp">UITouch</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">touches</span> <span class="nf">withEvent:</span><span class="p">(</span><span class="bp">UIEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">{</span>
+    <span class="p">[</span><span class="n">_searchBar</span> <span class="nl">endEditing</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span>
 </pre></div>
 <p>其实还有一个神器<a href="https://github.com/hackiftekhar/IQKeyboardManager">IQKeyboardManager</a></p>
 <ul>
 <li>更改UI控件系统默认样式</li>
 </ul>
-<div class="codehilite"><pre>//黑色改白色 不要忘记设置plist
-[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-//导航条颜色
-[[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-//title的颜色和字体
-[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}];
-//透明or不透明。这个会影响storyBoard纵坐标的位置。注意这个方法与`SetbackgroundImageForBarMetrics`一起使用时导航的变化。
-[[UINavigationBar appearance] setTranslucent:NO];
-//serarchBar的颜色,比如说取消按钮。再也不会遍历子视图了。
-[[UISearchBar appearance] setTintColor:[UIColor whiteColor]];
+<div class="highlight"><pre><span></span><span class="c1">//黑色改白色 不要忘记设置plist</span>
+<span class="p">[[</span><span class="bp">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="nl">setStatusBarStyle</span><span class="p">:</span><span class="n">UIStatusBarStyleLightContent</span><span class="p">];</span>
+<span class="c1">//导航条颜色</span>
+<span class="p">[[</span><span class="bp">UINavigationBar</span> <span class="n">appearance</span><span class="p">]</span> <span class="nl">setBarTintColor</span><span class="p">:[</span><span class="bp">UIColor</span> <span class="n">whiteColor</span><span class="p">]];</span>
+<span class="c1">//title的颜色和字体</span>
+<span class="p">[[</span><span class="bp">UINavigationBar</span> <span class="n">appearance</span><span class="p">]</span> <span class="nl">setTitleTextAttributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSForegroundColorAttributeName</span><span class="p">:[</span><span class="bp">UIColor</span> <span class="n">whiteColor</span><span class="p">],</span> <span class="nl">NSFontAttributeName</span><span class="p">:[</span><span class="bp">UIFont</span> <span class="nl">systemFontOfSize</span><span class="p">:</span><span class="mf">14.0f</span><span class="p">]</span><span class="l">}</span><span class="p">];</span>
+<span class="c1">//透明or不透明。这个会影响storyBoard纵坐标的位置。注意这个方法与`SetbackgroundImageForBarMetrics`一起使用时导航的变化。</span>
+<span class="p">[[</span><span class="bp">UINavigationBar</span> <span class="n">appearance</span><span class="p">]</span> <span class="nl">setTranslucent</span><span class="p">:</span><span class="nb">NO</span><span class="p">];</span>
+<span class="c1">//serarchBar的颜色,比如说取消按钮。再也不会遍历子视图了。</span>
+<span class="p">[[</span><span class="bp">UISearchBar</span> <span class="n">appearance</span><span class="p">]</span> <span class="nl">setTintColor</span><span class="p">:[</span><span class="bp">UIColor</span> <span class="n">whiteColor</span><span class="p">]];</span>
 </pre></div>
 <p>每个控件的<code>appearance</code>都可以去看下。有时候能省很多事。不用一个个的单独设置。</p>
 <ul>
@@ -188,7 +188,7 @@
 <p><code>Xcode</code> 调试的状态显示<code>indexing....</code>,卡很久</p>
 </li>
 </ul>
-<div class="codehilite"><pre>Open your Project Folder.
+<div class="highlight"><pre><span></span>Open your Project Folder.
 Find ProjectName.xcodeproj file.
 Right-Click Copy and Paste to Safe Place.
 Right-Click Show Package Contents.
@@ -197,21 +197,24 @@ Reopen Your Project and clean and Rebuild.
 </pre></div>
                 </div>
                 <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/bnote/iOS-notes.html';
-                            this.page.identifier = 'iOS-notes';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/bnote/iOS-notes.html" data-title="iOS-notes" data-url="http://99d.in/bnote/iOS-notes.html">
+                    </div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = { short_name: 'pdx' };
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0] 
+                             || document.getElementsByTagName('body')[0]).appendChild(ds);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+                    <!-- 多说公共JS代码 end -->
+                </div>
 
             </div>
             <div class="niu2-right-container col-md-2 with-left-border">
@@ -219,7 +222,7 @@ Reopen Your Project and clean and Rebuild.
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
                     <div class="niu2-sidebar-value">2015-08-29 14:58</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil" style="font-size: 1.05em;"></i>最后修改:</div>
-                    <div class="niu2-sidebar-value">2017-01-16 14:41</div>
+                    <div class="niu2-sidebar-value">2017-07-13 19:34</div>
                     <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
                     <div class="niu2-sidebar-value"><a href="http://99d.in/bnote/index.html">笔记</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
@@ -231,7 +234,7 @@ Reopen Your Project and clean and Rebuild.
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">iOS notes</a></li>
+                        <li><a href="#content-heading">iOS-notes</a></li>
                         
                         <li><a href="#content-comments">评论</a></li>
                     </ul>
