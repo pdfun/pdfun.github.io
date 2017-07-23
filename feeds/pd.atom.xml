@@ -119,7 +119,6 @@ Hi user2! You've successfully authenticated, but GitHub does not provide shell a
 &lt;p&gt;睡的很晚也能准时醒来，不知道打磕睡是种什么样的体验。 &lt;/p&gt;
 &lt;p&gt;一个人呆在家的时候经常不知道干什么好。 &lt;/p&gt;
 &lt;p&gt;快30的人了有时候竟然还会沉迷于游戏。 &lt;/p&gt;
-&lt;p&gt;倒车还是很烂，经常刮蹭。&lt;/p&gt;
 &lt;p&gt;想法太少，缺少规划。 &lt;/p&gt;
 &lt;p&gt;有时候脾气很大。 &lt;/p&gt;
 &lt;p&gt;依然不自信。 
@@ -552,16 +551,7 @@ AriServer&lt;br/&gt;
 ColorPikcer&lt;br/&gt;
 The Unarchiver  &lt;/p&gt;
 &lt;h1 id="0eda7c38afb2bff0a16ee496cc03a5e8"&gt;播放器&lt;/h1&gt;
-&lt;p&gt;mpv  &lt;/p&gt;</content><category term="Mac"></category></entry><entry><title>Cannot-generate-iOS-App-archive-in-Xcode</title><link href="http://99d.in/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html" rel="alternate"></link><published>2015-07-29T10:06:00+08:00</published><updated>2015-07-29T10:06:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-29:/bnote/Cannot-generate-iOS-App-archive-in-Xcode.html</id><summary type="html">Cannot generate iOS App archive in xcode</summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;Cannot generate iOS App archive in xcode&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id="e678f2cc8303d18a894f8be0f9588fe7"&gt;Xcode archive&lt;/h4&gt;
-&lt;p&gt;Xcode 打包的时候一直生成&lt;code&gt;Other Item&lt;/code&gt;不生成&lt;code&gt;iOS App&lt;/code&gt;
-&lt;img alt="Cannot generate iOS App archive in xcode" src="http://7xixt5.com1.z0.glb.clouddn.com/Cannot-generate-iOS-App-archive-in-xcode.png"/&gt;
-折腾了几个小时,&lt;code&gt;stackoverflow&lt;/code&gt;也有人提问&lt;a href="http://stackoverflow.com/questions/10715211/cannot-generate-ios-app-archive-in-xcode"&gt;Cannot generate iOS App archive in xcode&lt;/a&gt;.&lt;code&gt;Build Settings&lt;/code&gt;配置也是一样的,就是无法生成&lt;code&gt;ipa&lt;/code&gt;,最后就差重新安装&lt;code&gt;Xcode&lt;/code&gt;了&lt;/p&gt;
-&lt;h4 id="957a228f87aaf86e436762129485625a"&gt;解决方法&lt;/h4&gt;
-&lt;p&gt;项目是用&lt;code&gt;pod&lt;/code&gt;管理的,操作&lt;code&gt;pod&lt;/code&gt;的过程中发现有更新提示.
-&lt;code&gt;sudo gem install cocoapods&lt;/code&gt;更新了下&lt;code&gt;pod&lt;/code&gt;,重新打包竟然OK了。在这里记录一下。&lt;/p&gt;</content><category term="archive"></category></entry><entry><title>poker2_mstand</title><link href="http://99d.in/dlife/poker2_mstand.html" rel="alternate"></link><published>2015-07-05T14:30:00+08:00</published><updated>2015-07-05T14:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-05:/dlife/poker2_mstand.html</id><summary type="html">晒晒我的装备</summary><content type="html">&lt;p&gt;晒晒我的装备&lt;/p&gt;
+&lt;p&gt;mpv  &lt;/p&gt;</content><category term="Mac"></category></entry><entry><title>poker2_mstand</title><link href="http://99d.in/dlife/poker2_mstand.html" rel="alternate"></link><published>2015-07-05T14:30:00+08:00</published><updated>2015-07-05T14:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-05:/dlife/poker2_mstand.html</id><summary type="html">晒晒我的装备</summary><content type="html">&lt;p&gt;晒晒我的装备&lt;/p&gt;
 &lt;p&gt;&lt;img alt="poker2" src="http://7xixt5.com1.z0.glb.clouddn.com/poker2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="mStand" src="http://7xixt5.com1.z0.glb.clouddn.com/mStand.png"/&gt;&lt;/p&gt;
 &lt;p&gt;还是用回HHKB吧,两个键盘之间切换实在适应不了。⌨拍照技术太差了😂
