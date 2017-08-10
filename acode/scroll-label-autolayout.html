@@ -3,12 +3,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>你在找神马! - just do it</title>
+        <meta name="keywords" content="scrollLabel">
+        <meta name="description" content="可以滚动的UILabel。">
+        <title>scroll-label-autolayout - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://99d.in/theme/css/niu2.min.css" type="text/css" />
+        <link rel="canonical" href="http://99d.in/acode/scroll-label-autolayout.html" />
         <script type="text/javascript">window.onload=function(){};</script>
         <!--[if lt IE 9]>
             <script src="http://99d.in/theme/js/html5shiv.js"></script>
@@ -101,14 +104,100 @@
         </div>
 
         <div id="body-content">
-            <div class="col-md-6 col-md-offset-2">
-                <div class="niu2-404-info-bigger">
-                    404
+            <div class="col-md-8 col-md-offset-2">
+                <h1 id="content-heading">scroll-label-autolayout</h1>
+            </div>
+            <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+                <div id="niu2-main-content">
+                    <blockquote>
+<p>可以滚动的UILabel。不需要写一行代码。</p>
+</blockquote>
+<h2 id="e6cefb85dc60e5c9c0d7d804f85f6572">需求</h2>
+<p>最开始设计图是这样的,居中显示一段文字,颜色xx,字体大小xx。</p>
+<div class="highlight"><pre><span></span>let label: UILabel = UILabel()
+label.text = "bababal..."
+label.font = UIFont.systemFontsize(1.0)
+label.textalign = .center
+label.snp.makeConstraints{ (make) in
+    make.left.top.right.equal(0)
+}
+</pre></div>
+<p>几行代码搞定。后来需求说文字可能有点多要换行。于是再加一行代码</p>
+<div class="highlight"><pre><span></span>label.numberoflines = 0
+</pre></div>
+<p>后来又说文字可能更多，更多的文字显示 ...
+再后来又说...的文字要显示出来，超出固定高度的要滚动。</p>
+<p>于是需求成这样了，在一定的高度范围内显示一行长度未知的文字，文字超过固定高度时滚动。</p>
+<h2 id="fa8f026e933d6aea81295dd0896f86dd">尝试</h2>
+<p>拆分下需求
+<em> 文字不超过一行，居中不滚动
+</em> 文字超过一行，不超过固定高度，不滚动，居中自动换行
+* 文字超过一行, 超过固定高度，滚动，居中自动换行</p>
+<p>能滚动的<code>UILabel</code>, 一开始想到的是<code>UITextView</code>, 试了下发现不超过一行的时候也会滚动，而且不能居中。
+需要添加各种判断和限制才能达到想要的效果。
+于是便考虑用<code>UIScorllView</code> + <code>UILabel</code>来实现。</p>
+<h2 id="de842a6c80128bf1587c7cd451914e7a">解决方案</h2>
+<div class="highlight"><pre><span></span>└── View
+    └── scrollView
+        └── contentView
+            └── label
+</pre></div>
+<ol>
+<li>scrollView  设置上下左右约束</li>
+<li>contentView 上下左右约束为0, 水平垂直居中，bottom和CenterY约束<code>Priority</code>调到最低250</li>
+<li>label 上左右约束为0，Lines设置为0</li>
+<li>设置contentView和label Equal Heights.</li>
+</ol>
+<p><img alt="" src="http://7xixt5.com1.z0.glb.clouddn.com/scrollLabel.png"/></p>
                 </div>
-                <div class="niu2-404-info">
-                    你在找神马!
+                <div id="content-comments">
+                    <!-- Disqus -->
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'http://99d.in/acode/scroll-label-autolayout.html';
+                            this.page.identifier = 'scroll-label-autolayout';
+                        };
+                        (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+                                s.src = '//99d.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+
+            </div>
+            <div class="niu2-right-container col-md-2 with-left-border">
+                <div id="niu2-sidebar-meta" class="niu2-sidebar">
+                    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+                    <div class="niu2-sidebar-value">2017-08-10 09:43</div>
+                    <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
+                    <div class="niu2-sidebar-value"><a href="http://99d.in/acode/index.html">饭碗</a></div>
+                    <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://99d.in/tag/scrolllabel.html">scrollLabel</a><sup>1</sup></div>
+                </div>
+
+                <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
+                    <div class="niu2-sidebar-label">
+                        <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                    </div>
+                    <ul id="niu2-sidebar-toc-list">
+                        <li><a href="#content-heading">scroll-label-autolayout</a></li>
+                        <li><a href='#e6cefb85dc60e5c9c0d7d804f85f6572'>需求</a></li><li><a href='#fa8f026e933d6aea81295dd0896f86dd'>尝试</a></li><li><a href='#de842a6c80128bf1587c7cd451914e7a'>解决方案</a></li>
+                        <li><a href="#content-comments">评论</a></li>
+                    </ul>
                 </div>
             </div>
+            <div id="niu2-toolbar">
+                <ul class="list-unstyled">
+                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
+                </ul>
+                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
+                <div id="niu2-toolbar-github" data-repo=""></div>
+                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
+            </div>
+            <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
         <div class="niu2-footer">
@@ -157,6 +246,7 @@
         <script type="text/javascript" src="http://99d.in/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://99d.in/theme/js/bootstrap.min.js"></script>
         <script type="text/javascript">
+            onContentLoaded();
         </script>
     </body>
 </html>

@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it - pd</title><link href="http://99d.in/" rel="alternate"></link><link href="http://99d.in/feeds/pd.atom.xml" rel="self"></link><id>http://99d.in/</id><updated>2016-09-19T20:33:00+08:00</updated><entry><title>Xcode8-Plugin-invalid</title><link href="http://99d.in/acode/Xcode8-Plugin-invalid.html" rel="alternate"></link><published>2016-09-19T20:33:00+08:00</published><updated>2016-09-19T20:33:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-09-19:/acode/Xcode8-Plugin-invalid.html</id><summary type="html">让Xcode8插件继续工作</summary><content type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it - pd</title><link href="http://99d.in/" rel="alternate"></link><link href="http://99d.in/feeds/pd.atom.xml" rel="self"></link><id>http://99d.in/</id><updated>2017-08-10T09:43:51+08:00</updated><entry><title>scroll-label-autolayout</title><link href="http://99d.in/acode/scroll-label-autolayout.html" rel="alternate"></link><published>2017-08-10T09:43:51+08:00</published><updated>2017-08-10T09:43:51+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-08-10:/acode/scroll-label-autolayout.html</id><summary type="html">可以滚动的UILabel。</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;可以滚动的UILabel。不需要写一行代码。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="e6cefb85dc60e5c9c0d7d804f85f6572"&gt;需求&lt;/h2&gt;
+&lt;p&gt;最开始设计图是这样的,居中显示一段文字,颜色xx,字体大小xx。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;let label: UILabel = UILabel()
+label.text = "bababal..."
+label.font = UIFont.systemFontsize(1.0)
+label.textalign = .center
+label.snp.makeConstraints{ (make) in
+    make.left.top.right.equal(0)
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;几行代码搞定。后来需求说文字可能有点多要换行。于是再加一行代码&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;label.numberoflines = 0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;后来又说文字可能更多，更多的文字显示 ...
+再后来又说...的文字要显示出来，超出固定高度的要滚动。&lt;/p&gt;
+&lt;p&gt;于是需求成这样了，在一定的高度范围内显示一行长度未知的文字，文字超过固定高度时滚动。&lt;/p&gt;
+&lt;h2 id="fa8f026e933d6aea81295dd0896f86dd"&gt;尝试&lt;/h2&gt;
+&lt;p&gt;拆分下需求
+&lt;em&gt; 文字不超过一行，居中不滚动
+&lt;/em&gt; 文字超过一行，不超过固定高度，不滚动，居中自动换行
+* 文字超过一行, 超过固定高度，滚动，居中自动换行&lt;/p&gt;
+&lt;p&gt;能滚动的&lt;code&gt;UILabel&lt;/code&gt;, 一开始想到的是&lt;code&gt;UITextView&lt;/code&gt;, 试了下发现不超过一行的时候也会滚动，而且不能居中。
+需要添加各种判断和限制才能达到想要的效果。
+于是便考虑用&lt;code&gt;UIScorllView&lt;/code&gt; + &lt;code&gt;UILabel&lt;/code&gt;来实现。&lt;/p&gt;
+&lt;h2 id="de842a6c80128bf1587c7cd451914e7a"&gt;解决方案&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;└── View
+    └── scrollView
+        └── contentView
+            └── label
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;scrollView  设置上下左右约束&lt;/li&gt;
+&lt;li&gt;contentView 上下左右约束为0, 水平垂直居中，bottom和CenterY约束&lt;code&gt;Priority&lt;/code&gt;调到最低250&lt;/li&gt;
+&lt;li&gt;label 上左右约束为0，Lines设置为0&lt;/li&gt;
+&lt;li&gt;设置contentView和label Equal Heights.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="" src="http://7xixt5.com1.z0.glb.clouddn.com/scrollLabel.png"/&gt;&lt;/p&gt;</content><category term="scrollLabel"></category></entry><entry><title>Xcode8-Plugin-invalid</title><link href="http://99d.in/acode/Xcode8-Plugin-invalid.html" rel="alternate"></link><published>2016-09-19T20:33:00+08:00</published><updated>2016-09-19T20:33:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-09-19:/acode/Xcode8-Plugin-invalid.html</id><summary type="html">让Xcode8插件继续工作</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;让Xcode8插件继续工作&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="968aa9a1b558d0206eab6aeff69d9dd2"&gt;起因&lt;/h2&gt;
