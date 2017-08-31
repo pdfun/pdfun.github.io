@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="iOS">
-        <meta name="description" content="大部分来自stackoverflow">
+        <meta name="description" content="很多来自stackoverflow">
         <title>iOS-notes - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
@@ -57,7 +57,7 @@
                                       (4)</a></li>
                                <li><a href="http://99d.in/dlife/index.html">
                                       <i class="icon-coffee"></i>生活
-                                      (4)</a></li>
+                                      (3)</a></li>
                                <li><a href="http://99d.in/edesign/index.html">
                                       <i class="icon-flask"></i>设计
                                       (1)</a></li>
@@ -100,7 +100,7 @@
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
                     <blockquote>
-<p>大部分来自<a href="http://stackoverflow.com">stackoverflow</a></p>
+<p>很多来自<a href="http://stackoverflow.com">stackoverflow</a></p>
 </blockquote>
 <ul>
 <li>
@@ -164,10 +164,9 @@
 </blockquote>
 </li>
 <li>
-<p><code>Xcode</code>archive之后上传报错</p>
+<p><code>Xcode</code>archive之后上传报错 <code>ERROR ITMS-90207: "Invalid Bundle. The bundle at 'example.app' does not contain a bundle executable</code></p>
 </li>
 </ul>
-<p><code>ERROR ITMS-90207: "Invalid Bundle. The bundle at 'example.app' does not contain a bundle executable</code></p>
 <p>用<code>vi</code>打开<code>Info.plist</code>检查有没有特殊字符。有时候从别的地方复制过来的会有特殊字符，删掉重新添加再打包就可以上传了。</p>
 <ul>
 <li>
@@ -185,6 +184,15 @@ Right-Click Show Package Contents.
 Find project.xcworkspace file and delete that file.
 Reopen Your Project and clean and Rebuild.
 </pre></div>
+<ul>
+<li>自定义通知(远程和本地)的声音文件可以放入bundle文件夹,注册推送的时候声音文件填写对应的路径即可。</li>
+</ul>
+<div class="highlight"><pre><span></span>let notification = UILocalNotification()
+notification.soundName = "sound.bundle/" + xxx.wav
+</pre></div>
+<ul>
+<li><code>swift</code> <code>print</code>在<code>Xcode</code>-&gt;<code>Devices</code>-&gt; 'xxx的iPhone8' 不会打印日志, <code>NSLog</code>会打印。</li>
+</ul>
                 </div>
                 <div id="content-comments">
                     <!-- Disqus -->
