@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Codepush">
+        <meta name="description" content="记录下Codepush常用的命令行。">
+        <title>Codepush React native iOS - just do it</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://99d.in/theme/css/niu2.min.css" type="text/css" />
+        <link rel="canonical" href="http://99d.in/bnote/codePush.html" />
+        <script type="text/javascript">window.onload=function(){};</script>
+        <!--[if lt IE 9]>
+            <script src="http://99d.in/theme/js/html5shiv.js"></script>
+            <script src="http://99d.in/theme/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body> 
+        <div id="body-header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://99d.in">
+                            <i class="icon-home"></i>just do it
+                        </a>
+                    </div>
+                    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/about.html" title="about me">
+                                <i class="icon-anchor"></i>关于</a>
+                            </li>
+                            <li><a href="/tag/" title="blog tags">
+                                <i class="icon-tag"></i>标签</a>
+                            </li>
+                            <li><a href="/archives.html" title="archives order by publish time">
+                                <i class="fa-calendar"></i>归档</a>
+                            </li>
+                        <!-- category dropdown list -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="http://99d.in/acode/index.html">
+                                      <i class="icon-code"></i>饭碗
+                                      (6)</a></li>
+                               <li><a href="http://99d.in/bnote/index.html">
+                                      <i class="icon-pencil"></i>笔记
+                                      (5)</a></li>
+                               <li><a href="http://99d.in/dlife/index.html">
+                                      <i class="icon-coffee"></i>生活
+                                      (3)</a></li>
+                               <li><a href="http://99d.in/edesign/index.html">
+                                      <i class="icon-flask"></i>设计
+                                      (1)</a></li>
+                           </ul>
+                        </li>
+                        <!--  self defined dropdown list -->
+                        </ul>
+                        
+                        <!-- right nav bar -->
+                        <ul class="nav navbar-nav navbar-right">
+                        <!-- google custom search -->
+                        <li>
+                        <div id="niu2-cse-wrapper">
+                            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                                <form action="https://cse.google.com/cse">
+                                    <input type="hidden" name="cx" value="010866507058033518033:pt7h0jd6cs8" />
+                                    <input type="hidden" name="ie" value="UTF-8" />
+                                    <div class="form-group">
+                                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                                            type="text" name="q" 
+                                            placeholder="按回车开始搜索 ..."/>
+                                    </div>
+                                </form>
+                           </div>
+                           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+                            <i id="niu2-cse-search-image" class="icon-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+                           </div>
+                       </div>
+                       </li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="body-content">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 id="content-heading">Codepush React native iOS</h1>
+            </div>
+            <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+                <div id="niu2-main-content">
+                    <p>记录下Codepush常用的命令行。省得每次去翻官方文档。</p>
+<h2 id="c04495b8ddd6ab4ca28152219ada6dae">登录appcenter</h2>
+<p>appcenter login</p>
+<h2 id="ac863f346e618f9a959b5c95d5d28941">App</h2>
+<h3 id="7178306565b0fe8f014443adadd59d7c">创建App</h3>
+<p>appcenter apps create -d <appdisplayname> -o <operatingsystem>  -p <platform></platform></operatingsystem></appdisplayname></p>
+<p>appcenter apps create -d MyApp-Android -o Android -p React-Native
+appcenter apps create -d MyApp-iOS -o iOS -p Cordova
+appcenter apps update -n <newname> -a <ownername>/<appname>
+appcenter apps delete -a <ownername>/<appname></appname></ownername></appname></ownername></newname></p>
+<h3 id="531679de83cfda4cdd74ad4b5b96d9a2">查看app列表</h3>
+<p>appcenter apps list</p>
+<h3 id="a68c51a8b4677571d87b60027b77d90a">设置当前app</h3>
+<p>appcenter apps set-current <ownername>/<appname></appname></ownername></p>
+<h3 id="108c612be1cdab0cbec735f153e3584a">获取当前app</h3>
+<p>appcenter apps get-current</p>
+<h3 id="f98cb537e799fae4a0385c9d68a6878f">布署app</h3>
+<p>appcenter codepush deployment add -a <ownername>/<appname> Staging
+appcenter codepush deployment add -a <ownername>/<appname> Production
+appcenter codepush deployment add -a <ownername>/<appname> Staging
+appcenter codepush deployment add -a <ownername>/<appname> Production
+appcenter codepush deployment remove -a <ownername>/<appname> <deploymentname>
+appcenter codepush deployment rename -a <ownername>/<appname> <deploymentname> <newdeploymentname></newdeploymentname></deploymentname></appname></ownername></deploymentname></appname></ownername></appname></ownername></appname></ownername></appname></ownername></appname></ownername></p>
+<h3 id="52a1f8bdb2fa15e1bb8aec867cd1a9c3">查看App key</h3>
+<p>appcenter codepush deployment list -a <ownername>/<appname></appname></ownername></p>
+<h3 id="38fdcb650cc9d4679666ed3052208d83">删除app</h3>
+<p>appcenter apps delete -a <ownername>/<appname></appname></ownername></p>
+<h2 id="32ac152be1911e9360047dcb0898cf70">更新</h2>
+<h3 id="7146155519264ed69d657fe7e0ad7a05">发布更新</h3>
+<p>appcenter codepush release-react -a <ownername>/<appname></appname></ownername></p>
+<h3 id="d78a572f68d533aa1da980ffc5d774b5">查看发布历史记录</h3>
+<p>appcenter codepush deployment history -a <ownername>/<appname> <deploymentname>
+appcenter codepush deployment history -a <ownername>/<appname> <deploymentname></deploymentname></appname></ownername></deploymentname></appname></ownername></p>
+<h3 id="a740edf983f81230d056e125248577fc">清除所有更新 不可逆操作  已经发布线上操作要谨慎</h3>
+<p>appcenter codepush deployment clear -a <ownername>/<appname> <deploymentname></deploymentname></appname></ownername></p>
+                </div>
+                <div id="content-comments">
+                    <!-- Disqus -->
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'http://99d.in/bnote/codePush.html';
+                            this.page.identifier = 'codePush';
+                        };
+                        (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+                                s.src = '//99d.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
+
+            </div>
+            <div class="niu2-right-container col-md-2 with-left-border">
+                <div id="niu2-sidebar-meta" class="niu2-sidebar">
+                    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+                    <div class="niu2-sidebar-value">2017-12-20 19:00</div>
+                    <div class="niu2-sidebar-label"><i class="icon-pencil"></i>分类:</div>
+                    <div class="niu2-sidebar-value"><a href="http://99d.in/bnote/index.html">笔记</a></div>
+                    <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://99d.in/tag/codepush.html">Codepush</a><sup>1</sup></div>
+                </div>
+
+                <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
+                    <div class="niu2-sidebar-label">
+                        <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+                    </div>
+                    <ul id="niu2-sidebar-toc-list">
+                        <li><a href="#content-heading">Codepush React native iOS</a></li>
+                        <li><a href='#c04495b8ddd6ab4ca28152219ada6dae'>登录appcenter</a></li><li><a href='#ac863f346e618f9a959b5c95d5d28941'>App</a><ul><li><a href='#7178306565b0fe8f014443adadd59d7c'>创建App</a></li><li><a href='#531679de83cfda4cdd74ad4b5b96d9a2'>查看app列表</a></li><li><a href='#a68c51a8b4677571d87b60027b77d90a'>设置当前app</a></li><li><a href='#108c612be1cdab0cbec735f153e3584a'>获取当前app</a></li><li><a href='#f98cb537e799fae4a0385c9d68a6878f'>布署app</a></li><li><a href='#52a1f8bdb2fa15e1bb8aec867cd1a9c3'>查看App key</a></li><li><a href='#38fdcb650cc9d4679666ed3052208d83'>删除app</a></li></ul></li><li><a href='#32ac152be1911e9360047dcb0898cf70'>更新</a><ul><li><a href='#7146155519264ed69d657fe7e0ad7a05'>发布更新</a></li><li><a href='#d78a572f68d533aa1da980ffc5d774b5'>查看发布历史记录</a></li><li><a href='#a740edf983f81230d056e125248577fc'>清除所有更新 不可逆操作  已经发布线上操作要谨慎</a></li></ul></li>
+                        <li><a href="#content-comments">评论</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="niu2-toolbar">
+                <ul class="list-unstyled">
+                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
+                </ul>
+                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
+                <div id="niu2-toolbar-github" data-repo=""></div>
+                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
+            </div>
+            <div id="niu2-toc" data-style="fixed"></div>
+        </div>
+
+        <div class="niu2-footer">
+            <div id="body-footer" class="col-md-6 col-md-offset-2">
+                <hr/>
+                <p>
+                    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+                    <a href="https://github.com/mawenbao/niu-x2-sidebar">theme</a> built with <a href="https://github.com/twbs/bootstrap">Bootstrap3</a>
+                    by <a href="https://blog.mawenbao.com">Ma Wenbao</a>, icons by 
+                    <a href="https://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
+                </p>
+                <p>
+                    ©
+                            2015-2017
+                    <a class="niu2-footer-link" href="http://99d.in">pd</a>
+                    /                         <a class="niu2-footer-link" href="/about.html" title="about me">关于</a>
+                </p>
+                <p class="niu2-icons">
+                    <a class="niu2-footer-icon" href="https://git.io/vKNkO" title="my github page">
+                        <i class="icon-github-alt icon-lg"></i>
+                    </a>
+                    <a class="niu2-footer-icon" href="mailto:pd@99d.in" title="my email address">
+                        <i class="icon-envelope-o icon-lg"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var _gaq=_gaq||[];
+            _gaq.push(["_setAccount","UA-58307278-1"]);
+            _gaq.push(["_trackPageview"]);
+            (function(){
+                var b=document.createElement("script");
+                b.type="text/javascript";
+                b.async=true;
+                b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";
+                var a=document.getElementsByTagName("script")[0];
+                a.parentNode.insertBefore(b,a)
+            })();
+        </script>
+        <div id="niu2-pygments" data-theme="github"></div>
+        <div id="niu2-lazy-load" data-loading-txt="努力加载中" data-loading-icon="icon-spin icon-spinner"></div>
+        <div id="niu2-toolbar-load" data-loading-icon="icon-spin icon-4x icon-spinner"></div>
+        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="http://99d.in/theme/js/niu2.min.js"></script>
+        <script type="text/javascript" src="http://99d.in/theme/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            onContentLoaded();
+        </script>
+    </body>
+</html>
