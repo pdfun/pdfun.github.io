@@ -18,8 +18,6 @@ appcenter apps delete -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&a
 &lt;h3 id="f98cb537e799fae4a0385c9d68a6878f"&gt;布署app&lt;/h3&gt;
 &lt;p&gt;appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Staging&lt;br/&gt;
 appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Production&lt;br/&gt;
-appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Staging&lt;br/&gt;
-appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Production&lt;br/&gt;
 appcenter codepush deployment remove -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;br/&gt;
 appcenter codepush deployment rename -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;deploymentName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;newDeploymentName&amp;gt;&lt;/code&gt; &lt;/p&gt;
 &lt;h3 id="52a1f8bdb2fa15e1bb8aec867cd1a9c3"&gt;查看App key&lt;/h3&gt;
@@ -30,8 +28,7 @@ appcenter codepush deployment rename -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&a
 &lt;h3 id="7146155519264ed69d657fe7e0ad7a05"&gt;发布更新&lt;/h3&gt;
 &lt;p&gt;appcenter codepush release-react -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id="d78a572f68d533aa1da980ffc5d774b5"&gt;查看发布历史记录&lt;/h3&gt;
-&lt;p&gt;appcenter codepush deployment history -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;br/&gt;
-appcenter codepush deployment history -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;appcenter codepush deployment history -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;deploymentName&amp;gt;&lt;/code&gt; &lt;/p&gt;
 &lt;h3 id="a740edf983f81230d056e125248577fc"&gt;清除所有更新 不可逆操作  已经发布线上操作要谨慎&lt;/h3&gt;
 &lt;p&gt;appcenter codepush deployment clear -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;/p&gt;</content><category term="Codepush"></category></entry><entry><title>scroll-label-autolayout</title><link href="http://99d.in/acode/scroll-label-autolayout.html" rel="alternate"></link><published>2017-08-10T09:43:51+08:00</published><updated>2017-08-10T09:43:51+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-08-10:/acode/scroll-label-autolayout.html</id><summary type="html">可以滚动的UILabel。</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;可以滚动的UILabel。不需要写一行代码。&lt;/p&gt;
