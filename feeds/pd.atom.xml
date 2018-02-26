@@ -4,11 +4,11 @@
 &lt;p&gt;appcenter login&lt;/p&gt;
 &lt;h2 id="ac863f346e618f9a959b5c95d5d28941"&gt;App&lt;/h2&gt;
 &lt;h3 id="7178306565b0fe8f014443adadd59d7c"&gt;创建App&lt;/h3&gt;
-&lt;p&gt;appcenter apps create -d &lt;code&gt;&amp;lt;appDisplayName&amp;gt;&lt;/code&gt; -o &lt;code&gt;&amp;lt;operatingSystem&amp;gt;&lt;/code&gt;  -p &lt;code&gt;&amp;lt;platform&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;appcenter apps create -d MyApp-Android -o Android -p React-Native
-appcenter apps create -d MyApp-iOS -o iOS -p Cordova
-appcenter apps update -n &lt;code&gt;&amp;lt;newName&amp;gt;&lt;/code&gt; -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt;
-appcenter apps delete -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;appcenter apps create -d &lt;code&gt;&amp;lt;appDisplayName&amp;gt;&lt;/code&gt; -o &lt;code&gt;&amp;lt;operatingSystem&amp;gt;&lt;/code&gt;  -p &lt;code&gt;&amp;lt;platform&amp;gt;&lt;/code&gt;&lt;br/&gt;
+appcenter apps create -d MyApp-Android -o Android -p React-Native&lt;br/&gt;
+appcenter apps create -d MyApp-iOS -o iOS -p Cordova&lt;br/&gt;
+appcenter apps update -n &lt;code&gt;&amp;lt;newName&amp;gt;&lt;/code&gt; -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt;&lt;br/&gt;
+appcenter apps delete -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;/p&gt;
 &lt;h3 id="531679de83cfda4cdd74ad4b5b96d9a2"&gt;查看app列表&lt;/h3&gt;
 &lt;p&gt;appcenter apps list&lt;/p&gt;
 &lt;h3 id="a68c51a8b4677571d87b60027b77d90a"&gt;设置当前app&lt;/h3&gt;
@@ -16,12 +16,12 @@ appcenter apps delete -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&a
 &lt;h3 id="108c612be1cdab0cbec735f153e3584a"&gt;获取当前app&lt;/h3&gt;
 &lt;p&gt;appcenter apps get-current&lt;/p&gt;
 &lt;h3 id="f98cb537e799fae4a0385c9d68a6878f"&gt;布署app&lt;/h3&gt;
-&lt;p&gt;appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Staging
-appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Production
-appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Staging
-appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Production
-appcenter codepush deployment remove -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt;
-appcenter codepush deployment rename -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;deploymentName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;newDeploymentName&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Staging&lt;br/&gt;
+appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Production&lt;br/&gt;
+appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Staging&lt;br/&gt;
+appcenter codepush deployment add -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; Production&lt;br/&gt;
+appcenter codepush deployment remove -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;br/&gt;
+appcenter codepush deployment rename -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;deploymentName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;newDeploymentName&amp;gt;&lt;/code&gt; &lt;/p&gt;
 &lt;h3 id="52a1f8bdb2fa15e1bb8aec867cd1a9c3"&gt;查看App key&lt;/h3&gt;
 &lt;p&gt;appcenter codepush deployment list -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id="38fdcb650cc9d4679666ed3052208d83"&gt;删除app&lt;/h3&gt;
@@ -30,8 +30,8 @@ appcenter codepush deployment rename -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&a
 &lt;h3 id="7146155519264ed69d657fe7e0ad7a05"&gt;发布更新&lt;/h3&gt;
 &lt;p&gt;appcenter codepush release-react -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id="d78a572f68d533aa1da980ffc5d774b5"&gt;查看发布历史记录&lt;/h3&gt;
-&lt;p&gt;appcenter codepush deployment history -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;deploymentName&amp;gt;&lt;/code&gt;
-appcenter codepush deployment history -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;appcenter codepush deployment history -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;br/&gt;
+appcenter codepush deployment history -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt; &lt;/p&gt;
 &lt;h3 id="a740edf983f81230d056e125248577fc"&gt;清除所有更新 不可逆操作  已经发布线上操作要谨慎&lt;/h3&gt;
 &lt;p&gt;appcenter codepush deployment clear -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;/p&gt;</content><category term="Codepush"></category></entry><entry><title>scroll-label-autolayout</title><link href="http://99d.in/acode/scroll-label-autolayout.html" rel="alternate"></link><published>2017-08-10T09:43:51+08:00</published><updated>2017-08-10T09:43:51+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-08-10:/acode/scroll-label-autolayout.html</id><summary type="html">可以滚动的UILabel。</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;可以滚动的UILabel。不需要写一行代码。&lt;/p&gt;

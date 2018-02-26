@@ -104,11 +104,11 @@
 <p>appcenter login</p>
 <h2 id="ac863f346e618f9a959b5c95d5d28941">App</h2>
 <h3 id="7178306565b0fe8f014443adadd59d7c">创建App</h3>
-<p>appcenter apps create -d <code>&lt;appDisplayName&gt;</code> -o <code>&lt;operatingSystem&gt;</code>  -p <code>&lt;platform&gt;</code></p>
-<p>appcenter apps create -d MyApp-Android -o Android -p React-Native
-appcenter apps create -d MyApp-iOS -o iOS -p Cordova
-appcenter apps update -n <code>&lt;newName&gt;</code> -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code>
-appcenter apps delete -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code></p>
+<p>appcenter apps create -d <code>&lt;appDisplayName&gt;</code> -o <code>&lt;operatingSystem&gt;</code>  -p <code>&lt;platform&gt;</code><br/>
+appcenter apps create -d MyApp-Android -o Android -p React-Native<br/>
+appcenter apps create -d MyApp-iOS -o iOS -p Cordova<br/>
+appcenter apps update -n <code>&lt;newName&gt;</code> -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code><br/>
+appcenter apps delete -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> </p>
 <h3 id="531679de83cfda4cdd74ad4b5b96d9a2">查看app列表</h3>
 <p>appcenter apps list</p>
 <h3 id="a68c51a8b4677571d87b60027b77d90a">设置当前app</h3>
@@ -116,12 +116,12 @@ appcenter apps delete -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code></p>
 <h3 id="108c612be1cdab0cbec735f153e3584a">获取当前app</h3>
 <p>appcenter apps get-current</p>
 <h3 id="f98cb537e799fae4a0385c9d68a6878f">布署app</h3>
-<p>appcenter codepush deployment add -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> Staging
-appcenter codepush deployment add -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> Production
-appcenter codepush deployment add -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> Staging
-appcenter codepush deployment add -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> Production
-appcenter codepush deployment remove -a <code>&lt;ownerName&gt;/&lt;appName&gt; &lt;deploymentName&gt;</code>
-appcenter codepush deployment rename -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> <code>&lt;deploymentName&gt;</code> <code>&lt;newDeploymentName&gt;</code></p>
+<p>appcenter codepush deployment add -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> Staging<br/>
+appcenter codepush deployment add -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> Production<br/>
+appcenter codepush deployment add -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> Staging<br/>
+appcenter codepush deployment add -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> Production<br/>
+appcenter codepush deployment remove -a <code>&lt;ownerName&gt;/&lt;appName&gt; &lt;deploymentName&gt;</code><br/>
+appcenter codepush deployment rename -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> <code>&lt;deploymentName&gt;</code> <code>&lt;newDeploymentName&gt;</code> </p>
 <h3 id="52a1f8bdb2fa15e1bb8aec867cd1a9c3">查看App key</h3>
 <p>appcenter codepush deployment list -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code></p>
 <h3 id="38fdcb650cc9d4679666ed3052208d83">删除app</h3>
@@ -130,8 +130,8 @@ appcenter codepush deployment rename -a <code>&lt;ownerName&gt;/&lt;appName&gt;<
 <h3 id="7146155519264ed69d657fe7e0ad7a05">发布更新</h3>
 <p>appcenter codepush release-react -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code></p>
 <h3 id="d78a572f68d533aa1da980ffc5d774b5">查看发布历史记录</h3>
-<p>appcenter codepush deployment history -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> <code>&lt;deploymentName&gt;</code>
-appcenter codepush deployment history -a <code>&lt;ownerName&gt;/&lt;appName&gt; &lt;deploymentName&gt;</code></p>
+<p>appcenter codepush deployment history -a <code>&lt;ownerName&gt;/&lt;appName&gt;</code> <code>&lt;deploymentName&gt;</code><br/>
+appcenter codepush deployment history -a <code>&lt;ownerName&gt;/&lt;appName&gt; &lt;deploymentName&gt;</code> </p>
 <h3 id="a740edf983f81230d056e125248577fc">清除所有更新 不可逆操作  已经发布线上操作要谨慎</h3>
 <p>appcenter codepush deployment clear -a <code>&lt;ownerName&gt;/&lt;appName&gt; &lt;deploymentName&gt;</code></p>
                 </div>
