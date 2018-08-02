@@ -3,15 +3,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="Metal armv7">
-        <meta name="description" content="framework not found Metal for architecture armv7">
-        <title>link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7 - just do it</title>
+        <title>标签 算法学习 - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://99d.in/theme/css/niu2.min.css" type="text/css" />
-        <link rel="canonical" href="http://99d.in/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html" />
         <script type="text/javascript">window.onload=function(){};</script>
         <!--[if lt IE 9]>
             <script src="http://99d.in/theme/js/html5shiv.js"></script>
@@ -95,107 +92,40 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7</h1>
+                <h1 class="niu2-index-title"><i class="icon-tag icon-lg"></i>算法学习</h1>
             </div>
-            <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
-                <div id="niu2-main-content">
-                    <p>framework not found Metal for architecture armv7</p>
-<h4 id="b5d1f808293deb9322b5b96519730ac2">The scene</h4>
-<p>以下条件Xcode才会报这个错误: </p>
-<ul>
-<li><code>build target</code>是真机不是模拟器</li>
-<li><code>other link flags</code> 添加了 <code>-ObjC</code></li>
-<li>静态库是用<code>8.0</code>以上的的SDK打包,使用的时候Xcode的<code>iPhone SDK</code>小于<code>8.0</code>,换句话说就是Xcode6打包的静态库用Xcode5来运行</li>
-</ul>
-<h4 id="8b87f3464a8057b84f5b012bdf867cbe">The Reason</h4>
-<p>其实这是苹果的一个bug.没有对<code>no-Metal</code>的设备即<code>armv7&amp;armv7s</code>做向后兼容
-<code>CoreVideo.h</code>可以看出来这点:</p>
-<div class="highlight"><pre><span></span><span class="cp">#if COREVIDEO_SUPPORTS_METAL</span>
-<span class="cp">#include</span> <span class="cpf">&lt;CoreVideo/CVMetalTexture.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;CoreVideo/CVMetalTextureCache.h&gt;</span><span class="cp"></span>
-<span class="cp">#endif</span>
-</pre></div>
-<p><code>COREVIDEO_SUPPORTS_METAL</code>是这样定义的:<code>#if TARGET_OS_IPHONE</code>,这是不够的,因为<code>armv7/s</code>设备不支持<code>Metal</code></p>
-<h4 id="10eb951159a4b6a485744e900a86dff5">Link Frameworks Automatically</h4>
-<p><code>XCode5</code>苹果引进了新<code>links</code>flags,<code>Link Frames Automatically</code>,<code>Defalut</code>值是<code>YES</code>.目的为了减少开发者添加<code>framework</code>的工作量.在引入这个之前开发者使用<code>framework</code>必须<code>link</code>到工程。这个<code>flag</code>让开发者们更简单的使用<code>framework</code>.
-对报错的<code>framework</code>执行以下命令:</p>
-<p><code>otool -arch armv7 –l Xxxxx.framework/Xxxxx</code></p>
-<p>我们可以看到以下内容:</p>
-<div class="highlight"><pre><span></span>Load command 14
-cmd LC_LINKER_OPTION
-cmdsize 32
-count 2
-string #1 -framework
-string #2 OpenGLES
-Load command 15
 
-cmd LC_LINKER_OPTION
-cmdsize 32
-count 2
-string #1 -framework
-string #2 Metal
-Load command 16
-</pre></div>
-<p>正如你所看到的,这将导致<code>linker</code>隐式使用<code>Metal</code></p>
-<h4 id="34e74b1c7f4aad91715567cf698912f6">The Solution</h4>
-<p>在苹果没解决这个问题之前。可以通过以下两种方法来避免编译错误:</p>
-<p>1&gt;. 直接用Xcode5来生成<code>lib</code>和<code>framework</code></p>
-<p>2&gt;. Xcode6 <code>Build Setting</code>--&gt;<code>Link Frameworks Automatically</code>设置为NO,设置这个之后,Xcode 可能会报更多的错误,因为现在不会自动<code>link</code>框架了,根据报错添加对应的<code>framework</code>即可.</p>
-<h3 id="5da618e8e4b89c66fe86e32cdafde142">From</h3>
-<p><a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7">framework not found Metal for architecture armv7</a></p>
-                </div>
-                <div id="content-comments">
-                    <!-- Disqus -->
-                    <div id="disqus_thread"></div>
-                    <script>
-                        var disqus_config = function () {
-                            this.page.url = 'http://99d.in/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html';
-                            this.page.identifier = 'link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7';
-                        };
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = '//99d.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
-                        })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>                </div>
-
-            </div>
-            <div class="niu2-right-container col-md-2 with-left-border">
-                <div id="niu2-sidebar-meta" class="niu2-sidebar">
-                    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-                    <div class="niu2-sidebar-value">2015-06-08 09:50</div>
-                    <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
-                    <div class="niu2-sidebar-value"><a href="http://99d.in/acode/index.html">饭碗</a></div>
-                    <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
-                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://99d.in/tag/metal-armv7.html">Metal armv7</a><sup>1</sup></div>
-                </div>
-
-                <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
-                    <div class="niu2-sidebar-label">
-                        <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+            <div class="col-md-8 col-md-offset-2">
+                <div class="niu2-index-article">
+                    <div class="niu2-index-article-title">
+                        <span>
+                            <a href="http://99d.in/acode/算法第四版环境搭建.html">《算法》第四版Mac环境手动搭建</a>
+                        </span>
                     </div>
-                    <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7</a></li>
-                        <li><a href='#b5d1f808293deb9322b5b96519730ac2'>The scene</a></li><li><a href='#8b87f3464a8057b84f5b012bdf867cbe'>The Reason</a></li><li><a href='#10eb951159a4b6a485744e900a86dff5'>Link Frameworks Automatically</a></li><li><a href='#34e74b1c7f4aad91715567cf698912f6'>The Solution</a></li><li><a href='#5da618e8e4b89c66fe86e32cdafde142'>From</a></li>
-                        <li><a href="#content-comments">评论</a></li>
-                    </ul>
+                    <div class="niu2-meta-index">
+                        <span class="niu2-meta-date-index">
+                            <i class="icon-calendar"></i>2018-08-02
+                        </span>
+                        <span class="niu2-meta-category-index">
+                            <i class="icon-code"></i><a href="http://99d.in/acode/index.html">饭碗</a>
+                        </span>
+                        <span class="niu2-meta-tag-index">
+                            <i class="icon-tag"></i>
+                            <a href="http://99d.in/tag/suan-fa-xue-xi.html">算法学习</a>
+                        </span>
+                    </div>
+                    <div class="niu2-article-summary">
+                        算法第四版 macOS High Sierra 手动搭建运行环境
+                    </div>
                 </div>
+
+
+
             </div>
-            <div id="niu2-toolbar">
-                <ul class="list-unstyled">
-                    <li><a id="niu2-toolbar-ctrlsidebar" href="#" title="Hide Sidebar"><i class="icon-3x icon-hide-sidebar"></i></a></li>
-                </ul>
-                <div id="niu2-toolbar-showsidebar" data-title="Show Sidebar"></div>
-                <div id="niu2-toolbar-github" data-repo=""></div>
-                <div id="niu2-toolbar-bitbucket" data-repo=""></div>
-            </div>
-            <div id="niu2-toc" data-style="fixed"></div>
         </div>
 
         <div class="niu2-footer">
-            <div id="body-footer" class="col-md-6 col-md-offset-2">
+            <div id="body-footer" class="col-md-8 col-md-offset-2">
                 <hr/>
                 <p>
                     Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
@@ -240,7 +170,6 @@ Load command 16
         <script type="text/javascript" src="http://99d.in/theme/js/niu2.min.js"></script>
         <script type="text/javascript" src="http://99d.in/theme/js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            onContentLoaded();
         </script>
     </body>
 </html>

@@ -3,15 +3,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="HHKB, Karabiner">
-        <meta name="description" content="Karabiner 给HHKB添加功能键F0~F12">
-        <title>HHKB-Function-Key-With-Karabiner - just do it</title>
+        <meta name="keywords" content="算法学习">
+        <meta name="description" content="算法第四版 macOS High Sierra 手动搭建运行环境">
+        <title>《算法》第四版Mac环境手动搭建 - just do it</title>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="http://99d.in/theme/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="http://99d.in/theme/font-icons/style.min.css" type="text/css" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://99d.in/theme/css/niu2.min.css" type="text/css" />
-        <link rel="canonical" href="http://99d.in/dlife/HHKB-Function-Key-With-Karabiner.html" />
+        <link rel="canonical" href="http://99d.in/acode/算法第四版环境搭建.html" />
         <script type="text/javascript">window.onload=function(){};</script>
         <!--[if lt IE 9]>
             <script src="http://99d.in/theme/js/html5shiv.js"></script>
@@ -95,56 +95,46 @@
 
         <div id="body-content">
             <div class="col-md-8 col-md-offset-2">
-                <h1 id="content-heading">HHKB-Function-Key-With-Karabiner</h1>
+                <h1 id="content-heading">《算法》第四版Mac环境手动搭建</h1>
             </div>
             <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
                 <div id="niu2-main-content">
-                    <p>Karabiner 给HHKB添加功能键F0~F12</p>
-<h2 id="34c847b65e809d462fadf06a2488c1ab">Karabiner</h2>
-<p><a href="https://pqrs.org/osx/karabiner/">Karabiner</a>这个键盘映射工具很强大。看了下<code>Change Key</code>选项里,只有<code>Shift+Num</code>和<code>Command+Num</code>映射<code>Fn</code>,<code>Shift</code>和<code>Command</code>组合数字快捷键平时经常用到,只能另辟蹊径了,这时候很容易想到<code>Option+Num</code>。</p>
-<h2 id="49b21ad0d38942f635877e7bbc5d7a1e">Solution</h2>
-<p>打开<code>Karabiner</code>,选中<code>Change Key</code>菜单,看到右下角有句话<code>Do you want to add your own settings?</code>点击<code>Open the documentation web site</code>跳转到 <a href="https://pqrs.org/osx/karabiner/document.html#privatexml">How to add your own settings</a>,有详情的教程告诉我们进行个性化设置。</p>
-<h2 id="fa535ffb25e1fd20341652f9be21e06e">Config</h2>
-<p>贴下我的XML配置,只是左边的<code>Option+Num</code>映射<code>Fn</code>的,可以根据自己的需要进行修改。</p>
-<div class="highlight"><pre><span></span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
-<span class="nt">&lt;root&gt;</span>
-  <span class="nt">&lt;item&gt;</span>
-    <span class="nt">&lt;name&gt;</span>option+num to Fn<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;identifier&gt;</span>private.swap_space_and_tab<span class="nt">&lt;/identifier&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_1, ModifierFlag::OPTION_L, KeyCode::F1<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_2, ModifierFlag::OPTION_L, KeyCode::F2<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_3, ModifierFlag::OPTION_L, KeyCode::F3<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_4, ModifierFlag::OPTION_L, KeyCode::F4<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_5, ModifierFlag::OPTION_L, KeyCode::F5<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_6, ModifierFlag::OPTION_L, KeyCode::F6<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_7, ModifierFlag::OPTION_L, KeyCode::F7<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_8, ModifierFlag::OPTION_L, KeyCode::F8<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_9, ModifierFlag::OPTION_L, KeyCode::F9<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::KEY_0, ModifierFlag::OPTION_L, KeyCode::F10<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::MINUS, ModifierFlag::OPTION_L, KeyCode::F11<span class="nt">&lt;/autogen&gt;</span>
-    <span class="nt">&lt;autogen&gt;</span>__KeyToKey__ KeyCode::EQUAL, ModifierFlag::OPTION_L, KeyCode::F12<span class="nt">&lt;/autogen&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-
-<span class="nt">&lt;/root&gt;</span>
-</pre></div>
-<h2 id="e7384c252586cce857cb14709845a8a4">KeyCode.data</h2>
-<p>找对应的<code>KeyCode</code>是件头疼的事,才开始慢慢试看到<code>Karabiner</code>报错一点点修改,后来搜索了下才发现的有现成的可以看😹这智商真是捉急啊。附上KeyCode.data链接<a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data">KeyCode.data</a></p>
-<p>总结下规律:</p>
+                    <blockquote>
+<p>算法第四版 <code>macOS High Sierra</code> 手动搭建运行环境</p>
+</blockquote>
+<h2 id="bd94efa4b73cf1fef746e93f09cdc9dd">安装java</h2>
+<p><code>brew cask install java</code></p>
+<h2 id="ad714bcfb574c5c21b394d0cffba8b8e">配置java环境变量</h2>
+<p>vi ~/.bashrc
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home"
+CLASSPATH="$JAVA_HOME/lib"</p>
+<h2 id="db6e73aa347576c5b4e2918658dca69e">导入jar包</h2>
+<p>mkdir ~/algs4
+到<a href="https://algs4.cs.princeton.edu/code/">配套网站</a>下载<a href="https://algs4.cs.princeton.edu/code/algs4.jar/">algs4 jar包</a>，并拷贝到 <code>~/algs4</code> 目录下
+vi ~/.bashrc
+export CLASSPATH=$CLASSPATH:~/algs4/algs4.jar
+source ~/.bashrc</p>
+<h2 id="9c4848674ee259109c197a0d2d441f62">运行测试</h2>
 <ul>
-<li>全部是大写</li>
-<li><code>KEY_num</code> 表示数字,比如:KEY_0 =&gt; 0</li>
-<li><code>R</code> 表示右边,<code>L</code>表示左边,比如OPTION_R =&gt; 左边的Option</li>
-<li><code>MINUS</code>=&gt;<code>-</code> <code>EQUAL</code> =&gt;<code>=</code></li>
-<li>更全的就看<a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data">KeyCode.data</a>了</li>
+<li>解压下载的jar包到xx目录,直入xx目录</li>
+<li>javac TestAlgs4.java</li>
+<li>java TestAlgs4</li>
+<li>看到下面的界面就代表成功
+<img alt="Snipaste_2018-08-02_10-34-17.png" src="/Users/pd1/Documents/blog/content/static/Snipaste_2018-08-02_10-34-17.png"/></li>
 </ul>
+<h2 id="f0f16a6fdefb115292dde549f250ba6e">参考网站</h2>
+<p><a href="https://algs4.cs.princeton.edu/code/">!https://algs4.cs.princeton.edu/code/</a>,滚动到下面
+<code>Installing the textbook libraries.</code>有配置介绍。</p>
+<h2 id="290612199861c31d1036b185b4e69b75">Summary</h2>
+<p>总是想着看些东西看提高自己，好多次半途而废。希望这次能坚持下来，认真读完一本书。</p>
                 </div>
                 <div id="content-comments">
                     <!-- Disqus -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'http://99d.in/dlife/HHKB-Function-Key-With-Karabiner.html';
-                            this.page.identifier = 'HHKB-Function-Key-With-Karabiner';
+                            this.page.url = 'http://99d.in/acode/算法第四版环境搭建.html';
+                            this.page.identifier = '算法第四版环境搭建';
                         };
                         (function() {  // DON'T EDIT BELOW THIS LINE
                                 var d = document, s = d.createElement('script');
@@ -159,12 +149,11 @@
             <div class="niu2-right-container col-md-2 with-left-border">
                 <div id="niu2-sidebar-meta" class="niu2-sidebar">
                     <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
-                    <div class="niu2-sidebar-value">2015-09-14 10:37</div>
-                    <div class="niu2-sidebar-label"><i class="icon-coffee"></i>分类:</div>
-                    <div class="niu2-sidebar-value"><a href="http://99d.in/dlife/index.html">生活</a></div>
+                    <div class="niu2-sidebar-value">2018-08-02 12:00</div>
+                    <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
+                    <div class="niu2-sidebar-value"><a href="http://99d.in/acode/index.html">饭碗</a></div>
                     <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
-                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://99d.in/tag/hhkb.html">HHKB</a><sup>2</sup></div>
-                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://99d.in/tag/karabiner.html">Karabiner</a><sup>1</sup></div>
+                    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://99d.in/tag/suan-fa-xue-xi.html">算法学习</a><sup>1</sup></div>
                 </div>
 
                 <div id="niu2-sidebar-toc" class="niu2-sidebar with-left-border" data-status="closed">
@@ -172,8 +161,8 @@
                         <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
                     </div>
                     <ul id="niu2-sidebar-toc-list">
-                        <li><a href="#content-heading">HHKB-Function-Key-With-Karabiner</a></li>
-                        <li><a href='#34c847b65e809d462fadf06a2488c1ab'>Karabiner</a></li><li><a href='#49b21ad0d38942f635877e7bbc5d7a1e'>Solution</a></li><li><a href='#fa535ffb25e1fd20341652f9be21e06e'>Config</a></li><li><a href='#e7384c252586cce857cb14709845a8a4'>KeyCode.data</a></li>
+                        <li><a href="#content-heading">《算法》第四版Mac环境手动搭建</a></li>
+                        <li><a href='#bd94efa4b73cf1fef746e93f09cdc9dd'>安装java</a></li><li><a href='#ad714bcfb574c5c21b394d0cffba8b8e'>配置java环境变量</a></li><li><a href='#db6e73aa347576c5b4e2918658dca69e'>导入jar包</a></li><li><a href='#9c4848674ee259109c197a0d2d441f62'>运行测试</a></li><li><a href='#f0f16a6fdefb115292dde549f250ba6e'>参考网站</a></li><li><a href='#290612199861c31d1036b185b4e69b75'>Summary</a></li>
                         <li><a href="#content-comments">评论</a></li>
                     </ul>
                 </div>
