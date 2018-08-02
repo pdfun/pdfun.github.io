@@ -5,25 +5,29 @@
 &lt;h2 id="bd94efa4b73cf1fef746e93f09cdc9dd"&gt;安装java&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;brew cask install java&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id="ad714bcfb574c5c21b394d0cffba8b8e"&gt;配置java环境变量&lt;/h2&gt;
-&lt;p&gt;vi ~/.bashrc
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home"
-CLASSPATH="$JAVA_HOME/lib"&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vi ~/.bashrc&lt;/li&gt;
+&lt;li&gt;export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home"&lt;/li&gt;
+&lt;li&gt;CLASSPATH="$JAVA_HOME/lib"&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="db6e73aa347576c5b4e2918658dca69e"&gt;导入jar包&lt;/h2&gt;
-&lt;p&gt;mkdir ~/algs4
-到&lt;a href="https://algs4.cs.princeton.edu/code/"&gt;配套网站&lt;/a&gt;下载&lt;a href="https://algs4.cs.princeton.edu/code/algs4.jar/"&gt;algs4 jar包&lt;/a&gt;，并拷贝到 &lt;code&gt;~/algs4&lt;/code&gt; 目录下
-vi ~/.bashrc
-export CLASSPATH=$CLASSPATH:~/algs4/algs4.jar
-source ~/.bashrc&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mkdir ~/algs4&lt;/li&gt;
+&lt;li&gt;到&lt;a href="https://algs4.cs.princeton.edu/code/"&gt;配套网站&lt;/a&gt;下载&lt;a href="https://algs4.cs.princeton.edu/code/algs4.jar/"&gt;algs4 jar包&lt;/a&gt;，并拷贝到 &lt;code&gt;~/algs4&lt;/code&gt; 目录下&lt;/li&gt;
+&lt;li&gt;vi ~/.bashrc&lt;/li&gt;
+&lt;li&gt;export CLASSPATH=$CLASSPATH:~/algs4/algs4.jar&lt;/li&gt;
+&lt;li&gt;source ~/.bashrc&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="9c4848674ee259109c197a0d2d441f62"&gt;运行测试&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;解压下载的jar包到xx目录,直入xx目录&lt;/li&gt;
 &lt;li&gt;javac TestAlgs4.java&lt;/li&gt;
 &lt;li&gt;java TestAlgs4&lt;/li&gt;
 &lt;li&gt;看到下面的界面就代表成功
-&lt;img alt="Snipaste_2018-08-02_10-34-17.png" src="/Users/pd1/Documents/blog/content/static/Snipaste_2018-08-02_10-34-17.png"/&gt;&lt;/li&gt;
+&lt;img alt="" src="../static/Snipaste_2018-08-02_10-34-17.png"/&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="f0f16a6fdefb115292dde549f250ba6e"&gt;参考网站&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://algs4.cs.princeton.edu/code/"&gt;!https://algs4.cs.princeton.edu/code/&lt;/a&gt;,滚动到下面
+&lt;p&gt;&lt;a href="https://algs4.cs.princeton.edu/code/"&gt;https://algs4.cs.princeton.edu/code/&lt;/a&gt;,滚动到下面
 &lt;code&gt;Installing the textbook libraries.&lt;/code&gt;有配置介绍。&lt;/p&gt;
 &lt;h2 id="290612199861c31d1036b185b4e69b75"&gt;Summary&lt;/h2&gt;
 &lt;p&gt;总是想着看些东西看提高自己，好多次半途而废。希望这次能坚持下来，认真读完一本书。&lt;/p&gt;</content><category term="算法学习"></category></entry><entry><title>Codepush React native iOS</title><link href="http://99d.in/bnote/codePush.html" rel="alternate"></link><published>2017-12-20T19:00:00+08:00</published><updated>2017-12-20T19:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-12-20:/bnote/codePush.html</id><summary type="html">记录下Codepush常用的命令行。</summary><content type="html">&lt;p&gt;记录下Codepush常用的命令行。省得每次去翻官方文档。&lt;/p&gt;
