@@ -8,7 +8,10 @@
 &lt;ul&gt;
 &lt;li&gt;vi ~/.bashrc&lt;/li&gt;
 &lt;li&gt;export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home"&lt;/li&gt;
-&lt;li&gt;CLASSPATH="$JAVA_HOME/lib"&lt;/li&gt;
+&lt;li&gt;CLASSPATH="$JAVA_HOME/lib:."&lt;blockquote&gt;
+&lt;p&gt;多个路径用&lt;code&gt;:&lt;/code&gt;格开, &lt;code&gt;.&lt;/code&gt;代表当前目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="db6e73aa347576c5b4e2918658dca69e"&gt;导入jar包&lt;/h2&gt;
 &lt;ul&gt;
