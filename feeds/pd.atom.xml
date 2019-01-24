@@ -1,5 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it - pd</title><link href="http://99d.in/" rel="alternate"></link><link href="http://99d.in/feeds/pd.atom.xml" rel="self"></link><id>http://99d.in/</id><updated>2017-12-20T19:00:00+08:00</updated><entry><title>Codepush React native iOS</title><link href="http://99d.in/bnote/codePush.html" rel="alternate"></link><published>2017-12-20T19:00:00+08:00</published><updated>2017-12-20T19:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-12-20:/bnote/codePush.html</id><summary type="html">记录下Codepush常用的命令行。</summary><content type="html">&lt;p&gt;记录下Codepush常用的命令行。省得每次去翻官方文档。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it - pd</title><link href="https://99d.in/" rel="alternate"></link><link href="https://99d.in/feeds/pd.atom.xml" rel="self"></link><id>https://99d.in/</id><updated>2018-12-06T17:03:29+08:00</updated><entry><title>React Native with TypeScript</title><link href="https://99d.in/bnote/React%20Native%20with%20TypeScript.html" rel="alternate"></link><published>2018-12-06T17:03:29+08:00</published><updated>2018-12-06T17:03:29+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2018-12-06:/bnote/React Native with TypeScript.html</id><summary type="html">TypeScript搭建React Native开发环境</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;TypeScript&lt;/code&gt;搭建&lt;code&gt;React Native&lt;/code&gt;开发环境&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="b2371a4a9eef9f8bc1223be13f7f2bc7"&gt;配置React Native&lt;/h2&gt;
+&lt;h3 id="ad8567705b3d7280ef668dfd543a2f14"&gt;安装 React Native&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;brew install node 
+brew install watchman
+npm install react-native-cli -g
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="2ffb25bef0d75b5232a72ab73fb8095c"&gt;初始化工程&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;react-native init App&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="5d691bb6bbd60b9d11acfcc11bc268f4"&gt;配置 React Native CLI&lt;/h3&gt;
+&lt;p&gt;创建 &lt;code&gt;rn-cli.config.js&lt;/code&gt;文件，填入以下内容。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;module&lt;/span&gt;.&lt;span class="n"&gt;exports&lt;/span&gt; = {
+  &lt;span class="n"&gt;getTransformModulePath&lt;/span&gt;() {
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;require&lt;/span&gt;.&lt;span class="n"&gt;resolve&lt;/span&gt;(&lt;span class="s"&gt;'react-native-typescript-transformer'&lt;/span&gt;);
+  },
+  &lt;span class="n"&gt;getSourceExts&lt;/span&gt;() {
+    &lt;span class="k"&gt;return&lt;/span&gt; [&lt;span class="s"&gt;'ts'&lt;/span&gt;, &lt;span class="s"&gt;'tsx'&lt;/span&gt;, &lt;span class="s"&gt;'js'&lt;/span&gt;, &lt;span class="s"&gt;'jsx'&lt;/span&gt;];
+  }
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="7dee264f2d5e4d394d865f36bca016a8"&gt;配置package.json&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
+  "scripts": {
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "lint": "tslint -p \".\" -t stylish"
+  }
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;运行&lt;code&gt;npm run ios&lt;/code&gt;  可以在iOS模拟模拟器调试。&lt;/p&gt;
+&lt;h2 id="5d9f29885f09c57ae1435b5afbc8b1d5"&gt;配置 TypeScript&lt;/h2&gt;
+&lt;h3 id="21d8af5b4419baa0d0e5a45435fda06e"&gt;添加tslint依赖的 npm包&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm install typescript tslint tslint-react tslint-eslint-rules react-native-typescript-transformer tslint-react-recommended --save-dev
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="70463367463e4497ce6fe7fb28f75438"&gt;配置 TSLint&lt;/h3&gt;
+&lt;p&gt;创建 tslint.json 文件，添加tslint规则。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
+  "extends": [
+    "tslint-react-recommended"
+  ],
+  "rules": {
+    "ordered-imports": [
+      true
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-single",
+      "avoid-escape"
+    ],
+    "semicolon": [
+      true,
+      "never"
+    ],
+    "member-access": [
+      false
+    ],
+    "member-ordering": [
+      false
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ],
+    "no-empty": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "no-constant-condition": false,
+    "triple-equals": [
+      true,
+      "allow-undefined-check"
+    ],
+    "ter-indent": [
+      true,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-duplicate-imports": false,
+    "jsx-alignment": true,
+    "jsx-no-bind": true,
+    "jsx-no-lambda": true,
+    "max-classes-per-file": [
+      false
+    ]
+  }
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="a27918e0d99003501f8cf32d436e2903"&gt;配置tsconfig.json&lt;/h3&gt;
+&lt;p&gt;新建 tsconfig.json，添加以下内容&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "outDir": "./dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "noUnusedLocals": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="252aae1a4e113fdf6f01d996f0c56b69"&gt;Add typings&lt;/h3&gt;
+&lt;p&gt;npm install @types/react @types/react-native --save-dev&lt;/p&gt;
+&lt;h2 id="4029a79aed5cbeda0843006ff4ab2b96"&gt;Refactor Code to TypeScript&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;React&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;'react'&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;Platform&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;StyleSheet&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;View&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;'react-native'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;const&lt;/span&gt; &lt;span class="n"&gt;instructions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Platform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="n"&gt;ios&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'Press Cmd+R to reload,&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="s1"&gt;'Cmd+D or shake for dev menu'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="n"&gt;android&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'Double tap R on your keyboard to reload,&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="s1"&gt;'Shake or press menu button for dev menu'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;Props&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;State&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;App&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;React&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Component&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Props&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;State&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;View&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;styles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;container&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;styles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;welcome&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class="n"&gt;Welcome&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;React&lt;/span&gt; &lt;span class="n"&gt;Native&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;styles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;instructions&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;started&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;edit&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;styles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;instructions&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;instructions&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;View&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;const&lt;/span&gt; &lt;span class="n"&gt;styles&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;StyleSheet&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="n"&gt;container&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;flex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;justifyContent&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'center'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;alignItems&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'center'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;backgroundColor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'#F5FCFF'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="n"&gt;welcome&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;fontSize&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;textAlign&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'center'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;margin&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="n"&gt;instructions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;textAlign&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'center'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'#333333'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;marginBottom&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="sb"&gt;``&lt;/span&gt;
+
+&lt;span class="c1"&gt;## Update index.js&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;import { AppRegistry } from 'react-native';
+import { App } from './src/app';&lt;/p&gt;
+&lt;p&gt;AppRegistry.registerComponent('Todo', () =&amp;gt; App);&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## Run
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="0f64d0456878c73cbec1ccea842a6f14"&gt;fcp&lt;/h3&gt;
+&lt;p&gt;npm start&lt;/p&gt;
+&lt;h3 id="d9309e57ba770f289bc8e1ccf2cb8efd"&gt;from another terminal&lt;/h3&gt;
+&lt;p&gt;npm run ios        # 在iOS模拟器运行
+npm run android    # 在安桌模拟器运行或者连接真机运行
+```&lt;/p&gt;
+&lt;h2 id="31105be55ce3527acea30687fec6c655"&gt;Setup Test Suit&lt;/h2&gt;
+&lt;p&gt;npm i jest @types/jest ts-jest react-test-renderer @types/react-test-renderer --save-dev&lt;/p&gt;
+&lt;p&gt;Create src/app.test.tsx:&lt;/p&gt;
+&lt;p&gt;import 'react-native'
+import renderer from 'react-test-renderer'
+import { App } from './app'
+import React from 'react'&lt;/p&gt;
+&lt;p&gt;test('renders correctly', () =&amp;gt; {
+  const tree = renderer.create(
+    &lt;app&gt;&lt;/app&gt;
+  )
+  expect(tree).toBeDefined()
+})&lt;/p&gt;
+&lt;p&gt;Update package.json with the following jest configuration:&lt;/p&gt;
+&lt;p&gt;{
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/src/.*\.(test|spec))\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}&lt;/p&gt;
+&lt;p&gt;npm test&lt;/p&gt;</content><category term="Tags"></category></entry><entry><title>Codepush React native iOS</title><link href="https://99d.in/bnote/codePush.html" rel="alternate"></link><published>2017-12-20T19:00:00+08:00</published><updated>2017-12-20T19:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-12-20:/bnote/codePush.html</id><summary type="html">记录下Codepush常用的命令行。</summary><content type="html">&lt;p&gt;记录下Codepush常用的命令行。省得每次去翻官方文档。&lt;/p&gt;
 &lt;h2 id="c04495b8ddd6ab4ca28152219ada6dae"&gt;登录appcenter&lt;/h2&gt;
 &lt;p&gt;appcenter login&lt;/p&gt;
 &lt;h2 id="ac863f346e618f9a959b5c95d5d28941"&gt;App&lt;/h2&gt;
@@ -30,7 +247,7 @@ appcenter codepush deployment rename -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&a
 &lt;h3 id="d78a572f68d533aa1da980ffc5d774b5"&gt;查看发布历史记录&lt;/h3&gt;
 &lt;p&gt;appcenter codepush deployment history -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;deploymentName&amp;gt;&lt;/code&gt; &lt;/p&gt;
 &lt;h3 id="a740edf983f81230d056e125248577fc"&gt;清除所有更新 不可逆操作  已经发布线上操作要谨慎&lt;/h3&gt;
-&lt;p&gt;appcenter codepush deployment clear -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;/p&gt;</content><category term="Codepush"></category></entry><entry><title>scroll-label-autolayout</title><link href="http://99d.in/acode/scroll-label-autolayout.html" rel="alternate"></link><published>2017-08-10T09:43:51+08:00</published><updated>2017-08-10T09:43:51+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-08-10:/acode/scroll-label-autolayout.html</id><summary type="html">可以滚动的UILabel。</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;appcenter codepush deployment clear -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&amp;lt;appName&amp;gt; &amp;lt;deploymentName&amp;gt;&lt;/code&gt;&lt;/p&gt;</content><category term="Codepush"></category></entry><entry><title>scroll-label-autolayout</title><link href="https://99d.in/acode/scroll-label-autolayout.html" rel="alternate"></link><published>2017-08-10T09:43:51+08:00</published><updated>2017-08-10T09:43:51+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-08-10:/acode/scroll-label-autolayout.html</id><summary type="html">可以滚动的UILabel。</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;可以滚动的UILabel。不需要写一行代码。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="e6cefb85dc60e5c9c0d7d804f85f6572"&gt;需求&lt;/h2&gt;
@@ -69,7 +286,7 @@ label.snp.makeConstraints{ (make) in
 &lt;li&gt;label 上左右约束为0，Lines设置为0&lt;/li&gt;
 &lt;li&gt;设置contentView和label Equal Heights.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="" src="../static/scrollLabel.png"/&gt;&lt;/p&gt;</content><category term="scrollLabel"></category></entry><entry><title>Xcode8-Plugin-invalid</title><link href="http://99d.in/acode/Xcode8-Plugin-invalid.html" rel="alternate"></link><published>2016-09-19T20:33:00+08:00</published><updated>2016-09-19T20:33:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-09-19:/acode/Xcode8-Plugin-invalid.html</id><summary type="html">让Xcode8插件继续工作</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;img alt="" src="../static/scrollLabel.png"/&gt;&lt;/p&gt;</content><category term="scrollLabel"></category></entry><entry><title>Xcode8-Plugin-invalid</title><link href="https://99d.in/acode/Xcode8-Plugin-invalid.html" rel="alternate"></link><published>2016-09-19T20:33:00+08:00</published><updated>2016-09-19T20:33:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-09-19:/acode/Xcode8-Plugin-invalid.html</id><summary type="html">让Xcode8插件继续工作</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;让Xcode8插件继续工作&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="968aa9a1b558d0206eab6aeff69d9dd2"&gt;起因&lt;/h2&gt;
@@ -127,7 +344,7 @@ label.snp.makeConstraints{ (make) in
 &lt;p&gt;最好别用重签名的Xcode打包上传到AppStore&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="d1f972b30c618743b603afa37d79464f"&gt;参考文档&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/XVimProject/XVim"&gt;XVim&lt;/a&gt;&lt;/p&gt;</content><category term="Xcode8 Plugin"></category></entry><entry><title>github一台机器多帐号</title><link href="http://99d.in/acode/github%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%A4%9A%E5%B8%90%E5%8F%B7.html" rel="alternate"></link><published>2016-09-02T18:00:00+08:00</published><updated>2016-09-02T18:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-09-02:/acode/github一台机器多帐号.html</id><summary type="html">同一台机器使用两个github帐号从终端推送代码到不同的仓库。</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/XVimProject/XVim"&gt;XVim&lt;/a&gt;&lt;/p&gt;</content><category term="Xcode8 Plugin"></category></entry><entry><title>github一台机器多帐号</title><link href="https://99d.in/acode/github%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%A4%9A%E5%B8%90%E5%8F%B7.html" rel="alternate"></link><published>2016-09-02T18:00:00+08:00</published><updated>2016-09-02T18:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-09-02:/acode/github一台机器多帐号.html</id><summary type="html">同一台机器使用两个github帐号从终端推送代码到不同的仓库。</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;同一台机器使用两个github帐号从终端推送代码到不同的仓库。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="33cb536a07aaab662456a946c6f0ef34"&gt;配置sshkey&lt;/h2&gt;
@@ -182,7 +399,7 @@ git@new.github.com:user2/mutiple_sshkey.git&lt;/code&gt;&lt;/p&gt;
 Hi user2! You've successfully authenticated, but GitHub does not provide shell access.&lt;/p&gt;
 &lt;p&gt;接下就可以进行&lt;code&gt;commit&lt;/code&gt; &lt;code&gt;push&lt;/code&gt;等操作了。&lt;/p&gt;
 &lt;h2 id="d1f972b30c618743b603afa37d79464f"&gt;参考文档&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://gist.github.com/jexchan/2351996"&gt;gist&lt;/a&gt;&lt;/p&gt;</content><category term="mutiple github account"></category></entry><entry><title>git-notes</title><link href="http://99d.in/bnote/git-notes.html" rel="alternate"></link><published>2016-07-27T09:11:00+08:00</published><updated>2016-07-27T09:11:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-07-27:/bnote/git-notes.html</id><summary type="html">之前学习git的时候记录的笔记</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://gist.github.com/jexchan/2351996"&gt;gist&lt;/a&gt;&lt;/p&gt;</content><category term="mutiple github account"></category></entry><entry><title>git-notes</title><link href="https://99d.in/bnote/git-notes.html" rel="alternate"></link><published>2016-07-27T09:11:00+08:00</published><updated>2016-07-27T09:11:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-07-27:/bnote/git-notes.html</id><summary type="html">之前学习git的时候记录的笔记</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;之前学习git的时候记录的笔记&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000"&gt;Git教程&lt;/a&gt;&lt;/p&gt;
@@ -228,7 +445,7 @@ Hi user2! You've successfully authenticated, but GitHub does not provide shell a
 &lt;ul&gt;
 &lt;li&gt;git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset' --abbrev-commit"&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/niIaT29.png"/&gt;&lt;/p&gt;</content><category term="git"></category></entry><entry><title>iOS微信多图分享到享到朋友圈</title><link href="http://99d.in/acode/iOS%E5%BE%AE%E4%BF%A1%E5%A4%9A%E5%9B%BE%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%AB%E5%88%B0%E6%9C%8B%E5%8F%8B%E5%9C%88.html" rel="alternate"></link><published>2016-05-13T15:00:00+08:00</published><updated>2016-05-13T15:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-05-13:/acode/iOS微信多图分享到享到朋友圈.html</id><summary type="html">iOS系统分享多张图片到微信朋友圈</summary><content type="html">&lt;p&gt;iOS系统分享多张图片到微信朋友圈&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/niIaT29.png"/&gt;&lt;/p&gt;</content><category term="git"></category></entry><entry><title>iOS微信多图分享到享到朋友圈</title><link href="https://99d.in/acode/iOS%E5%BE%AE%E4%BF%A1%E5%A4%9A%E5%9B%BE%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%AB%E5%88%B0%E6%9C%8B%E5%8F%8B%E5%9C%88.html" rel="alternate"></link><published>2016-05-13T15:00:00+08:00</published><updated>2016-05-13T15:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2016-05-13:/acode/iOS微信多图分享到享到朋友圈.html</id><summary type="html">iOS系统分享多张图片到微信朋友圈</summary><content type="html">&lt;p&gt;iOS系统分享多张图片到微信朋友圈&lt;/p&gt;
 &lt;h2 id="b3a139f3f6e01f97d2a9848454a93f19"&gt;微信分享多张图片到微信朋圈&lt;/h2&gt;
 &lt;p&gt;最近有个需求，要分享多张图片到微信朋友圈。导入微信SDK,看了下微信的接口,各种限制，根本没办法搞。BOSS一定要实现，没办法只能折腾了。
 最后通过系统级别的分享&lt;code&gt;UIActivityViewController&lt;/code&gt;来实现了这个功能。&lt;/p&gt;
@@ -262,7 +479,7 @@ Hi user2! You've successfully authenticated, but GitHub does not provide shell a
 &lt;p&gt;没办法添加文字。暂时能通过复制粘贴的方式实现。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在&lt;code&gt;Swift&lt;/code&gt;出3.0前又重新体验了下。比&lt;code&gt;Objective C&lt;/code&gt;写起来要爽。&lt;code&gt;Swift&lt;/code&gt;从精通到重新入门.😬😰&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="微信多图分享"></category></entry><entry><title>Swift-notes</title><link href="http://99d.in/bnote/Swift-notes.html" rel="alternate"></link><published>2015-12-25T10:20:00+08:00</published><updated>2015-12-25T10:20:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-12-25:/bnote/Swift-notes.html</id><summary type="html">Swift才出来的时候看过一遍,忘记了。</summary><content type="html">&lt;blockquote&gt;
+&lt;/blockquote&gt;</content><category term="微信多图分享"></category></entry><entry><title>Swift-notes</title><link href="https://99d.in/bnote/Swift-notes.html" rel="alternate"></link><published>2015-12-25T10:20:00+08:00</published><updated>2015-12-25T10:20:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-12-25:/bnote/Swift-notes.html</id><summary type="html">Swift才出来的时候看过一遍,忘记了。</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;Swift才出来的时候看过一遍,忘记了。记下笔记加深印象。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id="ddc7d28b7b108cdca9ee7832f7314422"&gt;变量&lt;/h1&gt;
@@ -440,7 +657,7 @@ print(s)
 &lt;p&gt;== 前缀/后缀相等&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var a_ = "字符串1",b = "字符串2"
 print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Swift"></category></entry><entry><title>Flask_notes_01</title><link href="http://99d.in/bnote/Flask_notes_01.html" rel="alternate"></link><published>2015-10-25T11:30:00+08:00</published><updated>2015-10-25T11:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-10-25:/bnote/Flask_notes_01.html</id><summary type="html">Flask学习笔记之Flask-Bootstrap Flask-Moment</summary><content type="html">&lt;p&gt;Flask学习笔记之Flask-Bootstrap Flask-Moment&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Swift"></category></entry><entry><title>Flask_notes_01</title><link href="https://99d.in/bnote/Flask_notes_01.html" rel="alternate"></link><published>2015-10-25T11:30:00+08:00</published><updated>2015-10-25T11:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-10-25:/bnote/Flask_notes_01.html</id><summary type="html">Flask学习笔记之Flask-Bootstrap Flask-Moment</summary><content type="html">&lt;p&gt;Flask学习笔记之Flask-Bootstrap Flask-Moment&lt;/p&gt;
 &lt;h1 id="44b2ec7b98f5190b3617c573c39e7488"&gt;Flask-Bootstrap&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;pip install Flask-Bootstrap&lt;/code&gt; 默认安装的是最新版本。也可以在安装的时候自定义版本。&lt;/p&gt;
 &lt;h2 id="44731d72f069d71202a56c99d85ffaa8"&gt;scripts styles&lt;/h2&gt;
@@ -463,7 +680,7 @@ print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
 &lt;span class="x"&gt;&amp;lt;!--设置默认地区--&amp;gt;&lt;/span&gt;
 &lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;moment.lang&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"zh-CN"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Bootstrap Moment"></category></entry><entry><title>HHKB-Function-Key-With-Karabiner</title><link href="http://99d.in/dlife/HHKB-Function-Key-With-Karabiner.html" rel="alternate"></link><published>2015-09-14T10:37:00+08:00</published><updated>2015-09-14T10:37:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-09-14:/dlife/HHKB-Function-Key-With-Karabiner.html</id><summary type="html">Karabiner 给HHKB添加功能键F0~F12</summary><content type="html">&lt;p&gt;Karabiner 给HHKB添加功能键F0~F12&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Bootstrap Moment"></category></entry><entry><title>HHKB-Function-Key-With-Karabiner</title><link href="https://99d.in/dlife/HHKB-Function-Key-With-Karabiner.html" rel="alternate"></link><published>2015-09-14T10:37:00+08:00</published><updated>2015-09-14T10:37:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-09-14:/dlife/HHKB-Function-Key-With-Karabiner.html</id><summary type="html">Karabiner 给HHKB添加功能键F0~F12</summary><content type="html">&lt;p&gt;Karabiner 给HHKB添加功能键F0~F12&lt;/p&gt;
 &lt;h2 id="34c847b65e809d462fadf06a2488c1ab"&gt;Karabiner&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://pqrs.org/osx/karabiner/"&gt;Karabiner&lt;/a&gt;这个键盘映射工具很强大。看了下&lt;code&gt;Change Key&lt;/code&gt;选项里,只有&lt;code&gt;Shift+Num&lt;/code&gt;和&lt;code&gt;Command+Num&lt;/code&gt;映射&lt;code&gt;Fn&lt;/code&gt;,&lt;code&gt;Shift&lt;/code&gt;和&lt;code&gt;Command&lt;/code&gt;组合数字快捷键平时经常用到,只能另辟蹊径了,这时候很容易想到&lt;code&gt;Option+Num&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id="49b21ad0d38942f635877e7bbc5d7a1e"&gt;Solution&lt;/h2&gt;
@@ -500,7 +717,7 @@ print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
 &lt;li&gt;&lt;code&gt;R&lt;/code&gt; 表示右边,&lt;code&gt;L&lt;/code&gt;表示左边,比如OPTION_R =&amp;gt; 左边的Option&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;MINUS&lt;/code&gt;=&amp;gt;&lt;code&gt;-&lt;/code&gt; &lt;code&gt;EQUAL&lt;/code&gt; =&amp;gt;&lt;code&gt;=&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;更全的就看&lt;a href="https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data"&gt;KeyCode.data&lt;/a&gt;了&lt;/li&gt;
-&lt;/ul&gt;</content><category term="HHKB"></category><category term="Karabiner"></category></entry><entry><title>iOS-notes</title><link href="http://99d.in/bnote/iOS-notes.html" rel="alternate"></link><published>2015-08-29T14:58:00+08:00</published><updated>2015-08-29T14:58:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-29:/bnote/iOS-notes.html</id><summary type="html">很多来自stackoverflow</summary><content type="html">&lt;blockquote&gt;
+&lt;/ul&gt;</content><category term="HHKB"></category><category term="Karabiner"></category></entry><entry><title>iOS-notes</title><link href="https://99d.in/bnote/iOS-notes.html" rel="alternate"></link><published>2015-08-29T14:58:00+08:00</published><updated>2015-08-29T14:58:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-29:/bnote/iOS-notes.html</id><summary type="html">很多来自stackoverflow</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;很多来自&lt;a href="http://stackoverflow.com"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
@@ -593,7 +810,7 @@ notification.soundName = "sound.bundle/" + xxx.wav
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;swift&lt;/code&gt; &lt;code&gt;print&lt;/code&gt;在&lt;code&gt;Xcode&lt;/code&gt;-&amp;gt;&lt;code&gt;Devices&lt;/code&gt;-&amp;gt; 'xxx的iPhone8' 不会打印日志, &lt;code&gt;NSLog&lt;/code&gt;会打印。&lt;/li&gt;
-&lt;/ul&gt;</content><category term="iOS"></category></entry><entry><title>macOS app</title><link href="http://99d.in/dlife/%E6%88%91%E7%9A%84macOS%20app.html" rel="alternate"></link><published>2015-08-25T20:22:00+08:00</published><updated>2015-08-25T20:22:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-25:/dlife/我的macOS app.html</id><summary type="html">Alfred 3
+&lt;/ul&gt;</content><category term="iOS"></category></entry><entry><title>macOS app</title><link href="https://99d.in/dlife/%E6%88%91%E7%9A%84macOS%20app.html" rel="alternate"></link><published>2015-08-25T20:22:00+08:00</published><updated>2015-08-25T20:22:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-25:/dlife/我的macOS app.html</id><summary type="html">Alfred 3
 1Password
 PDF Export
 Fantastical 
@@ -639,12 +856,12 @@ AriServer&lt;br/&gt;
 ColorPikcer&lt;br/&gt;
 The Unarchiver Browser &lt;/p&gt;
 &lt;h1 id="0eda7c38afb2bff0a16ee496cc03a5e8"&gt;播放器&lt;/h1&gt;
-&lt;p&gt;mpv  &lt;/p&gt;</content><category term="Mac"></category></entry><entry><title>poker2_mstand</title><link href="http://99d.in/dlife/poker2_mstand.html" rel="alternate"></link><published>2015-07-05T14:30:00+08:00</published><updated>2015-07-05T14:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-05:/dlife/poker2_mstand.html</id><summary type="html">晒晒我的装备</summary><content type="html">&lt;p&gt;晒晒我的装备&lt;/p&gt;
+&lt;p&gt;mpv  &lt;/p&gt;</content><category term="Mac"></category></entry><entry><title>poker2_mstand</title><link href="https://99d.in/dlife/poker2_mstand.html" rel="alternate"></link><published>2015-07-05T14:30:00+08:00</published><updated>2015-07-05T14:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-05:/dlife/poker2_mstand.html</id><summary type="html">晒晒我的装备</summary><content type="html">&lt;p&gt;晒晒我的装备&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="../static/poker2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;还是用回HHKB吧,两个键盘之间切换实在适应不了。⌨拍照技术太差了😂
 &lt;img alt="HHKB" src="../static/hhkb.png"/&gt;&lt;/p&gt;
 &lt;p&gt;期待了好久的彩色键帽
-&lt;img alt="color_hhkb" src="../static/color_hhkb.png"/&gt;&lt;/p&gt;</content><category term="poker2"></category><category term="HHKB"></category></entry><entry><title>link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7</title><link href="http://99d.in/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html" rel="alternate"></link><published>2015-06-08T09:50:00+08:00</published><updated>2015-06-08T09:50:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-06-08:/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html</id><summary type="html">framework not found Metal for architecture armv7</summary><content type="html">&lt;p&gt;framework not found Metal for architecture armv7&lt;/p&gt;
+&lt;img alt="color_hhkb" src="../static/color_hhkb.png"/&gt;&lt;/p&gt;</content><category term="poker2"></category><category term="HHKB"></category></entry><entry><title>link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7</title><link href="https://99d.in/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html" rel="alternate"></link><published>2015-06-08T09:50:00+08:00</published><updated>2015-06-08T09:50:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-06-08:/acode/link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7.html</id><summary type="html">framework not found Metal for architecture armv7</summary><content type="html">&lt;p&gt;framework not found Metal for architecture armv7&lt;/p&gt;
 &lt;h4 id="b5d1f808293deb9322b5b96519730ac2"&gt;The scene&lt;/h4&gt;
 &lt;p&gt;以下条件Xcode才会报这个错误: &lt;/p&gt;
 &lt;ul&gt;
@@ -687,7 +904,7 @@ Load command 16
 &lt;p&gt;1&amp;gt;. 直接用Xcode5来生成&lt;code&gt;lib&lt;/code&gt;和&lt;code&gt;framework&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;2&amp;gt;. Xcode6 &lt;code&gt;Build Setting&lt;/code&gt;--&amp;gt;&lt;code&gt;Link Frameworks Automatically&lt;/code&gt;设置为NO,设置这个之后,Xcode 可能会报更多的错误,因为现在不会自动&lt;code&gt;link&lt;/code&gt;框架了,根据报错添加对应的&lt;code&gt;framework&lt;/code&gt;即可.&lt;/p&gt;
 &lt;h3 id="5da618e8e4b89c66fe86e32cdafde142"&gt;From&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7"&gt;framework not found Metal for architecture armv7&lt;/a&gt;&lt;/p&gt;</content><category term="Metal armv7"></category></entry><entry><title>sketch_01</title><link href="http://99d.in/edesign/sketch_01.html" rel="alternate"></link><published>2015-01-10T23:10:00+08:00</published><updated>2015-01-10T23:10:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-01-10:/edesign/sketch_01.html</id><summary type="html">思客抱团学习sketch</summary><content type="html">&lt;p&gt;思客抱团学习sketch&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.appsee.com/blog/dev/xcode-new-link-frameworks-automatically-fix-framework-not-found-metal-for-architecture-armv7"&gt;framework not found Metal for architecture armv7&lt;/a&gt;&lt;/p&gt;</content><category term="Metal armv7"></category></entry><entry><title>sketch_01</title><link href="https://99d.in/edesign/sketch_01.html" rel="alternate"></link><published>2015-01-10T23:10:00+08:00</published><updated>2015-01-10T23:10:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-01-10:/edesign/sketch_01.html</id><summary type="html">思客抱团学习sketch</summary><content type="html">&lt;p&gt;思客抱团学习sketch&lt;/p&gt;
 &lt;h3 id="eb8fb008f8af47db48b10936b671611f"&gt;&lt;a href="http://medialoot.com/blog/how-to-create-a-website-header-design-using-bohemian-coding-sketch/"&gt;主页头条设计&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="img" src="../static/starer_sketch01.png"/&gt;&lt;/p&gt;
 &lt;h3 id="b3c3ad9d7d738a6b0eb767186a4cc4ef"&gt;&lt;a href="http://webdesign.tutsplus.com/tutorials/sketch-for-beginners-design-a-login-form-interface--cms-21534"&gt;登陆页面设计&lt;/a&gt;&lt;/h3&gt;
