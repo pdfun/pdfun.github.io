@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it - pd</title><link href="https://99d.in/" rel="alternate"></link><link href="https://99d.in/feeds/pd.atom.xml" rel="self"></link><id>https://99d.in/</id><updated>2017-12-20T19:00:00+08:00</updated><entry><title>Codepush React native iOS</title><link href="https://99d.in/bnote/codePush.html" rel="alternate"></link><published>2017-12-20T19:00:00+08:00</published><updated>2017-12-20T19:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-12-20:/bnote/codePush.html</id><summary type="html">记录下Codepush常用的命令行。</summary><content type="html">&lt;p&gt;记录下Codepush常用的命令行。省得每次去翻官方文档。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>just do it - pd</title><link href="https://99d.in/" rel="alternate"></link><link href="https://99d.in/feeds/pd.atom.xml" rel="self"></link><id>https://99d.in/</id><updated>2020-03-29T21:01:00+08:00</updated><entry><title>做我的猫你过的好不好</title><link href="https://99d.in/dlife/cat.html" rel="alternate"></link><published>2020-03-29T21:01:00+08:00</published><updated>2020-03-29T21:01:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2020-03-29:/dlife/cat.html</id><summary type="html">2018花了5000元学费买了一只猫</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;2018花了5000元学费买了一只猫&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="a3542999f583f692a7b7224ff658c91b"&gt;喵名&lt;/h2&gt;
+&lt;p&gt;因有一张和饼一样大的脸，故起名叫大饼。&lt;/p&gt;
+&lt;h2 id="c2d82f9a6415c2fe824392c92ae0aef2"&gt;喵生&lt;/h2&gt;
+&lt;p&gt;贴几张照片记录下猫生。&lt;/p&gt;
+&lt;p&gt;还不到一岁的时候,抬起头的样子真可爱。
+&lt;img alt="" src="../static/small.png"/&gt;&lt;/p&gt;
+&lt;p&gt;在光前村的时候最喜欢的睡觉姿势。
+&lt;img alt="" src="../static/sleep.png"/&gt;&lt;/p&gt;
+&lt;p&gt;不管是谁只要撸你，你就会顺势躺下,这个时候已经看不出来你是一个女孩子了。
+&lt;img alt="" src="../static/fat.png"/&gt;&lt;/p&gt;</content><category term="Cat"></category></entry><entry><title>Codepush React native iOS</title><link href="https://99d.in/bnote/codePush.html" rel="alternate"></link><published>2017-12-20T19:00:00+08:00</published><updated>2017-12-20T19:00:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2017-12-20:/bnote/codePush.html</id><summary type="html">记录下Codepush常用的命令行。</summary><content type="html">&lt;p&gt;记录下Codepush常用的命令行。省得每次去翻官方文档。&lt;/p&gt;
 &lt;h2 id="c04495b8ddd6ab4ca28152219ada6dae"&gt;登录appcenter&lt;/h2&gt;
 &lt;p&gt;appcenter login&lt;/p&gt;
 &lt;h2 id="ac863f346e618f9a959b5c95d5d28941"&gt;App&lt;/h2&gt;
@@ -35,16 +47,16 @@ appcenter codepush deployment rename -a &lt;code&gt;&amp;lt;ownerName&amp;gt;/&a
 &lt;/blockquote&gt;
 &lt;h2 id="e6cefb85dc60e5c9c0d7d804f85f6572"&gt;需求&lt;/h2&gt;
 &lt;p&gt;最开始设计图是这样的,居中显示一段文字,颜色xx,字体大小xx。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;let label: UILabel = UILabel()
-label.text = "bababal..."
-label.font = UIFont.systemFontsize(1.0)
-label.textalign = .center
-label.snp.makeConstraints{ (make) in
-    make.left.top.right.equal(0)
-}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;let label: UILabel = UILabel()&lt;/span&gt;
+&lt;span class="err"&gt;label.text = "bababal..."&lt;/span&gt;
+&lt;span class="err"&gt;label.font = UIFont.systemFontsize(1.0)&lt;/span&gt;
+&lt;span class="err"&gt;label.textalign = .center&lt;/span&gt;
+&lt;span class="err"&gt;label.snp.makeConstraints{ (make) in&lt;/span&gt;
+&lt;span class="err"&gt;    make.left.top.right.equal(0)&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;几行代码搞定。后来需求说文字可能有点多要换行。于是再加一行代码&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;label.numberoflines = 0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;label.numberoflines = 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;后来又说文字可能更多，更多的文字显示 ...
 再后来又说...的文字要显示出来，超出固定高度的要滚动。&lt;/p&gt;
@@ -58,10 +70,10 @@ label.snp.makeConstraints{ (make) in
 需要添加各种判断和限制才能达到想要的效果。
 于是便考虑用&lt;code&gt;UIScorllView&lt;/code&gt; + &lt;code&gt;UILabel&lt;/code&gt;来实现。&lt;/p&gt;
 &lt;h2 id="de842a6c80128bf1587c7cd451914e7a"&gt;解决方案&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;└── View
-    └── scrollView
-        └── contentView
-            └── label
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;└── View&lt;/span&gt;
+&lt;span class="err"&gt;    └── scrollView&lt;/span&gt;
+&lt;span class="err"&gt;        └── contentView&lt;/span&gt;
+&lt;span class="err"&gt;            └── label&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;scrollView  设置上下左右约束&lt;/li&gt;
@@ -87,7 +99,7 @@ label.snp.makeConstraints{ (make) in
 &lt;ul&gt;
 &lt;li&gt;用创建的&lt;code&gt;XcodeSigner&lt;/code&gt;证书给&lt;code&gt;Xcode&lt;/code&gt;重新签名&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo codesign -f -s XcodeSigner /Applications/Xcode.app 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;sudo codesign -f -s XcodeSigner /Applications/Xcode.app &lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;git clone https://github.com/XVimProject/XVim/&lt;/li&gt;
@@ -95,7 +107,7 @@ label.snp.makeConstraints{ (make) in
 &lt;li&gt;make   &lt;/li&gt;
 &lt;li&gt;最后运行下面的命令&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add `defaults read /Applications/Xcode.app/Contents/Info.plist DVTPlugInCompatibilityUUID`&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;重启Xcode即可&lt;/li&gt;
@@ -154,17 +166,17 @@ user1一般是default user&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cd ~/.ssh/&lt;/code&gt;&lt;br/&gt;
 &lt;code&gt;vi config&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;输入以下内容&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#默认的sshky可以不用配置
-Host github.com #Host相当于别名
-    HostName github.com #HostName填写github.com
-    PreferredAuthentications publickey 
-    IdentityFile ~/.ssh/id_rsa #私钥的路径
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="err"&gt;默认的&lt;/span&gt;&lt;span class="n"&gt;sshky&lt;/span&gt;&lt;span class="err"&gt;可以不用配置&lt;/span&gt;
+&lt;span class="k"&gt;Host&lt;/span&gt; &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="k"&gt;Host&lt;/span&gt;&lt;span class="err"&gt;相当于别名&lt;/span&gt;
+    &lt;span class="n"&gt;HostName&lt;/span&gt; &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="n"&gt;HostName&lt;/span&gt;&lt;span class="err"&gt;填写&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+    &lt;span class="n"&gt;PreferredAuthentications&lt;/span&gt; &lt;span class="n"&gt;publickey&lt;/span&gt; 
+    &lt;span class="n"&gt;IdentityFile&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="err"&gt;私钥的路径&lt;/span&gt;
 
-# 另外一个sshkey
-Host new.github.com #记住这个Host后面需要用到
-    HostName github.com
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_rsa_user2
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="err"&gt;另外一个&lt;/span&gt;&lt;span class="n"&gt;sshkey&lt;/span&gt;
+&lt;span class="k"&gt;Host&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="err"&gt;记住这个&lt;/span&gt;&lt;span class="k"&gt;Host&lt;/span&gt;&lt;span class="err"&gt;后面需要用到&lt;/span&gt;
+    &lt;span class="n"&gt;HostName&lt;/span&gt; &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+    &lt;span class="n"&gt;PreferredAuthentications&lt;/span&gt; &lt;span class="n"&gt;publickey&lt;/span&gt;
+    &lt;span class="n"&gt;IdentityFile&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa_user2&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;config文件根据实际情况修改。wq保存。&lt;/p&gt;
 &lt;h2 id="73378aea3aa42433689a071309d606e3"&gt;提交代码&lt;/h2&gt;
@@ -267,14 +279,14 @@ Hi user2! You've successfully authenticated, but GitHub does not provide shell a
 &lt;/blockquote&gt;
 &lt;h1 id="ddc7d28b7b108cdca9ee7832f7314422"&gt;变量&lt;/h1&gt;
 &lt;p&gt;let 定义一个常量 var 定义一个变量  可以不声明变量类型 变量名可用Unicode字符&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;let f = 70
-let f1: Float = 70
-let 🐶 = "加班狗"
-var s: String = "string"
-var red, green, bule: Double
-let `int` = "abc"
-print("Swift \(🐶)")
-print(f, f1, separator: "====", terminator: "\n")
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;70&lt;/span&gt;
+&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;f1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;Float&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;70&lt;/span&gt;
+&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="err"&gt;🐶&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"加班狗"&lt;/span&gt;
+&lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"string"&lt;/span&gt;
+&lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="n"&gt;red&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;green&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bule&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;Double&lt;/span&gt;
+&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="ss"&gt;`int`&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"abc"&lt;/span&gt;
+&lt;span class="nf"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Swift \(🐶)"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nf"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;f1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;separator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"===="&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;terminator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"\n"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Notes&lt;/p&gt;
@@ -299,23 +311,23 @@ print(f, f1, separator: "====", terminator: "\n")
 &lt;p&gt;&lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;终于不是 &lt;code&gt;YES or NO&lt;/code&gt;了&lt;/p&gt;
 &lt;h2 id="cda9f200088a3396902af2d4b5efb290"&gt;元组&lt;/h2&gt;
 &lt;p&gt;元组把多个值组合在一起,每一个值可以是不同的数据类型.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;let http404Error = (404,"Not Found")
-类型为(Int,String)的元组
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;let http404Error = (404,"Not Found")&lt;/span&gt;
+&lt;span class="err"&gt;类型为(Int,String)的元组&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;let (statuCode, error) = http404Error
-print(statuCode,error)
-将元组内容分解成单独的的常量和变量
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;statuCode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;http404Error&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;statuCode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;将元组内容分解成单独的的常量和变量&lt;/span&gt;
 
-let (statuCode,_) = http404Error
-print(statuCode,error)
-分解的时候忽略的部分用_标记
+&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;statuCode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;http404Error&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;statuCode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;分解的时候忽略的部分用&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="err"&gt;标记&lt;/span&gt;
 
-print(http404Error.0, http404Error.1)
-可以通过下标来访问
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;http404Error&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;http404Error&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;可以通过下标来访问&lt;/span&gt;
 
-let http200 = (code:200, des:true)
-print(http200.code, http200.des)
-定义元组的时候给元素命名,可以通过名字来取值
+&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;http200&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;des&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;http200&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;http200&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;des&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;定义元组的时候给元素命名&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;可以通过名字来取值&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="4fa4f39154d3fc1624099c34182adbfb"&gt;可选类型&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;optionals&lt;/code&gt;来处理可能缺失的情况,可选类型来表示:&lt;/p&gt;
@@ -327,24 +339,24 @@ print(http200.code, http200.des)
 &lt;p&gt;&lt;code&gt;Int?&lt;/code&gt; or &lt;code&gt;optional Int&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id="852438d026c018c4307b916406f98c62"&gt;nil&lt;/h3&gt;
 &lt;p&gt;可以给可选变量赋值为nil来表示它没有值。nil不能用于非可选的常量和变量,如果要处理缺失情况,应该声明成对应的可选类型.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;OC中nil指向不存在的对象的指针。Swift中nil不是指针它是一个确定的值,用来表示缺失,任何类型的可选状态都可以设置为nil。
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;OC中nil指向不存在的对象的指针。Swift中nil不是指针它是一个确定的值,用来表示缺失,任何类型的可选状态都可以设置为nil。&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="52281bbb55b775e6238b4faea2763f78"&gt;可选值的强制解析&lt;/h3&gt;
 &lt;p&gt;当确定可选类型确实包含值之后,可以在可选的名字后面加一个感叹号来取值&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if convertNumber != nil{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;convertNumber&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;nil&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
 
-    print("(converNumber!)")
+    &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;"(converNumber!)"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-}
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;获取一个不存在可选值会导致运行时的错误。使用&lt;code&gt;!&lt;/code&gt;来强制解析之前,一定要确定可选包含一个非&lt;code&gt;nil&lt;/code&gt;的值。&lt;/p&gt;
 &lt;h3 id="362a5bcaae88747d270aedbe592dd7aa"&gt;可选绑定&lt;/h3&gt;
 &lt;p&gt;使用可选绑定来判断可选类型是否包含值,如果包含值就把值赋给一个临时常量或变量。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if let actualNumber = Int(possbileNumber){
-    print(actualNumber)
-}else{
-    print("not integer")
-}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;if let actualNumber = Int(possbileNumber){&lt;/span&gt;
+&lt;span class="err"&gt;    print(actualNumber)&lt;/span&gt;
+&lt;span class="err"&gt;}else{&lt;/span&gt;
+&lt;span class="err"&gt;    print("not integer")&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="871961bb53c7d430a1be996622d506e5"&gt;隐式解析可选类型&lt;/h3&gt;
 &lt;p&gt;隐式解析可选其实就是一个普通的可选类型(可自动解析的可选类型)，但是可以被当做非可选类型来用，不需要每次都使用解析来获取值。
@@ -357,11 +369,11 @@ print(http200.code, http200.des)
 &lt;p&gt;很多地方和大部分语言是相同的。只记下不同的地方。&lt;/p&gt;
 &lt;h2 id="dac6cd239b9a9c4cd71fb3d5e2d3fb49"&gt;赋值运算符&lt;/h2&gt;
 &lt;p&gt;Swift的赋值运算符不返回任何值。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if(x = 1){
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
 
-    //此句错误。再也不用担心 ==写成=了。
+    &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;此句错误。再也不用担心&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="err"&gt;写成&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;了。&lt;/span&gt;
 
-}
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="20805b4c0d2cc79d9e7ff7d09649a390"&gt;算术运算符&lt;/h2&gt;
 &lt;p&gt;Swift默认情况下不允许出现溢出情况。但可以使用Swift的溢出运算符来实现溢出运算。如(a &amp;amp;+ b)
@@ -376,11 +388,11 @@ print(http200.code, http200.des)
 &lt;h2 id="0b9e4c50c1cc94af08df81e22c2f0fd9"&gt;区间运算符&lt;/h2&gt;
 &lt;h3 id="737996fad0e733e457a8fe8f0c72004d"&gt;闭区间运算符&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;a...b&lt;/code&gt; 定义一个从a到b(包含a和b)的所有值区间,b必须大于等于a.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for index in 1...5{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="k"&gt;index&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
 
-    print(index)
+    &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-}
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="3df0c47cdc0607e68b466869840f15c4"&gt;半开区间运算符&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;a..&amp;lt;b&lt;/code&gt; 定义一个从a到b但不包括b的区间,称为半区间是因为包含第一个值不包含最后一个值.
@@ -388,25 +400,25 @@ print(http200.code, http200.des)
 &lt;h1 id="cc4dd1da7e1a754534215f02fb9ba85d"&gt;字符串&lt;/h1&gt;
 &lt;h2 id="a6b363bb757dc13cece66cf23648b8cf"&gt;拼接&lt;/h2&gt;
 &lt;p&gt;直接使用加号&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;print("今天星期四"+"明天元旦放假啊")
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;print("今天星期四"+"明天元旦放假啊")&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="706a31e5f14203120576352d0cf8bf97"&gt;字符串插值&lt;/h2&gt;
 &lt;p&gt;换句话说就是格式化字符串。个人理解是使用&lt;code&gt;\()&lt;/code&gt;来占位替换.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;let tucao = "车牌又要到3W了"
-print("\(tucao)。要不要离开这个鬼地方")
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;let tucao = "车牌又要到3W了"&lt;/span&gt;
+&lt;span class="err"&gt;print("\(tucao)。要不要离开这个鬼地方")&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;插值字符串写在括号中的表达式不能包含非转义反斜线&lt;code&gt;\&lt;/code&gt;,并且不能包含回车或换行。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="c6009d4f6a2226b5376028d5f296bae5"&gt;字符数量&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;"数量".characters.count
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;"数量".characters.count&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;在Swift 中，使用可拓展的字符群集作为Character值来连接或改变字符串时，并不一定会更改字符串的字符数量。&lt;/p&gt;
 &lt;p&gt;NSString的length和characters.count返回的长度可能不一样。这个得小心了。感觉很复杂。#-_-&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var word = "cafe"
-print("the number of characters in \(word) is \(word.characters.count)")
-word += "\u{301}"
-print("the number of characters in \(word) is \(word.characters.count)")
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;var word = "cafe"&lt;/span&gt;
+&lt;span class="err"&gt;print("the number of characters in \(word) is \(word.characters.count)")&lt;/span&gt;
+&lt;span class="err"&gt;word += "\u{301}"&lt;/span&gt;
+&lt;span class="err"&gt;print("the number of characters in \(word) is \(word.characters.count)")&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="83f6fff6219e3d2e7f7e857b7d611c24"&gt;访问和修改字符串&lt;/h2&gt;
 &lt;h3 id="b271e427962758c71e342a2c06df493a"&gt;索引&lt;/h3&gt;
@@ -417,29 +429,29 @@ print("the number of characters in \(word) is \(word.characters.count)")
 &lt;code&gt;index.predecessor()&lt;/code&gt;得到index的前一个索引。&lt;br/&gt;
 &lt;code&gt;index.successor()&lt;/code&gt;得到index后一个索引。&lt;br/&gt;
 &lt;code&gt;startIndex.advancedBy(3)&lt;/code&gt;startIndex后面的第三个索引。  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;print(word[word.startIndex],
-    word[word.endIndex.predecessor()],
-    word[word.startIndex.successor()],
-    word[word.startIndex.advancedBy(3)])
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;print(word[word.startIndex],&lt;/span&gt;
+&lt;span class="err"&gt;    word[word.endIndex.predecessor()],&lt;/span&gt;
+&lt;span class="err"&gt;    word[word.startIndex.successor()],&lt;/span&gt;
+&lt;span class="err"&gt;    word[word.startIndex.advancedBy(3)])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;字符串characters属性的indices属性创建一个包含全部索引Range,用来在一个字符串中访问单个字符&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for index in word.characters.indices{
-    print(word[index])
-}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;characters&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;indices&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="4f72854e51ae690d3d28f8138e0b6fc7"&gt;插入和删除&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var s = "插入"
-s.insert("啊", atIndex: s.endIndex)//插入单个字符
-s.insertContentsOf("字符串".characters, at: s.endIndex)//插入字符串
-s.removeAtIndex(s.startIndex)//移除单个
-let range = s.endIndex.advancedBy(-2)..&amp;lt;s.endIndex//移除子串
-s.removeRange(range)//清空字符串
-print(s)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;var s = "插入"&lt;/span&gt;
+&lt;span class="err"&gt;s.insert("啊", atIndex: s.endIndex)//插入单个字符&lt;/span&gt;
+&lt;span class="err"&gt;s.insertContentsOf("字符串".characters, at: s.endIndex)//插入字符串&lt;/span&gt;
+&lt;span class="err"&gt;s.removeAtIndex(s.startIndex)//移除单个&lt;/span&gt;
+&lt;span class="err"&gt;let range = s.endIndex.advancedBy(-2)..&amp;lt;s.endIndex//移除子串&lt;/span&gt;
+&lt;span class="err"&gt;s.removeRange(range)//清空字符串&lt;/span&gt;
+&lt;span class="err"&gt;print(s)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="469e0eee17a884bf97e500fdb0f02182"&gt;比较字符串&lt;/h3&gt;
 &lt;p&gt;== 前缀/后缀相等&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var a_ = "字符串1",b = "字符串2"
-print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;var a_ = "字符串1",b = "字符串2"&lt;/span&gt;
+&lt;span class="err"&gt;print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="Swift"></category></entry><entry><title>Flask_notes_01</title><link href="https://99d.in/bnote/Flask_notes_01.html" rel="alternate"></link><published>2015-10-25T11:30:00+08:00</published><updated>2015-10-25T11:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-10-25:/bnote/Flask_notes_01.html</id><summary type="html">Flask学习笔记之Flask-Bootstrap Flask-Moment</summary><content type="html">&lt;p&gt;Flask学习笔记之Flask-Bootstrap Flask-Moment&lt;/p&gt;
 &lt;h1 id="44b2ec7b98f5190b3617c573c39e7488"&gt;Flask-Bootstrap&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;pip install Flask-Bootstrap&lt;/code&gt; 默认安装的是最新版本。也可以在安装的时候自定义版本。&lt;/p&gt;
@@ -512,7 +524,7 @@ print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
 &lt;p&gt;像&lt;code&gt;tree&lt;/code&gt; 命令一样显示&lt;code&gt;view&lt;/code&gt;的层次结构。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[self.view recursiveDescription]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;[self.view recursiveDescription]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;tableView&lt;/code&gt;滚动的时候始终以&lt;code&gt;row&lt;/code&gt;的高度为单位。
@@ -578,68 +590,170 @@ print(a_ == b, a_.hasPrefix("字符串"),b.hasSuffix("2"))
 &lt;p&gt;&lt;code&gt;Xcode&lt;/code&gt; 调试的状态显示&lt;code&gt;indexing....&lt;/code&gt;,卡很久&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Open your Project Folder.
-Find ProjectName.xcodeproj file.
-Right-Click Copy and Paste to Safe Place.
-Right-Click Show Package Contents.
-Find project.xcworkspace file and delete that file.
-Reopen Your Project and clean and Rebuild.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;Open your Project Folder.&lt;/span&gt;
+&lt;span class="err"&gt;Find ProjectName.xcodeproj file.&lt;/span&gt;
+&lt;span class="err"&gt;Right-Click Copy and Paste to Safe Place.&lt;/span&gt;
+&lt;span class="err"&gt;Right-Click Show Package Contents.&lt;/span&gt;
+&lt;span class="err"&gt;Find project.xcworkspace file and delete that file.&lt;/span&gt;
+&lt;span class="err"&gt;Reopen Your Project and clean and Rebuild.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;自定义通知(远程和本地)的声音文件可以放入bundle文件夹,注册推送的时候声音文件填写对应的路径即可。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;let notification = UILocalNotification()
-notification.soundName = "sound.bundle/" + xxx.wav
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;let notification = UILocalNotification()&lt;/span&gt;
+&lt;span class="err"&gt;notification.soundName = "sound.bundle/" + xxx.wav&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;swift&lt;/code&gt; &lt;code&gt;print&lt;/code&gt;在&lt;code&gt;Xcode&lt;/code&gt;-&amp;gt;&lt;code&gt;Devices&lt;/code&gt;-&amp;gt; 'xxx的iPhone8' 不会打印日志, &lt;code&gt;NSLog&lt;/code&gt;会打印。&lt;/li&gt;
-&lt;/ul&gt;</content><category term="iOS"></category></entry><entry><title>macOS app</title><link href="https://99d.in/dlife/%E6%88%91%E7%9A%84macOS%20app.html" rel="alternate"></link><published>2015-08-25T20:22:00+08:00</published><updated>2015-08-25T20:22:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-25:/dlife/我的macOS app.html</id><summary type="html">Alfred 3
-1Password
-PDF Export
-Fantastical 
-Trello 
-MockingBot 
-Timing</summary><content type="html">&lt;h1 id="3256142c22150278239cd3379225ebe8"&gt;效率&lt;/h1&gt;
-&lt;p&gt;Alfred 3&lt;br/&gt;
-1Password&lt;br/&gt;
-PDF Export&lt;br/&gt;
-Fantastical 
-Trello 
-MockingBot 
-Timing&lt;/p&gt;
-&lt;h1 id="53733cd6e368336f07f46755e971cab3"&gt;编辑器&lt;/h1&gt;
-&lt;p&gt;Sublime3&lt;br/&gt;
-MacVim&lt;br/&gt;
-UltraEdit 
-WizNote&lt;br/&gt;
-Xcode &lt;br/&gt;
-TextWrangeler&lt;br/&gt;
-Haroopad  &lt;/p&gt;
-&lt;h1 id="20dce2c6fa909a5cd62526615fe2788a"&gt;工具&lt;/h1&gt;
-&lt;p&gt;Tower&lt;br/&gt;
-Cornerstone3&lt;br/&gt;
-Beyond Compare&lt;br/&gt;
-Easy APNs Provider&lt;br/&gt;
-DB Browser for SQLite&lt;br/&gt;
-Reveal 
-Sketch 
-Snipaste 
-Surge 
-PxCook &lt;/p&gt;
-&lt;h1 id="bfb948674f0abac493f32fb6d39a73b9"&gt;网络相关&lt;/h1&gt;
-&lt;p&gt;Burpsuite_free &lt;br/&gt;
-Wireshark&lt;br/&gt;
-Paw&lt;br/&gt;
-Charles &lt;/p&gt;
-&lt;h1 id="c97c043860d0b110620f60f50b292212"&gt;思维导图&lt;/h1&gt;
-&lt;p&gt;Scapple  &lt;/p&gt;
-&lt;h1 id="de71492af019157e5a5ef958b570e760"&gt;系统工具&lt;/h1&gt;
-&lt;p&gt;TeamViewer&lt;br/&gt;
-AriServer&lt;br/&gt;
-ColorPikcer&lt;br/&gt;
-The Unarchiver Browser &lt;/p&gt;
-&lt;h1 id="0eda7c38afb2bff0a16ee496cc03a5e8"&gt;播放器&lt;/h1&gt;
-&lt;p&gt;mpv  &lt;/p&gt;</content><category term="Mac"></category></entry><entry><title>poker2_mstand</title><link href="https://99d.in/dlife/poker2_mstand.html" rel="alternate"></link><published>2015-07-05T14:30:00+08:00</published><updated>2015-07-05T14:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-05:/dlife/poker2_mstand.html</id><summary type="html">晒晒我的装备</summary><content type="html">&lt;p&gt;晒晒我的装备&lt;/p&gt;
+&lt;/ul&gt;</content><category term="iOS"></category></entry><entry><title>macOS app</title><link href="https://99d.in/dlife/%E6%88%91%E7%9A%84macOS%20app.html" rel="alternate"></link><published>2015-08-25T20:22:00+08:00</published><updated>2015-08-25T20:22:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-08-25:/dlife/我的macOS app.html</id><summary type="html">一些常用的Mac App</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;一些常用的Mac App&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Alfred 4&lt;/td&gt;
+&lt;td&gt;快速启动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SafeInCloud&lt;/td&gt;
+&lt;td&gt;跨平台密码管理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PDF Export&lt;/td&gt;
+&lt;td&gt;跨平台pdf阅读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MockingBot&lt;/td&gt;
+&lt;td&gt;原型设计&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DropBox&lt;/td&gt;
+&lt;td&gt;网盘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google 虚拟云端硬盘&lt;/td&gt;
+&lt;td&gt;网盘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AppCleaner&lt;/td&gt;
+&lt;td&gt;App卸载&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PastePal&lt;/td&gt;
+&lt;td&gt;剪贴板管理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dayone&lt;/td&gt;
+&lt;td&gt;跨平台日记&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Notion&lt;/td&gt;
+&lt;td&gt;跨平台笔记&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SwiftyMenu&lt;/td&gt;
+&lt;td&gt;Finder目录打开应用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AltTab&lt;/td&gt;
+&lt;td&gt;切换应用，替换系统cmd+tab&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Xcode&lt;/td&gt;
+&lt;td&gt;代码编辑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BBEdit&lt;/td&gt;
+&lt;td&gt;编辑器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Vscode&lt;/td&gt;
+&lt;td&gt;编辑器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IDEA&lt;/td&gt;
+&lt;td&gt;代码编辑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Typora&lt;/td&gt;
+&lt;td&gt;markdown编辑器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tower&lt;/td&gt;
+&lt;td&gt;git版本控制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cornerstone3&lt;/td&gt;
+&lt;td&gt;svn控制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Beyond Compare&lt;/td&gt;
+&lt;td&gt;文件对比&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sketch&lt;/td&gt;
+&lt;td&gt;设计&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Snipaste&lt;/td&gt;
+&lt;td&gt;截图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Clashx&lt;/td&gt;
+&lt;td&gt;代理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sloth&lt;/td&gt;
+&lt;td&gt;进程管理工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Wireshark&lt;/td&gt;
+&lt;td&gt;抓包工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Paw&lt;/td&gt;
+&lt;td&gt;模拟请求，Api管理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Charles&lt;/td&gt;
+&lt;td&gt;抓包工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BurpSuite&lt;/td&gt;
+&lt;td&gt;抓包工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Scapple&lt;/td&gt;
+&lt;td&gt;思维导图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iThoughtsX&lt;/td&gt;
+&lt;td&gt;跨平台思维导图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IINA&lt;/td&gt;
+&lt;td&gt;播放器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eZip&lt;/td&gt;
+&lt;td&gt;压缩工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ipatool&lt;/td&gt;
+&lt;td&gt;命令行下载ipa&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;broot&lt;/td&gt;
+&lt;td&gt;命令行目录树&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content><category term="Mac"></category></entry><entry><title>poker2_mstand</title><link href="https://99d.in/dlife/poker2_mstand.html" rel="alternate"></link><published>2015-07-05T14:30:00+08:00</published><updated>2015-07-05T14:30:00+08:00</updated><author><name>pd</name></author><id>tag:99d.in,2015-07-05:/dlife/poker2_mstand.html</id><summary type="html">晒晒我的装备</summary><content type="html">&lt;p&gt;晒晒我的装备&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="../static/poker2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;还是用回HHKB吧,两个键盘之间切换实在适应不了。⌨拍照技术太差了😂
 &lt;img alt="HHKB" src="../static/hhkb.png"/&gt;&lt;/p&gt;
@@ -666,20 +780,20 @@ The Unarchiver Browser &lt;/p&gt;
 对报错的&lt;code&gt;framework&lt;/code&gt;执行以下命令:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;otool -arch armv7 –l Xxxxx.framework/Xxxxx&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;我们可以看到以下内容:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Load command 14
-cmd LC_LINKER_OPTION
-cmdsize 32
-count 2
-string #1 -framework
-string #2 OpenGLES
-Load command 15
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Load&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="mi"&gt;14&lt;/span&gt;
+&lt;span class="n"&gt;cmd&lt;/span&gt; &lt;span class="n"&gt;LC_LINKER_OPTION&lt;/span&gt;
+&lt;span class="n"&gt;cmdsize&lt;/span&gt; &lt;span class="mi"&gt;32&lt;/span&gt;
+&lt;span class="k"&gt;count&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;
+&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;OpenGLES&lt;/span&gt;
+&lt;span class="k"&gt;Load&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;
 
-cmd LC_LINKER_OPTION
-cmdsize 32
-count 2
-string #1 -framework
-string #2 Metal
-Load command 16
+&lt;span class="n"&gt;cmd&lt;/span&gt; &lt;span class="n"&gt;LC_LINKER_OPTION&lt;/span&gt;
+&lt;span class="n"&gt;cmdsize&lt;/span&gt; &lt;span class="mi"&gt;32&lt;/span&gt;
+&lt;span class="k"&gt;count&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;framework&lt;/span&gt;
+&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;Metal&lt;/span&gt;
+&lt;span class="k"&gt;Load&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;正如你所看到的,这将导致&lt;code&gt;linker&lt;/code&gt;隐式使用&lt;code&gt;Metal&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id="34e74b1c7f4aad91715567cf698912f6"&gt;The Solution&lt;/h4&gt;
